@@ -11,8 +11,13 @@ $Lspppejp = &$Page;
 	p, table, div {
     font-size: 16px;
 	}
-	h4{
+	
+	h2{
 		font-size: 20px;
+	}
+
+	h4{
+		font-size: 18px;
 	}
 
 	table {
@@ -89,8 +94,8 @@ $Lspppejp = &$Page;
 		<div class="row row-bar-count pt-3 text-white">
 
 			<div class="col-12 text-center">
-				<h4>Motto Kami : </h4>
-				<h4>“MEMASTIKAN DAN MEMELIHARA KOMPETENSI ANDA DI BIDANG EKSPOR IMPOR”</h4>	
+				<h2>Motto Kami : </h2>
+				<h2>“MEMASTIKAN DAN MEMELIHARA KOMPETENSI ANDA DI BIDANG EKSPOR IMPOR”</h2>	
 			</div>
 		</div>
 	</div>
