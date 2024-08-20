@@ -8,46 +8,46 @@ $Lspppejp = &$Page;
 <?php echo myheader(); ?>
 
 <style>
-table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
-    overflow: hidden;
-}
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+		border-radius: 10px;
+		overflow: hidden;
+	}
 
-thead {
-    background-color: #009879;
-    color: #ffffff;
-    text-align: center; /* Rata tengah untuk header */
-}
+	thead {
+		background-color: #009879;
+		color: #ffffff;
+		text-align: center; /* Rata tengah untuk header */
+	}
 
-thead th {
-    padding: 6px 7px;
-    border: 1px solid #dddddd;
-}
+	thead th {
+		padding: 6px 7px;
+		border: 1px solid #dddddd;
+	}
 
-tbody td {
-    padding: 6px 12px;
-    border: 1px solid #dddddd;
-    text-align: left; /* Rata kiri untuk isi kolom */
-}
+	tbody td {
+		padding: 6px 12px;
+		border: 1px solid #dddddd;
+		text-align: left; /* Rata kiri untuk isi kolom */
+	}
 
-tbody td:nth-child(1) {
-    text-align: center; /* Rata tengah untuk kolom NO */
-}
+	tbody td:nth-child(1) {
+		text-align: center; /* Rata tengah untuk kolom NO */
+	}
 
-tbody td:nth-child(2) {
-    text-align: left; /* Rata kiri untuk kolom KODE UNIT */
-}
+	tbody td:nth-child(2) {
+		text-align: left; /* Rata kiri untuk kolom KODE UNIT */
+	}
 
-tbody td:nth-child(3) {
-    text-align: left; /* Rata kiri untuk kolom JUDUL UNIT KOMPETENSI */
-}
+	tbody td:nth-child(3) {
+		text-align: left; /* Rata kiri untuk kolom JUDUL UNIT KOMPETENSI */
+	}
 
-tbody tr:nth-child(even) {
-    background-color: #f3f3f3;
-}
+	tbody tr:nth-child(even) {
+		background-color: #f3f3f3;
+	}
 </style>
 
 <div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
