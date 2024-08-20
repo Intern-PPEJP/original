@@ -34,19 +34,19 @@ $Lspppejp = &$Page;
 	}
 
 	tbody td:nth-child(1) {
-		text-align: center; /* Rata tengah untuk kolom NO */
+		text-align: center; /* Rata tengah isi untuk kolom NO */
 	}
 
 	tbody td:nth-child(2) {
-		text-align: left; /* Rata kiri untuk kolom KODE UNIT */
+		text-align: left; /* Rata kiri untuk isi kolom KODE UNIT */
 	}
 
 	tbody td:nth-child(3) {
-		text-align: left; /* Rata kiri untuk kolom JUDUL UNIT KOMPETENSI */
+		text-align: left; /* Rata kiri untuk isi kolom JUDUL UNIT KOMPETENSI */
 	}
 
 	tbody tr:nth-child(even) {
-		background-color: #f3f3f3;
+		background-color: #f3f3f3; /* memberi warna yang berbeda tiap baris*/
 	}
 </style>
 
