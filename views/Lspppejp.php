@@ -8,6 +8,13 @@ $Lspppejp = &$Page;
 <?php echo myheader(); ?>
 
 <style>
+	p, table, div {
+    font-size: 16px;
+	}
+	h4{
+		font-size: 20px;
+	}
+
 	table {
 		width: 100%;
 		border-collapse: collapse;
@@ -72,8 +79,8 @@ $Lspppejp = &$Page;
     <div class="row my-4">
         <div class="col-md-12">
             <div class="text-center">
-              LSP PPEJP ini merupakan LSP pihak ke 2 yang mempunyai tugas memastikan dan memelihara kompetensi alumni pelatihan PPEJP dan jejaringnya, khususnya eksportir dan calon eksportir di dalam ruang lingkup tugas mereka sebagai pengelola dan pelaku manajemen ekspor impor.
-            </div>
+				<p> LSP PPEJP ini merupakan LSP pihak ke 2 yang mempunyai tugas memastikan dan memelihara kompetensi alumni pelatihan PPEJP dan jejaringnya, khususnya eksportir dan calon eksportir di dalam ruang lingkup tugas mereka sebagai pengelola dan pelaku manajemen ekspor impor.</p>
+			</div>
         </div>
     </div>
 </div>
@@ -95,23 +102,23 @@ $Lspppejp = &$Page;
              Persyaratan Pendaftaran Peserta Sertifikasi :
             </h4>
 			<p>
-			<ol>
-				<li>LSP PPEJP menginformasikan kepada pemohon persyaratan sertifikasi sesuai skema sertifikasi jenis bukti, aturan bukti, proses sertifikasi, hak pemohon dan kewajiban pemohon, biaya sertifikasi dan kewajiban pemegang sertifikat kompetensi</li>
-				<li>Pemohon mengisi formulir pendaftaran (APL-01) dan dilengkapi dengan bukti-bukti pendukung berupa :
-				<ol type="a">	
-					<li>Foto copy KTP</li>
-					<li>Pas Photo 3 x 4 cm sebanyak 2 (dua) lembar, dengan latar belakang warna merah, dan</li>
-					<li>Foto copy Sertifikat Pelatihan Persiapan Ekspor dari PPEJP</li>
-					<li>Foto copy Ijazah SMA/SMK Sederjat atau</li>
-					<li>Surat Keterangan telah bekerja minimal 2 tahun pada pekerjaan Persiapan Ekspor, atau</li>
-					<li>Foto copy Surat Ijin Berusaha, seperti NIB.</li>
+				<ol>
+					<li>LSP PPEJP menginformasikan kepada pemohon persyaratan sertifikasi sesuai skema sertifikasi jenis bukti, aturan bukti, proses sertifikasi, hak pemohon dan kewajiban pemohon, biaya sertifikasi dan kewajiban pemegang sertifikat kompetensi</li>
+					<li>Pemohon mengisi formulir pendaftaran (APL-01) dan dilengkapi dengan bukti-bukti pendukung berupa :
+					<ol type="a">	
+						<li>Foto copy KTP</li>
+						<li>Pas Photo 3 x 4 cm sebanyak 2 (dua) lembar, dengan latar belakang warna merah, dan</li>
+						<li>Foto copy Sertifikat Pelatihan Persiapan Ekspor dari PPEJP</li>
+						<li>Foto copy Ijazah SMA/SMK Sederjat atau</li>
+						<li>Surat Keterangan telah bekerja minimal 2 tahun pada pekerjaan Persiapan Ekspor, atau</li>
+						<li>Foto copy Surat Ijin Berusaha, seperti NIB.</li>
+					</ol>
+					</li>
+					<li>Pemohon mengisi formulir Asesmen Mandiri (APL 02) dan dilengkapi dengan bukti pendukung yang relevan (jika ada)</li>
+					<li>Peserta menyatakan setuju untuk memenuhi persyaratan sertifikasi dan memberikan setiap informasi yang diperlukan untuk penilaian.</li>
+					<li>LSP PPEJP menelaah berkas pendaftaran untuk konfirmasi bahwa peserta sertifikasi memenuhi persyaratan yang ditetapkan dalam skema sertifikasi.</li>
+					<li>Pemohon yang memenuhi persyaratan dinyatakan sebagai peserta sertifikasi.</li>
 				</ol>
-				</li>
-				<li>Pemohon mengisi formulir Asesmen Mandiri (APL 02) dan dilengkapi dengan bukti pendukung yang relevan (jika ada)</li>
-				<li>Peserta menyatakan setuju untuk memenuhi persyaratan sertifikasi dan memberikan setiap informasi yang diperlukan untuk penilaian.</li>
-				<li>LSP PPEJP menelaah berkas pendaftaran untuk konfirmasi bahwa peserta sertifikasi memenuhi persyaratan yang ditetapkan dalam skema sertifikasi.</li>
-				<li>Pemohon yang memenuhi persyaratan dinyatakan sebagai peserta sertifikasi.</li>
-			</ol>
 			</p>
 			
             <h4 class="text-center mt-2 mb-2">
