@@ -17,7 +17,7 @@ $Lspppejp = &$Page;
 	}
 
 	thead {
-		background-color: #009879;
+		background-color: #16a45c;
 		color: #ffffff;
 		text-align: center; /* Rata tengah untuk header */
 	}
@@ -83,7 +83,7 @@ $Lspppejp = &$Page;
 
 			<div class="col-12 text-center">
 				<h4>Motto Kami : </h4>
-		<h4>“MEMASTIKAN DAN MEMELIHARA KOMPETENSI ANDA DI BIDANG EKSPOR IMPOR”</h4>	
+				<h4>“MEMASTIKAN DAN MEMELIHARA KOMPETENSI ANDA DI BIDANG EKSPOR IMPOR”</h4>	
 			</div>
 		</div>
 	</div>
@@ -114,10 +114,10 @@ $Lspppejp = &$Page;
 			</ol>
 			</p>
 			
-            <h4 class="text-center mt-5 mb-4">
+            <h4 class="text-center mt-2 mb-2">
             4 (empat) ruang lingkup skema sertifikasi klaster :
             </h4>
-			<div class="row text-white text-center mb-5">
+			<div class="row text-white text-center mb-2">
 			<div class="col-md-3 col-6">
 				<div class="card mr-1" style="background-color:#031A31;height:3.3em;">PERSIAPAN <br>EKSPOR</div>
 			</div>
@@ -473,7 +473,6 @@ $Lspppejp = &$Page;
 		</ol>
 	</p>
 	
-	<br>
 	<div class="card p-3 text-center">
 		<p>Biaya sertifikasi untuk skema Kompetensi Pelaksanan Impor sebesar Rp.500.000. dengan rincian biaya terlampir. (dalam proses pengajuan PP tarif)</p>
 	</div>
