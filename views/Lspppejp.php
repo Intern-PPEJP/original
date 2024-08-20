@@ -465,6 +465,7 @@ $Lspppejp = &$Page;
 		</tbody>
 	</table>
 
+	<br>
 	<p> Persyaratan Dasar Pemohon Sertifikasi
 		<ol>
 			<li>Memiliki sertifikat pelatihan ekspor yang diselenggarakan oleh PPEJP, dan</li>
@@ -478,7 +479,7 @@ $Lspppejp = &$Page;
 	</div>
 </div>
 	
-<div class="mb-5">&nbsp;
+<div class="mb-1">&nbsp;
 </div>
 <?php echo myfooter(); ?>
 <?= GetDebugMessage() ?>
