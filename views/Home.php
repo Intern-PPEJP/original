@@ -82,6 +82,19 @@ Attribution required
 .nav-fill .nav-item .nav-link.active {
   background: #28a745 !important;
 }
+
+/* Tambahkan efek untuk bagian yang akan naik ke atas */
+.angka {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.angka.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -123,7 +136,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<div class="col-lg-12 col-12 p-0">
 				<div class="container">
 				<h4 class="judul">PUSAT PELATIHAN<br>SUMBER DAYA MANUSIA EKSPOR<br>DAN JASA PERDAGANGAN</h4>
-				<p class="subline">Mengembangkan UMKM Indonesia sejak 1990
+				<p class="subline">Mengembangkan UMKM Indonesia Sejak 1990
 				
 				</p>
 				<ul class="slider-button pl-0">
@@ -284,29 +297,74 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	</section>
 
 	<section class="barcount-section">
-		<div class="container">
-			<div class="row row-bar-count pt-3">
+    <div class="container">
+        <div class="row row-bar-count pt-3">
+            <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
+                <span class="col-12 jumlah" data-target="60000">0</span>
+                <span class="col-12 jumlah_cap">Alumni pelatihan</span>
+            </div>
+            
+            <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
+                <span class="col-12 jumlah" data-target="2000">0</span>
+                <span class="col-12 jumlah_cap">Alumni Pendampingan</span>        
+            </div>
+            <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
+                <span class="col-12 jumlah" data-target="110">0</span>
+                <span class="col-12 jumlah_cap">Fasilitator</span>        
+            </div>
+            <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
+                <span class="col-12 jumlah" data-target="80">0</span>
+                <span class="col-12 jumlah_cap">Topik Pelatihan</span>        
+            </div>
+        </div>
+    </div>
+</section>
 
-				<div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
-					<span class="col-12 jumlah">60000</span>
-					<span class="col-12 jumlah_cap">Alumni pelatihan</span>
-				</div>
-				
-				<div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
-					<span class="col-12 jumlah">2000</span>
-					<span class="col-12 jumlah_cap">Alumni Pendampingan</span>		
-				</div>
-				<div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
-					<span class="col-12 jumlah">110</span>
-					<span class="col-12 jumlah_cap">Fasilitator</span>		
-				</div>
-				<div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
-					<span class="col-12 jumlah">80</span>
-					<span class="col-12 jumlah_cap">Topik Pelatihan</span>		
-				</div>
-			</div>
-		</div>
-	</section>
+<script>
+    // Fungsi untuk melakukan animasi hitung angka
+    function animateCountUp(element, start, end, duration) {
+        let startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+            element.innerText = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+                requestAnimationFrame(animation);
+            } else {
+                element.innerText = end; // Pastikan angka berakhir sesuai target
+            }
+        }
+        requestAnimationFrame(animation);
+    }
+
+    // Memulai animasi pada semua elemen dengan class 'jumlah'
+    document.querySelectorAll('.jumlah').forEach((element) => {
+        const target = parseInt(element.getAttribute('data-target'));
+        animateCountUp(element, 0, target, 4000); // 2000ms = 2 detik
+    });
+
+	document.addEventListener('DOMContentLoaded', function() {
+    const angkaElements = document.querySelectorAll('.angka');
+
+    function checkScroll() {
+        angkaElements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight - 100) { // Sesuaikan angka -100 untuk mengatur kapan animasi dimulai
+                element.classList.add('show');
+            }
+        });
+    }
+
+    // Memeriksa elemen saat halaman pertama kali dimuat
+    checkScroll();
+
+    // Memeriksa elemen ketika pengguna melakukan scroll
+    window.addEventListener('scroll', checkScroll);
+});
+
+</script>
+
 	
 	<section class="pt-5 pb-2">
 		<div class="container">
