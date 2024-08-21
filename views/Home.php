@@ -435,7 +435,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 								<div class="card" style="padding:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
 									<img class="img-fluid" alt="100%x220" style="height:220px !important;border-radius:8px 8px 0 0 !important;" src="files/<?php echo $row["gambar"]; ?>">
 									<div class="card-body m-0 p-1">
-										<h4 class="card-titte" style="height:2.5em"><?php echo $row["judul_pelatihan"]; ?></h4>
+										<h3 class="card-titte" style="height:2.5em"><?php echo $row["judul_pelatihan"]; ?></h3>
 										<table class="table p-0 m-0" style="font-size:.8em">
 											<tr>
 												<td width="50%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
@@ -488,60 +488,84 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	<section class="content-section">
 		<div class="container">
 			<div class="row">
-			<h3 class="text-center text-bold mb-4">Fasilitas</h3>
-			
-			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-			  <div class="carousel-inner">
-				<div class="carousel-item active">
-				  
-					<div class="row justify-content-center">
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/perpustakaan.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
-						</div>
-						<div class="ccol-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/simulation_center.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/auditorium.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/fasilitas-asrama.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
-						</div>
-					</div>
-				  
-				</div>
-				<div class="carousel-item">
-				  
-					<div class="row justify-content-center">
-				
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/auditorium.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3">AUDITORIUM</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/fasilitas-asrama.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3">ASRAMA</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/laboratorium.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3">LABORATORIUM</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/ruang_kelas.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3">RUANG KELAS</h6>
-						</div>
+				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
 						
-					</div>
-				  
+						<!-- Slide 1 -->
+						<div class="carousel-item active">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/perpustakaan.png" style="width:70%; height:300px !important;" alt="Perpustakaan">
+							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 2 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/simulation_center.png" style="width:70%; height:300px !important;" alt="Simulation Center">
+							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 3 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/auditorium.png" style="width:70%; height:300px !important;" alt="Auditorium">
+							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 4 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/fasilitas-asrama.png" style="width:70%; height:300px !important;" alt="Asrama">
+							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 5 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/ruang_kelas.png" style="width:70%; height:300px !important;" alt="Ruang Kelas">
+							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 6 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/laboratorium.png" style="width:70%; height:300px !important;" alt="Laboratorium">
+							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
+							</div>
+						</div>
+					</div>	
 				</div>
-			  </div>
 			</div>
-			
-			
+
+			<!-- Controls (Previous and Next) -->
+			<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+			</div>
+
+
 			<h3 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h3>
 			
 			<center>
