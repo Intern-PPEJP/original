@@ -6,6 +6,7 @@ namespace PHPMaker2021\ppejp_web;
 $Home = &$Page;
 ?>
 <?php echo myheader(); ?>
+
 <style>
 /*
 
@@ -95,6 +96,28 @@ Attribution required
     transform: translateY(0);
 }
 
+p, div {
+    font-size: 18px;
+}
+	
+	h2{
+		font-size: 20px;
+}
+
+	h3{
+		font-size: 22px;
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.zoom-in.show {
+    opacity: 1;
+    transform: scale(1);
+}
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -136,9 +159,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<div class="col-lg-12 col-12 p-0">
 				<div class="container">
 				<h4 class="judul">PUSAT PELATIHAN<br>SUMBER DAYA MANUSIA EKSPOR<br>DAN JASA PERDAGANGAN</h4>
-				<p class="subline">Mengembangkan UMKM Indonesia Sejak 1990
-				
-				</p>
+				<p class="subline" style="font-size: 30px;">Mengembangkan UMKM Indonesia Sejak 1990</p>
 				<ul class="slider-button pl-0">
 				<li class="b-item mb-2">
 					<a class="nav-link custom-btn custom-border-btn btn inactive list-pelatihan" href="#" data-toggle="modal" data-target="#ListPelatihan">Jadwal Pelatihan</a>
@@ -171,7 +192,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						$ikon = "icon-video.png";
 					}
 				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:22px;height:100%;"></span>
-					<div class="item_direction mb-3">
+					<div class="item_direction mb-4">
 						
 						<i class="fas fa-circle cikon"></i><a href="<?php echo $link; ?>" style="text-decoration:none;color:#fff;">
 						<table><tr><td><img src="images/icons/<?php echo $ikon; ?>"></img></td><td>
@@ -200,25 +221,25 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					  </div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>
 
 
 	<section class="profile-section">
-		<div class="container">
-			<div class="row profil-row1">
-			
-				<div class="col-lg-5 col-12 vid-profil mb-1">
-					<iframe width="100%" height="292" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<div class="container text-center">
+			<div class="row justify-content-center">
+			<h3 class="mb-3 text-bold">Profil</h3>
+				<div class="col-lg-8 col-12 vid-profil mb-4">
+					<iframe width="90%" height="300" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
-				<div class="col-lg-7 col-12 text-description">
-					<h3 class="mb-3 text-bold" style="position:absolute;top:0;">Tentang Kami</h3>
-					<p style="text-align:justify;" class="mt-5">Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) merupakan lembaga yang berada di lingkungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP mempunyai tugas melaksanakan pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan untuk dunia usaha dan masyarakat.</p>
+				<div class="col-lg-10 col-12 text-description">
+	
+					<p style="text-align:center;">
+						Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) merupakan lembaga yang berada di lingkungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP mempunyai tugas melaksanakan pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan untuk dunia usaha dan masyarakat.
+					</p>
 				</div>
-				</div>
-				
+			</div>
 		</div>
 	</section>
 	
@@ -226,9 +247,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<div class="container-fluid">	
 				<div class="row cs-icons-menu">
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-ekspor" class="d-block">
-							<p class="icon-text text-center">PELATIHAN EKSPOR</p>
+							<p class="icon-text text-center zoom-in">PELATIHAN EKSPOR</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/icon-world.png" class="featured-block-image img-fluid " alt="">
 						</p>
 					</div>
@@ -237,9 +258,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-metrologi" class="d-block">
-							<p class="icon-text text-center">PELATIHAN METROLOGI</p>
+							<p class="icon-text text-center zoom-in">PELATIHAN METROLOGI</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/pelatihan-metrologi.png" class="featured-block-image img-fluid" alt="">
 						</p>
 					</div>
@@ -248,9 +269,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-mutu" class="d-block">
-							<p class="icon-text text-center">PELATIHAN MUTU</p>
+							<p class="icon-text text-center zoom-in">PELATIHAN MUTU</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/icon-checkup.png" class="featured-block-image img-fluid " alt="">
 						</p>
 					</div>
@@ -259,9 +280,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-jasa-perdagangan" class="d-block">
-							<p class="icon-text text-center">PELATIHAN JASA PERDAGANGAN</p>
+							<p class="icon-text text-center zoom-in">PELATIHAN JASA PERDAGANGAN</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/pelatihan-ekspor.png" class="featured-block-image img-fluid " alt="">
 						</p>
 					</div>
@@ -270,9 +291,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="export-coaching-program" class="d-block">
-							<p class="icon-text text-center">EXPORT COACHING PROGRAM</p>
+							<p class="icon-text text-center zoom-in">EXPORT COACHING PROGRAM</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/ecp.png" class="featured-block-image img-fluid" alt="">
 						</p>
 					</div>
@@ -281,9 +302,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="webinar" class="d-block">
-							<p class="icon-text text-center">WEBINAR</p>
+							<p class="icon-text text-center zoom-in">WEBINAR</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/webinar.png" class="featured-block-image img-fluid" alt="">
 						</p>
 					</div>
@@ -291,10 +312,27 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</div>
 					</a>
 				</div>
-
 			</div>
 		</div>
 	</section>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+    	const elements = document.querySelectorAll('.zoom-in');
+
+    	function checkElements() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                element.classList.add('show');
+            }
+        });
+    }
+
+		window.addEventListener('scroll', checkElements);
+		checkElements(); // Check initially in case the elements are already in view
+	});
+	</script>
 
 	<section class="barcount-section">
     <div class="container">
@@ -373,7 +411,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<a class="btn btn-success mb-3 mr-1" href="#carouselProducts" role="button" data-slide="prev" style="position:absolute;left:12px;top:0;">
 						<i class="fa fa-arrow-left"></i>
 					</a>
-					<h4 class="mb-3 text-bold">Pelatihan Mendatang </h4>
+					<h3 class="mb-3 text-bold">Pelatihan Mendatang </h3>
 					<a class="btn btn-success mb-3 " href="#carouselProducts" role="button" data-slide="next" style="position:absolute;right:25px;top:0">
 						<i class="fa fa-arrow-right"></i>
 					</a>
@@ -398,7 +436,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 								<div class="card" style="padding:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
 									<img class="img-fluid" alt="100%x220" style="height:220px !important;border-radius:8px 8px 0 0 !important;" src="files/<?php echo $row["gambar"]; ?>">
 									<div class="card-body m-0 p-1">
-										<h4 class="card-titte" style="height:2.5em"><?php echo $row["judul_pelatihan"]; ?></h4>
+										<h3 class="card-titte" style="height:40px; font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></h3>
 										<table class="table p-0 m-0" style="font-size:.8em">
 											<tr>
 												<td width="50%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
@@ -436,78 +474,91 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			</div>
 		</div>
 	</section>	
-	
-	
-
-
-	
-	
-	
-	
-	
-	
-	
 
 	<section class="content-section">
 		<div class="container">
 			<div class="row">
-			<h4 class="text-center text-bold mb-4">Fasilitas</h4>
-			
-			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-			  <div class="carousel-inner">
-				<div class="carousel-item active">
-				  
-					<div class="row justify-content-center">
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/perpustakaan.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
-						</div>
-						<div class="ccol-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/simulation_center.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/auditorium.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/fasilitas-asrama.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
-						</div>
-					</div>
-				  
-				</div>
-				<div class="carousel-item">
-				  
-					<div class="row justify-content-center">
-				
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/auditorium.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3">AUDITORIUM</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/fasilitas-asrama.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3">ASRAMA</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/laboratorium.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3">LABORATORIUM</h6>
-						</div>
-						<div class="col-lg col-md-3 col-sm-12 col-xs-12 text-center">
-							<image src="images/fasilitas/ruang_kelas.png"style="width:100%; height:190px !important;"></img> 
-							<h6 class="text-bold mt-3">RUANG KELAS</h6>
-						</div>
+				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
 						
-					</div>
-				  
+						<!-- Slide 1 -->
+						<div class="carousel-item active">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/perpustakaan.png" style="width:70%; height:300px !important;" alt="Perpustakaan">
+							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 2 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/simulation_center.png" style="width:70%; height:300px !important;" alt="Simulation Center">
+							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 3 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/auditorium.png" style="width:70%; height:300px !important;" alt="Auditorium">
+							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 4 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/fasilitas-asrama.png" style="width:70%; height:300px !important;" alt="Asrama">
+							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 5 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/ruang_kelas.png" style="width:70%; height:300px !important;" alt="Ruang Kelas">
+							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
+							</div>
+						</div>
+						</div>
+
+						<!-- Slide 6 -->
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+							<div class="col-12 text-center">
+							<img src="images/fasilitas/laboratorium.png" style="width:70%; height:300px !important;" alt="Laboratorium">
+							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
+							</div>
+						</div>
+					</div>	
 				</div>
-			  </div>
 			</div>
+
+			<!-- Controls (Previous and Next) -->
+			<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+			</div>
+
+
+			<h3 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h3>
 			
-			
-			<h4 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h4>
 			<center>
-			
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 					<?php
@@ -545,10 +596,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					?>
 			  </div>
 			</div>
-
 			</center>
 			
-			<h4 class="text-center text-bold mb-5 mt-5">Media Sosial</h4>
+			<h3 class="text-center text-bold mb-5 mt-5">Media Sosial</h3>
 			<div class="container mb-5">
 			
 			<ul class="nav nav-pills nav-fill mb-3 text-center row" id="pills-tab" role="tablist">
