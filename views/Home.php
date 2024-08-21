@@ -124,8 +124,8 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<div class="container">
 				<h4 class="judul">PUSAT PELATIHAN<br>SUMBER DAYA MANUSIA EKSPOR<br>DAN JASA PERDAGANGAN</h4>
 				<p class="subline">Mengembangkan UMKM Indonesia sejak 1990
-				
 				</p>
+				
 				<ul class="slider-button pl-0">
 				<li class="b-item mb-2">
 					<a class="nav-link custom-btn custom-border-btn btn inactive list-pelatihan" href="#" data-toggle="modal" data-target="#ListPelatihan">Jadwal Pelatihan</a>
