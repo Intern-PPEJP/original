@@ -20,22 +20,19 @@ $Pelatihanmutu = &$Page;
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
         <div class="col-md-12 p-0" style=" height: 400px">
-            <div style="background-image: url(images/pages/pelatihan-mutu.png); background-size: cover ; background-position: center;width: 90%;height: 90%; position: absolute;top:0">
+            <div style="background-image: url(images/pages/pelatihan-mutu.png); background-size: cover ; background-position: center;width: 100%;height: 90%; position: absolute;top:0">
             </div>
         </div>
     </div>
 </div>
 
 <div class="container">
-    <div class="row my-5 ">
-        <div class="col-md-12">
-            <div class="text-center" style="font-size: 1.3em;">
-              Dengan program pelatihan terpercaya, kami membekali Anda dengan pengetahuan tentang pengendalian kualitas, peningkatan proses, dan implementasi sistem manajemen mutu yang kuat. Kami juga fokus pada kepuasan pelanggan dan membantu Anda meningkatkan reputasi dan keunggulan bisnis Anda.
-            </div>
+    <div class="col-md-12">
+        <div class="text-center">
+            Dengan program pelatihan terpercaya, kami membekali Anda dengan pengetahuan tentang pengendalian kualitas, peningkatan proses, dan implementasi sistem manajemen mutu yang kuat. Kami juga fokus pada kepuasan pelanggan dan membantu Anda meningkatkan reputasi dan keunggulan bisnis Anda.
         </div>
     </div>
 </div>
-
 
 <style>
     .alur-daftar {
@@ -65,6 +62,18 @@ $Pelatihanmutu = &$Page;
         text-align: left;
         font-weight: 300;
     }
+    
+    p, table, div {
+    font-size: 16px;
+	}
+	
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 18px;
+	}
 </style>
 <div class="container-fluid p-0 mt-0" style="background-image: url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;display:none;">
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
@@ -141,7 +150,7 @@ $Pelatihanmutu = &$Page;
 	
 <section class="content-section mt-5">
 	<div class="container">
-		<h3 class="text-center text-bold mb-4">PELATIHAN MUTU TAHUN <?php echo date("Y"); ?></h3>
+		<h2 class="text-center text-bold mb-4">PELATIHAN MUTU TAHUN <?php echo date("Y"); ?></h2>
 		<div class="row mb-5">
 		
 		<?php
