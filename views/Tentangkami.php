@@ -6,6 +6,47 @@ namespace PHPMaker2021\ppejp_web;
 $Tentangkami = &$Page;
 ?>
 <?php echo myheader(); ?>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<style>
+	h1 h4 p ul li {
+        font-family: 'Poppins', sans-serif;
+    }
+	h4 {
+		letter-spacing: 0.5px;
+    }
+
+	p {
+		font-size : 16px;
+		line-height: 1.3; 
+		letter-spacing: 0.5px;
+	}
+	ul {
+		font-size : 16px;
+		line-height: 1.3; 
+		letter-spacing: 0.5px;
+	}
+	li {
+		font-size : 16px;
+		line-height: 1.3; 
+		letter-spacing: 0.5px;
+	}
+	p class="mt-2" {
+		margin-top : 2px;
+	}
+	.col-md-12{
+		font-size : 16px;
+		line-height: 1.3;
+		margin-top : 2px;
+		margin-bottom: 2px; 
+	}
+	
+</style>
 
 <div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
     <div class="container">
@@ -22,23 +63,44 @@ $Tentangkami = &$Page;
 	<iframe  style="width: 100%; height: 509px; border-radius: 0px;" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <br><br>
-<div class="container" style="text-align:justify;">
-<div class="row ">
-	<center><h4 class="text-bold">SAMBUTAN  KEPALA PPEJP</h4></center>
-	
-	<div class="col-md-12">
-		<div style="position:absolute;left:10px;top:670px;width:575px;background:#031A31;margin-left:2px;color:#fff;padding:10px;"><h3>SUGIH RAHMANSYAH, S.E., M.M.</h3>
-		<p style="line-height:1;font-size:17px;margin-bottom:0;">KEPALA PUSAT PELATIHAN SUMBER DAYA MANUSIA EKSPOR DAN JASA PERDAGANGAN</p></div>
-		<img src="images/pages/kepala-ppejp.png" style="width: 575px;height:750px;float: left !important;margin: 10px 35px 0 0;"></img>
+<div class="container" style="text-align: justify;">
+    <div class="row">
+	<h3 class="text-bold mb-3">SAMBUTAN KEPALA PPEJP</h3>
+        <div class="col-lg-6 col-12 mb-lg-0 mb-4" style="background: #031A31; color: #fff; padding: 10px;">>
+            <img src="images/pages/kepala-ppejp.png" class="img-fluid" style="width: 575px; height: 750px;" alt="Kepala PPEJP">
+			<div class="col-lg-5 col-12 m-auto">
+                <h3>SUGIH RAHMANSYAH, S.E., M.M.</h3>
+                <p style="line-height: 1; font-size: 17px; margin-bottom: 0;">
+                    KEPALA PUSAT PELATIHAN SUMBER DAYA MANUSIA EKSPOR DAN JASA PERDAGANGAN
+                </p>
+            </div>
+        </div>
 
-		<p class="mt-2">Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) adalah lembaga terkemuka yang beroperasi di bawah naungan Sekretariat Jenderal, Kementerian Perdagangan. Dengan fokus yang tajam, PPEJP bertugas melaksanakan pengembangan sumber daya manusia di bidang ekspor, mutu, personil metrologi legal, dan jasa perdagangan. Dalam upaya kami memajukan dunia usaha dan masyarakat, kami mempersiapkan individu untuk meraih kesuksesan di panggung internasional.</p><p>
-		
-		Di PPEJP, kami mempersembahkan program pelatihan yang dirancang khusus untuk mengasah keterampilan dan pengetahuan dalam ekspor, mutu, metrologi legal, dan jasa perdagangan. Kami memadukan keahlian praktis dengan pendekatan terkini untuk memastikan peserta kami siap menghadapi tantangan dalam dunia bisnis yang dinamis.</p><p>
-		
-		PPEJP adalah jembatan Anda menuju kesuksesan. Mari bergabung dengan kami dan tembuslah batas-batas kesuksesan dalam ekspor, mutu, metrologi, dan jasa perdagangan.</p>
+            <p class="mt-4">
+                Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) adalah lembaga terkemuka yang beroperasi di bawah naungan Sekretariat Jenderal, Kementerian Perdagangan. Dengan fokus yang tajam, PPEJP bertugas melaksanakan pengembangan sumber daya manusia di bidang ekspor, mutu, personil metrologi legal, dan jasa perdagangan. Dalam upaya kami memajukan dunia usaha dan masyarakat, kami mempersiapkan individu untuk meraih kesuksesan di panggung internasional.
+            </p>
+
+            <p>
+                Di PPEJP, kami mempersembahkan program pelatihan yang dirancang khusus untuk mengasah keterampilan dan pengetahuan dalam ekspor, mutu, metrologi legal, dan jasa perdagangan. Kami memadukan keahlian praktis dengan pendekatan terkini untuk memastikan peserta kami siap menghadapi tantangan dalam dunia bisnis yang dinamis.
+            </p>
+
+            <p>
+                PPEJP adalah jembatan Anda menuju kesuksesan. Mari bergabung dengan kami dan tembuslah batas-batas kesuksesan dalam ekspor, mutu, metrologi, dan jasa perdagangan.
+            </p>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<div class="row ">
+	<center><h4 class="text-bold">SEJARAH SINGKAT</h4></center>
+	<div class="col-md-12">
+		<p>Semenjak berdirinya pada tahun 1990, PPEI telah mengalami transformasi struktur organisasi, yang semula Eselon 2 di bawah Sekretariat Jenderal pada tahun 1990 hingga 1995 dengan nama Pusat Pelatihan Ekspor Indonesia (PPEI), kemudian pada tahun 1995 yakni saat Departemen Perdagangan digabung dengan Departemen Perindustrian, PPEI mengalami perubahan status menjadi Eselon 3 dibawah Pusat Pembinaan dan Pelatihan (PUSBINLAT) Deperindag dengan nama Balai Pendidikan dan Pelatihan Ekspor (PPEI) hingga tahun 2005.</p><p>
+Akhirnya pada tahun 2006 PPEI kembali mengalami perubahan status menjadi Eselon 2 dengan nama Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) di bawah Badan Pengembangan Ekspor Nasional Departemen Perdagangan. </p><p>
+Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) berubah nama menjadi Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP)  yang berada dibawah naungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP menyelenggarakan fungsi penyelenggaraan pelatihan SDM Ekspor, Pelatihan SDM Jasa Perdagangan, dan Export Coaching Program.  Transformasi status tersebut membawa pengaruh terhadap pelaksanaan tugasnya sebagai Unit Pelaksana Teknis yang melakukan pembinaan terhadap dunia usaha eksportir.</p>
 	</div>
 </div>
-<br><br>
+
 <div class="row ">
 	<center><h4 class="text-bold">SEJARAH SINGKAT</h4></center>
 	<div class="col-md-12">
@@ -49,9 +111,11 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 </div>
 <br><br>
 <div class="row ">
-	<center><h4 class="text-bold">FUNGSI PPEJP</h4></center>
-	<div class="col-md-12">
-		Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) menyelenggarakan fungsi:<ul>
+<center><h4 class="text-bold">FUNGSI PPEJP</h4></center>
+<div class="col-md-12">
+	Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) menyelenggarakan fungsi:
+<br>
+<ul>
 <li>Penyusunan rencana & program pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan</li>
 <li>Penyiapan koordinasi dan pelaksanaan pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan</li>
 <li>Penyiapan koordinasi dan pelaksanaan promosi dan kerja sama pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan</li>
@@ -185,7 +249,7 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 <script>
     document.title = "Tentang Kami";
 </script>
-
+</html>
 <?php echo myfooter(); ?>
 
 <?= GetDebugMessage() ?>
