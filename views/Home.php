@@ -436,7 +436,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 								<div class="card" style="padding:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
 									<img class="img-fluid" alt="100%x220" style="height:220px !important;border-radius:8px 8px 0 0 !important;" src="files/<?php echo $row["gambar"]; ?>">
 									<div class="card-body m-0 p-1">
-										<h3 class="card-titte" style="height:2.5em"><?php echo $row["judul_pelatihan"]; ?></h3>
+										<h3 class="card-titte" style="height:40px; font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></h3>
 										<table class="table p-0 m-0" style="font-size:.8em">
 											<tr>
 												<td width="50%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
