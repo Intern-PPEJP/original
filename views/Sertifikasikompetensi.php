@@ -7,6 +7,20 @@ $Sertifikasikompetensi = &$Page;
 ?>
 <?php echo myheader(); ?>
 
+<style>
+	p, table, div {
+    font-size: 16px;
+	}
+	
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 18px;
+	}
+</style>
+
 <div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
     <div class="container" style="xmargin-top:110px">
         <div class="row" style="xbackground-color: #031A31;">
@@ -29,7 +43,7 @@ $Sertifikasikompetensi = &$Page;
 <div class="container">
     <div class="row my-5 ">
         <div class="col-md-12">
-            <div class="text-justify" style="font-size: 1.3em;">
+            <div class="text-center">
               ...
             </div>
         </div>
@@ -40,7 +54,7 @@ $Sertifikasikompetensi = &$Page;
 
 <section class="content-section mt-5">
 	<div class="container">
-		<h3 class="text-center text-bold mb-4">SEFTIFIKASI KOMPETENSI TAHUN <?php echo date("Y"); ?></h3>
+		<h2 class="text-center text-bold mb-4">SEFTIFIKASI KOMPETENSI TAHUN <?php echo date("Y"); ?></h2>
 		<div class="row mb-5">
 		
 		<?php
