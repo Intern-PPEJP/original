@@ -97,15 +97,26 @@ Attribution required
 
 p, div {
     font-size: 18px;
-	}
+}
 	
 	h2{
 		font-size: 20px;
-	}
+}
 
 	h3{
 		font-size: 22px;
-	}
+}
+
+.zoom-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.zoom-in.show {
+    opacity: 1;
+    transform: scale(1);
+}
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -235,9 +246,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<div class="container-fluid">	
 				<div class="row cs-icons-menu">
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-ekspor" class="d-block">
-							<p class="icon-text text-center">PELATIHAN EKSPOR</p>
+							<p class="icon-text text-center zoom-in">PELATIHAN EKSPOR</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/icon-world.png" class="featured-block-image img-fluid " alt="">
 						</p>
 					</div>
@@ -246,9 +257,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-metrologi" class="d-block">
-							<p class="icon-text text-center">PELATIHAN METROLOGI</p>
+							<p class="icon-text text-center zoom-in">PELATIHAN METROLOGI</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/pelatihan-metrologi.png" class="featured-block-image img-fluid" alt="">
 						</p>
 					</div>
@@ -257,9 +268,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-mutu" class="d-block">
-							<p class="icon-text text-center">PELATIHAN MUTU</p>
+							<p class="icon-text text-center zoom-in">PELATIHAN MUTU</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/icon-checkup.png" class="featured-block-image img-fluid " alt="">
 						</p>
 					</div>
@@ -268,9 +279,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-jasa-perdagangan" class="d-block">
-							<p class="icon-text text-center">PELATIHAN JASA PERDAGANGAN</p>
+							<p class="icon-text text-center zoom-in">PELATIHAN JASA PERDAGANGAN</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/pelatihan-ekspor.png" class="featured-block-image img-fluid " alt="">
 						</p>
 					</div>
@@ -279,9 +290,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="export-coaching-program" class="d-block">
-							<p class="icon-text text-center">EXPORT COACHING PROGRAM</p>
+							<p class="icon-text text-center zoom-in">EXPORT COACHING PROGRAM</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/ecp.png" class="featured-block-image img-fluid" alt="">
 						</p>
 					</div>
@@ -290,9 +301,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="webinar" class="d-block">
-							<p class="icon-text text-center">WEBINAR</p>
+							<p class="icon-text text-center zoom-in">WEBINAR</p>
 					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p>
+						<p class="zoom-in">
 							<img src="images/icons/webinar.png" class="featured-block-image img-fluid" alt="">
 						</p>
 					</div>
@@ -300,10 +311,27 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</div>
 					</a>
 				</div>
-
 			</div>
 		</div>
 	</section>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function() {
+    	const elements = document.querySelectorAll('.zoom-in');
+
+    	function checkElements() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                element.classList.add('show');
+            }
+        });
+    }
+
+		window.addEventListener('scroll', checkElements);
+		checkElements(); // Check initially in case the elements are already in view
+	});
+	</script>
 
 	<section class="barcount-section">
     <div class="container">
@@ -382,7 +410,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<a class="btn btn-success mb-3 mr-1" href="#carouselProducts" role="button" data-slide="prev" style="position:absolute;left:12px;top:0;">
 						<i class="fa fa-arrow-left"></i>
 					</a>
-					<h4 class="mb-3 text-bold">Pelatihan Mendatang </h4>
+					<h3 class="mb-3 text-bold">Pelatihan Mendatang </h3>
 					<a class="btn btn-success mb-3 " href="#carouselProducts" role="button" data-slide="next" style="position:absolute;right:25px;top:0">
 						<i class="fa fa-arrow-right"></i>
 					</a>
@@ -460,7 +488,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	<section class="content-section">
 		<div class="container">
 			<div class="row">
-			<h4 class="text-center text-bold mb-4">Fasilitas</h4>
+			<h3 class="text-center text-bold mb-4">Fasilitas</h3>
 			
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
@@ -514,9 +542,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			</div>
 			
 			
-			<h4 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h4>
-			<center>
+			<h3 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h3>
 			
+			<center>
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 					<?php
@@ -554,10 +582,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					?>
 			  </div>
 			</div>
-
 			</center>
 			
-			<h4 class="text-center text-bold mb-5 mt-5">Media Sosial</h4>
+			<h3 class="text-center text-bold mb-5 mt-5">Media Sosial</h3>
 			<div class="container mb-5">
 			
 			<ul class="nav nav-pills nav-fill mb-3 text-center row" id="pills-tab" role="tablist">
