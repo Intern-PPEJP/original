@@ -16,7 +16,7 @@ $Lspppejp = &$Page;
 		font-size: 20px;
 	}
 
-	h4{
+	h3{
 		font-size: 18px;
 	}
 
@@ -103,9 +103,9 @@ $Lspppejp = &$Page;
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <h4 class="text-center">
+            <h3 class="text-center">
              Persyaratan Pendaftaran Peserta Sertifikasi :
-            </h4>
+            </h3>
 			<p>
 				<ol>
 					<li>LSP PPEJP menginformasikan kepada pemohon persyaratan sertifikasi sesuai skema sertifikasi jenis bukti, aturan bukti, proses sertifikasi, hak pemohon dan kewajiban pemohon, biaya sertifikasi dan kewajiban pemegang sertifikat kompetensi</li>
@@ -126,9 +126,9 @@ $Lspppejp = &$Page;
 				</ol>
 			</p>
 			
-            <h4 class="text-center mt-2 mb-2">
+            <h3 class="text-center mt-2 mb-2">
             4 (empat) ruang lingkup skema sertifikasi klaster :
-            </h4>
+            </h3>
 			<div class="row text-white text-center mb-2">
 			<div class="col-md-3 col-6">
 				<div class="card mr-1" style="background-color:#031A31;height:3.3em;">PERSIAPAN <br>EKSPOR</div>
@@ -155,7 +155,7 @@ $Lspppejp = &$Page;
 
 <div class="container-fluid text-white mb-4" style="background-color:#031A31;">
 	<div class="container py-3">
-		<h4>1. Skema Sertifikasi Persiapan Ekspor</h4>
+		<h3>1. Skema Sertifikasi Persiapan Ekspor</h3>
 	</div>
 </div>
 <div class="container mb-5">
@@ -252,7 +252,7 @@ $Lspppejp = &$Page;
 
 <div class="container-fluid text-white mb-4" style="background-color:#031A31;">
 	<div class="container py-3">
-		<h4>2. Skema Sertifikasi Pelaksanaan Ekspor</h4>
+		<h3>2. Skema Sertifikasi Pelaksanaan Ekspor</h3>
 	</div>
 </div>
 <div class="container mb-5">
@@ -348,7 +348,7 @@ $Lspppejp = &$Page;
 
 <div class="container-fluid text-white mb-4" style="background-color:#031A31;">
 	<div class="container py-3">
-		<h4>3. Skema Sertifikasi Persiapan Impor</h4>
+		<h3>3. Skema Sertifikasi Persiapan Impor</h3>
 	</div>
 </div>
 <div class="container mb-5">
@@ -420,7 +420,7 @@ $Lspppejp = &$Page;
 
 <div class="container-fluid text-white mb-4" style="background-color:#031A31;">
 	<div class="container py-3">
-		<h4>4. Skema Sertifikasi Pelaksanaan Impor</h4>
+		<h3>4. Skema Sertifikasi Pelaksanaan Impor</h3>
 	</div>
 </div>
 <div class="container mb-5">
