@@ -95,6 +95,17 @@ Attribution required
     transform: translateY(0);
 }
 
+p, div {
+    font-size: 18px;
+	}
+	
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 22px;
+	}
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -136,9 +147,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<div class="col-lg-12 col-12 p-0">
 				<div class="container">
 				<h4 class="judul">PUSAT PELATIHAN<br>SUMBER DAYA MANUSIA EKSPOR<br>DAN JASA PERDAGANGAN</h4>
-				<p class="subline">Mengembangkan UMKM Indonesia Sejak 1990
-				
-				</p>
+				<p class="subline" style="font-size: 30px;">Mengembangkan UMKM Indonesia Sejak 1990</p>
 				<ul class="slider-button pl-0">
 				<li class="b-item mb-2">
 					<a class="nav-link custom-btn custom-border-btn btn inactive list-pelatihan" href="#" data-toggle="modal" data-target="#ListPelatihan">Jadwal Pelatihan</a>
@@ -171,7 +180,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						$ikon = "icon-video.png";
 					}
 				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:22px;height:100%;"></span>
-					<div class="item_direction mb-3">
+					<div class="item_direction mb-4">
 						
 						<i class="fas fa-circle cikon"></i><a href="<?php echo $link; ?>" style="text-decoration:none;color:#fff;">
 						<table><tr><td><img src="images/icons/<?php echo $ikon; ?>"></img></td><td>
@@ -200,25 +209,25 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					  </div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>
 
 
 	<section class="profile-section">
-		<div class="container">
-			<div class="row profil-row1">
-			
-				<div class="col-lg-5 col-12 vid-profil mb-1">
-					<iframe width="100%" height="292" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		<div class="container text-center">
+			<div class="row justify-content-center">
+			<h3 class="mb-3 text-bold">Profil</h3>
+				<div class="col-lg-8 col-12 vid-profil mb-4">
+					<iframe width="90%" height="300" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
-				<div class="col-lg-7 col-12 text-description">
-					<h3 class="mb-3 text-bold" style="position:absolute;top:0;">Tentang Kami</h3>
-					<p style="text-align:justify;" class="mt-5">Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) merupakan lembaga yang berada di lingkungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP mempunyai tugas melaksanakan pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan untuk dunia usaha dan masyarakat.</p>
+				<div class="col-lg-10 col-12 text-description">
+	
+					<p style="text-align:center;">
+						Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) merupakan lembaga yang berada di lingkungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP mempunyai tugas melaksanakan pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan untuk dunia usaha dan masyarakat.
+					</p>
 				</div>
-				</div>
-				
+			</div>
 		</div>
 	</section>
 	
