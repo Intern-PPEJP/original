@@ -6,6 +6,7 @@ namespace PHPMaker2021\ppejp_web;
 $Home = &$Page;
 ?>
 <?php echo myheader(); ?>
+
 <style>
 /*
 
@@ -473,17 +474,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			</div>
 		</div>
 	</section>	
-	
-	
-
-
-	
-	
-	
-	
-	
-	
-	
 
 	<section class="content-section">
 		<div class="container">
