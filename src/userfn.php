@@ -239,6 +239,13 @@ function myheader(){
 		font-size: 16px;
 	}
 
+	.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
+}
+
 	@media screen and (max-width: 768px) { /* mobile view */
 		#fcari {
 			position: static;
@@ -302,7 +309,7 @@ if ($(window).width() < 992) {
 	</a>
 		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
-  </button>
+  		</button>
 		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 			<ul class="navbar-nav ms-auto mr-3">
 				<li class="nav-item">
@@ -364,17 +371,18 @@ if ($(window).width() < 992) {
 				</li>
 			</ul>
 		</div>
+		<form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
+			<div class="input-group p-2">
+				<input type="hidden" name="cmd" value="search">
+				<input type="hidden" name="t" value="caridata">
+				<input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width:80px">
+				<div class="input-group-append">
+					<button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
+				</div>
+			</div>
+		</form>
 </nav>
-<form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
-<div class="input-group p-2">
-  <input type="hidden" name="cmd" value="search">
-  <input type="hidden" name="t" value="caridata">
-  <input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width:80px">
-  <div class="input-group-append">
-    <button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
-  </div>
-</div>
-</form>
+
 <script>
 $(document).ready(function(){
     $('#cari').attr('disabled',true);
