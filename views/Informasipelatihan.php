@@ -89,7 +89,7 @@ $Informasipelatihan = &$Page;
     <div class="row"><h2 class="h1-responsive font-weight-bold text-center my-4">Hubungi Kami</h2>
 		<div class="col-md-6 col-12">
 			<section>
-				<p class="text-justify w-responsive mx-auto mb-3">Untuk seputar pertanyaan dan informasi silahkan menghubungi kami dengan mengisi form dibawah ini</p>
+				<p class="text-justify w-responsive mx-auto mb-3">Untuk seputar pertanyaan dan informasi silahkan menghubungi kami dengan mengisi form di bawah ini</p>
 
 				<div class="row">
 					<div class="col-md-12 mb-md-0 mb-5">
