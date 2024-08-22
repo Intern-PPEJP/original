@@ -17,6 +17,19 @@ $Pelatihan = &$Page;
     </div>
 </div>
 
+<style>
+    p, table, div {
+    font-size: 16px;
+	}
+	
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 18px;
+	}
+</style>
 
 <div class="container-fluid">
 	<div id="ppejp-slide" class="carousel slide row" data-ride="carousel" data-interval="3000" data-pause="false">
@@ -39,7 +52,7 @@ $Pelatihan = &$Page;
 <div class="container">
     <div class="row my-5 ">
         <div class="col-md-12">
-            <div class="text-justify" style="font-size: 1.3em;">
+            <div class="text-justify">
                 Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan adalah mitra terpercaya untuk mengembangkan pengetahuan dan keterampilan di bidang ekspor, metrologi, mutu, dan jasa perdagangan. Program pelatihan kami yang terkini dan instruktur berpengalaman akan mempersiapkan Anda untuk menghadapi tantangan global dalam dunia bisnis, serta meningkatkan keunggulan produk, efisiensi operasional, dan kemampuan dalam bertransaksi di pasar internasional. Bergabunglah dengan kami sekarang untuk mengambil langkah selanjutnya dalam karier dan keberhasilan bisnis Anda 
             </div>
         </div>
@@ -51,53 +64,53 @@ $Pelatihan = &$Page;
     <div class="container py-5">
         <div class="row">
             <div class="col-md-12 p-0 text-center text-white">
-                <h3 class="mt-3">MENGAPA MEMILIH KAMI</h3>
+                <h2 class="mt-3"><b> MENGAPA MEMILIH KAMI</b></h2>
             </div>
         </div>
         <div class="row mb-5">
             <div class="col-md-4 text-center text-white">
                 <img src="images/icons/wallet.png" style="height: 150px;">
-                <h6>Biaya Terjangkau</h6>
-                <div style="font-size: .7em;">Pelatihan Di PPEJP memiliki harga biaya kepesertaan yang relatif lebih rendah dibanding institusi pelatihan sejenis. </div>
+                <h3><b>Biaya Terjangkau</b></h3>
+                <div>Pelatihan Di PPEJP memiliki harga biaya kepesertaan yang relatif lebih rendah dibanding institusi pelatihan sejenis. </div>
             </div>
             <div class="col-md-4 text-center text-white">
                 <img src="images/icons/shield.png" style="height: 150px;">
-                <h6>Terpercaya</h6>
-                <div style="font-size: .7em;">Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan merupakan institusi pelatihan resmi yang berada di bawah Kementerian Perdagangan.</div>
+                <h3>Terpercaya</h3>
+                <div>Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan merupakan institusi pelatihan resmi yang berada di bawah Kementerian Perdagangan.</div>
             </div>
             <div class="col-md-4 text-center text-white">
                 <img src="images/icons/certificate.png" style="height: 150px;">
-                <h6>Sertifikat</h6>
-                <div style="font-size: .7em;">Peserta yang telah selesai melaksanakan pelatihan akan mendapatkan sertifikat</div>
+                <h3>Sertifikat</h3>
+                <div>Peserta yang telah selesai melaksanakan pelatihan akan mendapatkan sertifikat</div>
             </div>
         </div>
 		
 		
         <div class="row mt-5">
             <div class="col-md-12 p-0 text-center text-white">
-                <h3 class="mt-3">METODE PELATIHAN</h3>
+                <h2 class="mt-3"><b>METODE PELATIHAN</b></h2>
             </div>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-2 text-center text-white">
                 <img src="images/icons/icon_speakerphone_.png" style="height: 100px;">
-                <h6>Ceramah</h6>
+                <p>Ceramah</p>
             </div>
             <div class="col-md-2 text-center text-white">
                 <img src="images/icons/icon_messages_.png" style="height: 100px;">
-                <h6>Diskusi</h6>
+                <p>Diskusi</p>
             </div>
             <div class="col-md-2 text-center text-white">
                 <img src="images/icons/icon_users group_.png" style="height: 100px;">
-                <h6>Studi Kasus</h6>
+                <p>Studi Kasus</p>
             </div>
             <div class="col-md-2 text-center text-white">
                 <img src="images/icons/icon_run_.png" style="height: 100px;">
-                <h6>Role Play</h6>
+                <p>Role Play</p>
             </div>
             <div class="col-md-2 text-center text-white">
                 <img src="images/icons/icon_file text_.png" style="height: 100px;">
-                <h6>Latihan</h6>
+                <p>Latihan</p>
             </div>
         </div>
     </div>
@@ -130,8 +143,8 @@ $Pelatihan = &$Page;
             
         </div>
         <div class="col-md-6 " style="display: flex; flex-direction: column; justify-content: center;">
-            <h4 style="font-weight: 600;">PELATIHAN EKSPOR</h4>
-            <div style="font-size: .8em;" class="mb-3">PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global.
+            <h3 style="font-weight: bold;">PELATIHAN EKSPOR</h3>
+            <div class="mb-3">PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global.
 Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.
             </div>
             <div class='mb-4' style="display: flex; justify-content: space-between; ">
@@ -142,8 +155,8 @@ Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperluka
         <div class="col-md-6 d-right" style="z-index: 2; background-image: url(images/pages/pel-metr.png); height: 350px; background-size: cover; background-position: center;">
         </div>
         <div class="col-md-6 d-left" style="display: flex; flex-direction: column; justify-content: center;z-index: 3;">
-            <h4 style="font-weight: 600;">PELATIHAN METROLOGI</h4>
-            <div style="font-size: .8em;" class="mb-3">PPEJP melalui Badan Diklat Mutu Metrologi dan Jasa Perdagangan menawarkan program pelatihan yang dirancang secara khusus untuk memperluas pemahaman Anda tentang prinsip-prinsip metrologi, peraturan dan standar pengukuran, serta teknik dan alat yang digunakan dalam proses pengukuran. Melalui pelatihan ini, Anda akan belajar bagaimana merancang, melaksanakan, dan memvalidasi pengukuran dengan tingkat akurasi yang tinggi.
+            <h3 style="font-weight: bold;">PELATIHAN METROLOGI</h3>
+            <div class="mb-3">PPEJP melalui Badan Diklat Mutu Metrologi dan Jasa Perdagangan menawarkan program pelatihan yang dirancang secara khusus untuk memperluas pemahaman Anda tentang prinsip-prinsip metrologi, peraturan dan standar pengukuran, serta teknik dan alat yang digunakan dalam proses pengukuran. Melalui pelatihan ini, Anda akan belajar bagaimana merancang, melaksanakan, dan memvalidasi pengukuran dengan tingkat akurasi yang tinggi.
             </div> <div class='mb-4' style="display: flex; justify-content: space-between; ">
                 <a class="btn btn-success" href="pelatihan-metrologi">Info selengkapnya</a>
             </div>
@@ -152,8 +165,8 @@ Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperluka
         <div class="col-md-6" style="background-image: url(images/pages/pel-mutu.png); height: 350px; background-size: cover; background-position: center;">
         </div>
         <div class="col-md-6" style="display: flex; flex-direction: column; justify-content: center;">
-            <h4 style="font-weight: 600;">PELATIHAN MUTU</h4>
-            <div style="font-size: .8em;" class="mb-3">PPEJP melalui Balai Pelatihan Metrologi, Mutu, dan Jasa Perdagangan menawarkan program pelatihan praktis tentang standar mutu, analisis data, pengendalian proses, perbaikan berkelanjutan, audit mutu, dan sertifikasi. Bergabunglah dengan kami untuk mencapai keunggulan mutu dan kepuasan pelanggan yang lebih baik.
+            <h3 style="font-weight: bold;">PELATIHAN MUTU</h3>
+            <div class="mb-3">PPEJP melalui Balai Pelatihan Metrologi, Mutu, dan Jasa Perdagangan menawarkan program pelatihan praktis tentang standar mutu, analisis data, pengendalian proses, perbaikan berkelanjutan, audit mutu, dan sertifikasi. Bergabunglah dengan kami untuk mencapai keunggulan mutu dan kepuasan pelanggan yang lebih baik.
             </div>
             <div class='mb-4' style="display: flex; justify-content: space-between; ">
                 <a class="btn btn-success" href="pelatihan-mutu">Info selengkapnya</a>
@@ -163,8 +176,8 @@ Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperluka
         <div class="col-md-6 d-right" style="z-index: 2; background-image: url(images/pages/pel-jasa-perd.png); height: 350px; background-size: cover; background-position: center;">
         </div>
         <div class="col-md-6 d-left" style="display: flex; flex-direction: column; justify-content: center;z-index: 3;">
-            <h4 style="font-weight: 600;">PELATIHAN JASA PERDAGANGAN</h4>
-            <div style="font-size: .8em;" class="mb-3">PPEJP melalui Badan Diklat Mutu Metrologi dan Jasa Perdagangan menyediakan program pelatihan untuk meningkatkan kompetensi dalam industri jasa perdagangan. Pelatihan kami mencakup strategi pemasaran, manajemen risiko, persyaratan peraturan internasional, dan keterampilan praktis seperti negosiasi dan layanan pelanggan. Bergabunglah dengan kami untuk mengembangkan keterampilan Anda dalam perdagangan jasa dan meraih kesuksesan di pasar global.
+            <h3 style="font-weight: bold;">PELATIHAN JASA PERDAGANGAN</h3>
+            <div class="mb-3">PPEJP melalui Badan Diklat Mutu Metrologi dan Jasa Perdagangan menyediakan program pelatihan untuk meningkatkan kompetensi dalam industri jasa perdagangan. Pelatihan kami mencakup strategi pemasaran, manajemen risiko, persyaratan peraturan internasional, dan keterampilan praktis seperti negosiasi dan layanan pelanggan. Bergabunglah dengan kami untuk mengembangkan keterampilan Anda dalam perdagangan jasa dan meraih kesuksesan di pasar global.
 
             </div> <div class='mb-4' style="display: flex; justify-content: space-between; ">
                 <a class="btn btn-success" href="pelatihan-jasa-perdagangan">Info selengkapnya</a>
