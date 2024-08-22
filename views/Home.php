@@ -482,7 +482,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/perpustakaan.png" style="width:70%; height:350px !important;" alt="Perpustakaan">
+							<img src="images/fasilitas/perpustakaan.png" style="width:60%; height:350px !important;" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
 						</div>
@@ -492,7 +492,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/simulation_center.png" style="width:70%; height:300px !important;" alt="Simulation Center">
+							<img src="images/fasilitas/simulation_center.png" style="width:60%; height:350px !important;" alt="Simulation Center">
 							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
 							</div>
 						</div>
@@ -502,7 +502,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/auditorium.png" style="width:70%; height:300px !important;" alt="Auditorium">
+							<img src="images/fasilitas/auditorium.png" style="width:60%; height:350px !important;" alt="Auditorium">
 							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
 							</div>
 						</div>
@@ -512,7 +512,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/fasilitas-asrama.png" style="width:70%; height:300px !important;" alt="Asrama">
+							<img src="images/fasilitas/fasilitas-asrama.png" style="width:60%; height:350px !important;" alt="Asrama">
 							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
 							</div>
 						</div>
@@ -522,7 +522,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/ruang_kelas.png" style="width:70%; height:300px !important;" alt="Ruang Kelas">
+							<img src="images/fasilitas/ruang_kelas.png" style="width:60%; height:350px !important;" alt="Ruang Kelas">
 							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
 							</div>
 						</div>
@@ -532,7 +532,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/laboratorium.png" style="width:70%; height:300px !important;" alt="Laboratorium">
+							<img src="images/fasilitas/laboratorium.png" style="width:60%; height:350px !important;" alt="Laboratorium">
 							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
 							</div>
 						</div>
