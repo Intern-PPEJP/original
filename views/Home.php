@@ -7,6 +7,14 @@ $Home = &$Page;
 ?>
 <?php echo myheader(); ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+</head>
+<body> 
 <style>
 /*
 
@@ -118,6 +126,7 @@ p, div {
     opacity: 1;
     transform: scale(1);
 }
+
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -231,7 +240,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			<div class="row justify-content-center">
 			<h3 class="mb-3 text-bold">Profil</h3>
 				<div class="col-lg-8 col-12 vid-profil mb-4">
-					<iframe width="90%" height="300" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<iframe width="100%" height="320" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
 				<div class="col-lg-10 col-12 text-description">
 	
@@ -555,7 +564,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
-			</div>
+		</div>
 	</section>
 
 	<section class="content-section">
@@ -792,3 +801,5 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	<?php } ?>
 
 <?= GetDebugMessage() ?>
+</body>
+</html>
