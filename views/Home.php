@@ -620,7 +620,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					
 						<div class="tab-pane fade show active" id="pills-instagram" role="tabpanel" aria-labelledby="pills-instagram-tab">
 							<!-- Instagram Embed Script -->
-							<script src="https://cdn2.woxo.tech/a.js#66c5a0ac34674ed437f7b09e" data-use-service-core defer></script>
+							<script src="https://cdn2.woxo.tech/a.js#66c5a0ac34674ed437f7b09e" async data-usrc></script>
 							<div class="elfsight-app-c0ba69ff-8b36-40f8-8eb3-758a5d633c90"></div>
 						</div>
 						<div class="tab-pane fade" id="pills-tiktok" role="tabpanel" aria-labelledby="pills-tiktok-tab">
@@ -632,6 +632,11 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 							<!-- YouTube Embed Script -->
 							<div data-mc-src="3662baff-3223-406a-afac-c6af840677d1#youtube"></div>
 							<script src="https://cdn2.woxo.tech/a.js#656f9f772d45de716bdbffc3" async data-usrc></script>
+						</div>
+						<div class="tab-pane fade" id="pills-facebook" role="tabpanel" aria-labelledby="pills-facebook-tab">
+							<!-- Facebook Embed Script -->
+							<script src="https://cdn2.woxo.tech/a.js#66c5a0ac34674ed437f7b09e" async data-usrc></script>
+							<div data-mc-src="c02aab12-d0ef-4899-8393-dc7b26758007#null"></div>
 						</div>
 					</div>
 			</script>
