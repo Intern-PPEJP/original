@@ -36,7 +36,6 @@ $Pelatihanmetrologi = &$Page;
     </div>
 </div>
 
-
 <style>
     .alur-daftar {
         margin-top:0 !important;
@@ -78,6 +77,7 @@ $Pelatihanmetrologi = &$Page;
 		font-size: 18px;
 	}
 </style>
+
 <div class="container-fluid p-0 mt-0" style="background-image: url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;display:none;">
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
     <div class="container py-3">
@@ -85,7 +85,6 @@ $Pelatihanmetrologi = &$Page;
 			<h3 class="mt-3">Cara Daftar Pelatihan</h3>
 		</div>
         <div class="row mt-5 alur-daftar justify-content-center">
-			
             <div class="col-md-2 p-0 m-0 text-center text-white mt-5">
                 <div class="step" style="height:67px;">Sign in</div>
                 <div class="step">1</div>
@@ -97,6 +96,7 @@ $Pelatihanmetrologi = &$Page;
                     Silahkan masuk ke akun PPEJP yang telah ada. Jika belum punya, maka calon peserta diharuskan membuat akun terlebih dahulu
                 </div>
             </div>
+
             <div class="col-md-2 p-0 m-0 text-center text-white mt-5">
                 <div class="step" style="height:67px;">Pilih Pelatihan</div>
                 <div class="step">2</div>
@@ -108,6 +108,7 @@ $Pelatihanmetrologi = &$Page;
                    Pilih pelatihan yang ingin diikuti di Website. Pilih tanggal pelaksanaan yang sesuai dan jumlah peserta yang akan mengikutinya
                 </div>
             </div>
+            
             <div class="col-md-2 p-0 m-0 text-center text-white mt-5">
                 <div class="step" style="height:67px;">Pembayaran</div>
                 <div class="step">3</div>
@@ -148,8 +149,6 @@ $Pelatihanmetrologi = &$Page;
     </div>
 </div>
 
-
-
 <section class="content-section mt-5">
 	<div class="container">
 		<h2 class="text-center text-bold mb-4">PELATIHAN METROLOGI TAHUN <?php echo date("Y"); ?></h2>
@@ -167,29 +166,27 @@ $Pelatihanmetrologi = &$Page;
 			<div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
 			  <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
 			  <div class="card-title m-2">
-			  <p style="font-size: 18px; font-weight: bold; justify-content: center"> <?php echo $row["judul_pelatihan"]; ?> </p>
+			  <p style="height:40px; font-size: 18px; font-weight: bold;"> <?php echo $row["judul_pelatihan"]; ?> </p>
 				<table class="table">
-					<tr>
-						<td><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
+					<tr> 
+						<td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
 						<td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
 					</tr>
 				</table>
-				
-							<a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
+                <a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
 			  </div>
 			</div>
 			</div>
-		<?php	
-			$jumlahpelatihan++;
-				}
-			if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>'; }
-		?>
+            <?php	
+                $jumlahpelatihan++;
+                    }
+                if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>'; }
+            ?>
 		</div>
 	</div>
 </section>
 
 <div class="mb-5">&nbsp;</div>
-
 
 <script>
     document.title = "Pelatihan Metrologi"
@@ -197,6 +194,5 @@ $Pelatihanmetrologi = &$Page;
 	
 </div>
 <?php echo myfooter(); ?>
-
 
 <?= GetDebugMessage() ?>
