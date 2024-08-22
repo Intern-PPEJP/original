@@ -54,7 +54,7 @@ $Tentangbpmjp = &$Page;
 		</div>
     </div>
 	<div class="row ">
-		<center><h4 class="text-bold mb-4 mt-5">SEJARAH SINGKAT</h4></center>
+		<center><h4 class="text-bold mb-4 t-5">SEJARAH SINGKAT</h4></center>
 		<div class="col-md-12">
 			<p>Peran SDM (Sumber Daya Manusia) dalam suatu perusahaan merupakan pilar utama yang mendukung pertumbuhan dan kesuksesan perusahaan kecil dan menengah. Sebagai tulang punggung operasional, SDM berkontribusi secara langsung pada efisiensi proses, pelayanan pelanggan, dan inovasi produk. </p>
 			
