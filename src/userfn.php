@@ -224,24 +224,59 @@ function myheader(){
 <link href="<?= GetUrl('dirku/cssku/cscs.css') ?>" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
-body,.h1,.h2,.h3,.h4,.h5,.h6,body,h1,h2,h3,h4,h5,h6,p { font-family: 'Poppins', sans-serif !important; }
-.main-header #ew-navbar .nav-item { padding: 10px; }
-.content-header { background: #031A31; margin-bottom: 15px; } .content-header h1 { color: #ffffff !important }
-button.close span { font-size: 25px; background: #ff1800; border-radius: 10px; padding-right: 10px; padding-left: 10px; }
-#fcari {
-	position: absolute;
-	z-index: 99;
-	width: 200px !important;
-	left: 194px;
-	top: 10px;
-}
-@media screen and (max-width: 768px) { /* mobile view */
+	body,.h1,.h2,.h3,.h4,.h5,.h6,body,h1,h2,h3,h4,h5,h6,p { font-family: 'Poppins', sans-serif !important; }
+	.main-header #ew-navbar .nav-item { padding: 10px; }
+	.content-header { background: #031A31; margin-bottom: 15px; } .content-header h1 { color: #ffffff !important }
+	button.close span { font-size: 25px; background: #ff1800; border-radius: 10px; padding-right: 10px; padding-left: 10px; }
 	#fcari {
-		position: static;
-		width:100% !important;
+		position: absolute;
+		z-index: 99;
+		width: 200px !important;
+		left: 194px;
+		top: 10px;
+		flex-grow: 1; /* Agar kotak pencarian mengambil ruang yang tersisa */
+		margin-left: 20px; /* Jarak antara logo dan kotak pencarian */
+		font-size: 16px;
 	}
-}
+
+	@media screen and (max-width: 768px) { /* mobile view */
+		#fcari {
+			position: static;
+			width:100% !important;
+			margin-left: 0; /* Reset margin pada tampilan mobile */
+		}
+		
+		.header {
+			flex-direction: column;
+			align-items: flex-start; /* Agar logo dan kotak pencarian berada di atas-bawah */
+    }
+	}
+	
+	.header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between; /* Agar logo dan kotak pencarian berada di ujung yang berlawanan */
+		padding: 10px;
+	}
+
+    p, table, div, ul, li {
+    font-size: 16px;
+	}
+	
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 18px;
+	}
+
+	.logo {
+    	margin-left: 20px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
+		height: auto;
+	}
 </style>
+
 <script>
 // Prevent closing from click inside dropdown
 $(document).on('click', '.dropdown-menu', function (e) {
@@ -325,7 +360,7 @@ if ($(window).width() < 992) {
 				</li>-->
 				<?php } ?>
 				<li class="nav-item ms-3">
-					<a class="nav-link custom-btn custom-border-btn btn" href="<?= GetUrl('formpendaftaran') ?>">Daftar Pelatihan</a>
+					<a class="nav-link custom-btn custom-border-btn btn" href="<?= GetUrl('formpendaftaran') ?>"><p>Daftar Pelatihan</p></a>
 				</li>
 			</ul>
 		</div>
