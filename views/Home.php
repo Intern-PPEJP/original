@@ -403,7 +403,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
 </script>
 
-	
 	<section class="pt-5 pb-2">
 		<div class="container">
 			<div class="row">
@@ -416,8 +415,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<i class="fa fa-arrow-right"></i>
 					</a>
 				</div>
-				
-
 
 				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="9000">
 					<div class="carousel-inner" role="listbox">
@@ -459,7 +456,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 										</table>
 										<div class="card-footer"><a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-lg btn-block">Lihat Detail</a></div>
 									</div>
-
 								</div>
 							</div>
 							<?php
@@ -554,10 +550,11 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<span class="sr-only">Next</span>
 			</a>
 			</div>
+	</section>
 
-
-			<h3 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h3>
-			
+	<section class="content-section">
+	<div class="container">
+		<h3 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h3>
 			<center>
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
@@ -597,7 +594,10 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			  </div>
 			</div>
 			</center>
-			
+	</section>
+
+	<section class="content-section">
+		<div class="container">		
 			<h3 class="text-center text-bold mb-5 mt-5">Media Sosial</h3>
 			<div class="container mb-5">
 			
@@ -606,7 +606,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link active" id="pills-instagram-tab" data-toggle="pill" href="#pills-instagram" role="tab" aria-controls="pills-instagram" aria-selected="true"><i class="fab fa-instagram"></i> INSTAGRAM</a>
 						</li>
 						<li class="nav-item col-md-3 col-12">
-						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-tiktok-tab" data-toggle="pill" href="#pills-tiktok" role="tab" aria-controls="pills-tiktok" aria-selected="false">    <i class="fab fa-tiktok"></i> TIKTOK</a>
+						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-tiktok-tab" data-toggle="pill" href="#pills-tiktok" role="tab" aria-controls="pills-tiktok" aria-selected="false"><i class="fab fa-tiktok"></i> TIKTOK</a>
 						</li>
 						<li class="nav-item col-md-3 col-12">
 						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-youtube-tab" data-toggle="pill" href="#pills-youtube" role="tab" aria-controls="pills-youtube" aria-selected="true"><i class="fab fa-youtube"></i> YOUTUBE</a>
@@ -616,21 +616,29 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						</li>
                     </ul>
 					
-			<div class="tab-content mb-5" style="z-index:1;">
-				<div class="tab-pane fade show active" id="pills-instagram" role="tabpanel" aria-labelledby="pills-instagram-tab">
-					<!--<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-					<div class="elfsight-app-c0ba69ff-8b36-40f8-8eb3-758a5d633c90"></div>-->
-				</div>
-				<div class="tab-pane fade" id="pills-tiktok" role="tabpanel" aria-labelledby="pills-tiktok-tab">
-					<!--<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-					<div class="elfsight-app-91337aaf-cefd-4752-80dc-88a335265f76" data-elfsight-app-lazy></div>-->
-				</div>
-				<div class="tab-pane fade" id="pills-youtube" role="tabpanel" aria-labelledby="pills-youtube-tab">
-					<div data-mc-src="3662baff-3223-406a-afac-c6af840677d1#youtube"></div>
-					<script src="https://cdn2.woxo.tech/a.js#656f9f772d45de716bdbffc3" async data-usrc> </script>
-				</div>
-			</div>
-			
+					<div class="tab-content mb-5" style="z-index:1;">
+					
+						<div class="tab-pane fade show active" id="pills-instagram" role="tabpanel" aria-labelledby="pills-instagram-tab">
+							<!-- Instagram Embed Script -->
+							<script src="https://cdn2.woxo.tech/a.js#66c5a0ac34674ed437f7b09e" async data-usrc></script>
+							<div class="elfsight-app-c0ba69ff-8b36-40f8-8eb3-758a5d633c90"></div>
+						</div>
+						<div class="tab-pane fade" id="pills-tiktok" role="tabpanel" aria-labelledby="pills-tiktok-tab">
+							<!-- TikTok Embed Script -->
+							<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+							<div class="elfsight-app-91337aaf-cefd-4752-80dc-88a335265f76"></div>
+						</div>
+						<div class="tab-pane fade" id="pills-youtube" role="tabpanel" aria-labelledby="pills-youtube-tab">
+							<!-- YouTube Embed Script -->
+							<div data-mc-src="3662baff-3223-406a-afac-c6af840677d1#youtube"></div>
+							<script src="https://cdn2.woxo.tech/a.js#656f9f772d45de716bdbffc3" async data-usrc></script>
+						</div>
+						<div class="tab-pane fade" id="pills-facebook" role="tabpanel" aria-labelledby="pills-facebook-tab">
+							<!-- Facebook Embed Script -->
+							<script src="https://cdn2.woxo.tech/a.js#66c5a0ac34674ed437f7b09e" async data-usrc></script>
+							<div data-mc-src="c02aab12-d0ef-4899-8393-dc7b26758007#null"></div>
+						</div>
+					</div>
 			</script>
 		</div>
 	</section>
