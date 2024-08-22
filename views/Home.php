@@ -482,7 +482,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/perpustakaan.png" style="width:70%; height:300px !important;" alt="Perpustakaan">
+							<img src="images/fasilitas/perpustakaan.png" style="width:70%; height:350px !important;" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
 						</div>
@@ -539,6 +539,12 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</div>	
 				</div>
 			</div>
+			
+			<!-- jQuery, Popper.js, and Bootstrap JS -->
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 			<!-- Controls (Previous and Next) -->
 			<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
