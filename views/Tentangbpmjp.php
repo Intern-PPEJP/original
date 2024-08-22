@@ -6,6 +6,7 @@ namespace PHPMaker2021\ppejp_web;
 $Tentangbpmjp = &$Page;
 ?>
 <?php echo myheader(); ?>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
 <div class="container-fluid " style="background-color: #3A8F53; padding:20px 0px;">
     <div class="container">
@@ -16,7 +17,17 @@ $Tentangbpmjp = &$Page;
         </div>
     </div>
 </div>
-
+<style>
+	
+	p{
+		font-family: Poppins;
+		font-size:16px;
+		line-height: 1.5;
+	}
+	h3{
+		font-weight:600px;
+	}
+</style>
 
 <div class="container-fluid" style="padding-left:0;padding-right:0;">
 	<iframe  style="width: 100%; height: 509px; border-radius: 0px;" src="https://www.youtube.com/embed/uwYw0NQ1WTA?si=zQOWDUuill_NEdhd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -25,13 +36,12 @@ $Tentangbpmjp = &$Page;
 <div class="container text-justify mt-5">
     <div class="row slim">
 	<center><h4 class="text-bold mb-3">SAMBUTAN  KEPALA BPMJP</h4></center>
-	
 		<div class="col-md-12">
-			<div style="position:absolute;left:10px;top:670px;width:575px;background:#031A31;margin-left:2px;color:#fff;padding:10px;"><h3>SUCI INGGRID DANIATI, S.Si., M.Si.</h3>
+			<div style="position:absolute;left:10px;top:550px;width:450px;background:#031A31;font-size:20px; margin-left:2px;color:#fff;padding:10px" h3>SUCI INGGRID DANIATI, S.Si., M.Si.</h3>
 			<p style="line-height:1;font-size:17px;margin-bottom:0;">KEPALA BALAI PELATIHAN SUMBER DAYA MANUSIA METROLOGI, MUTU, DAN JASA PERDAGANGAN</p></div>
-			<img src="images/pages/kepala-bpmjp.png" style="width: 575px;height:750px;float: left !important;margin: 10px 15px 0 0;"></img>
-
-			<p>Perdagangan merupakan salah satu sektor penggerak pertumbuhan dan daya saing ekonomi untuk kesejahteraan masyarakat. Metrologi, mutu dan jasa perdagangan merupakan bidang yang tidak dapat dipisahkan dari kegiatan perdagangan pada masyarakat dan dunia usaha.</p>
+			<img src="images/pages/kepala-bpmjp.png" style="width: 450px;height:550px;float: left !important;margin: 10px 15px 80px 0;"></img>
+		
+			<p style="margin-top:5px;">Perdagangan merupakan salah satu sektor penggerak pertumbuhan dan daya saing ekonomi untuk kesejahteraan masyarakat. Metrologi, mutu dan jasa perdagangan merupakan bidang yang tidak dapat dipisahkan dari kegiatan perdagangan pada masyarakat dan dunia usaha.</p>
 			
 			<p>Sebagai gambaran di bidang metrologi, pada tahun 2021 terdapat 16.175 pasar tradisional yang di dalamnya terdapat banyak alat ukur, alat takar, alat timbang dan perlengkapannya (UTTP) yang harus dicek kesesuaian pengukurannya oleh Juru Timbang. Terdapat 6.729 stasiun pengisian bahan bakar umum (SPBU) yang takarannya harus dicek berkala oleh Juru Takar, serta pemastian akan pelabelan dan kuanta produk makanan/minuman oleh Pelaku Usaha dimana industri ini menjadi kontributor terbesar produk domestik bruto (PDB) yakni mencapai Rp302,28 triliun (34,44%). </p>
 			
