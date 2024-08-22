@@ -482,7 +482,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/perpustakaan.png" style="width:70%; height:300px !important;" alt="Perpustakaan">
+							<img src="images/fasilitas/perpustakaan.png" style="width:70%; height:350px !important;" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
 						</div>
@@ -539,6 +539,12 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</div>	
 				</div>
 			</div>
+			
+			<!-- jQuery, Popper.js, and Bootstrap JS -->
+			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
 			<!-- Controls (Previous and Next) -->
 			<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
@@ -612,7 +618,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-youtube-tab" data-toggle="pill" href="#pills-youtube" role="tab" aria-controls="pills-youtube" aria-selected="true"><i class="fab fa-youtube"></i> YOUTUBE</a>
 						</li>
 						<li class="nav-item col-md-3 col-12">
-						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-facebook-tab" data-toggle="pill" href="#pills-facebook" role="tab" aria-controls="pills-facebook" aria-selected="true"><i class="fab fa-facebook"></i> FACEBOOK</a>
+						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-facebook-tab" href="https://www.facebook.com/PPEJP.Kemendag/" target="_blank" role="tab" aria-controls="pills-facebook" aria-selected="false"><i class="fab fa-facebook"></i> FACEBOOK</a>
 						</li>
                     </ul>
 					
@@ -632,11 +638,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 							<!-- YouTube Embed Script -->
 							<div data-mc-src="3662baff-3223-406a-afac-c6af840677d1#youtube"></div>
 							<script src="https://cdn2.woxo.tech/a.js#656f9f772d45de716bdbffc3" async data-usrc></script>
-						</div>
-						<div class="tab-pane fade" id="pills-facebook" role="tabpanel" aria-labelledby="pills-facebook-tab">
-							<!-- Facebook Embed Script -->
-							<script src="https://cdn2.woxo.tech/a.js#66c5a0ac34674ed437f7b09e" async data-usrc></script>
-							<div data-mc-src="c02aab12-d0ef-4899-8393-dc7b26758007#null"></div>
 						</div>
 					</div>
 			</script>
