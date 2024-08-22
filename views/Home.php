@@ -7,6 +7,14 @@ $Home = &$Page;
 ?>
 <?php echo myheader(); ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+</head>
+<body> 
 <style>
 /*
 
@@ -118,6 +126,7 @@ p, div {
     opacity: 1;
     transform: scale(1);
 }
+
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -231,7 +240,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			<div class="row justify-content-center">
 			<h3 class="mb-3 text-bold">Profil</h3>
 				<div class="col-lg-8 col-12 vid-profil mb-4">
-					<iframe width="90%" height="300" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<iframe width="100%" height="320" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
 				<div class="col-lg-10 col-12 text-description">
 	
@@ -482,7 +491,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/perpustakaan.png" style="width:70%; height:350px !important;" alt="Perpustakaan">
+							<img src="images/fasilitas/perpustakaan.png" style="width:60%; height:350px !important;" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
 						</div>
@@ -492,7 +501,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/simulation_center.png" style="width:70%; height:300px !important;" alt="Simulation Center">
+							<img src="images/fasilitas/simulation_center.png" style="width:60%; height:350px !important;" alt="Simulation Center">
 							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
 							</div>
 						</div>
@@ -502,7 +511,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/auditorium.png" style="width:70%; height:300px !important;" alt="Auditorium">
+							<img src="images/fasilitas/auditorium.png" style="width:60%; height:350px !important;" alt="Auditorium">
 							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
 							</div>
 						</div>
@@ -512,7 +521,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/fasilitas-asrama.png" style="width:70%; height:300px !important;" alt="Asrama">
+							<img src="images/fasilitas/fasilitas-asrama.png" style="width:60%; height:350px !important;" alt="Asrama">
 							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
 							</div>
 						</div>
@@ -522,7 +531,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/ruang_kelas.png" style="width:70%; height:300px !important;" alt="Ruang Kelas">
+							<img src="images/fasilitas/ruang_kelas.png" style="width:60%; height:350px !important;" alt="Ruang Kelas">
 							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
 							</div>
 						</div>
@@ -532,7 +541,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-12 text-center">
-							<img src="images/fasilitas/laboratorium.png" style="width:70%; height:300px !important;" alt="Laboratorium">
+							<img src="images/fasilitas/laboratorium.png" style="width:60%; height:350px !important;" alt="Laboratorium">
 							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
 							</div>
 						</div>
@@ -555,7 +564,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
 			</a>
-			</div>
+		</div>
 	</section>
 
 	<section class="content-section">
@@ -792,3 +801,5 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	<?php } ?>
 
 <?= GetDebugMessage() ?>
+</body>
+</html>
