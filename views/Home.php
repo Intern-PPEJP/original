@@ -240,7 +240,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			<div class="row justify-content-center">
 			<h3 class="mb-3 text-bold">Profil</h3>
 				<div class="col-lg-8 col-12 vid-profil mb-4">
-					<iframe width="100%" height="320" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<iframe width="90%" height="320" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
 				<div class="col-lg-10 col-12 text-description">
 	
@@ -549,13 +549,13 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				</div>
 			</div>
 			
-			<!-- jQuery, Popper.js, and Bootstrap JS -->
+			<!-- jQuery, Popper.js, and Bootstrap JS 
 			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
 
 
-			<!-- Controls (Previous and Next) -->
+			<!-- Controls (Previous and Next) 
 			<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="sr-only">Previous</span>
@@ -563,7 +563,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			<a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="sr-only">Next</span>
-			</a>
+			</a>-->
 		</div>
 	</section>
 
