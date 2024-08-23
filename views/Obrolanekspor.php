@@ -6,12 +6,11 @@ namespace PHPMaker2021\ppejp_web;
 $Obrolanekspor = &$Page;
 ?>
 <?php echo myheader(); ?>
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-
+<!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">-->
 
 <div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
-    <div class="container">
-        <div class="row">
+    <div class="container" style="xmargin-top:110px">
+        <div class="row" style="xbackground-color: #031A31;">
             <div class="col-md-12">
                 <h1 class="m-0" style="color: white;font-weight:bold">OBROLAN EKSPOR</h1>
             </div>
@@ -21,7 +20,7 @@ $Obrolanekspor = &$Page;
 
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
-        <div class="col-md-12 p-0" style=" height: 600px">
+        <div class="col-md-12 p-0" style=" height: 500px">
             <div style="background-image: url(images/pages/obrolan-ekspor.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
             </div>
         </div>
@@ -29,11 +28,11 @@ $Obrolanekspor = &$Page;
 </div>
 
 <div class="container">
-    <div class="row my-5 ">
+    <div class="row my-4">
         <div class="col-md-12">
             <div class="text-center" style="font-size: 16px">
-                Obrolan ekspor merupakan Dialog antara PPEJP, Pelaku Usaha, dan praktisi ekspor untuk mencapai kesepahaman dan peningkatan kolaborasi
-                pelaksanaan ekspor. Selain itu, Obrolan Ekspor memberikan informasi tentang ekspor serta Peningkatan motivasi dan pengetahuan ekspor
+                Obrolan ekspor merupakan dialog antara PPEJP, pelaku usaha, dan praktisi ekspor untuk mencapai kesepahaman dan peningkatan kolaborasi
+                pelaksanaan ekspor. Selain itu, Obrolan Ekspor memberikan informasi tentang ekspor serta peningkatan motivasi dan pengetahuan ekspor
                 bagi dunia usaha terutama pelaku usaha berorientasi ekspor.
             </div>
         </div>
@@ -54,10 +53,10 @@ $Obrolanekspor = &$Page;
 <div class="container-fluid grid-topik-obrol" style="background-color: #e9e9e9;">
     <div class="container">
         <div class="row py-3">
-            <div class="col-md-12 p-0">
-                <div style="font-weight: 600;" class="xb1 text-center">
-                    <h2 class="text-bold">TOPIK OBROLAN</h2>
-                </div>
+            <div class="col-md-12 p-0 text-center text-black">
+                <!--<div class="xb1 text-center">-->
+                    <h2 class="mt-3 text-bold" style="font-size: 20px;">TOPIK OBROLAN</h2>
+                <!--</div>-->
             </div>
         </div>
         <div class="row">
@@ -107,21 +106,23 @@ $Obrolanekspor = &$Page;
 
 <div class="container-fluid p-0" style="background-image: url(images/pages/narasumber-obrolan-ekspor.png); background-size: cover; position: relative; background-position: center;">
     <div style="box-sizing: border-box; position: absolute; top: 0; height: 100%; width: 100%; background-image: linear-gradient(#111111aa,#111111dd,#111111ff);"></div>
-    <div class="container py-5">
-        <div class="row">
+    <div class="container">
+        <div class="row py-3">
             <div class="col-md-12 p-0 text-center text-white">
-                <img src="images/icons/icon _user male circle_.png" style="height: 200px;">
-                <h1 class="mt-3 text-bold" style="font-size: 20px;">NARASUMBER</h1>
+                <h2 class="mt-3 text-bold" style="font-size: 20px;">NARASUMBER</h2>
             </div>
         </div>
-        <div class="row mt-5">
-            <div class="col-md-4 text-center text-white">
+        <div class="row mt-0">
+            <div class="col-md-4 py-3 text-center text-white">
+                <img src="images/icons/icon _user male circle_.png" style="height: 100px; margin-bottom: 15px;">
                 <h1 style="font-size: 20px;">Fasilitator <br>PPEJP</h1>
             </div>
-            <div class="col-md-4 text-center text-white">
+            <div class="col-md-4 py-3 text-center text-white">
+                <img src="images/icons/icon _user male circle_.png" style="height: 100px; margin-bottom: 15px;">
                 <h1 style="font-size: 20px;">Pejabat Perwakilan <br>Perdagangan</h1>
             </div>
-            <div class="col-md-4 text-center text-white">
+            <div class="col-md-4 py-3 text-center text-white">
+                <img src="images/icons/icon _user male circle_.png" style="height: 100px; margin-bottom: 15px;">
                 <h1 style="font-size: 20px;">Alumni Sukses <br>Pelatihan PPEJP</h1>
             </div>
         </div>
@@ -152,7 +153,7 @@ $Obrolanekspor = &$Page;
     <div class="container">
         <div class="row py-5">
             <div class="col-md-12 p-0">
-                <div style="font-size" class="xb1 text-center">
+                <div style="font-size: 20px;" class="xb1 text-center">
                     <h2 class="text-bold">OBROLAN EKSPOR</h2>
                 </div>
             </div>
