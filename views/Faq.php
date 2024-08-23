@@ -92,17 +92,17 @@ $Faq = &$Page;
 			<div class="card">
 				<div class="card-header" id="faqhead2">
 					<a href="#" class="btn btn-header-link" data-toggle="collapse" data-target="#faq2"
-					aria-expanded="true" aria-controls="faq2">BALAI PELATIHAN SDM METROLOGI, MUTU  DAN JASA PERDAGANGAN</a>
+					aria-expanded="true" aria-controls="faq2">BALAI PELATIHAN SDM METROLOGI, MUTU,  DAN JASA PERDAGANGAN</a>
 				</div>
 
 				<div id="faq2" class="collapse show" aria-labelledby="faqhead2" data-parent="#faq">
 					<div class="card-body">
 						<p class="text-bold" style="margin-bottom:0;">Dimana Lokasi Balai Pelatihan SDM Metrologi, Mutu, dan Jasa Perdagangan ?</p>
-						<p>Balai Pelatihan SDM Metrologi Mutu dan Jasa Perdagangan berlokasi di Jl. Daeng Muhammad Ardiwinata KM 3,4 Kel. Cihanjuang, Kec. Parongpong, Kabupaten Bandung Barat, Jawa Barat 40559</p>
+						<p>Balai Pelatihan SDM Metrologi Mutu dan Jasa Perdagangan berlokasi di Jl. Daeng Muhammad Ardiwinata KM 3.4 Kel. Cihanjuang, Kec. Parongpong, Kabupaten Bandung Barat, Jawa Barat 40559</p>
 						<p class="text-bold" style="margin-bottom:0;">Apakah biaya pelatihan sudah termasuk biaya penginapan?</p>
 						<p>Biaya pelatihan belum termasuk penginapan biaya pelatihan hanya termasuk training kit, sertifikat, makan siang dan rehat kopi. </p>
 						<p class="text-bold" style="margin-bottom:0;">Berapa biaya menginap di BPMJP?</p>
-						<p>Sesuai PP N0. 31 Tahun 2017 biaya menginap per hari adalah Rp. 300.000 dan per minggu adalah Rp. 500.000. 
+						<p>Sesuai PP No. 31 Tahun 2017 biaya menginap per hari adalah Rp.300.000 dan per minggu adalah Rp.500.000. 
 							<ul><li>Satu kamar dapat diisi oleh dua peserta</li></ul></p>
 						<p class="text-bold" style="margin-bottom:0;">Apakah dengan mengikuti pelatihan di BPMJP akan dijamin kelulusannya?</p>
 						<p>Peserta dinyatakan lulus apabila telah memenuhi standar kelulusan yang telah ditetapkan dalam kurikulum. Penetapan standard ini dimaksudkan agar peserta pelatihan dapat memenuhi standar kompetensi yang dipersyaratkan untuk tugas jabatannya dalam kegiatan metrologi, mutum dan jasa perdagangan.</p>
@@ -123,10 +123,5 @@ $Faq = &$Page;
 
 
 <?php echo myfooter(); ?>
-
-
-
-
-
 
 <?= GetDebugMessage() ?>
