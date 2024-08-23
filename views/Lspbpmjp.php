@@ -95,10 +95,10 @@ p, table, div {
         </div>
     </div>
 </div>
-<section class="barcount-section" style="min-height:100px !important">
+<section class="barcount-section" style="min-height:50px !important">
 	<div class="container">
-		<div class="row row-bar-count pt-3 text-white">
-			<div class="col-12 text-center">
+		<div class="row row-bar-count py-1 text-white">
+			<div class="col-12 text-center" style="padding-top: 8px;">
 				<h2>VISI</h2>
 			</div>
 		</div>
@@ -116,10 +116,10 @@ p, table, div {
         </div>
     </div>
 </div>
-<section class="barcount-section" style="min-height:100px !important">
+<section class="barcount-section" style="min-height:50px !important">
 	<div class="container">
-		<div class="row row-bar-count pt-3 text-white">
-			<div class="col-12 text-center">
+		<div class="row row-bar-count py-1 text-white">
+			<div class="col-12 text-center" style="padding-top: 8px;">
 				<h2>MISI</h2>
 			</div>
 		</div>
