@@ -226,7 +226,7 @@ function myheader(){
 <style>
 	body,.h1,.h2,.h3,.h4,.h5,.h6,body,h1,h2,h3,h4,h5,h6,p { font-family: 'Poppins', sans-serif !important; }
 	.main-header #ew-navbar .nav-item { padding: 10px; }
-	.content-header { background: #031A31; margin-bottom: 15px; } .content-header h1 { color: #ffffff !important }
+	.content-header { background: #031A31; margin-bottom: 15px;  } .content-header h1 { color: #ffffff !important }
 	button.close span { font-size: 25px; background: #ff1800; border-radius: 10px; padding-right: 10px; padding-left: 10px; }
 	#fcari {
 		position: absolute;
@@ -244,7 +244,7 @@ function myheader(){
     top: 0;
     width: 100%;
     z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
-}
+	}
 
 	@media screen and (max-width: 768px) { /* mobile view */
 		#fcari {
@@ -382,6 +382,9 @@ if ($(window).width() < 992) {
 			</div>
 		</form>
 </nav>
+
+<br>
+<br>
 
 <script>
 $(document).ready(function(){
