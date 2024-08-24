@@ -177,10 +177,17 @@ p, table, div {
         </div>
     </div>
 </div>-->
-<div class="container-fluid text-white mb-4" style="background-color: #3A8F53;">
+<!--<div class="container-fluid text-white mb-4" style="background-color: #3A8F53;">
 	<div class="container py-3">
 		<h3>Skema Sertifikasi Pengujian Meter Air</h3>
 	</div>
+</div>-->
+<div class="container-fluid text-white mb-4">
+    <div style="background-color: #3A8F53; margin-left: 185px; margin-right: 185px; border-radius: 10px; padding: 3px;">
+        <div class="container py-3" >
+            <h3 style="padding-top:5px;padding-bottom:0px;margin-left:24px;">Skema Sertifikasi Pengujian Meter Air</h3>
+        </div>
+    </div>
 </div>
 <div class="container">
     <div class="row my-4" style="margin-left: 110px; margin-right: 110px;">
