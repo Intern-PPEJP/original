@@ -127,6 +127,23 @@ p, div {
     transform: scale(1);
 }
 
+.carousel-indicators {
+    position: relative;
+    margin-top: 6px; /* Atur jarak dari konten di atasnya */
+    margin-bottom: -2px; /* Geser lebih ke bawah dari posisi default */
+    text-align: center; /* Posisikan di tengah secara horizontal */
+}
+
+.carousel-indicators li {
+  width: 12px;
+  height: 8px;
+  background-color: #6c757d; /* Warna tombol titik */
+  border-radius: 60%;
+}
+
+.carousel-indicators .active {
+  background-color: #000000; /* Warna tombol titik aktif */
+}
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -202,12 +219,13 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					} else if ($row["jenis_pelatihan"] == "webinar" ){
 						$ikon = "icon-video.png";
 					}
-				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:22px;height:100%;"></span>
+				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:23px;height:41%;"></span>
 					<div class="item_direction mb-4">
 						
 						<i class="fas fa-circle cikon"></i><a href="<?php echo $link; ?>" style="text-decoration:none;color:#fff;">
 						<table><tr><td><img src="images/icons/<?php echo $ikon; ?>"></img></td><td>
-				<?php echo $row["judul_pelatihan"]; ?><br><span class="y-tgl"><?php echo $row["tanggal_pelaksanaan"]; ?> <?php echo $ket; ?> </span></td></tr></table>
+				<?php 
+				echo $row["judul_pelatihan"]; ?><br><span class="y-tgl"><?php echo $row["tanggal_pelaksanaan"]; ?> <?php echo $ket; ?> </span></td></tr></table>
 					</a>
 					</div></li>
 				<?php
@@ -218,7 +236,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			
 				</div>
 					<div id="ppejp-slide"  class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false">
-					  <div style="position:absolute;background: rgb(0 0 0 / 20%);width:100%;height:100%;z-index: 2;"></div>
+					  <div style="position:absolute;background: rgb(0 0 0 / 50%);width:100%;height:100%;z-index: 2;"></div>
 					  <div class="carousel-inner">
 						<div class="carousel-item active">
 						  <img src="images/slide/1.png" class="carousel-image img-fluid" alt="Gedung Depan PPEJP">
@@ -487,85 +505,60 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			<div class="row">
 				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
 				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+					<!--<ol class="carousel-indicators">
+						<li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+					</ol>-->
 					<div class="carousel-inner">
-						
-						<!-- Slide 1 -->
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/perpustakaan.png" style="width:60%; height:350px !important;" alt="Perpustakaan">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/perpustakaan.png" style="width:95%; height:200px !important;" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
-						</div>
-						</div>
-
-						<!-- Slide 2 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/simulation_center.png" style="width:60%; height:350px !important;" alt="Simulation Center">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/simulation_center.png" style="width:95%; height:200px !important;" alt="Simulation Center">
 							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
 							</div>
-						</div>
-						</div>
-
-						<!-- Slide 3 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/auditorium.png" style="width:60%; height:350px !important;" alt="Auditorium">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/auditorium.png" style="width:95%; height:200px !important;" alt="Auditorium">
 							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
 							</div>
 						</div>
 						</div>
-
-						<!-- Slide 4 -->
 						<div class="carousel-item">
 						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/fasilitas-asrama.png" style="width:60%; height:350px !important;" alt="Asrama">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/fasilitas-asrama.png" style="width:95%; height:200px !important;" alt="Asrama">
 							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
 							</div>
-						</div>
-						</div>
-
-						<!-- Slide 5 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/ruang_kelas.png" style="width:60%; height:350px !important;" alt="Ruang Kelas">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/laboratorium.png" style="width:95%; height:200px !important;" alt="Laboratorium">
+							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/ruang_kelas.png" style="width:95%; height:200px !important;" alt="Ruang Kelas">
 							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
 							</div>
 						</div>
 						</div>
-
-						<!-- Slide 6 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/laboratorium.png" style="width:60%; height:350px !important;" alt="Laboratorium">
-							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
-							</div>
-						</div>
-					</div>	
+					</div>
+					<!-- Tombol titik navigasi -->
+					<ol class="carousel-indicators">
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+                </ol>
+  <!-- Kontrol tombol carousel 
+  <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>-->
 				</div>
 			</div>
-			
-			<!-- jQuery, Popper.js, and Bootstrap JS 
-			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
-
-
-			<!-- Controls (Previous and Next) 
-			<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>-->
 		</div>
 	</section>
 
