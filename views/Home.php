@@ -143,7 +143,7 @@ p, div {
 }
 
 .carousel-indicators li {
-  width: 12px;
+  width: 10px;
   height: 8px;
   background-color: #6c757d; /* Warna tombol titik */
   border-radius: 60%;
