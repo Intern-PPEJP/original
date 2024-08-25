@@ -127,6 +127,14 @@ p, div {
     transform: scale(1);
 }
 
+.icon-text, .featured-block {
+        transition: transform 0.3s ease; /* Efek transisi yang halus */
+}
+
+.icon-text:hover, .featured-block:hover {
+        transform: translateY(-10px); /* Efek naik saat dihover */
+}
+
 .carousel-indicators {
     position: relative;
     margin-top: 6px; /* Atur jarak dari konten di atasnya */
@@ -144,6 +152,45 @@ p, div {
 .carousel-indicators .active {
   background-color: #000000; /* Warna tombol titik aktif */
 }
+
+.testimonials {
+        display: flex;
+        justify-content: space-between; /* Spasi antar testimoni */
+        padding: 20px;
+        
+    }
+
+    .testimonial {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 23%; /* Lebar yang sesuai agar 4 testimoni muat dalam satu baris */
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+	.testimonial:hover {
+        background-color: #edf6f9; /* Warna latar belakang saat hover */
+    }
+
+    .testimonial p {
+        font-style: italic;
+        color: #666;
+    }
+
+    .testimonial h3 {
+        color: #004DAF;
+        margin-top: 20px;
+		font-size: 18px;
+    }
+
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -567,7 +614,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	<section class="content-section">
 	<div class="container">
 		<h3 class="text-center text-bold mt-5 mb-4">Testimoni Alumni</h3>
-			<center>
+			<!--<center>
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 					<?php
@@ -605,7 +652,24 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					?>
 			  </div>
 			</div>
-			</center>
+			</center>-->
+			<center>
+    <div class="testimonials">
+        <?php
+        $rs = ExecuteQuery("SELECT * FROM `w_testimoni` WHERE `show` = 'Y'");
+        while ($row_testimoni = $rs->fetch()) {
+        ?>
+            <div class="testimonial">
+                <img src="images/testimoni/<?php echo $row_testimoni["gambar"]; ?>" alt="<?php echo $row_testimoni["nama"]; ?>">
+                <p>"<?php echo $row_testimoni["testimoni"]; ?>"</p>
+                <h3><?php echo strtoupper($row_testimoni["nama"]); ?></h3>
+            </div>
+        <?php
+        }
+        ?>
+    </div>
+</center>
+
 	</section>
 
 	<section class="content-section">
