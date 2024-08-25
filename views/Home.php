@@ -127,6 +127,23 @@ p, div {
     transform: scale(1);
 }
 
+.carousel-indicators {
+    position: relative;
+    margin-top: 6px; /* Atur jarak dari konten di atasnya */
+    margin-bottom: -2px; /* Geser lebih ke bawah dari posisi default */
+    text-align: center; /* Posisikan di tengah secara horizontal */
+}
+
+.carousel-indicators li {
+  width: 12px;
+  height: 8px;
+  background-color: #6c757d; /* Warna tombol titik */
+  border-radius: 60%;
+}
+
+.carousel-indicators .active {
+  background-color: #000000; /* Warna tombol titik aktif */
+}
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -182,7 +199,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<div class="y-jadwal">
 				<ul style="list-style-type:none">
 				<?php 
-				$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_peserta`, `sisa`, `tanggal_pelaksanaan`, `jenis_pelatihan`, `Link` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() ORDER BY `tawal` ASC");
+				$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_peserta`, `sisa`, `tanggal_pelaksanaan`, `jenis_pelatihan`, `Link` 
+				FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE()
+				ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 				$i=1;
 				while ($row = $rs->fetch()) {
 					$ket = '<span class="badge text-success">Sisa '.$row["sisa"].' orang</span>';
@@ -200,12 +219,13 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					} else if ($row["jenis_pelatihan"] == "webinar" ){
 						$ikon = "icon-video.png";
 					}
-				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:22px;height:100%;"></span>
+				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:23px;height:41%;"></span>
 					<div class="item_direction mb-4">
 						
 						<i class="fas fa-circle cikon"></i><a href="<?php echo $link; ?>" style="text-decoration:none;color:#fff;">
 						<table><tr><td><img src="images/icons/<?php echo $ikon; ?>"></img></td><td>
-				<?php echo $row["judul_pelatihan"]; ?><br><span class="y-tgl"><?php echo $row["tanggal_pelaksanaan"]; ?> <?php echo $ket; ?> </span></td></tr></table>
+				<?php 
+				echo $row["judul_pelatihan"]; ?><br><span class="y-tgl"><?php echo $row["tanggal_pelaksanaan"]; ?> <?php echo $ket; ?> </span></td></tr></table>
 					</a>
 					</div></li>
 				<?php
@@ -216,7 +236,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			
 				</div>
 					<div id="ppejp-slide"  class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false">
-					  <div style="position:absolute;background: rgb(0 0 0 / 20%);width:100%;height:100%;z-index: 2;"></div>
+					  <div style="position:absolute;background: rgb(0 0 0 / 50%);width:100%;height:100%;z-index: 2;"></div>
 					  <div class="carousel-inner">
 						<div class="carousel-item active">
 						  <img src="images/slide/1.png" class="carousel-image img-fluid" alt="Gedung Depan PPEJP">
@@ -485,85 +505,60 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			<div class="row">
 				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
 				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+					<!--<ol class="carousel-indicators">
+						<li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+					</ol>-->
 					<div class="carousel-inner">
-						
-						<!-- Slide 1 -->
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/perpustakaan.png" style="width:60%; height:350px !important;" alt="Perpustakaan">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/perpustakaan.png" style="width:95%; height:200px !important;" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
-						</div>
-						</div>
-
-						<!-- Slide 2 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/simulation_center.png" style="width:60%; height:350px !important;" alt="Simulation Center">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/simulation_center.png" style="width:95%; height:200px !important;" alt="Simulation Center">
 							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
 							</div>
-						</div>
-						</div>
-
-						<!-- Slide 3 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/auditorium.png" style="width:60%; height:350px !important;" alt="Auditorium">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/auditorium.png" style="width:95%; height:200px !important;" alt="Auditorium">
 							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
 							</div>
 						</div>
 						</div>
-
-						<!-- Slide 4 -->
 						<div class="carousel-item">
 						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/fasilitas-asrama.png" style="width:60%; height:350px !important;" alt="Asrama">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/fasilitas-asrama.png" style="width:95%; height:200px !important;" alt="Asrama">
 							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
 							</div>
-						</div>
-						</div>
-
-						<!-- Slide 5 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/ruang_kelas.png" style="width:60%; height:350px !important;" alt="Ruang Kelas">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/laboratorium.png" style="width:95%; height:200px !important;" alt="Laboratorium">
+							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/ruang_kelas.png" style="width:95%; height:200px !important;" alt="Ruang Kelas">
 							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
 							</div>
 						</div>
 						</div>
-
-						<!-- Slide 6 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/laboratorium.png" style="width:60%; height:350px !important;" alt="Laboratorium">
-							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
-							</div>
-						</div>
-					</div>	
+					</div>
+					<!-- Tombol titik navigasi -->
+					<ol class="carousel-indicators">
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+                </ol>
+  <!-- Kontrol tombol carousel 
+  <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>-->
 				</div>
 			</div>
-			
-			<!-- jQuery, Popper.js, and Bootstrap JS 
-			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-			<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>-->
-
-
-			<!-- Controls (Previous and Next) 
-			<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>-->
 		</div>
 	</section>
 
@@ -653,13 +648,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		</div>
 	</section>
 
-
-
-	
-
 </main>
-
-
 
 <?php echo myfooter(); ?>
 
@@ -668,7 +657,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
   <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ListPelatihan">JADWAL PELATIHAN</h5>
+        <h5 class="modal-title" id="ListPelatihan"><strong>JADWAL PELATIHAN</strong></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -679,15 +668,26 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
   <div class="container-fluid">
     <div class="row">
     <?php
+		// $rs = ExecuteQuery("SELECT `judul_pelatihan`,SUM(`sisa`) AS total_sisa 
+		// FROM `w_pelatihan` WHERE `Activated` = 'Y' 
+		// AND `tawal` >= CURRENT_DATE() 
+		// AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
+		// GROUP BY `judul_pelatihan`
+		// ORDER BY CASE WHEN SUM(`sisa`) > 0 THEN 1 ELSE 2 END, `judul_pelatihan` ASC");
 		$rs = ExecuteQuery("SELECT `judul_pelatihan` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') GROUP BY `judul_pelatihan`");
 		$i=1;
 		while ($row1 = $rs->fetch()) {
 	?>
 		<div class="col-lg-4">
 		<div class="mb-3 p-0 pb-2" style="border:0;box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);">
-		<p class="p-2" style=" height: 87px;"><?php echo $row1["judul_pelatihan"]; ?></p>
+		<p class="p-2" style=" height: 55px;"><?php echo "<b>" . $row1["judul_pelatihan"] . "</b>"; ?></p>
 		<?php
-			$rs2 = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `judul_pelatihan` = '".$row1["judul_pelatihan"]."' AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') ORDER BY `tawal` ASC");
+			$rs2 = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
+			FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `judul_pelatihan` = '".$row1["judul_pelatihan"]."' AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
+			ORDER BY CASE 
+			WHEN `sisa` > 0  AND `tawal` >= CURDATE() THEN 1
+			WHEN `sisa` > 0  AND `tawal` >= CURDATE() THEN 2 
+			ELSE 3 END, `tawal` ASC");
 			$i=1;
 			while ($row2 = $rs2->fetch()) {
 		?>
@@ -699,12 +699,11 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			
 			<div class="col-8 text-sm-left" style="border:2px solid #babababa;padding:2px;border-right:none;border-radius:0.25rem 0 0 0.25rem;font-size:14pt;color:#bababa"><del><?php echo $row2["tanggal_pelaksanaan"]; ?></del></div>
 			<div class="col-4" style="border:2px solid #babababa;padding:2px;border-radius:0 0.25rem 0.25rem 0;">
-								<table><tr><td><i class="fa fa-user" aria-hidden="true" style="font-size:25px;color:#bababa;"></i></td>
-								
-								<td style="font-size:8pt;margin:0;padding:0;padding-left:5px;color:#bababa"><del>penuh</del></td>
-								
-								
-								</tr></table>
+				<table>
+					<tr><td><i class="fa fa-user" aria-hidden="true" style="font-size:25px;color:#bababa;"></i></td>
+					<td style="font-size:8pt;margin:0;padding:0;padding-left:5px;color:#bababa"><del>penuh</del></td>
+					</tr>
+				</table>
 			</div>
 			
 			<?php
