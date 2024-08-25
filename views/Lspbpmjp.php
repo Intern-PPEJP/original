@@ -7,6 +7,13 @@ $Lspbpmjp = &$Page;
 ?>
 <?php echo myheader(); ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
 <style>
     .text-center {
     text-align: center;
@@ -33,7 +40,7 @@ p, table, div {
 	}
 
 	thead {
-		background-color: #16a45c;
+		background-color: #3a5a40;
 		color: #ffffff;
 		text-align: center; /* Rata tengah untuk header */
 	}
@@ -65,14 +72,21 @@ p, table, div {
 		background-color: #f3f3f3; /* memberi warna yang berbeda tiap baris*/
 	}
 
+    .custom-card {
+    display: inline-block;
+    border-radius: 5px;      /* Sudut melengkung */
+    padding: 25px 20px 10px 20px; /* Padding atas 25px, bawah 10px, kiri/kanan 20px */
+    background-color: #fcf6bd; /* Warna latar card */
+}
+
 
 </style>
 
 <div class="container-fluid " style="background-color: #3A8F53; padding:20px 0px;">
     <div class="container" style="xmargin-top:110px">
-        <div class="row" style="xbackground-color: #031A31;">
+        <div class="row" style="xbackground-color: #3A8F53;">
             <div class="col-md-12">
-                <h1 class="m-0" style="color: white;font-weight:bold;">LSP BPMJP</h1>
+                <h1 class="m-0" style="color: white;font-weight:bold;">LSP P1 BPMJP</h1>
             </div>
         </div>
     </div>
@@ -80,22 +94,49 @@ p, table, div {
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
         <div class="col-md-12 p-0" style=" height: 400px">
-            <div style="background-image: url(images/pages/altpelatihan1/bg-lsp-ppejp.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
+            <div style="background-image: url(images/pages/altpelatihan1/bg-lsp-ppejp.png); background-size: cover; background-position: center; width: 100%; height: 100%; position: absolute; top:0">
             </div>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" style="padding-bottom: 0px;">
     <div class="row my-4">
         <div class="col-md-12">
-            <h3 class="mb-3 text-bold text-center">LSP P1 BPMJP</h3>
+            <!--<h3 class="mb-3 text-bold text-center">LSP P1 BPMJP</h3>-->
             <div class="text-center">
-				<p> Lembaga Sertifikasi Profesi (LSP) adalah organisasi yang berperan dalam sertifikasi kompetensi kerja di Indonesia. LSP berfungsi untuk menguji dan menilai kompetensi seseorang berdasarkan standar kompetensi yang telah ditetapkan oleh Badan Nasional Sertifikasi Profesi (BNSP) atau lembaga terkait lainnya. LSP bertujuan untuk memastikan bahwa tenaga kerja memiliki kompetensi sesuai dengan kebutuhan industri dan pasar kerja. </p>
+				<p style="margin-left: 110px; margin-right: 110px; padding-bottom: 0px;"> Lembaga Sertifikasi Profesi (LSP) adalah organisasi yang berperan dalam sertifikasi kompetensi kerja di Indonesia. LSP berfungsi untuk menguji dan menilai kompetensi seseorang berdasarkan standar kompetensi yang telah ditetapkan oleh Badan Nasional Sertifikasi Profesi (BNSP) atau lembaga terkait lainnya. LSP bertujuan untuk memastikan bahwa tenaga kerja memiliki kompetensi sesuai dengan kebutuhan industri dan pasar kerja. </p>
 			</div>
         </div>
     </div>
 </div>
-<section class="barcount-section" style="min-height:50px !important">
+<div class="d-flex justify-content-center">
+<div class="col-md-5">
+		<div class="card">
+		  <div class="card-header" style="background-color:#3A8F53;color:#fff;padding-top:10px;padding-bottom:3px;">
+			<h2 class="text-bold text-center">VISI</h2>
+		  </div>
+		  <div class="card-body">
+			<p class="card-text text-center">LSP P1 BPMJP mempunyai visi menjadi LSP bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya untuk menciptakan sumber daya manusia yang kompeten dan profesional serta diakui secara Nasional, Regional, dan Internasional.</p>
+		  </div>
+		</div>
+        <div class="card">
+		  <div class="card-header" style="background-color:#3A8F53;color:#fff;padding-top:10px;padding-bottom:3px;">
+			<h2 class="text-bold text-center">MISI</h2>
+		  </div>
+		  <div class="card-body">
+			<p>
+                <ol>
+					<li class="text-justify">Menyelenggarakan sertifikasi kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya/pemasok yang independen dan profesional.</li>
+					<li class="text-justify">Memastikan dan memelihara kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan untuk dapat bersaing secara nasional regional dan Internasional.</li>
+					<li class="text-justify">Menjamin mutu dengan menjaga proses sertifikasi sesuai dengan standar yang berlaku.</li>
+					<li class="text-justify">Menyediakan tempat uji kompetensi sesuai dengan ruang lingkup Lembaga Sertifikasi Profesi bidang metrologi, mutu dan jasa perdagangan.</li>
+				</ol>
+            </p>
+		  </div>
+		</div>
+	</div>
+</div>
+<!--<section class="barcount-section" style="min-height:50px !important">
 	<div class="container">
 		<div class="row row-bar-count py-1 text-white">
 			<div class="col-12 text-center" style="padding-top: 8px;">
@@ -107,9 +148,6 @@ p, table, div {
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <h3 class="text-center">
-            Visi LSP P1 BPMJP:
-            </h3>
 			<p class="text-center">
 			LSP P1 BPMJP mempunyai visi menjadi LSP bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya untuk menciptakan sumber daya manusia yang kompeten dan profesional serta diakui secara nasional, regional, dan internasional.
 			</p>
@@ -128,9 +166,6 @@ p, table, div {
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <h3 class="text-center">
-            Misi LSP P1 BPMJP:
-            </h3>
 			<p>
 				<ol>
 					<li class="text-justify">Menyelenggarakan sertifikasi kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya/pemasok yang independen dan profesional.</li>
@@ -141,14 +176,21 @@ p, table, div {
 			</p>
         </div>
     </div>
-</div>
-<div class="container-fluid text-white mb-4" style="background-color:#031A31;">
+</div>-->
+<!--<div class="container-fluid text-white mb-4" style="background-color: #3A8F53;">
 	<div class="container py-3">
 		<h3>Skema Sertifikasi Pengujian Meter Air</h3>
 	</div>
+</div>-->
+<div class="container-fluid text-white mb-4">
+    <div style="background-color: #3A8F53; margin-left: 185px; margin-right: 185px; border-radius: 10px; padding: 3px;">
+        <div class="container py-3" >
+            <h3 style="padding-top:5px;padding-bottom:0px;margin-left:24px;">Skema Sertifikasi Pengujian Meter Air</h3>
+        </div>
+    </div>
 </div>
 <div class="container">
-    <div class="row my-4">
+    <div class="row my-4" style="margin-left: 110px; margin-right: 110px;">
         <div class="col-md-12">
 			<p class="text-justify">
 			Skema sertifikasi Pengujian Meter Air adalah skema sertifikasi klaster yang dikembangkan oleh Komite Skema LSP P1 BPMJP untuk memenuhi kebutuhan sertifikasi kompetensi kerja di LSP P1 BPMJP.
@@ -204,7 +246,16 @@ p, table, div {
             <div class="card p-3 text-center">
             <p>Sesuai dengan PMK Nomor 140 Tahun 2023 Biaya sertifikasi untuk skema Kompetensi Pengujian Meter Air sebesar Rp. 1.250.000,- per orang per hari</p>
             </div>
-            <p>Informasi lebih lanjut dapat menghubungi: 0811-2006-6664</p>
+            <!--<span class="alert alert-warning text-center">Informasi lebih lanjut dapat menghubungi: 0811-2006-6664</span>-->
+            <!--<p>Informasi lebih lanjut dapat menghubungi: 0811-2006-6664</p>-->
+            <!--<div class="custom-card">
+                <p>Informasi lebih lanjut dapat menghubungi: 0811-2006-6664</p>
+            </div>-->
+            <div class="d-flex justify-content-center">
+            <div class="alert alert-warning text-center" style="display: inline-block;">
+            Informasi lebih lanjut hubungi: <strong>0811-2006-6664</strong>
+            </div>
+            </div>
         </div>
     </div>
 </div>
@@ -216,3 +267,5 @@ p, table, div {
 <?php echo myfooter(); ?>
 
 <?= GetDebugMessage() ?>
+</body>
+</html>
