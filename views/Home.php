@@ -182,7 +182,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<div class="y-jadwal">
 				<ul style="list-style-type:none">
 				<?php 
-				$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_peserta`, `sisa`, `tanggal_pelaksanaan`, `jenis_pelatihan`, `Link` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() ORDER BY `tawal` ASC");
+				$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_peserta`, `sisa`, `tanggal_pelaksanaan`, `jenis_pelatihan`, `Link` 
+				FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE()
+				ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 				$i=1;
 				while ($row = $rs->fetch()) {
 					$ket = '<span class="badge text-success">Sisa '.$row["sisa"].' orang</span>';
