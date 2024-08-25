@@ -691,7 +691,10 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<?php
 			$rs2 = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
 			FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `judul_pelatihan` = '".$row1["judul_pelatihan"]."' AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
-			ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
+			ORDER BY CASE 
+			WHEN `sisa` > 0  AND `tawal` >= CURDATE() THEN 1
+			WHEN `sisa` > 0  AND `tawal` >= CURDATE() THEN 2 
+			ELSE 3 END, `tawal` ASC");
 			$i=1;
 			while ($row2 = $rs2->fetch()) {
 		?>
