@@ -127,6 +127,14 @@ p, div {
     transform: scale(1);
 }
 
+.icon-text, .featured-block {
+        transition: transform 0.3s ease; /* Efek transisi yang halus */
+}
+
+.icon-text:hover, .featured-block:hover {
+        transform: translateY(-10px); /* Efek naik saat dihover */
+}
+
 .carousel-indicators {
     position: relative;
     margin-top: 6px; /* Atur jarak dari konten di atasnya */
@@ -135,7 +143,7 @@ p, div {
 }
 
 .carousel-indicators li {
-  width: 12px;
+  width: 10px;
   height: 8px;
   background-color: #6c757d; /* Warna tombol titik */
   border-radius: 60%;
@@ -144,6 +152,45 @@ p, div {
 .carousel-indicators .active {
   background-color: #000000; /* Warna tombol titik aktif */
 }
+
+.testimonials {
+        display: flex;
+        justify-content: space-between; /* Spasi antar testimoni */
+        padding: 20px;
+        
+    }
+
+    .testimonial {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 23%; /* Lebar yang sesuai agar 4 testimoni muat dalam satu baris */
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+	.testimonial:hover {
+        background-color: #edf6f9; /* Warna latar belakang saat hover */
+    }
+
+    .testimonial p {
+        font-style: italic;
+        color: #666;
+    }
+
+    .testimonial h3 {
+        color: #004DAF;
+        margin-top: 20px;
+		font-size: 18px;
+    }
+
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -445,11 +492,13 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 
-				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="9000">
+				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="5000">
 					<div class="carousel-inner" role="listbox">
 						<div class="row" style="margin-right:0px !important">
 							<?php
-								$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') ORDER BY `tawal` ASC");
+								$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
+								FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
+								ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 								$i=1;
 								while ($row = $rs->fetch()) {
 								
@@ -504,7 +553,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<div class="container">
 			<div class="row">
 				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
-				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
 					<!--<ol class="carousel-indicators">
 						<li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
 						<li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
@@ -564,8 +613,8 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
 	<section class="content-section">
 	<div class="container">
-		<h3 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h3>
-			<center>
+		<h3 class="text-center text-bold mt-5 mb-4">Testimoni Alumni</h3>
+			<!--<center>
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 					<?php
@@ -603,7 +652,24 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					?>
 			  </div>
 			</div>
-			</center>
+			</center>-->
+			<center>
+    <div class="testimonials">
+        <?php
+        $rs = ExecuteQuery("SELECT * FROM `w_testimoni` WHERE `show` = 'Y'");
+        while ($row_testimoni = $rs->fetch()) {
+        ?>
+            <div class="testimonial">
+                <img src="images/testimoni/<?php echo $row_testimoni["gambar"]; ?>" alt="<?php echo $row_testimoni["nama"]; ?>">
+                <p>"<?php echo $row_testimoni["testimoni"]; ?>"</p>
+                <h3><?php echo strtoupper($row_testimoni["nama"]); ?></h3>
+            </div>
+        <?php
+        }
+        ?>
+    </div>
+</center>
+
 	</section>
 
 	<section class="content-section">
