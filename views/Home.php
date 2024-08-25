@@ -445,11 +445,13 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a>
 				</div>
 
-				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="9000">
+				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="5000">
 					<div class="carousel-inner" role="listbox">
 						<div class="row" style="margin-right:0px !important">
 							<?php
-								$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') ORDER BY `tawal` ASC");
+								$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
+								FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
+								ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 								$i=1;
 								while ($row = $rs->fetch()) {
 								
@@ -504,7 +506,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<div class="container">
 			<div class="row">
 				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
-				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
 					<!--<ol class="carousel-indicators">
 						<li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
 						<li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
@@ -564,7 +566,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
 	<section class="content-section">
 	<div class="container">
-		<h3 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h3>
+		<h3 class="text-center text-bold mt-5 mb-4">Testimoni Alumni</h3>
 			<center>
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
