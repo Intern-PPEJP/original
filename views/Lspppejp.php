@@ -29,7 +29,7 @@ $Lspppejp = &$Page;
 	}
 
 	thead {
-		background-color: #16a45c;
+		background-color: #3A8F53;
 		color: #ffffff;
 		text-align: center; /* Rata tengah untuk header */
 	}
