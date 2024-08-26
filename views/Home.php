@@ -280,7 +280,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				</div>
 
 			</div>
-		</div>
+		</div>mengem
 	</section>
 
 	<section class="barcount-section">
