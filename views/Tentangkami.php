@@ -45,6 +45,14 @@ $Tentangkami = &$Page;
 		margin-top : 2px;
 		margin-bottom: 2px; 
 	}
+	.equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+	}
+	.card-body {
+		flex-grow: 1;
+	}
 	
 </style>
 
@@ -192,7 +200,7 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 <div class="row mt-5">
 	
 	<div class="col-md-6">
-		<div class="card">
+		<div class="card equal-height">
 		  <div class="card-header" style="background-color:#031A31;color:#fff">
 			<h4 class="text-bold text-center">KONTRAKTUAL</h4>
 		  </div>
@@ -204,14 +212,16 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 		  </div>
 		</div>
 	</div>
+	
 	<div class="col-md-6">
-		<div class="card">
+		<div class="card equal-height">
 		  <div class="card-header" style="background-color:#031A31;color:#fff">
 			<h4 class="text-bold text-center"><i>COST SHARING</i></h4>
 		  </div>
 		  <div class="card-body">
 			<h5 class="text-bold text-center">KERJASAMA SECARA <i>COST SHARING</i></h5>
 			<p class="card-text text-justify">Kerja sama pelatihan yang pembiayaan sebagian besar dari anggaran Rupiah Murni APBN PPEJP (bukan PNBP), sedangkan mitra yang kerja sama membayar biaya pelatihan sesuai tariff Penerimaan Negara Bukan Pajak (PNBP) yang berlaku di Kementerian Perdagangan.</p>
+			<br><br> 
 			<h5 class="text-bold text-center">KEPESERTAAN</h5>
 			<p class="card-text text-justify">Peserta berasal dari para pelaku usaha khususnya UKM binaannya maupun SDM Internal,  peserta harus 30 (tiga puluh) orang</p>
 		  </div>
@@ -219,6 +229,7 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 	</div>
 	
 </div>
+
 
 <div class="row mt-5">
 	
