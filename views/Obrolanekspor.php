@@ -194,14 +194,14 @@ $Obrolanekspor = &$Page;
     /* Media query untuk layar kecil */
     @media (max-width: 768px) {
     .container-topik {
-        flex-direction: column; /* Ubah arah menjadi kolom (vertikal) */
-        align-items: center; /* Selaraskan item di tengah */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .container-topik .topic-card {
-        width: 100%; /* Lebar penuh pada layar kecil */
-        max-width: 350px; /* Set batas maksimum agar tidak terlalu lebar */
-        margin: 10px auto; /* Pusatkan margin secara otomatis */
+        width: 100%; 
+        max-width: 350px; 
+        margin: 10px auto; 
     }
     }
     </style>
@@ -293,14 +293,14 @@ $Obrolanekspor = &$Page;
 }
 
 .narasumber-img {
-    width: 260px; /* Sesuaikan ukuran sesuai kebutuhan */
-    height: 260px; /* Ukuran yang sama dengan width untuk membuat kotak */
-    border-radius: 15px; /* Atur radius sesuai keinginan */
-    object-fit: cover; /* Agar gambar tetap proporsional */
+    width: 260px; 
+    height: 260px; 
+    border-radius: 15px; 
+    object-fit: cover; 
     margin-bottom: 15px;
-    display: block; /* Tambahkan ini */
-    margin-left: auto; /* Tambahkan ini */
-    margin-right: auto; /* Tambahkan ini */
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 
