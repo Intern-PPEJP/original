@@ -498,7 +498,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<h3 class="mb-3 text-bold">Pelatihan Mendatang </h3>
 					<a class="btn btn-success mb-3 " href="#carouselProducts" role="button" data-slide="next" style="position:absolute;right:25px;top:0">
 						<i class="fa fa-arrow-right"></i>
-					</a>
+					</a><br>
 				</div>
 
 				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="5000">
