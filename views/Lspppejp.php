@@ -60,6 +60,68 @@ $Lspppejp = &$Page;
 	tbody tr:nth-child(even) {
 		background-color: #f3f3f3; /* memberi warna yang berbeda tiap baris*/
 	}
+
+	.container-topik {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        padding: 50px 0px;
+    }
+
+    .container-topik .topic-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .container-topik .topic-card img {
+        width: 90px;
+        margin-bottom: 15px;
+    }
+
+    .container-topik .topic-card h3 {
+        font-size: 18px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    .container-topik .topic-card:hover {
+    background-color: #023e8a;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .container-topik .topic-card:hover h3 {
+        color: #ffffff;
+    }
+
+    .container-topik .topic-card:hover img {
+    filter: brightness(0) invert(1); /* Mengubah icon menjadi putih */
+    transition: filter 0.3s ease;
+    }
+
+	/* Media query untuk layar kecil */
+    @media (max-width: 768px) {
+    .container-topik {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .container-topik .topic-card {
+        width: 100%; 
+        max-width: 350px; 
+        margin: 10px; 
+    }
+    }
+
+	.custom-margin-bottom {
+        margin-bottom: 40px; /* Sesuaikan dengan jarak yang diinginkan */
+    }
 </style>
 
 <div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
@@ -83,7 +145,7 @@ $Lspppejp = &$Page;
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <div class="text-justify">
+            <div class="text-center">
 				<p> LSP PPEJP ini merupakan LSP pihak ke 2 yang mempunyai tugas memastikan dan memelihara kompetensi alumni pelatihan PPEJP dan jejaringnya, khususnya eksportir dan calon eksportir di dalam ruang lingkup tugas mereka sebagai pengelola dan pelaku manajemen ekspor impor.</p>
 			</div>
         </div>
@@ -94,7 +156,7 @@ $Lspppejp = &$Page;
 		<div class="row row-bar-count pt-3 text-white">
 
 			<div class="col-12 text-center">
-				<h2>Motto Kami : </h2>
+				<h2>Motto Kami: </h2>
 				<h2>“MEMASTIKAN DAN MEMELIHARA KOMPETENSI ANDA DI BIDANG EKSPOR IMPOR”</h2>	
 			</div>
 		</div>
@@ -103,8 +165,8 @@ $Lspppejp = &$Page;
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <h3 class="text-center">
-             Persyaratan Pendaftaran Peserta Sertifikasi :
+            <h3 class="text-center custom-margin-bottom">
+             Persyaratan Pendaftaran Peserta Sertifikasi:
             </h3>
 			<p>
 				<ol>
@@ -125,30 +187,31 @@ $Lspppejp = &$Page;
 					<li>Pemohon yang memenuhi persyaratan dinyatakan sebagai peserta sertifikasi.</li>
 				</ol>
 			</p>
-			
-            <h3 class="text-center mt-2 mb-2">
-            4 (empat) ruang lingkup skema sertifikasi klaster :
+			<br>
+            <h3 class="text-center mt-2 mb-2 custom-margin-bottom">
+            Empat ruang lingkup skema sertifikasi klaster:
             </h3>
-			<div class="row text-white text-center mb-2">
-			<div class="col-md-3 col-6">
-				<div class="card mr-1" style="background-color:#031A31;height:3.3em;">PERSIAPAN <br>EKSPOR</div>
+			<div class="container container-topik">
+			<div class="topic-card">
+				<img src="images\icons\clipboard.png" alt="Persiapan Ekspor">
+				<h3>Persiapan Ekspor</h3>
 			</div>
-			<div class="col-md-3 col-6">
-				<div class="card mr-1" style="background-color:#031A31;height:3.3em;">PELAKSANAAN <br>EKSPOR</div>
+			<div class="topic-card">
+				<img src="images\icons\implement.png" alt="Pelaksanaan Ekspor">
+				<h3>Pelaksanaan Ekspor</h3>
 			</div>
-			<div class="col-md-3 col-6">
-				<div class="card mr-1" style="background-color:#031A31;height:3.3em;">PERSIAPAN <br>IMPOR</div>
+			<div class="topic-card">
+				<img src="images\icons\clipboard.png" alt="Persiapan Impor">
+				<h3>Persiapan Impor</h3>
 			</div>
-			<div class="col-md-3 col-6">
-				<div class="card" style="background-color:#031A31;height:3.3em;">PELAKSANAAN <br>IMPOR</div>
+			<div class="topic-card">
+				<img src="images\icons\implement.png" alt="Pelaksanaan Impor">
+				<h3>Pelaksanaan Impor</h3>
 			</div>
 			</div>
-			</p>
-			
 			<p class="text-center">
 			Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 95 Tahun 2018 Tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Perdagangan Besar Dan Eceran; Reparasi Dan Perawatan Mobil Dan Sepeda Motor Golongan Pokok Perdagangan Besar, Bukan Mobil Dan Sepeda Motor Bidang Ekspor Impor.
 			</p>
-			
         </div>
     </div>
 </div>
@@ -238,7 +301,7 @@ $Lspppejp = &$Page;
     </table>
 
 	<br>
-	<p> Persyaratan Dasar Pemohon Sertifikasi
+	<p> Persyaratan Dasar Pemohon Sertifikasi:
 		<ol>
 			<li>Memiliki sertifikat pelatihan ekspor yang diselenggarakan oleh PPEJP, dan</li>
 			<li>Pendidikan minimal SMA/SMK atau tenaga kerja berpengalaman pada pekerjaan persiapan ekspor minimal 2 tahun atau memiliki Izin usaha.</li>
@@ -335,7 +398,7 @@ $Lspppejp = &$Page;
 	</table>
 	<br>
 
-	<p> Persyaratan Dasar Pemohon Sertifikasi </p>
+	<p> Persyaratan Dasar Pemohon Sertifikasi: </p>
 	<ol>
 		<li>Memiliki sertifikat pelatihan ekspor yang diselenggarakan oleh PPEJP, dan</li>
 		<li>Pendidikan minimal SMA/SMK atau tenaga kerja berpengalaman pada pekerjaan pelaksanaan ekspor minimal 2 tahun atau memiliki Izin usaha.</li>
@@ -406,7 +469,7 @@ $Lspppejp = &$Page;
 	</table>
 
 	<br>
-	<p> Persyaratan Dasar Pemohon Sertifikasi
+	<p> Persyaratan Dasar Pemohon Sertifikasi:
 		<ol>
 			<li>Memiliki sertifikat pelatihan ekspor yang diselenggarakan oleh PPEJP, dan</li>
 			<li>Pendidikan minimal SMA/SMK atau tenaga kerja berpengalaman pada pekerjaan persiapan impor minimal 2 tahun atau memiliki Izin usaha.</li>
@@ -478,7 +541,7 @@ $Lspppejp = &$Page;
 	</table>
 
 	<br>
-	<p> Persyaratan Dasar Pemohon Sertifikasi
+	<p> Persyaratan Dasar Pemohon Sertifikasi:
 		<ol>
 			<li>Memiliki sertifikat pelatihan ekspor yang diselenggarakan oleh PPEJP, dan</li>
 			<li>Pendidikan minimal SMA/SMK atau tenaga kerja berpengalaman pada pekerjaan pelaksanaan impor minimal 2 tahun atau memiliki Izin usaha.</li>
