@@ -68,11 +68,11 @@ $Tentangkami = &$Page;
 
 .fasilitas-row:first-child {
     width: 100%;
-    justify-content: space-between; /* Menyebarkan tiga item di bagian atas */
+    justify-content: space-between; 
 }
 
 .fasilitas-row-center {
-    justify-content: center; /* Memusatkan dua item di bagian bawah */
+    justify-content: center; 
 }
 
 .fasilitas-item {
@@ -80,7 +80,7 @@ $Tentangkami = &$Page;
     padding: 15px;
     border-radius: 8px;
     text-align: center;
-    width: 30%; /* Mengatur lebar setiap item agar konsisten */
+    width: 30%; 
 }
 
 .fasilitas-item img {
@@ -109,13 +109,13 @@ $Tentangkami = &$Page;
     }
 
     .fasilitas-item {
-        width: 80%; /* Mengubah lebar item pada layar yang lebih kecil */
+        width: 80%; 
     }
 }
 
 @media (max-width: 768px) {
     .fasilitas-item {
-        width: 100%; /* Lebar penuh untuk layar kecil */
+        width: 100%; 
     }
 }
 
