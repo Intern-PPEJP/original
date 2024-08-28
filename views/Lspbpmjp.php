@@ -113,8 +113,8 @@ p, table, div {
 <style>
 /* Untuk layar dengan lebar lebih besar dari 768px */
 .responsive-text {
-    margin-left: 125px;
-    margin-right: 125px;
+    margin-left: 115px;
+    margin-right: 115px;
     padding-bottom: 0px;
 }
 
