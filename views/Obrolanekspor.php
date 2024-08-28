@@ -30,7 +30,7 @@ $Obrolanekspor = &$Page;
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <div class="text-center" style="font-size: 16px">
+            <div class="text-justify" style="font-size: 16px">
                 Obrolan ekspor merupakan dialog antara PPEJP, pelaku usaha, dan praktisi ekspor untuk mencapai kesepahaman dan peningkatan kolaborasi
                 pelaksanaan ekspor. Selain itu, Obrolan Ekspor memberikan informasi tentang ekspor serta peningkatan motivasi dan pengetahuan ekspor
                 bagi dunia usaha terutama pelaku usaha berorientasi ekspor.
@@ -54,7 +54,7 @@ $Obrolanekspor = &$Page;
     <div class="container">
         <div class="row py-3">
             <div class="col-md-12 p-0 text-center text-black">
-                <!--<div class="xb1 text-center">-->
+                <div class="xb1 text-center">-->
                     <!--<h2 class="mt-3 text-bold" style="font-size: 20px;">TOPIK OBROLAN</h2>-->
                 <!--</div>-->
            <!-- </div>
@@ -201,7 +201,7 @@ $Obrolanekspor = &$Page;
     .container-topik .topic-card {
         width: 100%; 
         max-width: 350px; 
-        margin: 10px auto; 
+        margin: 10px; 
     }
     }
     </style>
@@ -293,8 +293,8 @@ $Obrolanekspor = &$Page;
 }
 
 .narasumber-img {
-    width: 260px; 
-    height: 260px; 
+    width: 100%; 
+    height: 220px; 
     border-radius: 15px; 
     object-fit: cover; 
     margin-bottom: 15px;
@@ -304,9 +304,14 @@ $Obrolanekspor = &$Page;
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .narasumber-card {
         margin-bottom: 20px;
+        padding: 15px;
+    }
+    .narasumber-img {
+        width: 100%; /* Atur agar gambar lebih kecil pada tablet */
+        height: auto; /* Memastikan gambar tetap proporsional */
     }
 }
 </style>
@@ -325,7 +330,7 @@ $Obrolanekspor = &$Page;
                 </div>
             </div>
         </div>
-        <div class="container">
+        <!--<div class="container">
             <div class="row xpy-5 flex-nowrap" style="overflow-x: auto; height: 420px;">
                 <?php
                     $rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`,`Link`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `jenis_pelatihan` LIKE 'obrolan_ekspor' ORDER BY `tawal` DESC Limit 20");
@@ -347,10 +352,39 @@ $Obrolanekspor = &$Page;
             </div>
         </div>
         <div class="row mt-2" style="font-weight: 600; font-size: 1.2em;">
-            <a href="https://www.youtube.com/playlist?list=PLnXXNWWTR6gbM0BabCRzXf4cZovf0wc8e" style="color:#212529;text-decoration:none"><div class="col-md-12 text-right">
+            <!--<a href="https://www.youtube.com/playlist?list=PLnXXNWWTR6gbM0BabCRzXf4cZovf0wc8e" style="color:#212529;text-decoration:none"><div class="col-md-12 text-right">
                 Selengkapnya <i class="fa fa-chevron-right"></i>
             </div>
 			</a>
+        </div>
+    </div>-->
+        <div class="container">
+            <div class="row">
+                <?php
+                $playlists = [
+                    "https://www.youtube.com/embed/2FTgzPOHIVs?si=6RZMlxt6tKwZMkNM",
+                    "https://www.youtube.com/embed/FWVt1DW2bs0?si=7EQ2UIW-Tqh3gHp_",
+                    "https://www.youtube.com/embed/ED3VtTqOm9M?si=g_M3vu-v8zMMjNvg",
+                    "https://www.youtube.com/embed/XhOVRfQhU-c?si=FaNHJKXf2hWU4KuQ"
+                ];
+
+                foreach ($playlists as $playlist) {
+                    echo '
+                    <div class="col-md-3 mb-4">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="'.$playlist.'" allowfullscreen></iframe>
+                        </div>
+                    </div>';
+                }
+                ?>
+            </div>
+            <div class="row mt-2" style="font-weight: 600; font-size: 1.2em;">
+                <a href="https://www.youtube.com/playlist?list=PLnXXNWWTR6gbM0BabCRzXf4cZovf0wc8e" style="color:#212529;text-decoration:none">
+                    <div class="col-md-12 text-right">
+                        Selengkapnya <i class="fa fa-chevron-right"></i>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 </div>
