@@ -32,6 +32,8 @@ $Tentangbpmjp = &$Page;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+	margin-bottom :200px;
+	
 }
 
 .fasilitas-row {
@@ -175,10 +177,6 @@ $Tentangbpmjp = &$Page;
         </div>
     </div>
 </div>
-
-<BR></BR>
-
-
 
 </div>
 
