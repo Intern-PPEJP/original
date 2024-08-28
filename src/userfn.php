@@ -274,10 +274,10 @@ function myheader(){
 	}
 
 	.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
+		position: fixed;
+		top: 0;
+		width: 100%;
+		z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
 	}
 
 	@media screen and (max-width: 768px) { /* mobile view */
@@ -301,7 +301,7 @@ function myheader(){
 	}
 
     p, table, div, ul, li {
-    font-size: 16px;
+    	font-size: 16px;
 	}
 	
 	h2{
@@ -318,10 +318,31 @@ function myheader(){
 	}
 
 	.icon {
-		height: 20px;
-		width: 20px;
+		height: 15px;
+		width: 15px;
 		margin-right: 10px; /* Menambahkan jarak antara ikon dan teks */
 		vertical-align: middle; /* Agar ikon sejajar dengan teks secara vertikal */
+		display: inline-block; /* Memastikan gambar dan teks berada di satu baris */
+		margin-top: 3px;
+	}
+
+	.footer-item {
+		display: flex; /* Menggunakan Flexbox untuk merapikan tata letak */
+		align-items: flex-start; /* Menyelaraskan gambar dan teks di tengah secara vertikal */
+	}
+
+	.footer-item img {
+		margin-right: 10px; /* Menambahkan jarak antara ikon dan teks */
+	}
+
+	.footer-item div {
+		display: inline-block; /* Memastikan teks tetap berada di samping gambar */
+		vertical-align: middle; /* Menyelaraskan teks di tengah secara vertikal */
+	}
+	.social-media-icon {
+		height: 30px; /* Atur ukuran ikon sesuai kebutuhan, misalnya 25px */
+		width: auto; /* Menyesuaikan lebar secara otomatis */
+		margin-right: 5px; /* Memberikan jarak antar ikon */
 	}
 
 </style>
@@ -448,35 +469,40 @@ function myfooter (){
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-12 mb-4">
-				
 				<div>
 					Pusat Pelatihan SDM Ekspor dan Jasa Perdagangan<br>
-                	<img src="<?= GetUrl('images/icons/address.png') ?>" class="icon">
-					Letjen S. Parman Jalan No.112, RT.3/RW.8, Tomang, Grogol Petamburan, Kota Jakarta Barat, Jakarta 11440<br>
-
-                    <img src="<?= GetUrl('images/icons/phone.png') ?>" class="icon"> 
-					021-5674229 ext 106<br>
-
-                    <img src="<?= GetUrl('images/icons/whatsapp.png') ?>" class="icon"> 
-					0813 8835 6060<br>
-
-                    <img src="<?= GetUrl('images/icons/email.png') ?>" class="icon"> 
-					promosi.ppejp@kemendag.go.id </div>
-				</p>
-				<p class="text-white d-flex mb-2">
+                	<div class="footer-item">
+						<img src="<?= GetUrl('images/icons/address.png') ?>" class="icon">
+						<div>Letjen S. Parman Jalan No.112, RT.3/RW.8, Tomang, Grogol Petamburan, Kota Jakarta Barat, Jakarta 11440</div>
+					</div>
+					<div class="footer-item">
+						<img src="<?= GetUrl('images/icons/phone.png') ?>" class="icon">
+						<div>021-5674229 ext 106</div>
+					</div>
+					<div class="footer-item">
+						<img src="<?= GetUrl('images/icons/whatsapp.png') ?>" class="icon">
+						<div>0813 8835 6060</div>
+					</div>
+					<div class="footer-item">
+						<img src="<?= GetUrl('images/icons/email.png') ?>" class="icon">
+						<div>promosi.ppejp@kemendag.go.id</div>
+					</div>
+				</div><br>
 				<div>
 					Balai Pelatihan SDM Metrologi Mutu dan Jasa Perdagangan<br>
-					
-					<img src="<?= GetUrl('images/icons/address.png') ?>" class="icon"> 
-					Jl. Daeng Muhammad Ardiwinata KM 3,4 Kel. Cihanjuang, Kec. Parongpong, Kabupaten Bandung Barat, Jawa Barat 40559<br>
-					
-					<img src="<?= GetUrl('images/icons/whatsapp.png') ?>" class="icon"> 
-					0811 200 6666 4<br>
-					
-					<img src="<?= GetUrl('images/icons/email.png') ?>" class="icon"> 
-					bpmjp@kemendag.go.id<br>
+					<div class="footer-item">
+						<img src="<?= GetUrl('images/icons/address.png') ?>" class="icon">
+						<div>Jl. Daeng Muhammad Ardiwinata KM 3,4 Kel. Cihanjuang, Kec. Parongpong, Kabupaten Bandung Barat, Jawa Barat 40559</div>
 					</div>
-				</p>
+					<div class="footer-item">
+						<img src="<?= GetUrl('images/icons/whatsapp.png') ?>" class="icon">
+						<div>0811 200 6666 4</div>
+					</div>
+					<div class="footer-item">
+						<img src="<?= GetUrl('images/icons/email.png') ?>" class="icon">
+						<div>bpmjp@kemendag.go.id</div>
+					</div>
+				</div>
 			</div>
 			<div class="col-lg-2 col-12 mb-4">
 				<h2 class="site-footer-title mb-3">Navigation</h2>
@@ -497,10 +523,18 @@ function myfooter (){
 			<div class="col-lg-2 col-md-6 col-12 mx-auto">
 				<h2 class="site-footer-title mb-3">Social Media</h2>
 				<p class="text-white d-flex mb-2">
-					<a href="https://www.facebook.com/PPEJP.Kemendag" class="footer-menu-link" target="_blank"><image src="<?= GetUrl('images/icons/xfacebook.png') ?>"></img> </a>
-					<a href="https://www.instagram.com/ppejp.kemendag/" class="footer-menu-link" target="_blank"><image src="<?= GetUrl('images/icons/xinstagram.png') ?>"></img> </a>
-					<a href="https://www.youtube.com/@PPEJPKemendag" class="footer-menu-link" target="_blank"><image src="<?= GetUrl('images/icons/xyoutube.png') ?>"></img> </a>
-					<a href="https://www.tiktok.com/@ppejp.kemendag/" class="footer-menu-link" target="_blank"><image src="<?= GetUrl('images/icons/xtiktok.png') ?>"></img> </a>
+				<a href="https://www.facebook.com/PPEJP.Kemendag" class="footer-menu-link" target="_blank">
+					<img src="<?= GetUrl('images/icons/xfacebook.png') ?>" class="social-media-icon">
+				</a>
+				<a href="https://www.instagram.com/ppejp.kemendag/" class="footer-menu-link" target="_blank">
+					<img src="<?= GetUrl('images/icons/xinstagram.png') ?>" class="social-media-icon">
+				</a>
+				<a href="https://www.youtube.com/@PPEJPKemendag" class="footer-menu-link" target="_blank">
+					<img src="<?= GetUrl('images/icons/xyoutube.png') ?>" class="social-media-icon">
+				</a>
+				<a href="https://www.tiktok.com/@ppejp.kemendag/" class="footer-menu-link" target="_blank">
+					<img src="<?= GetUrl('images/icons/xtiktok.png') ?>" class="social-media-icon">
+				</a>
 				</p>
 			</div>
 		</div>
