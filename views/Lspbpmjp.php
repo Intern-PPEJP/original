@@ -101,7 +101,7 @@ p, table, div {
 <div class="container" style="padding-bottom: 0px;">
     <div class="row my-4">
         <div class="col-md-12">
-            <div class="text-justify">
+            <div class="text-center">
 				<p class="responsive-text" style="padding-bottom: 0px;"> 
                 Lembaga Sertifikasi Profesi (LSP) adalah organisasi yang berperan dalam sertifikasi kompetensi kerja di Indonesia. LSP berfungsi untuk menguji dan menilai kompetensi seseorang berdasarkan standar kompetensi yang telah ditetapkan oleh Badan Nasional Sertifikasi Profesi (BNSP) atau lembaga terkait lainnya. LSP bertujuan untuk memastikan bahwa tenaga kerja memiliki kompetensi sesuai dengan kebutuhan industri dan pasar kerja. 
                 </p>
@@ -133,7 +133,7 @@ p, table, div {
         <h2 class="text-bold text-center">VISI</h2>
     </div>
     <div>
-        <p class="text-justify" >
+        <p class="text-center" >
             LSP P1 BPMJP mempunyai visi menjadi LSP bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya untuk menciptakan sumber daya manusia yang kompeten dan profesional serta diakui secara Nasional, Regional, dan Internasional.
         </p>
     </div>
