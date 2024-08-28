@@ -128,7 +128,7 @@ p, table, div {
 </style>
 
 <div class="d-flex justify-content-center">
-<div class="col-md-8 col-12">
+<div class="col-md-7 col-12">
     <div style="color:#000;padding-top:10px;padding-bottom:3px;">
         <h2 class="text-bold text-center">VISI</h2>
     </div>
