@@ -43,9 +43,82 @@ $Tentangkami = &$Page;
 		font-size : 16px;
 		line-height: 1.3;
 		margin-top : 2px;
-		margin-bottom: 2px; 
+		margin-bottom: 2px
+  }
+	.equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 	}
-	
+	.card-body {
+		flex-grow: 1;
+	}
+	.fasilitas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.fasilitas-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fasilitas-row:first-child {
+    width: 100%;
+    justify-content: space-between; 
+}
+
+.fasilitas-row-center {
+    justify-content: center; 
+}
+
+.fasilitas-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%; 
+}
+
+.fasilitas-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.fasilitas-item strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.fasilitas-item p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+    .fasilitas-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fasilitas-item {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .fasilitas-item {
+        width: 100%; 
+    }
+}
+
 </style>
 
 
