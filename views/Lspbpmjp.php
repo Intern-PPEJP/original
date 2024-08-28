@@ -74,9 +74,8 @@ p, table, div {
 
     .custom-card {
     display: inline-block;
-    border-radius: 5px;      /* Sudut melengkung */
     padding: 25px 20px 10px 20px; /* Padding atas 25px, bawah 10px, kiri/kanan 20px */
-    background-color: #fcf6bd; /* Warna latar card */
+    background-color: #fcf6bd;  Warna latar card */
 }
 
 
@@ -103,38 +102,36 @@ p, table, div {
     <div class="row my-4">
         <div class="col-md-12">
             <!--<h3 class="mb-3 text-bold text-center">LSP P1 BPMJP</h3>-->
-            <div class="text-center">
-				<p style="margin-left: 110px; margin-right: 110px; padding-bottom: 0px;"> Lembaga Sertifikasi Profesi (LSP) adalah organisasi yang berperan dalam sertifikasi kompetensi kerja di Indonesia. LSP berfungsi untuk menguji dan menilai kompetensi seseorang berdasarkan standar kompetensi yang telah ditetapkan oleh Badan Nasional Sertifikasi Profesi (BNSP) atau lembaga terkait lainnya. LSP bertujuan untuk memastikan bahwa tenaga kerja memiliki kompetensi sesuai dengan kebutuhan industri dan pasar kerja. </p>
+            <div class="text-justify">
+				<p style="margin-left: 125px; margin-right: 125px; padding-bottom: 0px;"> Lembaga Sertifikasi Profesi (LSP) adalah organisasi yang berperan dalam sertifikasi kompetensi kerja di Indonesia. LSP berfungsi untuk menguji dan menilai kompetensi seseorang berdasarkan standar kompetensi yang telah ditetapkan oleh Badan Nasional Sertifikasi Profesi (BNSP) atau lembaga terkait lainnya. LSP bertujuan untuk memastikan bahwa tenaga kerja memiliki kompetensi sesuai dengan kebutuhan industri dan pasar kerja. </p>
 			</div>
         </div>
     </div>
 </div>
 <div class="d-flex justify-content-center">
 <div class="col-md-5">
-		<div class="card">
-		  <div class="card-header" style="background-color:#3A8F53;color:#fff;padding-top:10px;padding-bottom:3px;">
-			<h2 class="text-bold text-center">VISI</h2>
-		  </div>
-		  <div class="card-body">
-			<p class="card-text text-center">LSP P1 BPMJP mempunyai visi menjadi LSP bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya untuk menciptakan sumber daya manusia yang kompeten dan profesional serta diakui secara Nasional, Regional, dan Internasional.</p>
-		  </div>
-		</div>
-        <div class="card">
-		  <div class="card-header" style="background-color:#3A8F53;color:#fff;padding-top:10px;padding-bottom:3px;">
-			<h2 class="text-bold text-center">MISI</h2>
-		  </div>
-		  <div class="card-body">
-			<p>
-                <ol>
-					<li class="text-justify">Menyelenggarakan sertifikasi kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya/pemasok yang independen dan profesional.</li>
-					<li class="text-justify">Memastikan dan memelihara kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan untuk dapat bersaing secara nasional regional dan Internasional.</li>
-					<li class="text-justify">Menjamin mutu dengan menjaga proses sertifikasi sesuai dengan standar yang berlaku.</li>
-					<li class="text-justify">Menyediakan tempat uji kompetensi sesuai dengan ruang lingkup Lembaga Sertifikasi Profesi bidang metrologi, mutu dan jasa perdagangan.</li>
-				</ol>
-            </p>
-		  </div>
-		</div>
-	</div>
+    <div style="color:#000;padding-top:10px;padding-bottom:3px;">
+        <h2 class="text-bold text-center">VISI</h2>
+    </div>
+    <div>
+        <p class="text-justify" style="margin-left: -200px; margin-right: -200px; padding-bottom: 0px;">
+            LSP P1 BPMJP mempunyai visi menjadi LSP bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya untuk menciptakan sumber daya manusia yang kompeten dan profesional serta diakui secara Nasional, Regional, dan Internasional.
+        </p>
+    </div>
+
+    <div style="color:#000;padding-top:10px;padding-bottom:3px;margin-top:20px;">
+        <h2 class="text-bold text-center">MISI</h2>
+    </div>
+    <div>
+        <ol style="margin-left: -200px; margin-right: -200px; padding-bottom: 30px;">
+            <li class="text-justify">Menyelenggarakan sertifikasi kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya/pemasok yang independen dan profesional.</li>
+            <li class="text-justify">Memastikan dan memelihara kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan untuk dapat bersaing secara nasional regional dan Internasional.</li>
+            <li class="text-justify">Menjamin mutu dengan menjaga proses sertifikasi sesuai dengan standar yang berlaku.</li>
+            <li class="text-justify">Menyediakan tempat uji kompetensi sesuai dengan ruang lingkup Lembaga Sertifikasi Profesi bidang metrologi, mutu dan jasa perdagangan.</li>
+        </ol>
+    </div>
+</div>
+
 </div>
 <!--<section class="barcount-section" style="min-height:50px !important">
 	<div class="container">
