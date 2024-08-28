@@ -7,6 +7,14 @@ $Home = &$Page;
 ?>
 <?php echo myheader(); ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+</head>
+<body> 
 <style>
 /*
 
@@ -118,6 +126,80 @@ p, div {
     opacity: 1;
     transform: scale(1);
 }
+
+.icon-text, .featured-block {
+        transition: transform 0.3s ease; /* Efek transisi yang halus */
+}
+
+.icon-text:hover, .featured-block:hover {
+        transform: translateY(-10px); /* Efek naik saat dihover */
+}
+
+.carousel-indicators {
+    position: relative;
+    margin-top: 6px; /* Atur jarak dari konten di atasnya */
+    margin-bottom: -2px; /* Geser lebih ke bawah dari posisi default */
+    text-align: center; /* Posisikan di tengah secara horizontal */
+}
+
+.carousel-indicators li {
+  width: 10px;
+  height: 8px;
+  background-color: #6c757d; /* Warna tombol titik */
+  border-radius: 60%;
+}
+
+.carousel-indicators .active {
+  background-color: #000000; /* Warna tombol titik aktif */
+}
+
+.testimonials {
+    text-align: center;
+    padding: 20px;
+    white-space: normal; /* Ubah menjadi normal agar elemen bisa wrap ke bawah */
+}
+
+    .testimonial {
+		display: inline-block;
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 23%; /* Lebar yang sesuai agar 4 testimoni muat dalam satu baris */
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		vertical-align: top;
+		margin-right: 1%;
+    }
+
+    .testimonial img {
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+    }
+
+	.testimonial:hover {
+        background-color: #edf6f9; /* Warna latar belakang saat hover */
+    }
+
+    .testimonial p {
+        font-style: italic;
+        color: #666;
+    }
+
+    .testimonial h3 {
+        color: #004DAF;
+        margin-top: 20px;
+		font-size: 18px;
+    }
+
+	@media (max-width: 768px) {
+    .testimonial {
+        width: 100%; /* Full width untuk tampilan HP */
+        margin-bottom: 20px; /* Spasi antar testimoni vertikal */
+        margin-right: 0; /* Hilangkan margin kanan */
+    }}
+
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -173,7 +255,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<div class="y-jadwal">
 				<ul style="list-style-type:none">
 				<?php 
-				$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_peserta`, `sisa`, `tanggal_pelaksanaan`, `jenis_pelatihan`, `Link` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() ORDER BY `tawal` ASC");
+				$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_peserta`, `sisa`, `tanggal_pelaksanaan`, `jenis_pelatihan`, `Link` 
+				FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE()
+				ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 				$i=1;
 				while ($row = $rs->fetch()) {
 					$ket = '<span class="badge text-success">Sisa '.$row["sisa"].' orang</span>';
@@ -191,12 +275,13 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					} else if ($row["jenis_pelatihan"] == "webinar" ){
 						$ikon = "icon-video.png";
 					}
-				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:22px;height:100%;"></span>
+				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:23px;height:41%;"></span>
 					<div class="item_direction mb-4">
 						
 						<i class="fas fa-circle cikon"></i><a href="<?php echo $link; ?>" style="text-decoration:none;color:#fff;">
 						<table><tr><td><img src="images/icons/<?php echo $ikon; ?>"></img></td><td>
-				<?php echo $row["judul_pelatihan"]; ?><br><span class="y-tgl"><?php echo $row["tanggal_pelaksanaan"]; ?> <?php echo $ket; ?> </span></td></tr></table>
+				<?php 
+				echo $row["judul_pelatihan"]; ?><br><span class="y-tgl"><?php echo $row["tanggal_pelaksanaan"]; ?> <?php echo $ket; ?> </span></td></tr></table>
 					</a>
 					</div></li>
 				<?php
@@ -207,7 +292,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			
 				</div>
 					<div id="ppejp-slide"  class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false">
-					  <div style="position:absolute;background: rgb(0 0 0 / 20%);width:100%;height:100%;z-index: 2;"></div>
+					  <div style="position:absolute;background: rgb(0 0 0 / 50%);width:100%;height:100%;z-index: 2;"></div>
 					  <div class="carousel-inner">
 						<div class="carousel-item active">
 						  <img src="images/slide/1.png" class="carousel-image img-fluid" alt="Gedung Depan PPEJP">
@@ -231,7 +316,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			<div class="row justify-content-center">
 			<h3 class="mb-3 text-bold">Profil</h3>
 				<div class="col-lg-8 col-12 vid-profil mb-4">
-					<iframe width="90%" height="300" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					<iframe width="90%" height="320" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				</div>
 				<div class="col-lg-10 col-12 text-description">
 	
@@ -336,7 +421,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
 	<section class="barcount-section">
     <div class="container">
-        <div class="row row-bar-count pt-3">
+        <div class="row row-bar-count pt-5">
             <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
                 <span class="col-12 jumlah" data-target="60000">0</span>
                 <span class="col-12 jumlah_cap">Alumni pelatihan</span>
@@ -403,7 +488,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
 </script>
 
-	
 	<section class="pt-5 pb-2">
 		<div class="container">
 			<div class="row">
@@ -414,16 +498,16 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<h3 class="mb-3 text-bold">Pelatihan Mendatang </h3>
 					<a class="btn btn-success mb-3 " href="#carouselProducts" role="button" data-slide="next" style="position:absolute;right:25px;top:0">
 						<i class="fa fa-arrow-right"></i>
-					</a>
+					</a><br>
 				</div>
-				
 
-
-				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="9000">
+				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="5000">
 					<div class="carousel-inner" role="listbox">
 						<div class="row" style="margin-right:0px !important">
 							<?php
-								$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') ORDER BY `tawal` ASC");
+								$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
+								FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
+								ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 								$i=1;
 								while ($row = $rs->fetch()) {
 								
@@ -439,15 +523,15 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 										<h3 class="card-titte" style="height:40px; font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></h3>
 										<table class="table p-0 m-0" style="font-size:.8em">
 											<tr>
-												<td width="50%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
-												<td width="50%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
+												<td width="60%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
+												<td width="40%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
 											</tr>
 											<tr>
 												<td height=""><i class="fa fa-users" aria-hidden="true"></i> <?php echo $row["jumlah_peserta"]; ?> Orang</td>
 												<td><i class="fa fa-money" aria-hidden="true"></i> <?php echo rupiah($row["harga"]); ?></td>
 											</tr>
 											<tr>
-												<td height="80px"><?php echo $row["tanggal_pelaksanaan"]; ?> </td><td><i class="fa fa-user" aria-hidden="true"></i> 
+												<td height=""><?php echo $row["tanggal_pelaksanaan"]; ?> </td><td><i class="fa fa-user" aria-hidden="true"></i> 
 												<?php if($row["sisa"] >0 && strtotime($row["tawal"]) > strtotime(date("Y-m-d"))){ ?>
 												<span class="text-danger">Sisa <?php echo $sisa; ?> Kursi
 												<?php } else { ?>
@@ -459,7 +543,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 										</table>
 										<div class="card-footer"><a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-lg btn-block">Lihat Detail</a></div>
 									</div>
-
 								</div>
 							</div>
 							<?php
@@ -479,86 +562,68 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<div class="container">
 			<div class="row">
 				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
-				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
+					<!--<ol class="carousel-indicators">
+						<li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+					</ol>-->
 					<div class="carousel-inner">
-						
-						<!-- Slide 1 -->
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/perpustakaan.png" style="width:70%; height:300px !important;" alt="Perpustakaan">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/perpustakaan.png" style="width:95%; height:200px !important;" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
-						</div>
-						</div>
-
-						<!-- Slide 2 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/simulation_center.png" style="width:70%; height:300px !important;" alt="Simulation Center">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/simulation_center.png" style="width:95%; height:200px !important;" alt="Simulation Center">
 							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
 							</div>
-						</div>
-						</div>
-
-						<!-- Slide 3 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/auditorium.png" style="width:70%; height:300px !important;" alt="Auditorium">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/auditorium.png" style="width:95%; height:200px !important;" alt="Auditorium">
 							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
 							</div>
 						</div>
 						</div>
-
-						<!-- Slide 4 -->
 						<div class="carousel-item">
 						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/fasilitas-asrama.png" style="width:70%; height:300px !important;" alt="Asrama">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/fasilitas-asrama.png" style="width:95%; height:200px !important;" alt="Asrama">
 							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
 							</div>
-						</div>
-						</div>
-
-						<!-- Slide 5 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/ruang_kelas.png" style="width:70%; height:300px !important;" alt="Ruang Kelas">
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/laboratorium.png" style="width:95%; height:200px !important;" alt="Laboratorium">
+							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/ruang_kelas.png" style="width:95%; height:200px !important;" alt="Ruang Kelas">
 							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
 							</div>
 						</div>
 						</div>
-
-						<!-- Slide 6 -->
-						<div class="carousel-item">
-						<div class="row justify-content-center">
-							<div class="col-12 text-center">
-							<img src="images/fasilitas/laboratorium.png" style="width:70%; height:300px !important;" alt="Laboratorium">
-							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
-							</div>
-						</div>
-					</div>	
+					</div>
+					<!-- Tombol titik navigasi -->
+					<ol class="carousel-indicators">
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+                </ol>
+  <!-- Kontrol tombol carousel 
+  <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>-->
 				</div>
 			</div>
+		</div>
+	</section>
 
-			<!-- Controls (Previous and Next) -->
-			<a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">Previous</span>
-			</a>
-			<a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">Next</span>
-			</a>
-			</div>
-
-
-			<h3 class="text-center text-bold mt-5 mb-4">Testimoni alumni</h3>
-			
-			<center>
+	<section class="content-section">
+	<div class="container">
+		<h3 class="text-center text-bold mt-5 mb-4">Testimoni Alumni</h3>
+			<!--<center>
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 					<?php
@@ -596,8 +661,27 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					?>
 			  </div>
 			</div>
-			</center>
-			
+			</center>-->
+			<center>
+			<div class="testimonials">
+				<?php
+				$rs = ExecuteQuery("SELECT * FROM `w_testimoni` WHERE `show` = 'Y'");
+				while ($row_testimoni = $rs->fetch()) {
+				?>
+					<div class="testimonial">
+						<img src="images/testimoni/<?php echo $row_testimoni["gambar"]; ?>" alt="<?php echo $row_testimoni["nama"]; ?>">
+						<p>"<?php echo $row_testimoni["testimoni"]; ?>"</p>
+						<h3><?php echo strtoupper($row_testimoni["nama"]); ?></h3>
+					</div>
+				<?php
+				}
+				?>
+			</div>
+		</center>
+	</section>
+
+	<section class="content-section">
+		<div class="container">		
 			<h3 class="text-center text-bold mb-5 mt-5">Media Sosial</h3>
 			<div class="container mb-5">
 			
@@ -606,42 +690,39 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link active" id="pills-instagram-tab" data-toggle="pill" href="#pills-instagram" role="tab" aria-controls="pills-instagram" aria-selected="true"><i class="fab fa-instagram"></i> INSTAGRAM</a>
 						</li>
 						<li class="nav-item col-md-3 col-12">
-						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-tiktok-tab" data-toggle="pill" href="#pills-tiktok" role="tab" aria-controls="pills-tiktok" aria-selected="false">    <i class="fab fa-tiktok"></i> TIKTOK</a>
+						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-tiktok-tab" data-toggle="pill" href="#pills-tiktok" role="tab" aria-controls="pills-tiktok" aria-selected="false"><i class="fab fa-tiktok"></i> TIKTOK</a>
 						</li>
 						<li class="nav-item col-md-3 col-12">
 						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-youtube-tab" data-toggle="pill" href="#pills-youtube" role="tab" aria-controls="pills-youtube" aria-selected="true"><i class="fab fa-youtube"></i> YOUTUBE</a>
 						</li>
 						<li class="nav-item col-md-3 col-12">
-						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-facebook-tab" data-toggle="pill" href="#pills-facebook" role="tab" aria-controls="pills-facebook" aria-selected="true"><i class="fab fa-facebook"></i> FACEBOOK</a>
+						<a style="padding: 6px;padding-right: 1px;padding-left: 1px;" class="nav-link" id="pills-facebook-tab" href="https://www.facebook.com/PPEJP.Kemendag/" target="_blank" role="tab" aria-controls="pills-facebook" aria-selected="false"><i class="fab fa-facebook"></i> FACEBOOK</a>
 						</li>
                     </ul>
 					
-			<div class="tab-content mb-5" style="z-index:1;">
-				<div class="tab-pane fade show active" id="pills-instagram" role="tabpanel" aria-labelledby="pills-instagram-tab">
-					<!--<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-					<div class="elfsight-app-c0ba69ff-8b36-40f8-8eb3-758a5d633c90"></div>-->
-				</div>
-				<div class="tab-pane fade" id="pills-tiktok" role="tabpanel" aria-labelledby="pills-tiktok-tab">
-					<!--<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-					<div class="elfsight-app-91337aaf-cefd-4752-80dc-88a335265f76" data-elfsight-app-lazy></div>-->
-				</div>
-				<div class="tab-pane fade" id="pills-youtube" role="tabpanel" aria-labelledby="pills-youtube-tab">
-					<div data-mc-src="3662baff-3223-406a-afac-c6af840677d1#youtube"></div>
-					<script src="https://cdn2.woxo.tech/a.js#656f9f772d45de716bdbffc3" async data-usrc> </script>
-				</div>
-			</div>
-			
+					<div class="tab-content mb-5" style="z-index:1;">
+					
+						<div class="tab-pane fade show active" id="pills-instagram" role="tabpanel" aria-labelledby="pills-instagram-tab">
+							<!-- Instagram Embed Script -->
+							<script src="https://cdn2.woxo.tech/a.js#66c5a0ac34674ed437f7b09e" async data-usrc></script>
+							<div class="elfsight-app-c0ba69ff-8b36-40f8-8eb3-758a5d633c90"></div>
+						</div>
+						<div class="tab-pane fade" id="pills-tiktok" role="tabpanel" aria-labelledby="pills-tiktok-tab">
+							<!-- TikTok Embed Script -->
+							<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+							<div class="elfsight-app-91337aaf-cefd-4752-80dc-88a335265f76"></div>
+						</div>
+						<div class="tab-pane fade" id="pills-youtube" role="tabpanel" aria-labelledby="pills-youtube-tab">
+							<!-- YouTube Embed Script -->
+							<div data-mc-src="3662baff-3223-406a-afac-c6af840677d1#youtube"></div>
+							<script src="https://cdn2.woxo.tech/a.js#656f9f772d45de716bdbffc3" async data-usrc></script>
+						</div>
+					</div>
 			</script>
 		</div>
 	</section>
 
-
-
-	
-
 </main>
-
-
 
 <?php echo myfooter(); ?>
 
@@ -650,7 +731,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
   <div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="ListPelatihan">JADWAL PELATIHAN</h5>
+        <h5 class="modal-title" id="ListPelatihan"><strong>JADWAL PELATIHAN</strong></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -661,15 +742,26 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
   <div class="container-fluid">
     <div class="row">
     <?php
+		// $rs = ExecuteQuery("SELECT `judul_pelatihan`,SUM(`sisa`) AS total_sisa 
+		// FROM `w_pelatihan` WHERE `Activated` = 'Y' 
+		// AND `tawal` >= CURRENT_DATE() 
+		// AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
+		// GROUP BY `judul_pelatihan`
+		// ORDER BY CASE WHEN SUM(`sisa`) > 0 THEN 1 ELSE 2 END, `judul_pelatihan` ASC");
 		$rs = ExecuteQuery("SELECT `judul_pelatihan` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') GROUP BY `judul_pelatihan`");
 		$i=1;
 		while ($row1 = $rs->fetch()) {
 	?>
 		<div class="col-lg-4">
 		<div class="mb-3 p-0 pb-2" style="border:0;box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);">
-		<p class="p-2" style=" height: 87px;"><?php echo $row1["judul_pelatihan"]; ?></p>
+		<p class="p-2" style=" height: 55px;"><?php echo "<b>" . $row1["judul_pelatihan"] . "</b>"; ?></p>
 		<?php
-			$rs2 = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `judul_pelatihan` = '".$row1["judul_pelatihan"]."' AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') ORDER BY `tawal` ASC");
+			$rs2 = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
+			FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `judul_pelatihan` = '".$row1["judul_pelatihan"]."' AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
+			ORDER BY CASE 
+			WHEN `sisa` > 0  AND `tawal` >= CURDATE() THEN 1
+			WHEN `sisa` > 0  AND `tawal` >= CURDATE() THEN 2 
+			ELSE 3 END, `tawal` ASC");
 			$i=1;
 			while ($row2 = $rs2->fetch()) {
 		?>
@@ -681,12 +773,11 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			
 			<div class="col-8 text-sm-left" style="border:2px solid #babababa;padding:2px;border-right:none;border-radius:0.25rem 0 0 0.25rem;font-size:14pt;color:#bababa"><del><?php echo $row2["tanggal_pelaksanaan"]; ?></del></div>
 			<div class="col-4" style="border:2px solid #babababa;padding:2px;border-radius:0 0.25rem 0.25rem 0;">
-								<table><tr><td><i class="fa fa-user" aria-hidden="true" style="font-size:25px;color:#bababa;"></i></td>
-								
-								<td style="font-size:8pt;margin:0;padding:0;padding-left:5px;color:#bababa"><del>penuh</del></td>
-								
-								
-								</tr></table>
+				<table>
+					<tr><td><i class="fa fa-user" aria-hidden="true" style="font-size:25px;color:#bababa;"></i></td>
+					<td style="font-size:8pt;margin:0;padding:0;padding-left:5px;color:#bababa"><del>penuh</del></td>
+					</tr>
+				</table>
 			</div>
 			
 			<?php
@@ -783,3 +874,5 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	<?php } ?>
 
 <?= GetDebugMessage() ?>
+</body>
+</html>

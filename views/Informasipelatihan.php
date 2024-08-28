@@ -9,12 +9,70 @@ $Informasipelatihan = &$Page;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <style>
-form:invalid [type="submit"] {
-  pointer-events: none;
-  border: 1px solid #999999;
-  background-color: #CCCCCC;
-  color: #666666;
+	.send_form {
+    background-color: #ACE1AF; /* Warna latar belakang */
+    border: none; /* Hilangkan border */
+    color: white; /* Warna teks putih */
+    padding: 10px 50px; 
+    text-align: center; 
+    text-decoration: none; /* Hilangkan garis bawah */
+    display: inline-block; /* Agar padding berfungsi */
+    font-size: 16px; /* Ukuran font */
+    margin-top: 20px; /* Margin atas */
+    cursor: pointer; /* Tampilkan ikon kursor */
+    border-radius: 5px; /* Berikan radius sudut */
+    transition: background-color 0.3s ease; /* Efek transisi */
 }
+
+.send_form:hover {
+    background-color: #28a745; /* Warna latar belakang saat di-hover */
+	text-decoration: none; /* Hilangkan garis bawah */
+	color: white; /* Warna teks putih */
+}
+
+	form:invalid [type="submit"] {
+	pointer-events: none;
+	border: 1px solid #999999;
+	background-color: #CCCCCC;
+	color: #666666;
+	}
+
+    p, table, div {
+    font-size: 16px;
+	}
+	
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 18px;
+	}
+
+	.select-wrapper {
+		position: relative;
+		display: inline-block;
+		width: 100%;
+	}
+
+	.select-wrapper select {
+		appearance: none; /* Menghilangkan gaya default dari browser */
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		background-color: #fff;
+		padding-right: 30px; /* Menyediakan ruang untuk ikon panah */
+	}
+
+	.select-wrapper::after {
+		content: '\25BC'; /* Unicode untuk panah ke bawah */
+		font-size: 12px;
+		color: #555;
+		position: absolute;
+		top: 40%;
+		right: 10px;
+		pointer-events: none; /* Supaya panah tidak mengganggu interaksi */
+		transform: translateY(-50%);
+	}
 </style>
 
 <div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
@@ -31,7 +89,7 @@ form:invalid [type="submit"] {
     <div class="row"><h2 class="h1-responsive font-weight-bold text-center my-4">Hubungi Kami</h2>
 		<div class="col-md-6 col-12">
 			<section>
-				<p class="text-justify w-responsive mx-auto mb-3">Untuk seputar pertanyaan dan informasi silahkan menghubungi kami dengan mengisi form dibawah ini</p>
+				<p class="text-justify w-responsive mx-auto mb-3">Untuk seputar pertanyaan dan informasi silahkan menghubungi kami dengan mengisi form di bawah ini</p>
 
 				<div class="row">
 					<div class="col-md-12 mb-md-0 mb-5">
@@ -41,56 +99,64 @@ form:invalid [type="submit"] {
 
 								<div class="col-md-12">
 									<div class="md-form mb-0">
-										<label for="name" class="mb-0">Kepada</label>
-										 <select class="form-control w-100 mb-2" id="kepada" required >
-										  <option>Silahkan pilih...</option>
-										  <option value="PPEJP">PPEJP</option>
-										  <option value="BPMJP">BPMJP</option>
-										</select>
+										<label for="kepada" class="mb-0">Kepada</label>
+										<div class="select-wrapper">
+											<select class="form-control w-100 mb-2" id="kepada" required>
+												<option value="" disabled selected hidden>Silahkan pilih</option>
+												<option value="PPEJP">PPEJP</option>
+												<option value="BPMJP">BPMJP</option>
+											</select>
+										</div>
 									</div>
 								</div>
-								<div class="col-md-12 inputan">
+
+								<div class="col-md-12">
 									<div class="md-form mb-0">
-										<label for="name" class="mb-0">Perihal</label>
-										 <select class="form-control w-100 mb-2" id="perihal" required>
-										  <option>Silahkan pilih...</option>
-										  <option value="1">Informasi Pelatihan</option>
-										  <option value="2">Kerjasama Pelatihan</option>
-										  <option value="3">Konsultasi</option>
-										  <option value="4">Lain-lain</option>
-										</select>
+										<label for="perihal" class="mb-0">Perihal</label>
+										<div class="select-wrapper">
+											<select class="form-control w-100 mb-2" id="perihal" required>
+												<option value="" disabled selected hidden>Silahkan pilih</option>
+												<option value="1">Informasi Pelatihan</option>
+												<option value="2">Kerjasama Pelatihan</option>
+												<option value="3">Konsultasi</option>
+												<option value="4">Lain-lain</option>
+											</select>
+										</div>
 									</div>
 								</div>
+
 								<div class="col-md-12 inputan">
 									<div class="md-form mb-0">
 										<label for="nama" class=" mb-0">Nama</label>
-										<input type="text" id="nama" name="nama" class="form-control w-100 mb-2" required>
+										<input type="text" id="nama" name="nama" class="form-control w-100 mb-2" placeholder="Masukkan nama Anda" required>
 									</div>
 								</div>
+
 								<div class="col-md-12 inputan">
 									<div class="md-form mb-0">
 										<label for="namap" class=" mb-0">Nama perusahaan</label>
-										<input type="text" id="namap" name="namap" class="form-control w-100 mb-2" required>
+										<input type="text" id="namap" name="namap" class="form-control w-100 mb-2" placeholder="Masukkan nama perusahaan Anda"required>
 									</div>
 								</div>
+
 								<div class="col-md-12 inputan">
 									<div class="md-form mb-0">
 										<label for="w_email" class=" mb-0">Alamat email</label>
-										<input type="email" id="w_email" name="w_email" class="form-control w-100 mb-2" required>
+										<input type="email" id="w_email" name="w_email" class="form-control w-100 mb-2" placeholder="Masukkan alamat email Anda" required>
 									</div>
 								</div>
 
 								<div class="col-md-12 inputan">
-
 									<div class="md-form">
 										<label for="pesan" class=" mb-0">Pesan</label>
-										<textarea type="text" id="pesan" name="pesan" rows="2" class="form-control md-textarea" required></textarea>
+										<textarea type="text" id="pesan" name="pesan" rows="2" class="form-control md-textarea" placeholder="Masukkan pesan Anda" required></textarea>
 									</div>
 
 								</div>
 								<div class="col-md-12 inputan">
 									<div class="text-center text-md-left">
-										<a class="send_form btn btn-success mt-4 px-5" href="javascript:void" type="submit" title="Send to Whatsapp">Kirim</a>
+										<a class="send_form" href="javascript:void(0)" title="Send to Whatsapp">Kirim</a>
+										
 										<div id="text-info" class="alert alert-info mt-5"></div>
 									</div>
 								</div>
