@@ -421,7 +421,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
 	<section class="barcount-section">
     <div class="container">
-        <div class="row row-bar-count pt-3">
+        <div class="row row-bar-count pt-5">
             <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
                 <span class="col-12 jumlah" data-target="60000">0</span>
                 <span class="col-12 jumlah_cap">Alumni pelatihan</span>
@@ -523,15 +523,15 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 										<h3 class="card-titte" style="height:40px; font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></h3>
 										<table class="table p-0 m-0" style="font-size:.8em">
 											<tr>
-												<td width="50%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
-												<td width="50%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
+												<td width="60%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
+												<td width="40%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
 											</tr>
 											<tr>
 												<td height=""><i class="fa fa-users" aria-hidden="true"></i> <?php echo $row["jumlah_peserta"]; ?> Orang</td>
 												<td><i class="fa fa-money" aria-hidden="true"></i> <?php echo rupiah($row["harga"]); ?></td>
 											</tr>
 											<tr>
-												<td height="80px"><?php echo $row["tanggal_pelaksanaan"]; ?> </td><td><i class="fa fa-user" aria-hidden="true"></i> 
+												<td height=""><?php echo $row["tanggal_pelaksanaan"]; ?> </td><td><i class="fa fa-user" aria-hidden="true"></i> 
 												<?php if($row["sisa"] >0 && strtotime($row["tawal"]) > strtotime(date("Y-m-d"))){ ?>
 												<span class="text-danger">Sisa <?php echo $sisa; ?> Kursi
 												<?php } else { ?>
