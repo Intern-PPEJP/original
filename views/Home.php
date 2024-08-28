@@ -154,19 +154,21 @@ p, div {
 }
 
 .testimonials {
-        display: flex;
-        justify-content: space-between; /* Spasi antar testimoni */
-        padding: 20px;
-        
-    }
+    text-align: center;
+    padding: 20px;
+    white-space: normal; /* Ubah menjadi normal agar elemen bisa wrap ke bawah */
+}
 
     .testimonial {
+		display: inline-block;
         background: white;
         border-radius: 10px;
         padding: 20px;
         width: 23%; /* Lebar yang sesuai agar 4 testimoni muat dalam satu baris */
         text-align: center;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+		vertical-align: top;
+		margin-right: 1%;
     }
 
     .testimonial img {
@@ -190,6 +192,13 @@ p, div {
         margin-top: 20px;
 		font-size: 18px;
     }
+
+	@media (max-width: 768px) {
+    .testimonial {
+        width: 100%; /* Full width untuk tampilan HP */
+        margin-bottom: 20px; /* Spasi antar testimoni vertikal */
+        margin-right: 0; /* Hilangkan margin kanan */
+    }}
 
 </style>	
 <script>
@@ -412,7 +421,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
 	<section class="barcount-section">
     <div class="container">
-        <div class="row row-bar-count pt-3">
+        <div class="row row-bar-count pt-5">
             <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
                 <span class="col-12 jumlah" data-target="60000">0</span>
                 <span class="col-12 jumlah_cap">Alumni pelatihan</span>
@@ -489,7 +498,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<h3 class="mb-3 text-bold">Pelatihan Mendatang </h3>
 					<a class="btn btn-success mb-3 " href="#carouselProducts" role="button" data-slide="next" style="position:absolute;right:25px;top:0">
 						<i class="fa fa-arrow-right"></i>
-					</a>
+					</a><br>
 				</div>
 
 				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="5000">
@@ -514,15 +523,15 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 										<h3 class="card-titte" style="height:40px; font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></h3>
 										<table class="table p-0 m-0" style="font-size:.8em">
 											<tr>
-												<td width="50%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
-												<td width="50%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
+												<td width="60%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
+												<td width="40%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
 											</tr>
 											<tr>
 												<td height=""><i class="fa fa-users" aria-hidden="true"></i> <?php echo $row["jumlah_peserta"]; ?> Orang</td>
 												<td><i class="fa fa-money" aria-hidden="true"></i> <?php echo rupiah($row["harga"]); ?></td>
 											</tr>
 											<tr>
-												<td height="80px"><?php echo $row["tanggal_pelaksanaan"]; ?> </td><td><i class="fa fa-user" aria-hidden="true"></i> 
+												<td height=""><?php echo $row["tanggal_pelaksanaan"]; ?> </td><td><i class="fa fa-user" aria-hidden="true"></i> 
 												<?php if($row["sisa"] >0 && strtotime($row["tawal"]) > strtotime(date("Y-m-d"))){ ?>
 												<span class="text-danger">Sisa <?php echo $sisa; ?> Kursi
 												<?php } else { ?>
@@ -654,22 +663,21 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			</div>
 			</center>-->
 			<center>
-    <div class="testimonials">
-        <?php
-        $rs = ExecuteQuery("SELECT * FROM `w_testimoni` WHERE `show` = 'Y'");
-        while ($row_testimoni = $rs->fetch()) {
-        ?>
-            <div class="testimonial">
-                <img src="images/testimoni/<?php echo $row_testimoni["gambar"]; ?>" alt="<?php echo $row_testimoni["nama"]; ?>">
-                <p>"<?php echo $row_testimoni["testimoni"]; ?>"</p>
-                <h3><?php echo strtoupper($row_testimoni["nama"]); ?></h3>
-            </div>
-        <?php
-        }
-        ?>
-    </div>
-</center>
-
+			<div class="testimonials">
+				<?php
+				$rs = ExecuteQuery("SELECT * FROM `w_testimoni` WHERE `show` = 'Y'");
+				while ($row_testimoni = $rs->fetch()) {
+				?>
+					<div class="testimonial">
+						<img src="images/testimoni/<?php echo $row_testimoni["gambar"]; ?>" alt="<?php echo $row_testimoni["nama"]; ?>">
+						<p>"<?php echo $row_testimoni["testimoni"]; ?>"</p>
+						<h3><?php echo strtoupper($row_testimoni["nama"]); ?></h3>
+					</div>
+				<?php
+				}
+				?>
+			</div>
+		</center>
 	</section>
 
 	<section class="content-section">

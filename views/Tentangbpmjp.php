@@ -27,6 +27,75 @@ $Tentangbpmjp = &$Page;
 	h3{
 		font-weight:600px;
 	}
+	.fasilitas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+	margin-bottom :200px;
+	
+	}
+
+	.fasilitas-row {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		flex-wrap: wrap; }
+
+	.fasilitas-row:first-child {
+		width: 100%;
+		justify-content: space-between; 
+	}
+
+	.fasilitas-row-center {
+		justify-content: center; }
+
+	.fasilitas-item {
+		background-color: #f9f9f9;
+		padding: 15px;
+		border-radius: 8px;
+		text-align: center;
+		width: 30%; 
+		box-sizing: border-box; 
+	}
+
+	.fasilitas-item img {
+		width: 100%;
+		height: 200px; 
+		object-fit: cover; 
+		margin-bottom: 15px;
+	}
+
+	.fasilitas-item strong {
+		display: block;
+		margin-top: 10px;
+		font-size: 18px;
+	}
+
+	.fasilitas-item p {
+		font-size: 14px;
+		margin-top: 10px;
+	}
+
+	@media (max-width: 992px) {
+		.fasilitas-row {
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.fasilitas-item {
+			width: 80%; 
+		}
+	}
+
+	@media (max-width: 768px) {
+		.fasilitas-item {
+			width: 100%; 
+		}
+	}
+
+
+
 </style>
 
 <div class="container-fluid" style="padding-left:0;padding-right:0;">
@@ -69,39 +138,41 @@ $Tentangbpmjp = &$Page;
 			<p>BPMJP dengan senang hati mengundang pelaku usaha dan masyarakat luas untuk ikut bergabung dalam program pelatihan kami untuk menjadi SDM yang berkualitas dan siap bersaing di dunia kerja.</p>
 		</div>
 	</div>
-	
+
 <center><h4 class="text-bold mb-4 mt-5">FASILITAS</h4></center>
-<div class="row fasilitas mb-5">
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/bpmjp-instalasi.png" style="width:100%"></img>
-		<strong>INSTALASI</strong><br>
-		<p>Instalasi Tangki Ukur Mobil, Instalasi Pompa Ukur BBM, Instalasi Timbangan Jembatan dan Instalasi TUTSIT adalah sarana praktik untuk mempermudah penyerapan sistim belajar.</p>
-	</div>
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/bpmjp-laboratorium.png" style="width:100%"></img>
-		<strong>LABORATORIUM</strong><br>
-		<p>Selain Instalasi yang beragam, BPMJP pun mempunyai laboratorium Bejana Ukur, Dimensi, Listrik, Massa Elektronik, Meter Kadar Air, Suhu, Gaya dan Tekanan dan Timbangan Mekanik. Pembelajaran dengan dibantu simulasi akan mendukung hasil yang optimal</p>
-	</div>
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/bpmjp-asrama.png" style="width:100%"></img>
-		<strong>ASRAMA</strong><br>
-		<p>Asrama adalah salah satu fasilitas di BPMJP yang dapat memberikan alternatif bagi peserta yang memerlukan untuk menginap yang satu lokasi dengan tempat pembelajaran, aman, bersih dan murah dengan tarif yang terjangkau.</p>
-	</div>
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/bpmjp-ruang-kelas.png" style="width:100%"></img>
-		<strong>RUANG KELAS</strong><br>
-		<p>Ruang kelas dilengkapi dengan peralatan audio, video dengan kapasitas 20 dan 40 orang.</p>
-	</div>
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/bpmjp-teater.png" style="width:100%"></img>
-		<strong>TEATER</strong><br>
-		<p>Teater dengan kapasitas untuk 150 orang.</p>
-	</div>
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/bpmjp-fasilitas-lainnya.png" style="width:100%"></img>
-		<strong>FASILITAS LAINNYA</strong><br>
-		<p>Sarana olahraga seperti lapangan badminton, lapangan voli dan jogging track dapat dimanfaatkan peserta untuk refreshing dan menjaga kondisi.</p>
-	</div>
+<div class="fasilitas-container">
+    <div class="fasilitas-row">
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/bpmjp-instalasi.png" alt="Instalasi">
+            <strong>INSTALASI</strong>
+            <p>Instalasi Tangki Ukur Mobil, Instalasi Pompa Ukur BBM, Instalasi Timbangan Jembatan dan Instalasi TUTSIT adalah sarana praktik untuk mempermudah penyerapan sistem belajar.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/bpmjp-laboratorium.png" alt="Laboratorium">
+            <strong>LABORATORIUM</strong>
+            <p>Selain Instalasi yang beragam, BPMJP pun mempunyai laboratorium Bejana Ukur, Dimensi, Listrik, Massa Elektronik, Meter Kadar Air, Suhu, Gaya dan Tekanan dan Timbangan Mekanik. Pembelajaran dengan dibantu simulasi akan mendukung hasil yang optimal.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/bpmjp-asrama.png" alt="Asrama">
+            <strong>ASRAMA</strong>
+            <p>Asrama adalah salah satu fasilitas di BPMJP yang dapat memberikan alternatif bagi peserta yang memerlukan untuk menginap yang satu lokasi dengan tempat pembelajaran, aman, bersih, dan murah dengan tarif yang terjangkau.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/bpmjp-ruang-kelas.png" alt="Ruang Kelas">
+            <strong>RUANG KELAS</strong>
+            <p>Ruang kelas dilengkapi dengan peralatan audio, video dengan kapasitas 20 dan 40 orang.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/bpmjp-teater.png" alt="Teater">
+            <strong>TEATER</strong>
+            <p>Teater dengan kapasitas untuk 150 orang.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/bpmjp-fasilitas-lainnya.png" alt="Fasilitas Lainnya">
+            <strong>FASILITAS LAINNYA</strong>
+            <p>Sarana olahraga seperti lapangan badminton, lapangan voli, dan jogging track dapat dimanfaatkan peserta untuk refreshing dan menjaga kondisi.</p>
+        </div>
+    </div>
 </div>
 
 </div>

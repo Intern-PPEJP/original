@@ -29,7 +29,7 @@ $Lspppejp = &$Page;
 	}
 
 	thead {
-		background-color: #16a45c;
+		background-color: #19497D;
 		color: #ffffff;
 		text-align: center; /* Rata tengah untuk header */
 	}
@@ -83,7 +83,7 @@ $Lspppejp = &$Page;
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <div class="text-center">
+            <div class="text-justify">
 				<p> LSP PPEJP ini merupakan LSP pihak ke 2 yang mempunyai tugas memastikan dan memelihara kompetensi alumni pelatihan PPEJP dan jejaringnya, khususnya eksportir dan calon eksportir di dalam ruang lingkup tugas mereka sebagai pengelola dan pelaku manajemen ekspor impor.</p>
 			</div>
         </div>
