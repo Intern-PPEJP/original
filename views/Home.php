@@ -200,6 +200,7 @@ p, div {
         margin-right: 0; /* Hilangkan margin kanan */
     }}
 
+
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -241,7 +242,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<div class="col-lg-12 col-12 p-0">
 				<div class="container">
 				<h4 class="judul">PUSAT PELATIHAN<br>SUMBER DAYA MANUSIA EKSPOR<br>DAN JASA PERDAGANGAN</h4>
+
 				<p class="subline" style="font-size: 30px;">Mengembangkan UMKM Indonesia Sejak 1990</p>
+
 				<ul class="slider-button pl-0">
 				<li class="b-item mb-2">
 					<a class="nav-link custom-btn custom-border-btn btn inactive list-pelatihan" href="#" data-toggle="modal" data-target="#ListPelatihan">Jadwal Pelatihan</a>
@@ -421,6 +424,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
 	<section class="barcount-section">
     <div class="container">
+
         <div class="row row-bar-count pt-5">
             <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
                 <span class="col-12 jumlah" data-target="60000">0</span>
@@ -487,6 +491,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 });
 
 </script>
+
 
 	<section class="pt-5 pb-2">
 		<div class="container">
