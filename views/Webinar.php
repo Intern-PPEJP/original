@@ -44,6 +44,7 @@ $Webinar = &$Page;
     </div>
 </div>
 
+
 <section class="content-section mt-5">
     <div class="container">
         <h3 class="text-center text-bold mb-4">WEBINAR MENDATANG</h3>
@@ -79,11 +80,8 @@ $Webinar = &$Page;
 			}
 			?>
 		</div>
-
-    </div>
+  </div>
 </section>
-
-
 <div class="mb-5">&nbsp;</div>
 
 
