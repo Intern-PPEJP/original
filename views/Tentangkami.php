@@ -118,10 +118,9 @@ $Tentangkami = &$Page;
         width: 100%; /* Lebar penuh untuk layar kecil */
     }
 }
-
-
 	
 </style>
+
 
 <div class="container-fluid" style="background-color: #031A31; padding:20px 0px;">
     <div class="container">
@@ -137,6 +136,7 @@ $Tentangkami = &$Page;
 	<iframe  style="width: 100%; height: 509px; border-radius: 0px;" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <br><br>
+
 <div class="container" style="text-align:justify;">
 <div class="row ">
 	<center><h4 class="text-bold">SAMBUTAN  KEPALA PPEJP</h4></center>
@@ -152,6 +152,7 @@ $Tentangkami = &$Page;
 		
 		PPEJP adalah jembatan Anda menuju kesuksesan. Mari bergabung dengan kami dan tembuslah batas-batas kesuksesan dalam ekspor, mutu, metrologi, dan jasa perdagangan.</p>
 	</div>
+
 </div>
 <br><br>
 <div class="row ">
@@ -277,6 +278,7 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 	</div>
 	
 	<div class="col-md-6">
+
 		<div class="card h-100">
 		  <div class="card-header" style="background-color:#031A31;color:#fff">
 			<h4 class="text-bold text-center"><i>COST SHARING</i></h4>
@@ -291,13 +293,11 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 				<h5 class="text-bold text-center">KEPESERTAAN</h5>
 				<p class="card-text text-justify">Peserta berasal dari para pelaku usaha khususnya UKM binaannya maupun SDM Internal, peserta harus 30 (tiga puluh) orang</p>
 			</div>
+
 		  </div>
 		</div>
 	</div>
 </div>
-
-
-
 
 <div class="row mt-5">
 	
