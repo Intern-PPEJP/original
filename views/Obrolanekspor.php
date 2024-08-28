@@ -330,7 +330,7 @@ $Obrolanekspor = &$Page;
                 </div>
             </div>
         </div>
-        <div class="container">
+        <!--<div class="container">
             <div class="row xpy-5 flex-nowrap" style="overflow-x: auto; height: 420px;">
                 <?php
                     $rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`,`Link`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `jenis_pelatihan` LIKE 'obrolan_ekspor' ORDER BY `tawal` DESC Limit 20");
@@ -352,15 +352,38 @@ $Obrolanekspor = &$Page;
             </div>
         </div>
         <div class="row mt-2" style="font-weight: 600; font-size: 1.2em;">
-            <a href="https://www.youtube.com/playlist?list=PLnXXNWWTR6gbM0BabCRzXf4cZovf0wc8e" style="color:#212529;text-decoration:none"><div class="col-md-12 text-right">
+            <!--<a href="https://www.youtube.com/playlist?list=PLnXXNWWTR6gbM0BabCRzXf4cZovf0wc8e" style="color:#212529;text-decoration:none"><div class="col-md-12 text-right">
                 Selengkapnya <i class="fa fa-chevron-right"></i>
             </div>
 			</a>
         </div>
-        <!-- Tambahkan embed playlist YouTube di sini -->
-        <div class="row mt-4">
-            <div class="col-md-12">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=dP-XeGtYMk3CFRaK&amp;list=PLnXXNWWTR6gbM0BabCRzXf4cZovf0wc8e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>-->
+        <div class="container">
+            <div class="row">
+                <?php
+                $playlists = [
+                    "https://www.youtube.com/embed/2FTgzPOHIVs?si=6RZMlxt6tKwZMkNM",
+                    "https://www.youtube.com/embed/FWVt1DW2bs0?si=7EQ2UIW-Tqh3gHp_",
+                    "https://www.youtube.com/embed/ED3VtTqOm9M?si=g_M3vu-v8zMMjNvg",
+                    "https://www.youtube.com/embed/XhOVRfQhU-c?si=FaNHJKXf2hWU4KuQ"
+                ];
+
+                foreach ($playlists as $playlist) {
+                    echo '
+                    <div class="col-md-3 mb-4">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="'.$playlist.'" allowfullscreen></iframe>
+                        </div>
+                    </div>';
+                }
+                ?>
+            </div>
+            <div class="row mt-2" style="font-weight: 600; font-size: 1.2em;">
+                <a href="https://www.youtube.com/playlist?list=PLnXXNWWTR6gbM0BabCRzXf4cZovf0wc8e" style="color:#212529;text-decoration:none">
+                    <div class="col-md-12 text-right">
+                        Selengkapnya <i class="fa fa-chevron-right"></i>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
