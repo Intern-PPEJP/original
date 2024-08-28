@@ -53,6 +53,73 @@ $Tentangkami = &$Page;
 	.card-body {
 		flex-grow: 1;
 	}
+	.fasilitas-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.fasilitas-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.fasilitas-row:first-child {
+    width: 100%;
+    justify-content: space-between; /* Menyebarkan tiga item di bagian atas */
+}
+
+.fasilitas-row-center {
+    justify-content: center; /* Memusatkan dua item di bagian bawah */
+}
+
+.fasilitas-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%; /* Mengatur lebar setiap item agar konsisten */
+}
+
+.fasilitas-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.fasilitas-item strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.fasilitas-item p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+    .fasilitas-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fasilitas-item {
+        width: 80%; /* Mengubah lebar item pada layar yang lebih kecil */
+    }
+}
+
+@media (max-width: 768px) {
+    .fasilitas-item {
+        width: 100%; /* Lebar penuh untuk layar kecil */
+    }
+}
+
+
 	
 </style>
 
@@ -95,15 +162,6 @@ Akhirnya pada tahun 2006 PPEI kembali mengalami perubahan status menjadi Eselon 
 Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) berubah nama menjadi Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP)  yang berada dibawah naungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP menyelenggarakan fungsi penyelenggaraan pelatihan SDM Ekspor, Pelatihan SDM Jasa Perdagangan, dan Export Coaching Program.  Transformasi status tersebut membawa pengaruh terhadap pelaksanaan tugasnya sebagai Unit Pelaksana Teknis yang melakukan pembinaan terhadap dunia usaha eksportir.</p>
 	</div>
 </div>
-
-<div class="row ">
-	<center><h4 class="text-bold">SEJARAH SINGKAT</h4></center>
-	<div class="col-md-12">
-		<p>Semenjak berdirinya pada tahun 1990, PPEI telah mengalami transformasi struktur organisasi, yang semula Eselon 2 di bawah Sekretariat Jenderal pada tahun 1990 hingga 1995 dengan nama Pusat Pelatihan Ekspor Indonesia (PPEI), kemudian pada tahun 1995 yakni saat Departemen Perdagangan digabung dengan Departemen Perindustrian, PPEI mengalami perubahan status menjadi Eselon 3 dibawah Pusat Pembinaan dan Pelatihan (PUSBINLAT) Deperindag dengan nama Balai Pendidikan dan Pelatihan Ekspor (PPEI) hingga tahun 2005.</p><p>
-Akhirnya pada tahun 2006 PPEI kembali mengalami perubahan status menjadi Eselon 2 dengan nama Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) di bawah Badan Pengembangan Ekspor Nasional Departemen Perdagangan. </p><p>
-Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) berubah nama menjadi Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP)  yang berada dibawah naungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP menyelenggarakan fungsi penyelenggaraan pelatihan SDM Ekspor, Pelatihan SDM Jasa Perdagangan, dan Export Coaching Program.  Transformasi status tersebut membawa pengaruh terhadap pelaksanaan tugasnya sebagai Unit Pelaksana Teknis yang melakukan pembinaan terhadap dunia usaha eksportir.</p>
-	</div>
-</div>
 <br><br>
 <div class="row ">
 <center><h4 class="text-bold">FUNGSI PPEJP</h4></center>
@@ -130,57 +188,59 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 	
 <br><br>
 <center><h4><strong>FASILITAS</strong></h4></center>
-<div class="row fasilitas">
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/fasilitas-perpustakaan.png" style="width:100%"></img>
-		<strong>PERPUSTAKAAN</strong><br>
-		<p>Perpustakaan menyediakan berbagai informasi bagi dunia usaha, peserta pelatihan serta masyarakat umum. </p>
-	</div>
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/fasilitas-auditorium.png" style="width:100%"></img>
-		<strong>AUDITORIUM</strong><br>
-		<p>Auditorium dengan kapasitas untuk 200 orang</p>
-	</div>
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/fasilitas-simulation-center.png" style="width:100%"></img>
-		<strong>SIMULATION CENTER</strong><br>
-		<p>Simulation Center adalah sarana praktek untuk mempermudah penyerapan sistim belajar dan memberikan pengalaman pertama untuk penerapan keterampilan.</p>
-	</div>
-	<div class="col-md-6 col-12">
-		<img src="images/fasilitas/fasilitas-ruang-kelas.png" style="width:100%"></img>
-		<strong>RUANG KELAS</strong><br>
-		<p>Ruang Kelas dilengkapi dengan peralatan audio video dengan kapasitas 15, 30 dan 50 orang.</p>
-	</div>
-	<div class="col-lg col-md-6 col-sm-12 col-xs-12">
-		<img src="images/fasilitas/fasilitas-asrama.png" style="width:100%"></img>
-	</div>
-	<div class="col-lg col-md-6 col-sm-12 col-xs-12">
-		<strong>ASRAMA</strong><br>
-		<p>Asrama adalah salah satu fasilitas yang disediakan oleh PPEJP untuk dapat memberikan alternatif tempat penginapan khususnya bagi peserta pelatihan atau pelanggan lainnya yang memerlukan tempat untuk menginap yang relatif aman, bersih dan murah dengan bermacam tarif yang dapat terjangkau serta sangat layak untuk istirahat dengan lebih tenang.</p>
-		<p>Bagi Para Calon Peserta yang ingin menginap di PPEI selama Pelatihan, kami juga menyediakan Asrama dengan tarif relatif murah yaitu</p>
-	</div>
+<div class="fasilitas-container">
+    <div class="fasilitas-row">
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/fasilitas-perpustakaan.png" alt="Perpustakaan">
+            <strong>PERPUSTAKAAN</strong>
+            <p>Perpustakaan menyediakan berbagai informasi bagi dunia usaha, peserta pelatihan serta masyarakat umum.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/fasilitas-auditorium.png" alt="Auditorium">
+            <strong>AUDITORIUM</strong>
+            <p>Auditorium dengan kapasitas untuk 200 orang.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/fasilitas-simulation-center.png" alt="Simulation Center">
+            <strong>SIMULATION CENTER</strong>
+            <p>Simulation Center adalah sarana praktek untuk mempermudah penyerapan sistem belajar dan memberikan pengalaman pertama untuk penerapan keterampilan.</p>
+        </div>
+    </div>
+    <div class="fasilitas-row fasilitas-row-center">
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/fasilitas-ruang-kelas.png" alt="Ruang Kelas">
+            <strong>RUANG KELAS</strong>
+            <p>Ruang Kelas dilengkapi dengan peralatan audio video dengan kapasitas 15, 30, dan 50 orang.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/fasilitas-asrama.png" alt="Asrama">
+            <strong>ASRAMA</strong>
+            <p>Asrama adalah salah satu fasilitas yang disediakan oleh PPEJP untuk memberikan alternatif tempat penginapan.</p>
+        </div>
+    </div>
+</div>
+<br><br>
+
+<center><h4><strong>Tipe Kamar</strong></h4></center>
+<div class="row">
+    <div class="col-md-4 col-12 mb-4">
+        <img src="images/fasilitas/fasilitas-kamar-standar.png" alt="Kamar Standard" class="img-fluid rounded">
+        <strong>Kamar Standard</strong><br>
+        <p>Rp. 75.000 / malam / bed / pintu<br>(1 Ruangan ada 4 pintu/bed)</p>
+    </div>
+    <div class="col-md-4 col-12 mb-4">
+        <img src="images/fasilitas/fasilitas-kamar-super.png" alt="Kamar Super" class="img-fluid rounded">
+        <strong>Kamar Super</strong><br>
+        <p>Rp. 100.000 / malam / bed<br>(1 ruangan ada 3 bed)</p>
+    </div>
+    <div class="col-md-4 col-12 mb-4">
+        <img src="images/fasilitas/fasilitas-kamar-vip.png" alt="Kamar VIP" class="img-fluid rounded">
+        <strong>Kamar VIP</strong><br>
+        <p>Rp. 300.000 / malam<br>(1 ruangan ada 2 bed)</p>
+    </div>
 </div>
 
-<div class="row ">
-	<div class="col-md-4 col-12">
-		<img src="images/fasilitas/fasilitas-kamar-standar.png" style="width:100%"></img>
-		<strong>Kamar Standard</strong><br>
-		<p>Rp. 75.000 / malam / bed / pintu<br>
-(1 Ruangan ada 4 pintu/bed)</p>
-	</div>
-	<div class="col-md-4 col-12">
-		<img src="images/fasilitas/fasilitas-kamar-super.png" style="width:100%"></img>
-		<strong>Kamar Super</strong><br>
-		<p>Rp. 100.000 / malam / bed<br>
-(1 ruangan ada 3 bed)</p>
-	</div>
-	<div class="col-md-4 col-12">
-		<img src="images/fasilitas/fasilitas-kamar-vip.png" style="width:100%"></img>
-		<strong>Kamar VIP</strong><br>
-		<p>Rp. 300.000 / malam<br>
-(1 ruangan ada 2 bed)</p>
-	</div>
-</div>
+
 
 
 </div>
@@ -196,38 +256,47 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 
 
 
+
 <div class="row mt-5">
-	
 	<div class="col-md-6">
-		<div class="card equal-height">
+		<div class="card h-100">
 		  <div class="card-header" style="background-color:#031A31;color:#fff">
 			<h4 class="text-bold text-center">KONTRAKTUAL</h4>
 		  </div>
-		  <div class="card-body">
-			<h5 class="text-bold text-center">KERJASAMA SECARA KONTRAKTUAL</h5>
-			<p class="card-text text-justify">Kerja sama pelatihan yang kami tawarkan kepada instansi-instansi dengan pola kontraktual adalah Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan melaksanakan penyelenggaraan pelatihan bagi binaannya maupun SDM internal dengan pembiayaan penyelenggaraan dimaksud ditanggung oleh pihak yang akan bekerjasama dan membayarkan biaya kontraktual sebagai Penerimaan Negara Bukan Pajak (PNBP) kepada PPEJP. Pelaksanaan pelatihan menggunakan seluruhnya dari anggaran PNBP.</p>
-			<h5 class="text-bold text-center">KEPESERTAAN</h5>
-			<p class="card-text text-justify">Peserta berasal dari para pelaku usaha khususnya UKM binaannya maupun SDM Internal, minimal peserta 20 (dua puluh) orang dan maksimal 30 (tiga puluh) orang</p>
+		  <div class="card-body d-flex flex-column justify-content-between">
+			<div>
+				<h5 class="text-bold text-center">KERJASAMA SECARA KONTRAKTUAL</h5>
+				<p class="card-text text-justify">Kerja sama pelatihan yang kami tawarkan kepada instansi-instansi dengan pola kontraktual adalah Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan melaksanakan penyelenggaraan pelatihan bagi binaannya maupun SDM internal dengan pembiayaan penyelenggaraan dimaksud ditanggung oleh pihak yang akan bekerjasama dan membayarkan biaya kontraktual sebagai Penerimaan Negara Bukan Pajak (PNBP) kepada PPEJP. Pelaksanaan pelatihan menggunakan seluruhnya dari anggaran PNBP.</p>
+			</div>
+			<div>
+				<h5 class="text-bold text-center">KEPESERTAAN</h5>
+				<p class="card-text text-justify">Peserta berasal dari para pelaku usaha khususnya UKM binaannya maupun SDM Internal, minimal peserta 20 (dua puluh) orang dan maksimal 30 (tiga puluh) orang</p>
+			</div>
 		  </div>
 		</div>
 	</div>
 	
 	<div class="col-md-6">
-		<div class="card equal-height">
+		<div class="card h-100">
 		  <div class="card-header" style="background-color:#031A31;color:#fff">
 			<h4 class="text-bold text-center"><i>COST SHARING</i></h4>
 		  </div>
-		  <div class="card-body">
-			<h5 class="text-bold text-center">KERJASAMA SECARA <i>COST SHARING</i></h5>
-			<p class="card-text text-justify">Kerja sama pelatihan yang pembiayaan sebagian besar dari anggaran Rupiah Murni APBN PPEJP (bukan PNBP), sedangkan mitra yang kerja sama membayar biaya pelatihan sesuai tariff Penerimaan Negara Bukan Pajak (PNBP) yang berlaku di Kementerian Perdagangan.</p>
-			<br><br> 
-			<h5 class="text-bold text-center">KEPESERTAAN</h5>
-			<p class="card-text text-justify">Peserta berasal dari para pelaku usaha khususnya UKM binaannya maupun SDM Internal,  peserta harus 30 (tiga puluh) orang</p>
+		  <div class="card-body d-flex flex-column justify-content-between">
+			<div>
+				<h5 class="text-bold text-center">KERJASAMA SECARA <i>COST SHARING</i></h5>
+				<p class="card-text text-justify">Kerja sama pelatihan yang pembiayaan sebagian besar dari anggaran Rupiah Murni APBN PPEJP (bukan PNBP), sedangkan mitra yang kerja sama membayar biaya pelatihan sesuai tariff Penerimaan Negara Bukan Pajak (PNBP) yang berlaku di Kementerian Perdagangan.</p>
+				<br>
+			</div>
+			<div>
+				<h5 class="text-bold text-center">KEPESERTAAN</h5>
+				<p class="card-text text-justify">Peserta berasal dari para pelaku usaha khususnya UKM binaannya maupun SDM Internal, peserta harus 30 (tiga puluh) orang</p>
+			</div>
 		  </div>
 		</div>
 	</div>
-	
 </div>
+
+
 
 
 <div class="row mt-5">
