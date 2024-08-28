@@ -27,9 +27,9 @@ $Pelatihanjasaperdagangan = &$Page;
 </div>
 
 <div class="container">
-    <div class="row my-5 ">
+    <div class="row my-5">
         <div class="col-md-12">
-            <div class="text-center" style="font-size: 1.3em;">
+            <div class="text-justify">
               Melalui program pelatihan kami yang komprehensif, kami memberikan pengetahuan yang mendalam tentang aspek-aspek penting dalam jasa perdagangan. Dengan menggunakan metode pembelajaran interaktif dan studi kasus nyata, kami membekali peserta pelatihan dengan keterampilan praktis yang diperlukan untuk sukses dalam perdagangan internasional.
             </div>
         </div>
@@ -65,6 +65,18 @@ $Pelatihanjasaperdagangan = &$Page;
         text-align: left;
         font-weight: 300;
     }
+
+    p, table, div {
+    font-size: 16px;
+	}
+	
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 18px;
+	}
 </style>
 <div class="container-fluid p-0 mt-0" style="background-image: url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;display:none;">
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
@@ -136,11 +148,10 @@ $Pelatihanjasaperdagangan = &$Page;
     </div>
 </div>
 
-
-
+<!--
 <section class="content-section mt-5">
 	<div class="container">
-		<h3 class="text-center text-bold mb-4">PELATIHAN JASA PERDAGANGAN TAHUN <?php echo date("Y"); ?></h3>
+		<h2 class="text-center text-bold mb-4">PELATIHAN JASA PERDAGANGAN TAHUN <?php echo date("Y"); ?></h2>
 		<div class="row mb-5">
 		
 		<?php
@@ -175,8 +186,8 @@ $Pelatihanjasaperdagangan = &$Page;
 		</div>
 	</div>
 </section>
-
-<div class="mb-5">&nbsp;</div>
+            -->
+<div class="mb-3">&nbsp;</div>
 
 <script>
     document.title = "Pelatihan Jasa Perdagangan"
