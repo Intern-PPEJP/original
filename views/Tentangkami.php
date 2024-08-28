@@ -239,10 +239,6 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
         <p>Rp. 300.000 / malam<br>(1 ruangan ada 2 bed)</p>
     </div>
 </div>
-
-
-
-
 </div>
 <div class="container-fluid" style="background-color:#fff;">
 <div class="container">
@@ -253,9 +249,6 @@ Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) b
 		Untuk menyelenggarakan pelatihan ekspor, PPEI membuka peluang kerja sama dengan berbagai instansi terkait dan stake holder lainnya dengan menggunakan pola subsidi dan kontraktual. Informasi lebih lanjut dapat menghubungi Tim Kerja Sama dan Promosi.
 	</div>
 </div>
-
-
-
 
 <div class="row mt-5">
 	<div class="col-md-6">
