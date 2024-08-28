@@ -34,68 +34,65 @@ $Tentangbpmjp = &$Page;
     gap: 20px;
 	margin-bottom :200px;
 	
-}
+	}
 
-.fasilitas-row {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap; /* Membungkus baris jika ada banyak item */
-}
+	.fasilitas-row {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		flex-wrap: wrap; }
 
-.fasilitas-row:first-child {
-    width: 100%;
-    justify-content: space-between; /* Menyebarkan tiga item di bagian atas */
-}
+	.fasilitas-row:first-child {
+		width: 100%;
+		justify-content: space-between; 
+	}
 
-.fasilitas-row-center {
-    justify-content: center; /* Memusatkan item di bagian bawah */
-}
+	.fasilitas-row-center {
+		justify-content: center; }
 
-.fasilitas-item {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    width: 30%; /* Mengatur lebar setiap item agar konsisten */
-    box-sizing: border-box; /* Termasuk padding dalam perhitungan lebar */
-}
+	.fasilitas-item {
+		background-color: #f9f9f9;
+		padding: 15px;
+		border-radius: 8px;
+		text-align: center;
+		width: 30%; 
+		box-sizing: border-box; 
+	}
 
-.fasilitas-item img {
-    width: 100%;
-    height: 200px; /* Ukuran konsisten untuk gambar */
-    object-fit: cover; /* Memastikan gambar tetap dalam proporsi */
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
+	.fasilitas-item img {
+		width: 100%;
+		height: 200px; 
+		object-fit: cover; 
+		margin-bottom: 15px;
+	}
 
-.fasilitas-item strong {
-    display: block;
-    margin-top: 10px;
-    font-size: 18px;
-}
+	.fasilitas-item strong {
+		display: block;
+		margin-top: 10px;
+		font-size: 18px;
+	}
 
-.fasilitas-item p {
-    font-size: 14px;
-    margin-top: 10px;
-}
+	.fasilitas-item p {
+		font-size: 14px;
+		margin-top: 10px;
+	}
 
-@media (max-width: 992px) {
-    .fasilitas-row {
-        flex-direction: column;
-        align-items: center;
-    }
+	@media (max-width: 992px) {
+		.fasilitas-row {
+			flex-direction: column;
+			align-items: center;
+		}
 
-    .fasilitas-item {
-        width: 80%; /* Mengubah lebar item pada layar yang lebih kecil */
-    }
-}
+		.fasilitas-item {
+			width: 80%; 
+		}
+	}
 
-@media (max-width: 768px) {
-    .fasilitas-item {
-        width: 100%; /* Lebar penuh untuk layar kecil */
-    }
-}
+	@media (max-width: 768px) {
+		.fasilitas-item {
+			width: 100%; 
+		}
+	}
 
 
 
