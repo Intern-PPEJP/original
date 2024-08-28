@@ -30,7 +30,7 @@ $Obrolanekspor = &$Page;
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <div class="text-center" style="font-size: 16px">
+            <div class="text-justify" style="font-size: 16px">
                 Obrolan ekspor merupakan dialog antara PPEJP, pelaku usaha, dan praktisi ekspor untuk mencapai kesepahaman dan peningkatan kolaborasi
                 pelaksanaan ekspor. Selain itu, Obrolan Ekspor memberikan informasi tentang ekspor serta peningkatan motivasi dan pengetahuan ekspor
                 bagi dunia usaha terutama pelaku usaha berorientasi ekspor.
@@ -54,7 +54,7 @@ $Obrolanekspor = &$Page;
     <div class="container">
         <div class="row py-3">
             <div class="col-md-12 p-0 text-center text-black">
-                <!--<div class="xb1 text-center">-->
+                <div class="xb1 text-center">-->
                     <!--<h2 class="mt-3 text-bold" style="font-size: 20px;">TOPIK OBROLAN</h2>-->
                 <!--</div>-->
            <!-- </div>
@@ -201,7 +201,7 @@ $Obrolanekspor = &$Page;
     .container-topik .topic-card {
         width: 100%; 
         max-width: 350px; 
-        margin: 10px auto; 
+        margin: 10px; 
     }
     }
     </style>
@@ -293,8 +293,8 @@ $Obrolanekspor = &$Page;
 }
 
 .narasumber-img {
-    width: 260px; 
-    height: 260px; 
+    width: 100%; 
+    height: 220px; 
     border-radius: 15px; 
     object-fit: cover; 
     margin-bottom: 15px;
@@ -304,9 +304,14 @@ $Obrolanekspor = &$Page;
 }
 
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
     .narasumber-card {
         margin-bottom: 20px;
+        padding: 15px;
+    }
+    .narasumber-img {
+        width: 100%; /* Atur agar gambar lebih kecil pada tablet */
+        height: auto; /* Memastikan gambar tetap proporsional */
     }
 }
 </style>
@@ -351,6 +356,12 @@ $Obrolanekspor = &$Page;
                 Selengkapnya <i class="fa fa-chevron-right"></i>
             </div>
 			</a>
+        </div>
+        <!-- Tambahkan embed playlist YouTube di sini -->
+        <div class="row mt-4">
+            <div class="col-md-12">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=dP-XeGtYMk3CFRaK&amp;list=PLnXXNWWTR6gbM0BabCRzXf4cZovf0wc8e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </div>
