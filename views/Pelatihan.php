@@ -24,8 +24,11 @@ $Pelatihan = &$Page;
 
     <style>
         .slider-container {
-            width: 80%;
+            width: 65%;
             margin: 0 auto;
+            justify-content: center;
+            align-items: stretch;
+            display: flex;
         }
 
         .slider-item {
@@ -35,6 +38,20 @@ $Pelatihan = &$Page;
             text-align: center;
             border-radius: 5px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px; /* Jarak antar card */
+            width: 100%; /* Biarkan Slick mengatur lebar item */
+            
+            max-width: 400px; /* Batas maksimal lebar card */
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            min-height: 320px;
+        }
+
+        .slider-item img {
+            width: 100px; /* Atur ukuran gambar sesuai keinginan */
+            height: 100px;
+            margin-bottom: 10px; /* Jarak bawah gambar dengan teks */
         }
 
         .slider-item h3 {
@@ -48,13 +65,22 @@ $Pelatihan = &$Page;
             color: #4a4a4a;
         }
 
+        .slider .slick-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Agar item di tengah */
+            flex-direction: column;
+            margin: 0 10px; /* Jarak antar slide */
+        }
+
         .slick-dots li button:before {
             color: #d1d1d1;
         }
 
         .slick-dots li.slick-active button:before {
-            color: #d55ace;
+            color: #004daf;
         }
+
     </style>
 </head>
 
@@ -170,7 +196,7 @@ $Pelatihan = &$Page;
                 <p>Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan merupakan institusi pelatihan resmi yang berada di bawah Kementerian Perdagangan.</p>
             </div>
             <div class="slider-item">
-                <img src="images\icons\certificate.png" alt="Icon">
+                <img src="images\icons\certificatenew.png" alt="Icon">
                 <h3>Sertifikat</h3>
                 <p>Peserta yang telah selesai melaksanakan rangkaian pelatihan akan mendapatkan sertifikat.</p>
             </div>
@@ -186,12 +212,29 @@ $Pelatihan = &$Page;
                 dots: true,
                 infinite: true,
                 speed: 500,
-                slidesToShow: 1,
-                slidesToScroll: 1,
+                slidesToShow: 3, /* Menampilkan 3 card per slide */
+                slidesToScroll: 3,
                 autoplay: true,
                 autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768, /* Pada ukuran layar lebih kecil, tampilkan 1 card */
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1024, /* Pada ukuran layar medium, tampilkan 2 card */
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
         });
+
     </script>
 
 <div class="container">
