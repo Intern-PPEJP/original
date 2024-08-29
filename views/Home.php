@@ -207,6 +207,7 @@ p, div {
         margin-bottom: 20px;
     }
 }
+
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
