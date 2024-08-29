@@ -29,7 +29,7 @@ $Pelatihanjasaperdagangan = &$Page;
 <div class="container">
     <div class="row my-5">
         <div class="col-md-12">
-            <div class="text-center">
+            <div class="text-justify">
               Melalui program pelatihan kami yang komprehensif, kami memberikan pengetahuan yang mendalam tentang aspek-aspek penting dalam jasa perdagangan. Dengan menggunakan metode pembelajaran interaktif dan studi kasus nyata, kami membekali peserta pelatihan dengan keterampilan praktis yang diperlukan untuk sukses dalam perdagangan internasional.
             </div>
         </div>
@@ -148,6 +148,7 @@ $Pelatihanjasaperdagangan = &$Page;
     </div>
 </div>
 
+<!--
 <section class="content-section mt-5">
 	<div class="container">
 		<h2 class="text-center text-bold mb-4">PELATIHAN JASA PERDAGANGAN TAHUN <?php echo date("Y"); ?></h2>
@@ -185,8 +186,8 @@ $Pelatihanjasaperdagangan = &$Page;
 		</div>
 	</div>
 </section>
-
-<div class="mb-5">&nbsp;</div>
+            -->
+<div class="mb-3">&nbsp;</div>
 
 <script>
     document.title = "Pelatihan Jasa Perdagangan"
