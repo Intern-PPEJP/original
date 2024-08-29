@@ -156,52 +156,57 @@ p, div {
 .testimonials {
     text-align: center;
     padding: 20px;
-    white-space: normal; /* Ubah menjadi normal agar elemen bisa wrap ke bawah */
+    white-space: normal;
 }
 
-    .testimonial {
-		display: inline-block;
-        background: white;
-        border-radius: 10px;
-        padding: 20px;
-        width: 23%; /* Lebar yang sesuai agar 4 testimoni muat dalam satu baris */
-        text-align: center;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-		vertical-align: top;
-		margin-right: 1%;
-    }
+.testimonial {
+    display: inline-block;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 23%;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    vertical-align: top;
+    margin-right: 1%;
+}
 
-    .testimonial img {
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
+.testimonial img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.testimonial:hover {
+    background-color: #edf6f9;
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #666;
+}
+
+.testimonial h3 {
+    color: #004DAF;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Responsif untuk testimoni */
+@media (max-width: 992px) {
+    .testimonial {
+        width: 48%;
         margin-bottom: 20px;
     }
+}
 
-	.testimonial:hover {
-        background-color: #edf6f9; /* Warna latar belakang saat hover */
-    }
-
-    .testimonial p {
-        font-style: italic;
-        color: #666;
-    }
-
-    .testimonial h3 {
-        color: #004DAF;
-        margin-top: 20px;
-		font-size: 18px;
-    }
-
-	@media (max-width: 768px) {
+@media (max-width: 768px) {
     .testimonial {
-        width: 100%; /* Full width untuk tampilan HP */
-        margin-bottom: 20px; /* Spasi antar testimoni vertikal */
-        margin-right: 0; /* Hilangkan margin kanan */
-    }}
-
-	
-
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
 </style>	
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
@@ -234,6 +239,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
         }
     }
 });
+
 </script>	
 <main>
 
