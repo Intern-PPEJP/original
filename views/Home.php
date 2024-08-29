@@ -105,7 +105,7 @@ Attribution required
 }
 
 p, div {
-    font-size: 18px;
+    font-size: 16px;
 }
 	
 	h2{
