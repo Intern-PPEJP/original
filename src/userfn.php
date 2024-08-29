@@ -250,7 +250,7 @@ function myheader(){
 		position: absolute;
 		z-index: 99;
 		width: 200px !important;
-		left: 194px;
+		left: 900px;
 		top: 10px;
 		flex-grow: 1; /* Agar kotak pencarian mengambil ruang yang tersisa */
 		margin-left: 20px; /* Jarak antara logo dan kotak pencarian */
@@ -313,8 +313,28 @@ function myheader(){
 	}
 
 	.logo {
-    	margin-left: 20px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
+    	margin-left: 50px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
 		height: auto;
+	}
+
+	.custom-btn {
+		background-color: #3A8F53; /* Warna latar belakang hijau */
+		color: #fff; /* Warna teks putih */
+		padding: 10px 20px; /* Ruang dalam (padding) di sekitar teks tombol */
+		border-radius: 5px; /* Sudut membulat */
+		border: none; /* Menghilangkan garis tepi */
+		font-size: 16px; /* Ukuran font */
+		font-weight: bold; /* Ketebalan font */
+		transition: background-color 0.3s ease; /* Animasi transisi pada perubahan warna latar belakang */
+		margin-right: 50px;
+	}
+
+	/* Gaya tombol saat di-hover */
+	.custom-btn:hover {
+		background-color: #5BC1AC; /* Warna latar belakang saat tombol di-hover */
+		color: #fff; /* Warna teks tetap putih */
+		text-decoration: none; /* Menghilangkan garis bawah teks */
+		cursor: pointer; /* Ubah kursor menjadi pointer saat di-hover */
 	}
 
 	.icon {
@@ -428,10 +448,8 @@ if ($(window).width() < 992) {
 					<a class="nav-link" href="login" style=""><i class="fa fa-user" aria-hidden="true"></i> Masuk</a>
 				</li>-->
 				<?php } ?>
-			<li class="nav-item ms-3">
-				<a class="nav-link custom-btn custom-border-btn btn" href="<?= GetUrl('formpendaftaran') ?>"><p>Daftar Pelatihan</p></a>
-			</li>
 		</ul>
+		<a class="nav-link custom-btn btn" href="<?= GetUrl('formpendaftaran') ?>"><p>Daftar Pelatihan</p></a>	
 	</div>
 	<form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
 		<div class="input-group p-2">
