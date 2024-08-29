@@ -127,6 +127,7 @@ p, div {
     transform: scale(1);
 }
 
+
 .icon-text, .featured-block {
         transition: transform 0.3s ease; /* Efek transisi yang halus */
 }
@@ -199,6 +200,7 @@ p, div {
         margin-bottom: 20px; /* Spasi antar testimoni vertikal */
         margin-right: 0; /* Hilangkan margin kanan */
     }}
+
 
 
 </style>	
@@ -319,7 +321,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			<div class="row justify-content-center">
 			<h3 class="mb-3 text-bold">Profil</h3>
 				<div class="col-lg-8 col-12 vid-profil mb-4">
+
 					<iframe width="90%" height="320" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 				</div>
 				<div class="col-lg-10 col-12 text-description">
 	
@@ -493,6 +497,8 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 </script>
 
 
+
+
 	<section class="pt-5 pb-2">
 		<div class="container">
 			<div class="row">
@@ -506,7 +512,9 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					</a><br>
 				</div>
 
+
 				<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="5000">
+
 					<div class="carousel-inner" role="listbox">
 						<div class="row" style="margin-right:0px !important">
 							<?php
@@ -575,6 +583,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
+
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
 							<img src="images/fasilitas/perpustakaan.png" style="width:95%; height:200px !important;" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
@@ -585,12 +594,14 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
 							<img src="images/fasilitas/auditorium.png" style="width:95%; height:200px !important;" alt="Auditorium">
+
 							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
 							</div>
 						</div>
 						</div>
 						<div class="carousel-item">
 						<div class="row justify-content-center">
+
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
 							<img src="images/fasilitas/fasilitas-asrama.png" style="width:95%; height:200px !important;" alt="Asrama">
 							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
@@ -601,10 +612,12 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
 							<img src="images/fasilitas/ruang_kelas.png" style="width:95%; height:200px !important;" alt="Ruang Kelas">
+
 							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
 							</div>
 						</div>
 						</div>
+
 					</div>
 					<!-- Tombol titik navigasi -->
 					<ol class="carousel-indicators">
@@ -629,6 +642,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	<div class="container">
 		<h3 class="text-center text-bold mt-5 mb-4">Testimoni Alumni</h3>
 			<!--<center>
+
 			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 					<?php
@@ -666,6 +680,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					?>
 			  </div>
 			</div>
+
 			</center>-->
 			<center>
 			<div class="testimonials">
@@ -683,6 +698,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				?>
 			</div>
 		</center>
+
 	</section>
 
 	<section class="content-section">

@@ -17,6 +17,73 @@ $Pelatihan = &$Page;
     </div>
 </div>
 
+<head> 
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+
+    <style>
+        .slider-container {
+            width: 65%;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: stretch;
+            display: flex;
+        }
+
+        .slider-item {
+            background-color: #f7f9fc;
+            border: 1px solid #d9e3ef;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px; /* Jarak antar card */
+            width: 100%; /* Biarkan Slick mengatur lebar item */
+            
+            max-width: 400px; /* Batas maksimal lebar card */
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            min-height: 320px;
+        }
+
+        .slider-item img {
+            width: 100px; /* Atur ukuran gambar sesuai keinginan */
+            height: 100px;
+            margin-bottom: 10px; /* Jarak bawah gambar dengan teks */
+        }
+
+        .slider-item h3 {
+            font-size: 18px;
+            color: #1a2238;
+            margin-top: 15px;
+        }
+
+        .slider-item p {
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .slider .slick-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center; /* Agar item di tengah */
+            flex-direction: column;
+            margin: 0 10px; /* Jarak antar slide */
+        }
+
+        .slick-dots li button:before {
+            color: #d1d1d1;
+        }
+
+        .slick-dots li.slick-active button:before {
+            color: #004daf;
+        }
+
+    </style>
+</head>
+
 <style>
     p, table, div {
     font-size: 16px;
@@ -53,13 +120,14 @@ $Pelatihan = &$Page;
     <div class="row my-5 ">
         <div class="col-md-12">
             <div class="text-center">
-                Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan adalah mitra terpercaya untuk mengembangkan pengetahuan dan keterampilan di bidang ekspor, metrologi, mutu, dan jasa perdagangan. Program pelatihan kami yang terkini dan instruktur berpengalaman akan mempersiapkan Anda untuk menghadapi tantangan global dalam dunia bisnis, serta meningkatkan keunggulan produk, efisiensi operasional, dan kemampuan dalam bertransaksi di pasar internasional. Bergabunglah dengan kami sekarang untuk mengambil langkah selanjutnya dalam karier dan keberhasilan bisnis Anda 
+                Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan adalah mitra terpercaya untuk mengembangkan pengetahuan dan keterampilan di bidang ekspor, metrologi, mutu, dan jasa perdagangan. Program pelatihan kami yang terkini dan instruktur berpengalaman akan mempersiapkan Anda untuk menghadapi tantangan global dalam dunia bisnis, serta meningkatkan keunggulan produk, efisiensi operasional, dan kemampuan dalam bertransaksi di pasar internasional. 
+                Bergabunglah dengan kami sekarang untuk mengambil langkah selanjutnya dalam karier dan keberhasilan bisnis Anda! 
             </div>
         </div>
     </div>
 </div>
 
-<div class="container-fluid p-0" style="background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8)), url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;">
+<!--<div class="container-fluid p-0" style="background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8)), url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;">
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%;;"></div>
     <div class="container py-5">
         <div class="row">
@@ -85,7 +153,6 @@ $Pelatihan = &$Page;
             </div>
         </div>
 		
-		
         <div class="row mt-5">
             <div class="col-md-12 p-0 text-center text-white">
                 <h2 class="mt-3"><b>METODE PELATIHAN</b></h2>
@@ -94,7 +161,7 @@ $Pelatihan = &$Page;
         <div class="row justify-content-center">
             <div class="col-md-2 text-center text-white">
                 <img src="images/icons/icon_speakerphone_.png" style="height: 100px;">
-                <p>Ceramah</p>
+                <p>Presentasi</p>
             </div>
             <div class="col-md-2 text-center text-white">
                 <img src="images/icons/icon_messages_.png" style="height: 100px;">
@@ -114,7 +181,159 @@ $Pelatihan = &$Page;
             </div>
         </div>
     </div>
+</div>-->
+
+<div class="slider-container">
+        <div class="slider">
+            <div class="slider-item">
+                <img src="images\icons\money (1).png" alt="Icon">
+                <h3>Biaya Terjangkau</h3>
+                <p>Pelatihan di PPEJP memiliki harga biaya kepesertaan yang relatif lebih rendah dibanding institusi pelatihan sejenis.</p>
+            </div>
+            <div class="slider-item">
+                <img src="images\icons\trust.png" alt="Icon">
+                <h3>Terpercaya</h3>
+                <p>Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan merupakan institusi pelatihan resmi yang berada di bawah Kementerian Perdagangan.</p>
+            </div>
+            <div class="slider-item">
+                <img src="images\icons\certificatenew.png" alt="Icon">
+                <h3>Sertifikat</h3>
+                <p>Peserta yang telah selesai melaksanakan rangkaian pelatihan akan mendapatkan sertifikat.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slick JS -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3, /* Menampilkan 3 card per slide */
+                slidesToScroll: 3,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 768, /* Pada ukuran layar lebih kecil, tampilkan 1 card */
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1024, /* Pada ukuran layar medium, tampilkan 2 card */
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+
+    </script>
+
+<div class="container">
+        <div class="row py-3">
+            <div class="col-md-12 p-0 text-center text-black">
+                <div class="xb1 text-center">
+                    <h2 class="mt-3 text-bold" style="font-size: 20px; margin-bottom: -60px;">METODE PELATIHAN</h2>
+                </div>
+           </div>
+        </div>
+<div class="container container-method">
+    <div class="method-card">
+        <img src="images\icons\teaching.png" alt="Presentasi">
+        <h3>Presentasi</h3>
+    </div>
+    <div class="method-card">
+        <img src="images\icons\conversation.png" alt="Diskusi">
+        <h3>Diskusi</h3>
+    </div>
+    <div class="method-card">
+        <img src="images\icons\file-case.png" alt="Studi Kasus">
+        <h3>Studi Kasus</h3>
+    </div>
+    <div class="method-card">
+        <img src="images\icons\role-playing.png" alt="Role Play">
+        <h3>Role Play</h3>
+    </div>
+    <div class="method-card">
+        <img src="images\icons\composition.png" alt="Latihan">
+        <h3>Latihan</h3>
+    </div>
 </div>
+</div>
+
+    <style>
+        .container-method {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        padding: 50px 0px;
+    }
+
+    .container-method .method-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 250px;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .container-method .method-card img {
+        width: 90px;
+        margin-bottom: 15px;
+    }
+
+    .container-method .method-card h3 {
+        font-size: 18px;
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+
+    .container-method .method-card p {
+        font-size: 14px;
+        color: #7f8c8d;
+    }
+
+    .container-method .method-card:hover {
+    background-color: #023e8a;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .container-method .method-card:hover h3 {
+        color: #ffffff;
+    }
+
+    .container-method .method-card:hover img {
+    filter: brightness(0) invert(1); /* Mengubah icon menjadi putih */
+    transition: filter 0.3s ease;
+    }
+    
+    /* Media query untuk layar kecil */
+    @media (max-width: 768px) {
+    .container-method {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .container-method .method-card {
+        width: 100%; 
+        max-width: 350px; 
+        margin: 10px; 
+    }
+    }
+    </style>
+
 
 <style>
 @media (min-width: 768px) {
@@ -129,8 +348,10 @@ $Pelatihan = &$Page;
 }
 </style>
 
+
+
 <div class="container">
-    <div class="row my-2 mt-5">
+    <div class="row my-2 mt-7">
         <div class="col-md-12 p-0">
             <div style="font-weight: 600;" class="text-center">
                 <h2 class="text-bold">JENIS PELATIHAN</h2>
@@ -145,7 +366,7 @@ $Pelatihan = &$Page;
         <div class="col-md-6 " style="display: flex; flex-direction: column; justify-content: center;">
             <h3 style="font-weight: bold;">PELATIHAN EKSPOR</h3>
             <div class="mb-3">PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global.
-Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.
+            Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.
             </div>
             <div class='mb-4' style="display: flex; justify-content: space-between; ">
                 <a class="btn btn-success" href="pelatihan-ekspor">Info selengkapnya</a>
@@ -183,7 +404,6 @@ Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperluka
                 <a class="btn btn-success" href="pelatihan-jasa-perdagangan">Info selengkapnya</a>
             </div>
         </div>
-
     </div>
 </div>
 
