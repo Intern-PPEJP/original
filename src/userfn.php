@@ -344,7 +344,6 @@ function myheader(){
 		width: auto; /* Menyesuaikan lebar secara otomatis */
 		margin-right: 5px; /* Memberikan jarak antar ikon */
 	}
-
 </style>
 
 <script>
@@ -370,52 +369,52 @@ if ($(window).width() < 992) {
 	<a class="navbar-brand" href="<?= GetUrl('home')?>">
 		<img src="<?= GetUrl('images/logo-kemendag.png') ?>" class="logo" alt="PPEJP | Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) merupakan lembaga yang berada di lingkungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP mempunyai tugas melaksanakan pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan untuk dunia usaha dan masyarakat.">
 	</a>
-		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  		</button>
-		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-			<ul class="navbar-nav ms-auto mr-3">
-				<li class="nav-item">
-					<a class="nav-link click-scroll" href="<?= GetUrl('home') ?>">Beranda</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
-					<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-						<li><a class="dropdown-item" href="<?= GetUrl('tentang-kami') ?>">Pusat Pelatihan SDM Ekspor dan <br>Jasa Perdagangan (PPEJP)</a></li>
-						<li><a class="dropdown-item" href="<?= GetUrl('tentang-bpmjp') ?>">Balai Pelatihan SDM Metrologi, Mutu <br>dan Jasa Perdagangan (BPMJP)</a></li>
-						<li><a class="dropdown-item dropdown-toggle" href="#">Lembaga Sertifikasi Profesi (LSP)</a>
-							<ul class="submenu dropdown-menu">
-								<li><a class="dropdown-item" href="<?= GetUrl('lsp-ppejp') ?>">LSP PPEJP</a></li>
-								<li><a class="dropdown-item" href="<?= GetUrl('lsp-bpmjp') ?>">LSP BPMJP</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kegiatan</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarLightDropdownMenuLink" id="sub-pelatihan">
-						<li><a class="dropdown-item dropdown-toggle" href="<?= GetUrl('pelatihan') ?>">Pelatihan</a>
-							<ul class="submenu dropdown-menu">
-								<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-ekspor') ?>">Pelatihan Ekspor</a></li>
-								<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-metrologi') ?>">Pelatihan Metrologi</a></li>
-								<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-mutu') ?>">Pelatihan Mutu</a></li>
-								<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-jasa-perdagangan') ?>">Pelatihan Jasa Perdagangan</a></li>
-							</ul>
-						</li>
-						<li><a class="dropdown-item font-italic" href="<?= GetUrl('export-coaching-program') ?>">Export Coaching Program</a></li>
-						<li><a class="dropdown-item" href="<?= GetUrl('webinar') ?>">Webinar</a></li>
-						<li><a class="dropdown-item" href="https://kudagang.kemendag.go.id/" target="_blank">KUDAGANG</a></li>
-						<li><a class="dropdown-item" href="<?= GetUrl('obrolan-ekspor') ?>">Obrolan Ekspor</a></li>
-						<!--<li><a class="dropdown-item" href="<?= GetUrl('sertifikasikompetensi') ?>">Sertifikasi Kompetensi</a></li> -->
-					</ul>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link" href="<?= GetUrl('kontak') ?>">Kontak</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= GetUrl('berita') ?>">Berita</a>
-				</li>
-				<?php if (IsLoggedIn()) { 
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+  	</button>
+	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+		<ul class="navbar-nav ms-auto mr-3">
+			<li class="nav-item">
+				<a class="nav-link click-scroll" href="<?= GetUrl('home') ?>">Beranda</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
+				<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+					<li><a class="dropdown-item" href="<?= GetUrl('tentang-kami') ?>">Pusat Pelatihan SDM Ekspor dan <br>Jasa Perdagangan (PPEJP)</a></li>
+					<li><a class="dropdown-item" href="<?= GetUrl('tentang-bpmjp') ?>">Balai Pelatihan SDM Metrologi, Mutu <br>dan Jasa Perdagangan (BPMJP)</a></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">Lembaga Sertifikasi Profesi (LSP)</a>
+						<ul class="submenu dropdown-menu">
+							<li><a class="dropdown-item" href="<?= GetUrl('lsp-ppejp') ?>">LSP PPEJP</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('lsp-bpmjp') ?>">LSP BPMJP</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kegiatan</a>
+				<ul class="dropdown-menu" aria-labelledby="navbarLightDropdownMenuLink" id="sub-pelatihan">
+					<li><a class="dropdown-item dropdown-toggle" href="<?= GetUrl('pelatihan') ?>">Pelatihan</a>
+						<ul class="submenu dropdown-menu">
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-ekspor') ?>">Pelatihan Ekspor</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-metrologi') ?>">Pelatihan Metrologi</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-mutu') ?>">Pelatihan Mutu</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-jasa-perdagangan') ?>">Pelatihan Jasa Perdagangan</a></li>
+						</ul>
+					</li>
+					<li><a class="dropdown-item font-italic" href="<?= GetUrl('export-coaching-program') ?>">Export Coaching Program</a></li>
+					<li><a class="dropdown-item" href="<?= GetUrl('webinar') ?>">Webinar</a></li>
+					<li><a class="dropdown-item" href="https://kudagang.kemendag.go.id/" target="_blank">KUDAGANG</a></li>
+					<li><a class="dropdown-item" href="<?= GetUrl('obrolan-ekspor') ?>">Obrolan Ekspor</a></li>
+					<!--<li><a class="dropdown-item" href="<?= GetUrl('sertifikasikompetensi') ?>">Sertifikasi Kompetensi</a></li> -->
+				</ul>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link" href="<?= GetUrl('kontak') ?>">Kontak</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="<?= GetUrl('berita') ?>">Berita</a>
+			</li>
+			<?php if (IsLoggedIn()) { 
 				?>
 				<!--<li class="nav-item dropdown">
 					<a class="nav-link" href="akun" style="font-size:35px;padding-top:5px;"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
@@ -429,21 +428,21 @@ if ($(window).width() < 992) {
 					<a class="nav-link" href="login" style=""><i class="fa fa-user" aria-hidden="true"></i> Masuk</a>
 				</li>-->
 				<?php } ?>
-				<li class="nav-item ms-3">
-					<a class="nav-link custom-btn custom-border-btn btn" href="<?= GetUrl('formpendaftaran') ?>"><p>Daftar Pelatihan</p></a>
-				</li>
-			</ul>
-		</div>
-		<form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
-			<div class="input-group p-2">
-				<input type="hidden" name="cmd" value="search">
-				<input type="hidden" name="t" value="caridata">
-				<input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width:80px">
-				<div class="input-group-append">
-					<button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
-				</div>
+			<li class="nav-item ms-3">
+				<a class="nav-link custom-btn custom-border-btn btn" href="<?= GetUrl('formpendaftaran') ?>"><p>Daftar Pelatihan</p></a>
+			</li>
+		</ul>
+	</div>
+	<form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
+		<div class="input-group p-2">
+			<input type="hidden" name="cmd" value="search">
+			<input type="hidden" name="t" value="caridata">
+			<input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width:80px">
+			<div class="input-group-append">
+				<button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
 			</div>
-		</form>
+		</div>
+	</form>
 </nav>
 
 <br>
