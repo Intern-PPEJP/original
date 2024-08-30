@@ -254,7 +254,7 @@ function myheader(){
 		left: 194px;
 		top: 10px;
 		flex-grow: 1; /* Agar kotak pencarian mengambil ruang yang tersisa */
-		margin-left: 180px; /* Jarak antara logo dan kotak pencarian */
+		margin-left: 100px; /* Jarak antara logo dan kotak pencarian */
 		font-size: 16px;
 	}
 
