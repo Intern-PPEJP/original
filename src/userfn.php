@@ -243,17 +243,18 @@ function myheader(){
 		background: #ff1800; 
 		border-radius: 10px; 
 		padding-right: 10px; 
-		padding-left: 10px; 
+		padding-left: 100px; 
+        margin-left: 100px;
 	}
 
 	#fcari {
 		position: absolute;
 		z-index: 99;
-		width: 200px !important;
+		width: 300px !important;
 		left: 194px;
 		top: 10px;
 		flex-grow: 1; /* Agar kotak pencarian mengambil ruang yang tersisa */
-		margin-left: 20px; /* Jarak antara logo dan kotak pencarian */
+		margin-left: 180px; /* Jarak antara logo dan kotak pencarian */
 		font-size: 16px;
 	}
 
@@ -315,6 +316,8 @@ function myheader(){
 	.logo {
     	margin-left: 20px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
 		height: auto;
+        margin-right:50px;
+        padding: auto;
 	}
 
 	.icon {
@@ -342,6 +345,12 @@ function myheader(){
       margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
   }
 }	
+
+.social-media-icon {
+        height: 30px;
+        width: auto;
+        margin-right: 5px;
+    }
 
 </style>
 
@@ -472,9 +481,9 @@ if (window.innerWidth < 992) {
 				</li>-->
 				<?php
 				} else { ?>
-				<li class="nav-item">
+				<!--<li class="nav-item">
 					<a class="nav-link" href="login" style=""><i class="fa fa-user" aria-hidden="true"></i> Masuk</a>
-				</li>
+				</li>-->
 				<?php } ?>
 				<li class="nav-item ms-3">
 					<a class="nav-link custom-btn custom-border-btn btn" href="<?= GetUrl('formpendaftaran') ?>"><p>Daftar Pelatihan</p></a>
