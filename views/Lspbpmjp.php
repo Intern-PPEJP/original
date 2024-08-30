@@ -101,11 +101,30 @@ p, table, div {
 <div class="container" style="padding-bottom: 0px;">
     <div class="row my-4">
         <div class="col-md-12">
-            <div class="text-center">
+            <div class="text-justify">
 				<p class="responsive-text" style="padding-bottom: 0px;"> 
                 Lembaga Sertifikasi Profesi (LSP) adalah organisasi yang berperan dalam sertifikasi kompetensi kerja di Indonesia. LSP berfungsi untuk menguji dan menilai kompetensi seseorang berdasarkan standar kompetensi yang telah ditetapkan oleh Badan Nasional Sertifikasi Profesi (BNSP) atau lembaga terkait lainnya. LSP bertujuan untuk memastikan bahwa tenaga kerja memiliki kompetensi sesuai dengan kebutuhan industri dan pasar kerja. 
                 </p>
 			</div>
+            <div style="color:#000;padding-top:10px;padding-bottom:3px;">
+            <h2 class="text-bold text-center">VISI</h2>
+            </div>
+            <div>
+                <p class="text-justify responsive-text">
+                    LSP P1 BPMJP mempunyai visi menjadi LSP bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya untuk menciptakan sumber daya manusia yang kompeten dan profesional serta diakui secara Nasional, Regional, dan Internasional.
+                </p>
+            </div>
+            <div style="color:#000;padding-top:10px;padding-bottom:3px;margin-top:20px;">
+            <h2 class="text-bold text-center">MISI</h2>
+            </div>
+            <div>
+                <ol class="responsive-text" style="padding-bottom: 20px;">
+                    <li class="text-justify">Menyelenggarakan sertifikasi kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya/pemasok yang independen dan profesional.</li>
+                    <li class="text-justify">Memastikan dan memelihara kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan untuk dapat bersaing secara nasional regional dan Internasional.</li>
+                    <li class="text-justify">Menjamin mutu dengan menjaga proses sertifikasi sesuai dengan standar yang berlaku.</li>
+                    <li class="text-justify">Menyediakan tempat uji kompetensi sesuai dengan ruang lingkup Lembaga Sertifikasi Profesi bidang metrologi, mutu dan jasa perdagangan.</li>
+                </ol>
+            </div>
         </div>
     </div>
 </div>
@@ -113,8 +132,8 @@ p, table, div {
 <style>
 /* Untuk layar dengan lebar lebih besar dari 768px */
 .responsive-text {
-    margin-left: 115px;
-    margin-right: 115px;
+    margin-left: 130px;
+    margin-right: 130px;
     padding-bottom: 0px;
 }
 
@@ -127,90 +146,14 @@ p, table, div {
 }
 </style>
 
-<div class="d-flex justify-content-center">
-<div class="col-md-7 col-12">
-    <div style="color:#000;padding-top:10px;padding-bottom:3px;">
-        <h2 class="text-bold text-center">VISI</h2>
-    </div>
-    <div>
-        <p class="text-center" >
-            LSP P1 BPMJP mempunyai visi menjadi LSP bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya untuk menciptakan sumber daya manusia yang kompeten dan profesional serta diakui secara Nasional, Regional, dan Internasional.
-        </p>
-    </div>
 
-    <div style="color:#000;padding-top:10px;padding-bottom:3px;margin-top:20px;">
-        <h2 class="text-bold text-center">MISI</h2>
-    </div>
-    <div>
-        <ol style="padding-bottom: 30px;">
-            <li class="text-justify">Menyelenggarakan sertifikasi kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya/pemasok yang independen dan profesional.</li>
-            <li class="text-justify">Memastikan dan memelihara kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan untuk dapat bersaing secara nasional regional dan Internasional.</li>
-            <li class="text-justify">Menjamin mutu dengan menjaga proses sertifikasi sesuai dengan standar yang berlaku.</li>
-            <li class="text-justify">Menyediakan tempat uji kompetensi sesuai dengan ruang lingkup Lembaga Sertifikasi Profesi bidang metrologi, mutu dan jasa perdagangan.</li>
-        </ol>
-    </div>
-</div>
-</div>
-
-<style>
-@media (max-width: 768px) {
-    p, ol {
-        margin-left: 40px;
-        margin-right: 40px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-</style>
-
-<!--<section class="barcount-section" style="min-height:50px !important">
-	<div class="container">
-		<div class="row row-bar-count py-1 text-white">
-			<div class="col-12 text-center" style="padding-top: 8px;">
-				<h2>VISI</h2>
-			</div>
-		</div>
-	</div>
-</section>
-<div class="container">
-    <div class="row my-4">
-        <div class="col-md-12">
-			<p class="text-center">
-			LSP P1 BPMJP mempunyai visi menjadi LSP bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya untuk menciptakan sumber daya manusia yang kompeten dan profesional serta diakui secara nasional, regional, dan internasional.
-			</p>
-        </div>
-    </div>
-</div>
-<section class="barcount-section" style="min-height:50px !important">
-	<div class="container">
-		<div class="row row-bar-count py-1 text-white">
-			<div class="col-12 text-center" style="padding-top: 8px;">
-				<h2>MISI</h2>
-			</div>
-		</div>
-	</div>
-</section>
-<div class="container">
-    <div class="row my-4">
-        <div class="col-md-12">
-			<p>
-				<ol>
-					<li class="text-justify">Menyelenggarakan sertifikasi kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan serta penunjangnya/pemasok yang independen dan profesional.</li>
-					<li class="text-justify">Memastikan dan memelihara kompetensi SDM bidang metrologi, mutu, dan jasa perdagangan untuk dapat bersaing secara nasional regional dan Internasional.</li>
-					<li class="text-justify">Menjamin mutu dengan menjaga proses sertifikasi sesuai dengan standar yang berlaku.</li>
-					<li class="text-justify">Menyediakan tempat uji kompetensi sesuai dengan ruang lingkup Lembaga Sertifikasi Profesi bidang metrologi, mutu dan jasa perdagangan.</li>
-				</ol>
-			</p>
-        </div>
-    </div>
-</div>-->
 <!--<div class="container-fluid text-white mb-4" style="background-color: #3A8F53;">
 	<div class="container py-3">
 		<h3>Skema Sertifikasi Pengujian Meter Air</h3>
 	</div>
 </div>-->
-<div class="container-fluid text-white mb-4">
-    <div class="responsive-container" style="background-color: #3A8F53; border-radius: 10px; padding: 3px;">
+<div class="container-fluid text-white mb-5">
+    <div class="responsive-container" style="background-color: #3A8F53; border-radius: 6px; padding: 1px;">
         <div class="container py-3" >
             <h3 style="padding-top:5px;padding-bottom:0px;margin-left:24px;">Skema Sertifikasi Pengujian Meter Air</h3>
         </div>
