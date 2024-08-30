@@ -250,7 +250,7 @@ function myheader(){
 	#fcari {
 		position: absolute;
 		z-index: 99;
-		width: 300px !important;
+		width: 200px !important;
 		left: 194px;
 		top: 10px;
 		flex-grow: 1; /* Agar kotak pencarian mengambil ruang yang tersisa */
