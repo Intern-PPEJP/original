@@ -193,20 +193,28 @@ $Lspppejp = &$Page;
             </h3>
 			<div class="container container-topik">
 			<div class="topic-card">
+				<a href="#persiapan-ekspor" style="text-decoration: none;">
 				<img src="images\icons\clipboard.png" alt="Persiapan Ekspor">
 				<h3>Persiapan Ekspor</h3>
+				</a>
 			</div>
 			<div class="topic-card">
+				<a href="#pelaksanaan-ekspor" style="text-decoration: none;">
 				<img src="images\icons\implement.png" alt="Pelaksanaan Ekspor">
 				<h3>Pelaksanaan Ekspor</h3>
+				</a>
 			</div>
 			<div class="topic-card">
+				<a href="#persiapan-impor" style="text-decoration: none;">
 				<img src="images\icons\clipboard.png" alt="Persiapan Impor">
 				<h3>Persiapan Impor</h3>
+				</a>
 			</div>
 			<div class="topic-card">
+				<a href="#pelaksanaan-impor" style="text-decoration: none;">
 				<img src="images\icons\implement.png" alt="Pelaksanaan Impor">
 				<h3>Pelaksanaan Impor</h3>
+				</a>
 			</div>
 			</div>
 			<p class="text-center">
@@ -216,7 +224,7 @@ $Lspppejp = &$Page;
     </div>
 </div>
 
-<div class="container-fluid text-white mb-4" style="background-color:#031A31;">
+<div id="persiapan-ekspor" class="container-fluid text-white mb-4" style="background-color:#031A31;">
 	<div class="container py-3">
 		<h3>1. Skema Sertifikasi Persiapan Ekspor</h3>
 	</div>
@@ -313,7 +321,7 @@ $Lspppejp = &$Page;
 	</div>
 </div>
 
-<div class="container-fluid text-white mb-4" style="background-color:#031A31;">
+<div id="pelaksanaan-ekspor" class="container-fluid text-white mb-4" style="background-color:#031A31;">
 	<div class="container py-3">
 		<h3>2. Skema Sertifikasi Pelaksanaan Ekspor</h3>
 	</div>
@@ -409,7 +417,7 @@ $Lspppejp = &$Page;
 	</div>
 </div>
 
-<div class="container-fluid text-white mb-4" style="background-color:#031A31;">
+<div id="persiapan-impor" class="container-fluid text-white mb-4" style="background-color:#031A31;">
 	<div class="container py-3">
 		<h3>3. Skema Sertifikasi Persiapan Impor</h3>
 	</div>
@@ -481,7 +489,7 @@ $Lspppejp = &$Page;
 	</div>
 </div>
 
-<div class="container-fluid text-white mb-4" style="background-color:#031A31;">
+<div id="pelaksanaan-impor" class="container-fluid text-white mb-4" style="background-color:#031A31;">
 	<div class="container py-3">
 		<h3>4. Skema Sertifikasi Pelaksanaan Impor</h3>
 	</div>
