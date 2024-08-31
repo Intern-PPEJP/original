@@ -240,30 +240,30 @@ window.addEventListener('scroll', toggleBackToTopBtn);
             Empat ruang lingkup skema sertifikasi klaster:
             </h3>
 			<div class="container container-topik">
+			<a href="#persiapan-ekspor" style="text-decoration: none;">
 			<div class="topic-card">
-				<a href="#persiapan-ekspor" style="text-decoration: none;">
 				<img src="images\icons\clipboard.png" alt="Persiapan Ekspor">
 				<h3>Persiapan Ekspor</h3>
-				</a>
 			</div>
+			</a>
+			<a href="#pelaksanaan-ekspor" style="text-decoration: none;">
 			<div class="topic-card">
-				<a href="#pelaksanaan-ekspor" style="text-decoration: none;">
 				<img src="images\icons\implement.png" alt="Pelaksanaan Ekspor">
 				<h3>Pelaksanaan Ekspor</h3>
-				</a>
 			</div>
+			</a>
+			<a href="#persiapan-impor" style="text-decoration: none;">
 			<div class="topic-card">
-				<a href="#persiapan-impor" style="text-decoration: none;">
 				<img src="images\icons\clipboard.png" alt="Persiapan Impor">
 				<h3>Persiapan Impor</h3>
-				</a>
 			</div>
+			</a>
+			<a href="#pelaksanaan-impor" style="text-decoration: none;">
 			<div class="topic-card">
-				<a href="#pelaksanaan-impor" style="text-decoration: none;">
 				<img src="images\icons\implement.png" alt="Pelaksanaan Impor">
 				<h3>Pelaksanaan Impor</h3>
-				</a>
 			</div>
+			</a>
 			</div>
 			<p class="text-center">
 			Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 95 Tahun 2018 Tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Perdagangan Besar Dan Eceran; Reparasi Dan Perawatan Mobil Dan Sepeda Motor Golongan Pokok Perdagangan Besar, Bukan Mobil Dan Sepeda Motor Bidang Ekspor Impor.
