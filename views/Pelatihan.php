@@ -32,17 +32,17 @@ $Pelatihan = &$Page;
 </style>
 
 <div class="container-fluid">
-	<div id="ppejp-slide" class="carousel slide row" data-ride="carousel" data-interval="3000" data-pause="false">
+	<div id="ppejp-slide" class="carousel slide row" data-ride="carousel" data-interval="3000" data-pause="false" style="margin-bottom: 0;">
 	  <div class="carousel-inner col-12 p-0">
-		<div class="carousel-item active" style=" height: 600px;">
-            <div style="background-image:linear-gradient(0deg, rgba(3, 26, 49, 0.61), rgba(3, 26, 49, 0.61)), url(images/pages/pelatihan2.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
+		<div class="carousel-item active" style=" height: 470px;">
+            <div style="background-image:linear-gradient(0deg, rgba(3, 26, 49, 0.61), rgba(3, 26, 49, 0.61)), url(images/pages/pelatihan2.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0;">
             </div>
         </div>
-		<div class="carousel-item" style=" height: 600px;">
+		<div class="carousel-item" style=" height: 470px;">
             <div style="background-image:linear-gradient(0deg, rgba(3, 26, 49, 0.61), rgba(3, 26, 49, 0.61)), url(images/pages/altpelatihan1/p3131465_2.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
             </div>
         </div>
-		<div class="carousel-item" style=" height: 600px;">
+		<div class="carousel-item" style=" height: 470px;">
             <div style="background-image:linear-gradient(0deg, rgba(3, 26, 49, 0.61), rgba(3, 26, 49, 0.61)), url(images/pages/header-ecp.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
             </div>
         </div>
@@ -50,7 +50,7 @@ $Pelatihan = &$Page;
 	</div>
 </div>
 <div class="container">
-    <div class="row my-5">
+    <div class="row mb-5 mt-n5">
         <div class="col-md-12">
             <div class="text-center">
                 Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan adalah mitra terpercaya untuk mengembangkan pengetahuan dan keterampilan di bidang ekspor, metrologi, mutu, dan jasa perdagangan. Program pelatihan kami yang terkini dan instruktur berpengalaman akan mempersiapkan Anda untuk menghadapi tantangan global dalam dunia bisnis, serta meningkatkan keunggulan produk, efisiensi operasional, dan kemampuan dalam bertransaksi di pasar internasional. 
@@ -277,60 +277,103 @@ $Pelatihan = &$Page;
             </div>
         </div>
     </div>
-    <div class="row text-justify py-5 mb-5">
-
-        <div class="col-md-6" style="background-image: url(images/pages/pel-ekspor.png); height: 350px; background-size: cover; background-position: center;">
-            
+    <div class="container-j my-4" style="max-width: 1260px; margin: 0 auto;">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="images/pages/pel-ekspor.png" alt="Pelatihan Ekspor" class="img-fluid rounded">
         </div>
-        <div class="col-md-6 " style="display: flex; flex-direction: column; justify-content: center;">
-            <h3 style="font-weight: bold;">PELATIHAN EKSPOR</h3>
-            <div class="mb-3">PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global.
-            Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.
-            </div>
-            <div class='mb-4' style="display: flex; justify-content: space-between; ">
-                <a class="btn btn-success" href="pelatihan-ekspor">Info selengkapnya</a>
-            </div>
+        <div class="col-md-6">
+            <h2 class="font-weight-bold">PELATIHAN EKSPOR</h2>
+            <p style="text-align: justify;">PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global.
+            Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.</p>
+            <a href="pelatihan-ekspor" class="btn btn-outline-dark">Info Selengkapnya</a>
         </div>
-
-        <div class="col-md-6 d-right" style="z-index: 2; background-image: url(images/pages/pel-metr.png); height: 350px; background-size: cover; background-position: center;">
+    </div>
+</div>
+<div class="container-j my-4" style="max-width: 1260px; margin: 0 auto;">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="images/pages/pel-metr.png" alt="Pelatihan Metrologi" class="img-fluid rounded">
         </div>
-        <div class="col-md-6 d-left" style="display: flex; flex-direction: column; justify-content: center;z-index: 3;">
-            <h3 style="font-weight: bold;">PELATIHAN METROLOGI</h3>
-            <div class="mb-3">PPEJP melalui Badan Diklat Mutu Metrologi dan Jasa Perdagangan menawarkan program pelatihan yang dirancang secara khusus untuk memperluas pemahaman Anda tentang prinsip-prinsip metrologi, peraturan dan standar pengukuran, serta teknik dan alat yang digunakan dalam proses pengukuran. Melalui pelatihan ini, Anda akan belajar bagaimana merancang, melaksanakan, dan memvalidasi pengukuran dengan tingkat akurasi yang tinggi.
-            </div> <div class='mb-4' style="display: flex; justify-content: space-between; ">
-                <a class="btn btn-success" href="pelatihan-metrologi">Info selengkapnya</a>
-            </div>
-        </div>
-
-        <div class="col-md-6" style="background-image: url(images/pages/pel-mutu.png); height: 350px; background-size: cover; background-position: center;">
-        </div>
-        <div class="col-md-6" style="display: flex; flex-direction: column; justify-content: center;">
-            <h3 style="font-weight: bold;">PELATIHAN MUTU</h3>
-            <div class="mb-3">PPEJP melalui Balai Pelatihan Metrologi, Mutu, dan Jasa Perdagangan menawarkan program pelatihan praktis tentang standar mutu, analisis data, pengendalian proses, perbaikan berkelanjutan, audit mutu, dan sertifikasi. Bergabunglah dengan kami untuk mencapai keunggulan mutu dan kepuasan pelanggan yang lebih baik.
-            </div>
-            <div class='mb-4' style="display: flex; justify-content: space-between; ">
-                <a class="btn btn-success" href="pelatihan-mutu">Info selengkapnya</a>
-            </div>
-        </div>
-		
-        <div class="col-md-6 d-right" style="z-index: 2; background-image: url(images/pages/pel-jasa-perd.png); height: 350px; background-size: cover; background-position: center;">
-        </div>
-        <div class="col-md-6 d-left" style="display: flex; flex-direction: column; justify-content: center;z-index: 3;">
-            <h3 style="font-weight: bold;">PELATIHAN JASA PERDAGANGAN</h3>
-            <div class="mb-3">PPEJP melalui Badan Diklat Mutu Metrologi dan Jasa Perdagangan menyediakan program pelatihan untuk meningkatkan kompetensi dalam industri jasa perdagangan. Pelatihan kami mencakup strategi pemasaran, manajemen risiko, persyaratan peraturan internasional, dan keterampilan praktis seperti negosiasi dan layanan pelanggan. Bergabunglah dengan kami untuk mengembangkan keterampilan Anda dalam perdagangan jasa dan meraih kesuksesan di pasar global.
-
-            </div> <div class='mb-4' style="display: flex; justify-content: space-between; ">
-                <a class="btn btn-success" href="pelatihan-jasa-perdagangan">Info selengkapnya</a>
-            </div>
+        <div class="col-md-6">
+            <h2 class="font-weight-bold">PELATIHAN METROLOGI</h2>
+            <p style="text-align: justify;">PPEJP melalui Badan Diklat Mutu Metrologi dan Jasa Perdagangan menawarkan program pelatihan yang dirancang secara khusus untuk memperluas pemahaman Anda tentang prinsip-prinsip metrologi, peraturan dan standar pengukuran, serta teknik dan alat yang digunakan dalam proses pengukuran. Melalui pelatihan ini, Anda akan belajar bagaimana merancang, melaksanakan, dan memvalidasi pengukuran dengan tingkat akurasi yang tinggi.</p>
+            <a href="pelatihan-metrologi" class="btn btn-outline-dark">Info Selengkapnya</a>
         </div>
     </div>
 </div>
 
+<div class="container-j my-4" style="max-width: 1260px; margin: 0 auto;">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="images/pages/pel-mutu.png" alt="Pelatihan Mutu" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+            <h2 class="font-weight-bold">PELATIHAN MUTU</h2>
+            <p style="text-align: justify;">PPEJP melalui Balai Pelatihan Metrologi, Mutu, dan Jasa Perdagangan menawarkan program pelatihan praktis tentang standar mutu, analisis data, pengendalian proses, perbaikan berkelanjutan, audit mutu, dan sertifikasi. Bergabunglah dengan kami untuk mencapai keunggulan mutu dan kepuasan pelanggan yang lebih baik.</p>
+            <a href="pelatihan-mutu" class="btn btn-outline-dark">Info Selengkapnya</a>
+        </div>
+    </div>
+</div>
+
+<div class="container-j my-4" style="max-width: 1260px; margin: 0 auto;">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <img src="images/pages/pel-jasa-perd.png" alt="Pelatihan Jasa Perdagangan" class="img-fluid rounded">
+        </div>
+        <div class="col-md-6">
+            <h2 class="font-weight-bold">PELATIHAN JASA PERDAGANGAN</h2>
+            <p style="text-align: justify;">PPEJP melalui Badan Diklat Mutu Metrologi dan Jasa Perdagangan menyediakan program pelatihan untuk meningkatkan kompetensi dalam industri jasa perdagangan. Pelatihan kami mencakup strategi pemasaran, manajemen risiko, persyaratan peraturan internasional, dan keterampilan praktis seperti negosiasi dan layanan pelanggan. Bergabunglah dengan kami untuk mengembangkan keterampilan Anda dalam perdagangan jasa dan meraih kesuksesan di pasar global.</p>
+            <a href="pelatihan-jasa-perdagangan" class="btn btn-outline-dark">Info Selengkapnya</a>
+        </div>
+    </div>
+</div>
+</div>
+
+<style>
+    .container-j {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container-j:hover {
+    transform: translateY(-10px); 
+}
+
+.img-fluid {
+    border-radius: 0px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn-outline-dark {
+    padding: 10px 20px;
+    border: 2px solid #000000;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size:small;
+}
+
+</style>
 
 <script>
     document.title = "Pelatihan"
 </script>
 	
+<div class="mb-5">&nbsp;
 </div>
 <?php echo myfooter(); ?>
 
