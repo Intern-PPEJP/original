@@ -248,19 +248,25 @@ function myheader(){
 	}
 
 	#fcari {
-		position: absolute;
+		position: static;
 		z-index: 99;
-		width: 200px !important;
-		left: 194px;
-		top: 10px;
-		flex-grow: 1; /* Agar kotak pencarian mengambil ruang yang tersisa */
-		margin-left: 100px; /* Jarak antara logo dan kotak pencarian */
+		width: 300px !important;
+		margin-left: auto; /* Posisikan di sebelah kanan sebelum tombol "Daftar Pelatihan" */
+		margin-right: 20px; /* Jarak dengan tombol "Daftar Pelatihan" */
+		margin-top: 7.5px;
+		order: 2; /* Urutan setelah navbar "Berita" */
 		font-size: 16px;
+	}
+	#fcari input.form-control {
+    border-radius: 5px 0 0 5px; /* Rounded di sisi kiri */
+	}
+
+	#fcari .btn {
+		border-radius: 0 5px 5px 0; /* Rounded di sisi kanan */
 	}
 
 	
 	.navbar-nav {
-		margin-right: auto; /* Memberikan ruang otomatis antara item menu dan tombol "Daftar Pelatihan" */
 		flex-grow: 1; /* Membiarkan item navigasi tumbuh dan mengambil ruang yang tersedia */
 		display: flex;
 		justify-content: center; /* Memusatkan item navigasi */
@@ -280,12 +286,17 @@ function myheader(){
     width: 100%;
     z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
 	}
+	.nav-item.ms-3 {
+    margin-left: auto;
+    order: 3; /* Posisikan tombol di pojok kanan */
+		}
 
 	@media screen and (max-width: 768px) { /* mobile view */
 		#fcari {
 			position: static;
 			width:100% !important;
 			margin-left: 0; /* Reset margin pada tampilan mobile */
+			margin-left: 10px;
 		}
 		
 		.header {
@@ -326,31 +337,57 @@ function myheader(){
 		margin-right: 10px; /* Menambahkan jarak antara ikon dan teks */
 		vertical-align: middle; /* Agar ikon sejajar dengan teks secara vertikal */
 	}
-    @media all and (min-width: 992px) {
-	.dropdown-menu li{ position: relative; 	}
-	.nav-item .submenu{ 
-		display: none;
-		position: absolute;
-		left:100%; top:-7px;
-	}
-	.nav-item .submenu-left{ 
-		right:100%; left:auto;
-	}
-	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
-	.dropdown-menu > li:hover > .submenu{ display: block; }
-}	
+    /* Styling untuk submenu */
+@media (min-width: 992px) {
+    .dropdown-menu .submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        margin-top: 0;
+    }
+
+    .dropdown-menu > li:hover > .submenu {
+        display: block;
+    }
+}
 
 @media (max-width: 991px) {
-  .dropdown-menu .dropdown-menu{
-      margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
-  }
-}	
+    .dropdown-menu .submenu {
+        display: none;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin: 0;
+    }
+
+    .dropdown-menu > li > .submenu {
+        display: none;
+    }
+
+    .dropdown-menu > li.show > .submenu {
+        display: block;
+    }
+}
+
+
 
 .social-media-icon {
         height: 30px;
         width: auto;
         margin-right: 5px;
     }
+	.footer-menu-link img {
+    width: 22px;
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.footer-menu-link {
+    display: inline-flex;
+    align-items: center;
+}
 
 </style>
 
@@ -373,44 +410,33 @@ if ($(window).width() < 992) {
   });
 }-->
 <script>
-    $(document).on('click', '.dropdown-menu', function (e) {
-    e.stopPropagation();
+   document.addEventListener("DOMContentLoaded", function() {
+    // Menangani klik pada item submenu
+    document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+            let nextEl = this.nextElementSibling;
+            if (nextEl && nextEl.classList.contains('submenu')) {
+                e.preventDefault();
+                e.stopPropagation();
+                nextEl.style.display = nextEl.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+
+    // Mencegah dropdown utama tertutup saat submenu diklik
+    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+        dropdown.addEventListener('hide.bs.dropdown', function(e) {
+            if (dropdown.querySelector('.submenu') && dropdown.querySelector('.submenu').style.display === 'block') {
+                e.preventDefault(); // Mencegah penutupan dropdown
+            }
+        });
+    });
 });
 
-    document.addEventListener("DOMContentLoaded", function(){
-// make it as accordion for smaller screens
-if (window.innerWidth < 992) {
 
-  // close all inner dropdowns when parent is closed
-  document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
-    everydropdown.addEventListener('hidden.bs.dropdown', function () {
-      // after dropdown is hidden, then find all submenus
-        this.querySelectorAll('.submenu').forEach(function(everysubmenu){
-          // hide every submenu as well
-          everysubmenu.style.display = 'none';
-        });
-    })
-  });
 
-  document.querySelectorAll('.dropdown-menu a').forEach(function(element){
-    element.addEventListener('click', function (e) {
-        let nextEl = this.nextElementSibling;
-        if(nextEl && nextEl.classList.contains('submenu')) {	
-          // prevent opening link if link needs to open dropdown
-          e.preventDefault();
-          if(nextEl.style.display == 'block'){
-            nextEl.style.display = 'none';
-          } else {
-            nextEl.style.display = 'block';
-          }
 
-        }
-    });
-  })
-}
-// end if innerWidth
-}); 
-</script>
+
 </script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding:0;">
 	<a class="navbar-brand" href="<?= GetUrl('home')?>">
@@ -439,7 +465,7 @@ if (window.innerWidth < 992) {
 				</li>
 				<li class="nav-item dropdown">
 					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kegiatan</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarLightDropdownMenuLink" id="sub-pelatihan">
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<li><a class="dropdown-item" href="<?= GetUrl('pelatihan') ?>">Pelatihan &raquo;</a>
 							<ul class="submenu dropdown-menu">
 								<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-ekspor') ?>">Pelatihan Ekspor</a></li>
@@ -462,15 +488,16 @@ if (window.innerWidth < 992) {
 					<a class="nav-link" href="<?= GetUrl('berita') ?>">Berita</a>
 				</li>
                 <form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
-			    <div class="input-group p-2">
-				<input type="hidden" name="cmd" value="search">
-				<input type="hidden" name="t" value="caridata">
-				<input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width:80px">
-				<div class="input-group-append">
-					<button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
-				</div>
-			    </div>
-		        </form>
+                <div class="input-group p-2">
+                    <input type="hidden" name="cmd" value="search">
+                    <input type="hidden" name="t" value="caridata">
+                    <input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width:80px">
+                    <div class="input-group-append">
+                        <button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
+                    </div>
+                </div>
+            </form>
+            
 				<?php if (IsLoggedIn()) { 
 				?>
 				<!--<li class="nav-item dropdown">
@@ -514,11 +541,11 @@ function myfooter (){
 <footer class="site-footer">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-6 col-12 mb-4">
+			<div sclass="col-lg-6 col-12 mb-4">
 				
 				<div>
 					Pusat Pelatihan SDM Ekspor dan Jasa Perdagangan<br>
-                	<img src="<?= GetUrl('images/icons/address.png') ?>" class="icon">
+                	<img style="width:17px;" src="<?= GetUrl('images/icons/address.png') ?>" class="icon" >
 					Letjen S. Parman Jalan No.112, RT.3/RW.8, Tomang, Grogol Petamburan, Kota Jakarta Barat, Jakarta 11440<br>
 
                     <img src="<?= GetUrl('images/icons/phone.png') ?>" class="icon"> 
@@ -534,7 +561,7 @@ function myfooter (){
 				<div>
 					Balai Pelatihan SDM Metrologi Mutu dan Jasa Perdagangan<br>
 					
-					<img src="<?= GetUrl('images/icons/address.png') ?>" class="icon"> 
+					<img style="width:17px;" src="<?= GetUrl('images/icons/address.png') ?>" class="icon" > 
 					Jl. Daeng Muhammad Ardiwinata KM 3,4 Kel. Cihanjuang, Kec. Parongpong, Kabupaten Bandung Barat, Jawa Barat 40559<br>
 					
 					<img src="<?= GetUrl('images/icons/whatsapp.png') ?>" class="icon"> 
