@@ -13,6 +13,7 @@ $Home = &$Page;
 	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   	<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
+	<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
 </head>
 <body> 
 <style>
@@ -583,28 +584,21 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<div class="container">
 			<div class="row">
 				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
-				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="4000">
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
 
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/perpustakaan (2).JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Perpustakaan">
+							<img src="images/fasilitas/perpustakaan (2).JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Perpustakaan" data-bs-toggle="modal" data-bs-target="#modalPerpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/simulation_center.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Simulation Center">
+							<img src="images/fasilitas/simulation_center.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Simulation Center" data-bs-toggle="modal" data-bs-target="#modalSimulationCenter">
 							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-<<<<<<< HEAD
-							<img src="images\fasilitas\auditorium.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Auditorium">
-=======
-
-							<img src="images/fasilitas/auditorium.png" style="width:95%; height:200px !important;" alt="Auditorium">
-
-
->>>>>>> f0f8cef57a33cf70bb2da77b09d2987f69c0e035
+							<img src="images\fasilitas\auditorium.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Auditorium" data-bs-toggle="modal" data-bs-target="#modalAuditorium">
 							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
 							</div>
 						</div>
@@ -613,22 +607,15 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="row justify-content-center">
 
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/asrama.jpg" style="width:95%; height:210px !important; border-radius: 10px" alt="Asrama">
+							<img src="images/fasilitas/asrama.jpg" style="width:95%; height:210px !important; border-radius: 10px" alt="Asrama" data-bs-toggle="modal" data-bs-target="#modalAsrama">
 							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/jicanet.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Laboratorium">
+							<img src="images/fasilitas/jicanet.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Jicanet" data-bs-toggle="modal" data-bs-target="#modalJicanet">
 							<h6 class="text-bold mt-3 text-secondary">JICANET</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-<<<<<<< HEAD
-							<img src="images/fasilitas/ruang_kelas.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Ruang Kelas">
-=======
-
-							<img src="images/fasilitas/ruang_kelas.png" style="width:95%; height:200px !important;" alt="Ruang Kelas">
-
-
->>>>>>> f0f8cef57a33cf70bb2da77b09d2987f69c0e035
+							<img src="images/fasilitas/ruang_kelas.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Ruang Kelas" data-bs-toggle="modal" data-bs-target="#modalRuangKelas">
 							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
 							</div>
 						</div>
@@ -644,6 +631,259 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			</div>
 		</div>
 	</section>
+
+	<!-- Modals -->
+	<!-- Modal Perpustakaan -->
+	<div class="modal fade" id="modalPerpustakaan" tabindex="-1" aria-labelledby="modalPerpustakaanLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalPerpustakaanLabel">Perpustakaan</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+                <!-- Bootstrap Carousel -->
+                <div id="carouselPerpustakaan" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/fasilitas/perpustakaan (2).JPG" class="d-block w-100" alt="Perpustakaan">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/perpus 1.JPG" class="d-block w-100" alt="Perpustakaan 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/perpus 2.JPG" class="d-block w-100" alt="Perpustakaan 2">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/perpus 3.JPG" class="d-block w-100" alt="Perpustakaan 3">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/perpus 4.JPG" class="d-block w-100" alt="Perpustakaan 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Simulation Center -->
+	<div class="modal fade" id="modalSimulationCenter" tabindex="-1" aria-labelledby="modalSimulationCenterLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalSimulationCenterLabel">Simulation Center</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselPerpustakaan" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/fasilitas/simulation_center.JPG" class="d-block w-100" alt="SC">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/SC 1.JPG" class="d-block w-100" alt="SC 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/SC 2.JPG" class="d-block w-100" alt="SC 2">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/SC 3.JPG" class="d-block w-100" alt="SC 3">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/SC 4.JPG" class="d-block w-100" alt="SC 4">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/SC 5.JPG" class="d-block w-100" alt="SC 5">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/SC 6.JPG" class="d-block w-100" alt="SC 6">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Auditorium -->
+	<div class="modal fade" id="modalAuditorium" tabindex="-1" aria-labelledby="modalAuditoriumLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalAuditoriumLabel">Auditorium</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselPerpustakaan" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/fasilitas/auditorium.JPG" class="d-block w-100" alt="Auditorium">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/auditorium 1.JPG" class="d-block w-100" alt="Auditorium 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/auditorium 2.JPG" class="d-block w-100" alt="Auditorium 2">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/auditorium 3.JPG" class="d-block w-100" alt="Auditorium 3">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/auditorium 4.JPG" class="d-block w-100" alt="Auditorium 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Asrama -->
+	<div class="modal fade" id="modalAsrama" tabindex="-1" aria-labelledby="modalAsramaLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalAsramaLabel">Asrama</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselPerpustakaan" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/fasilitas/asrama.jpg" class="d-block w-100" alt="Asrama">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/Super (10).jpg" class="d-block w-100" alt="Asrama 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/Super (20).jpg" class="d-block w-100" alt="Asrama 2">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/VIP (17).jpg" class="d-block w-100" alt="Asrama 3">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/km standar 1.jpg" class="d-block w-100" alt="Asrama 4">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/km standar 2.jpg" class="d-block w-100" alt="Asrama 5">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images/fasilitas/km standar 3.jpg" class="d-block w-100" alt="Asrama 6">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+			</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Jicanet -->
+	<div class="modal fade" id="modalJicanet" tabindex="-1" aria-labelledby="modalJicanetLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalJicanetLabel">Jicanet</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<img src="images/fasilitas/jicanet.JPG" class="img-fluid" alt="Jicanet">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Ruang Kelas -->
+	<div class="modal fade" id="modalRuangKelas" tabindex="-1" aria-labelledby="modalRuangKelasLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalRuangKelasLabel">Ruang Kelas</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<img src="images/fasilitas/ruang_kelas.JPG" class="img-fluid" alt="Ruang Kelas">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Bootstrap JS Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	<style>
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: auto;
+        background: none;
+        border: none;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: transparent;
+        background-image: none; /* Menghapus ikon default */
+        border: 2px solid white; /* Border untuk ikon */
+        border-radius: 50%; /* Bentuk bulat */
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .carousel-control-prev-icon::before {
+        content: '<'; /* Tanda panah kiri */
+        color: white; /* Warna ikon */
+        font-size: 20px;
+        display: block;
+        text-align: center;
+    }
+
+    .carousel-control-next-icon::before {
+        content: '>'; /* Tanda panah kanan */
+        color: white; /* Warna ikon */
+        font-size: 20px;
+        display: block;
+        text-align: center;
+    }
+</style>
+
+
 
 	<section class="content-section">
 	<div class="container">
