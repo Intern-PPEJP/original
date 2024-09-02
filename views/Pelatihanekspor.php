@@ -29,7 +29,7 @@ $Pelatihanekspor = &$Page;
 <div class="container">
     <div class="row my-5 ">
         <div class="col-md-12">
-            <div class="text-justify" style="font-size: 1.3em;">
+            <div class="text-center">
                PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global. Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.
             </div>
         </div>
@@ -65,7 +65,88 @@ $Pelatihanekspor = &$Page;
         text-align: left;
         font-weight: 300;
     }
+
+    p, table, div {
+    font-size: 16px;
+	}
+	
+	h2{
+		font-size: 20px;
+	}
+
+	h3{
+		font-size: 18px;
+	}
+   
+    .pelatihan-mendatang {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; 
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.pelatihan-mendatang .card-title {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-bottom: 5px; 
+}
+
+.pelatihan-mendatang .card-title p {
+    margin-bottom: auto; 
+}
+
+.pelatihan-mendatang .card-title table {
+    width: 100%;
+    margin-bottom: auto; 
+}
+
+.pelatihan-mendatang .card-img-top {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.pelatihan-mendatang .btn {
+    margin-top: auto; 
+    padding: 10px; 
+    text-align: center; 
+    display: block;
+    width: 100%; 
+}
+
+
+@media (max-width: 768px) {
+    .pelatihan-mendatang {
+        min-height: auto; 
+    }
+
+    .pelatihan-mendatang .card-title {
+        margin-bottom: 5px; 
+    }
+
+    .pelatihan-mendatang .card-title p {
+        font-size: 16px; 
+        margin-bottom: 5px; 
+    }
+
+    .pelatihan-mendatang .card-title table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; 
+        margin-bottom: 5px; 
+    }
+
+    .pelatihan-mendatang .btn {
+        padding: 8px; 
+        margin-top: 5px; 
+       
+    }
+}
+
 </style>
+
 <div class="container-fluid p-0 mt-0" style="background-image: url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;display:none;">
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
     <div class="container py-3">
@@ -140,7 +221,7 @@ $Pelatihanekspor = &$Page;
 
 <section class="content-section mt-5">
 	<div class="container">
-		<h3 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h3>
+		<h2 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h2>
 		<div class="row mb-5">
 		
 		<?php
@@ -151,22 +232,23 @@ $Pelatihanekspor = &$Page;
 			//$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = ".$row["pelatihan_id"]);
 			$sisa = $row["sisa"];
 		?>
-			<div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
-			  <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
-			  <div class="card-title m-2">
-			  <p style="height:40px"><?php echo $row["judul_pelatihan"]; ?></p>
-				<table class="table">
-					<tr>
-						<td><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
-						<td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
-					</tr>
-				</table>
-				
-							<a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
-			  </div>
-			</div>
-			</div>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card pelatihan-mendatang mb-4">
+                <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top">
+                <div class="card-title m-2">
+                    <p style="font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></p>
+                    <table class="table">
+                        <tr>
+                            <td><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
+                            <td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></span></td>
+                        </tr>
+                    </table>
+                    <a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
+                </div>
+            </div>
+        </div>
+
+
 		<?php	
 			$jumlahpelatihan++;
 				}
