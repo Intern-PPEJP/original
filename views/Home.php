@@ -685,7 +685,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				</div>
 				<div class="modal-body">
 				<!-- Bootstrap Carousel -->
-                <div id="carouselPerpustakaan" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselSimulationCenter" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="images/fasilitas/simulation_center.JPG" class="d-block w-100" alt="SC">
@@ -709,11 +709,11 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
                             <img src="images/fasilitas/SC 6.JPG" class="d-block w-100" alt="SC 6">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselSimulationCenter" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselSimulationCenter" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -733,7 +733,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				</div>
 				<div class="modal-body">
 				<!-- Bootstrap Carousel -->
-                <div id="carouselPerpustakaan" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselAuditorium" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="images/fasilitas/auditorium.JPG" class="d-block w-100" alt="Auditorium">
@@ -751,11 +751,11 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
                             <img src="images/fasilitas/auditorium 4.JPG" class="d-block w-100" alt="Auditorium 4">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAuditorium" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselAuditorium" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -775,7 +775,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				</div>
 				<div class="modal-body">
 				<!-- Bootstrap Carousel -->
-                <div id="carouselPerpustakaan" class="carousel slide" data-bs-ride="carousel">
+                <div id="carouselAsrama" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="images/fasilitas/asrama.jpg" class="d-block w-100" alt="Asrama">
@@ -799,11 +799,11 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
                             <img src="images/fasilitas/km standar 3.jpg" class="d-block w-100" alt="Asrama 6">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselAsrama" data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselPerpustakaan" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselAsrama" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
@@ -822,8 +822,29 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<img src="images/fasilitas/jicanet.JPG" class="img-fluid" alt="Jicanet">
-				</div>
+				<!-- Bootstrap Carousel -->
+                <div id="carouselJicanet" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/fasilitas/jicanet.JPG" class="d-block w-100" alt="Jicanet">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/jicanet 1.JPG" class="d-block w-100" alt="Jicanet 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/jicanet 2.JPG" class="d-block w-100" alt="Jicanet 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselJicanet" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselJicanet" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+			</div>
 			</div>
 		</div>
 	</div>
@@ -837,7 +858,28 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
 				<div class="modal-body">
-					<img src="images/fasilitas/ruang_kelas.JPG" class="img-fluid" alt="Ruang Kelas">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselRuangKelas" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/fasilitas/ruang_kelas.JPG" class="d-block w-100" alt="Ruang Kelas">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/rk 2.JPG" class="d-block w-100" alt="rk 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/fasilitas/rk 3.JPG" class="d-block w-100" alt="rk 2">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRuangKelas" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRuangKelas" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
 				</div>
 			</div>
 		</div>
@@ -882,8 +924,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
         text-align: center;
     }
 </style>
-
-
 
 	<section class="content-section">
 	<div class="container">
