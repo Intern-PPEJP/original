@@ -99,6 +99,23 @@ $Tentangkami = &$Page;
 		font-size: 16px;
 		margin-top: 10px;
 	}
+	.fasilitas-item-full {
+    background-color: #f9f9f9;
+	object-fit: cover;
+	padding: 15px;
+	border-radius: 8px;
+	text-align: center; 
+	width: 1300px;
+	height: 320px;
+}
+
+@media (max-width: 992px) {
+    .fasilitas-item-full {
+        width: 100%; /* Tetap memenuhi lebar penuh pada layar lebih kecil */
+    }
+}
+
+
 
 	@media (max-width: 992px) {
 		.fasilitas-row {
@@ -185,36 +202,38 @@ $Tentangkami = &$Page;
 
 	<center><h2><strong>FASILITAS</strong></h2></center>
 	<div class="fasilitas-container">
-		<div class="fasilitas-row">
-			<div class="fasilitas-item">
-				<img src="images/fasilitas/fasilitas-perpustakaan.png" alt="Perpustakaan">
-				<h3><strong>PERPUSTAKAAN</strong></h3>
-				<p>Perpustakaan menyediakan berbagai informasi bagi dunia usaha, peserta pelatihan serta masyarakat umum.</p>
-			</div>
-			<div class="fasilitas-item">
-				<img src="images/fasilitas/fasilitas-auditorium.png" alt="Auditorium">
-				<h3><strong>AUDITORIUM</strong></h3>
-				<p>Auditorium dengan kapasitas untuk 200 orang.</p>
-			</div>
-			<div class="fasilitas-item">
-				<img src="images/fasilitas/fasilitas-simulation-center.png" alt="Simulation Center">
-				<h3><strong>SIMULATION CENTER</strong></h3>
-				<p>Simulation Center adalah sarana praktek untuk mempermudah penyerapan sistem belajar dan memberikan pengalaman pertama untuk penerapan keterampilan.</p>
-			</div>
-		</div>
-		<div class="fasilitas-row fasilitas-row-center">
-			<div class="fasilitas-item">
-				<img src="images/fasilitas/fasilitas-ruang-kelas.png" alt="Ruang Kelas">
-				<h3><strong>RUANG KELAS</strong></h3>
-				<p>Ruang Kelas dilengkapi dengan peralatan audio video dengan kapasitas 15, 30, dan 50 orang.</p>
-			</div>
-			<div class="fasilitas-item">
-				<img src="images/fasilitas/fasilitas-asrama.png" alt="Asrama">
-				<h3><strong>ASRAMA</strong></h3>
-				<p>Asrama adalah salah satu fasilitas yang disediakan oleh PPEJP untuk memberikan alternatif tempat penginapan.</p>
-			</div>
-		</div>
+    <div class="fasilitas-row">
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/fasilitas-perpustakaan.png" alt="Perpustakaan">
+            <h3><strong>PERPUSTAKAAN</strong></h3>
+            <p>Perpustakaan menyediakan berbagai informasi bagi dunia usaha, peserta pelatihan serta masyarakat umum.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/fasilitas-auditorium.png" alt="Auditorium">
+            <h3><strong>AUDITORIUM</strong></h3>
+            <p>Auditorium dengan kapasitas untuk 200 orang.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/fasilitas-simulation-center.png" alt="Simulation Center">
+            <h3><strong>SIMULATION CENTER</strong></h3>
+            <p>Simulation Center adalah sarana praktek untuk mempermudah penyerapan sistem belajar dan memberikan pengalaman pertama untuk penerapan keterampilan.</p>
+        </div>
+        <div class="fasilitas-item">
+            <img src="images/fasilitas/fasilitas-ruang-kelas.png" alt="Ruang Kelas">
+            <h3><strong>RUANG KELAS</strong></h3>
+            <p>Ruang Kelas dilengkapi dengan peralatan audio video dengan kapasitas 15, 30, dan 50 orang.</p>
+        </div>
+    </div>
+    <div class="fasilitas-row fasilitas-row-center">
+        <div class="fasilitas-item fasilitas-item-full">
+            <img src="images/fasilitas/fasilitas-asrama.png" alt="Asrama">
+            <h3><strong>ASRAMA</strong></h3>
+            <p>Asrama adalah salah satu fasilitas yang disediakan oleh PPEJP untuk memberikan alternatif tempat penginapan.</p>
+        </div>
+    </div>
 	</div>
+
+
 	<br>
 
 	<center><h2><strong>TIPE KAMAR</strong></h2></center>
