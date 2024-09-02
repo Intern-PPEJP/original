@@ -575,15 +575,15 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/perpustakaan (2).JPG" style="width:95%; height:210px !important;" alt="Perpustakaan">
+							<img src="images/fasilitas/perpustakaan (2).JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/simulation_center.JPG" style="width:95%; height:210px !important;" alt="Simulation Center">
+							<img src="images/fasilitas/simulation_center.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Simulation Center">
 							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images\fasilitas\auditorium.JPG" style="width:95%; height:210px !important;" alt="Auditorium">
+							<img src="images\fasilitas\auditorium.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Auditorium">
 							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
 							</div>
 						</div>
@@ -591,15 +591,15 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="carousel-item">
 						<div class="row justify-content-center">
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/asrama.jpg" style="width:95%; height:210px !important;" alt="Asrama">
+							<img src="images/fasilitas/asrama.jpg" style="width:95%; height:210px !important; border-radius: 10px" alt="Asrama">
 							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/jicanet.JPG" style="width:95%; height:210px !important;" alt="Laboratorium">
+							<img src="images/fasilitas/jicanet.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Laboratorium">
 							<h6 class="text-bold mt-3 text-secondary">JICANET</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/ruang_kelas.JPG" style="width:95%; height:210px !important;" alt="Ruang Kelas">
+							<img src="images/fasilitas/ruang_kelas.JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Ruang Kelas">
 							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
 							</div>
 						</div>
