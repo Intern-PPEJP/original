@@ -144,7 +144,7 @@ p, div {
 }
 
 .carousel-indicators li {
-  width: 10px;
+  width: 8px;
   height: 8px;
   background-color: #6c757d; /* Warna tombol titik */
   border-radius: 60%;
@@ -571,7 +571,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 								$i++;
 									}
 							?>
-
 						</div>
 					</div>
 				</div>
@@ -584,25 +583,23 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<div class="container">
 			<div class="row">
 				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
-				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="3000">
-					<!--<ol class="carousel-indicators">
-						<li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
-						<li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
-					</ol>-->
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval="4000">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
 
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/perpustakaan.png" style="width:95%; height:200px !important;" alt="Perpustakaan">
+							<img src="images/fasilitas/perpustakaan (2).JPG" style="width:95%; height:210px !important;" alt="Perpustakaan">
 							<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/simulation_center.png" style="width:95%; height:200px !important;" alt="Simulation Center">
+							<img src="images/fasilitas/simulation_center.JPG" style="width:95%; height:210px !important;" alt="Simulation Center">
 							<h6 class="text-bold mt-3 text-secondary">SIMULATION CENTER</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+
 							<img src="images/fasilitas/auditorium.png" style="width:95%; height:200px !important;" alt="Auditorium">
+
 
 							<h6 class="text-bold mt-3 text-secondary">AUDITORIUM</h6>
 							</div>
@@ -612,15 +609,17 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="row justify-content-center">
 
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/fasilitas-asrama.png" style="width:95%; height:200px !important;" alt="Asrama">
+							<img src="images/fasilitas/asrama.jpg" style="width:95%; height:210px !important;" alt="Asrama">
 							<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/laboratorium.png" style="width:95%; height:200px !important;" alt="Laboratorium">
-							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
+							<img src="images/fasilitas/jicanet.JPG" style="width:95%; height:210px !important;" alt="Laboratorium">
+							<h6 class="text-bold mt-3 text-secondary">JICANET</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+
 							<img src="images/fasilitas/ruang_kelas.png" style="width:95%; height:200px !important;" alt="Ruang Kelas">
+
 
 							<h6 class="text-bold mt-3 text-secondary">RUANG KELAS</h6>
 							</div>
@@ -632,16 +631,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<ol class="carousel-indicators">
                     <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
                     <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
-                </ol>
-  <!-- Kontrol tombol carousel 
-  <a class="carousel-control-prev" href="#carouselExampleSlidesOnly" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleSlidesOnly" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>-->
+                	</ol>
 				</div>
 			</div>
 		</div>
