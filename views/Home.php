@@ -748,7 +748,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
                             <img src="images/fasilitas/auditorium 3.JPG" class="d-block w-100" alt="Auditorium 3">
                         </div>
 						<div class="carousel-item">
-                            <img src="images/fasilitas/auditorium 4.JPG" class="d-block w-100" alt="Auditorium 4">
+                            <img src="images/fasilitas/auditorium 5.JPG" class="d-block w-100" alt="Auditorium 4">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselAuditorium" data-bs-slide="prev">
