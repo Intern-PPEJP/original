@@ -11,7 +11,7 @@ $Pelatihanekspor = &$Page;
     <div class="container" style="xmargin-top:110px">
         <div class="row" style="xbackground-color: #031A31;">
             <div class="col-md-12">
-                <h1 class="m-0" style="color: white;font-weight:bold;">PELATIHAN EKSPOR</h1>
+                <h2 class="m-0" style="color: white;font-weight:bold;">PELATIHAN EKSPOR</h2>
             </div>
         </div>
     </div>
@@ -70,11 +70,11 @@ $Pelatihanekspor = &$Page;
     font-size: 16px;
 	}
 	
-	h2{
+	h3{
 		font-size: 20px;
 	}
 
-	h3{
+	h4{
 		font-size: 18px;
 	}
 </style>
@@ -82,7 +82,7 @@ $Pelatihanekspor = &$Page;
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
     <div class="container py-3">
 		<div class="col p-0 mb-3 text-white text-center">
-			<h3 class="mt-3">Cara Daftar Pelatihan</h3>
+			<h4 class="mt-3">Cara Daftar Pelatihan</h4>
 		</div>
         <div class="row mt-5 alur-daftar justify-content-center">
 			
@@ -152,7 +152,7 @@ $Pelatihanekspor = &$Page;
 
 <section class="content-section mt-5">
 	<div class="container">
-		<h2 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h2>
+		<h3 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h3>
 		<div class="row mb-5">
 		
 		<?php
