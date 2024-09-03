@@ -39,7 +39,7 @@ $Tentangbpmjp = &$Page;
 		flex-direction: column;
 		align-items: center;
 		gap: 20px;
-		margin-bottom :200px;
+		margin-bottom :90px;
 	}
 
 	.fasilitas-row {
