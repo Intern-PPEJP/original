@@ -16,12 +16,16 @@ $Lspbpmjp = &$Page;
 <body>
 <style>
     .text-center {
-    text-align: center;
-}
+        text-align: center;
+    }
 
-p, table, div {
-    font-size: 16px;
+    p, table, div {
+        font-size: 16px;
 	}
+
+    h1{
+        font-size: 25px;
+    }
 	
 	h2{
 		font-size: 20px;
@@ -76,9 +80,7 @@ p, table, div {
     display: inline-block;
     padding: 25px 20px 10px 20px; /* Padding atas 25px, bawah 10px, kiri/kanan 20px */
     background-color: #fcf6bd;  /*Warna latar card */
-}
-
-
+    }
 </style>
 
 <div class="container-fluid " style="background-color: #3A8F53; padding:20px 0px;">
@@ -130,22 +132,21 @@ p, table, div {
 </div>
 
 <style>
-/* Untuk layar dengan lebar lebih besar dari 768px */
-.responsive-text {
-    margin-left: 130px;
-    margin-right: 130px;
-    padding-bottom: 0px;
-}
-
-/* Untuk layar dengan lebar lebih kecil dari 768px */
-@media (max-width: 768px) {
+    /* Untuk layar dengan lebar lebih besar dari 768px */
     .responsive-text {
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: 130px;
+        margin-right: 130px;
+        padding-bottom: 0px;
     }
-}
-</style>
 
+    /* Untuk layar dengan lebar lebih kecil dari 768px */
+    @media (max-width: 768px) {
+        .responsive-text {
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
+</style>
 
 <!--<div class="container-fluid text-white mb-4" style="background-color: #3A8F53;">
 	<div class="container py-3">
@@ -163,10 +164,10 @@ p, table, div {
     <div class="row my-4 responsive-content">
         <div class="col-md-12">
 			<p class="text-justify">
-			Skema sertifikasi Pengujian Meter Air adalah skema sertifikasi klaster yang dikembangkan oleh Komite Skema LSP P1 BPMJP untuk memenuhi kebutuhan sertifikasi kompetensi kerja di LSP P1 BPMJP.
+			    Skema sertifikasi Pengujian Meter Air adalah skema sertifikasi klaster yang dikembangkan oleh Komite Skema LSP P1 BPMJP untuk memenuhi kebutuhan sertifikasi kompetensi kerja di LSP P1 BPMJP.
 			</p>
             <p class="text-justify">
-			Skema sertifikasi yang telah dikembangkan oleh Komite Skema LSP P1 BPMJP adalah skema klaster pengujian meter air dengan unit kompetensi:
+			    Skema sertifikasi yang telah dikembangkan oleh Komite Skema LSP P1 BPMJP adalah skema klaster pengujian meter air dengan unit kompetensi:
 			</p>
             <table>
             <thead>
@@ -226,29 +227,29 @@ p, table, div {
 </div>
 
 <style>
-/* Untuk layar lebih besar dari 768px */
-.responsive-container {
-    margin-left: 185px;
-    margin-right: 185px;
-}
-
-.responsive-content {
-    margin-left: 110px;
-    margin-right: 110px;
-}
-
-/* Untuk layar lebih kecil dari 768px */
-@media (max-width: 768px) {
+    /* Untuk layar lebih besar dari 768px */
     .responsive-container {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 185px;
+        margin-right: 185px;
     }
 
     .responsive-content {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-left: 110px;
+        margin-right: 110px;
     }
-}
+
+    /* Untuk layar lebih kecil dari 768px */
+    @media (max-width: 768px) {
+        .responsive-container {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .responsive-content {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    }
 </style>
 
 <div class="mb-1">&nbsp;</div>
