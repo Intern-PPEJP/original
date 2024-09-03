@@ -22,6 +22,10 @@ $Pelatihan = &$Page;
     font-size: 16px;
 	}
 	
+    h1{
+		font-size: 25px;
+	}
+
 	h2{
 		font-size: 20px;
 	}
@@ -124,10 +128,10 @@ $Pelatihan = &$Page;
     }
 
     .container-why .why-card:hover {
-    background-color: #023e8a;
-    color: #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    transform: scale(1.05);
+        background-color: #023e8a;
+        color: #ffffff;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        transform: scale(1.05);
     }
 
     .container-why .why-card:hover h3,
@@ -136,22 +140,22 @@ $Pelatihan = &$Page;
     }
 
     .container-why .why-card:hover img {
-    filter: brightness(0) invert(1); /* Mengubah icon menjadi putih */
-    transition: filter 0.3s ease;
+        filter: brightness(0) invert(1); /* Mengubah icon menjadi putih */
+        transition: filter 0.3s ease;
     }
     
     /* Media query untuk layar kecil */
     @media (max-width: 768px) {
-    .container-why {
-        flex-direction: column; 
-        align-items: center; 
-    }
+        .container-why {
+            flex-direction: column; 
+            align-items: center; 
+        }
 
-    .container-why .why-card {
-        width: 100%; 
-        max-width: 350px; 
-        margin: 10px; 
-    }
+        .container-why .why-card {
+            width: 100%; 
+            max-width: 350px; 
+            margin: 10px; 
+        }
     }
     </style>
 
