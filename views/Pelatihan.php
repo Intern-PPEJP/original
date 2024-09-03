@@ -359,14 +359,19 @@ p {
 
 .btn-outline-dark {
     padding: 10px 20px;
-    border: 2px solid #000000;
-    color: #000000;
+    border: 2px solid #3a8f53;
+    color: #3a8f53;
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 5px;
     font-size:small;
 }
 
+.btn-outline-dark:hover {
+        background-color: #3a8f53; /* Warna hijau saat di-hover */
+        border-color: #3a8f53;    /* Ubah warna border juga */
+        color: #ffffff;           /* Ubah teks menjadi putih */
+    }
 </style>
 
 <script>
