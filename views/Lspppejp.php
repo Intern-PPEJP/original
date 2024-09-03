@@ -14,6 +14,7 @@ $Lspppejp = &$Page;
         <img src="images\icons\top.png" alt="Back to Top">
     </div>
 </a>
+
 <script>
 	// Ambil elemen button
 const backToTopBtn = document.getElementById('backToTopBtn');
@@ -29,37 +30,41 @@ function toggleBackToTopBtn() {
 
 // Pasang event listener untuk scroll
 window.addEventListener('scroll', toggleBackToTopBtn);
-
 </script>
+
 <style>
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    text-decoration: none;
-    display: none; /* Button disembunyikan secara default */
-}
+	.back-to-top {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		z-index: 100;
+		text-decoration: none;
+		display: none; /* Button disembunyikan secara default */
+	}
 
-.button-circle {
-    width: 50px;
-    height: 50px;
-    background-color: #19497D;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+	.button-circle {
+		width: 50px;
+		height: 50px;
+		background-color: #19497D;
+		border-radius: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-.button-circle img {
-    width: 20px;
-    height: 20px;
-}
+	.button-circle img {
+		width: 20px;
+		height: 20px;
+	}
 
 	p, table, div {
     font-size: 16px;
 	}
 	
+	h1{
+		font-size: 25px;
+	}
+
 	h2{
 		font-size: 20px;
 	}
@@ -139,9 +144,9 @@ window.addEventListener('scroll', toggleBackToTopBtn);
     }
 
     .container-topik .topic-card:hover {
-    background-color: #023e8a;
-    color: #ffffff;
-    transition: background-color 0.3s ease, color 0.3s ease;
+		background-color: #023e8a;
+		color: #ffffff;
+		transition: background-color 0.3s ease, color 0.3s ease;
     }
 
     .container-topik .topic-card:hover h3 {
@@ -149,22 +154,22 @@ window.addEventListener('scroll', toggleBackToTopBtn);
     }
 
     .container-topik .topic-card:hover img {
-    filter: brightness(0) invert(1); /* Mengubah icon menjadi putih */
-    transition: filter 0.3s ease;
+		filter: brightness(0) invert(1); /* Mengubah icon menjadi putih */
+		transition: filter 0.3s ease;
     }
 
 	/* Media query untuk layar kecil */
     @media (max-width: 768px) {
     .container-topik {
-        flex-direction: column; 
-        align-items: center; 
-    }
+			flex-direction: column; 
+			align-items: center; 
+		}
 
-    .container-topik .topic-card {
-        width: 100%; 
-        max-width: 350px; 
-        margin: 10px; 
-    }
+		.container-topik .topic-card {
+			width: 100%; 
+			max-width: 350px; 
+			margin: 10px; 
+		}
     }
 
 	.custom-margin-bottom {
@@ -181,6 +186,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
         </div>
     </div>
 </div>
+
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
         <div class="col-md-12 p-0" style=" height: 400px">
@@ -199,10 +205,10 @@ window.addEventListener('scroll', toggleBackToTopBtn);
         </div>
     </div>
 </div>
+
 <section class="barcount-section" style="min-height:100px !important">
 	<div class="container">
 		<div class="row row-bar-count pt-3 text-white">
-
 			<div class="col-12 text-center">
 				<h2>Motto Kami: </h2>
 				<h2>“MEMASTIKAN DAN MEMELIHARA KOMPETENSI ANDA DI BIDANG EKSPOR IMPOR”</h2>	
@@ -210,6 +216,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 		</div>
 	</div>
 </section>
+
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
@@ -220,14 +227,14 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 				<ol>
 					<li>LSP PPEJP menginformasikan kepada pemohon persyaratan sertifikasi sesuai skema sertifikasi jenis bukti, aturan bukti, proses sertifikasi, hak pemohon dan kewajiban pemohon, biaya sertifikasi dan kewajiban pemegang sertifikat kompetensi</li>
 					<li>Pemohon mengisi formulir pendaftaran (APL-01) dan dilengkapi dengan bukti-bukti pendukung berupa :
-					<ol type="a">	
-						<li>Foto copy KTP</li>
-						<li>Pas Photo 3 x 4 cm sebanyak 2 (dua) lembar, dengan latar belakang warna merah, dan</li>
-						<li>Foto copy Sertifikat Pelatihan Persiapan Ekspor dari PPEJP</li>
-						<li>Foto copy Ijazah SMA/SMK Sederjat atau</li>
-						<li>Surat Keterangan telah bekerja minimal 2 tahun pada pekerjaan Persiapan Ekspor, atau</li>
-						<li>Foto copy Surat Ijin Berusaha, seperti NIB.</li>
-					</ol>
+						<ol type="a">	
+							<li>Foto copy KTP</li>
+							<li>Pas Photo 3 x 4 cm sebanyak 2 (dua) lembar, dengan latar belakang warna merah, dan</li>
+							<li>Foto copy Sertifikat Pelatihan Persiapan Ekspor dari PPEJP</li>
+							<li>Foto copy Ijazah SMA/SMK Sederjat atau</li>
+							<li>Surat Keterangan telah bekerja minimal 2 tahun pada pekerjaan Persiapan Ekspor, atau</li>
+							<li>Foto copy Surat Ijin Berusaha, seperti NIB.</li>
+						</ol>
 					</li>
 					<li>Pemohon mengisi formulir Asesmen Mandiri (APL 02) dan dilengkapi dengan bukti pendukung yang relevan (jika ada)</li>
 					<li>Peserta menyatakan setuju untuk memenuhi persyaratan sertifikasi dan memberikan setiap informasi yang diperlukan untuk penilaian.</li>
@@ -236,34 +243,35 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 				</ol>
 			</p>
 			<br>
-            <h3 class="text-center mt-2 mb-2 custom-margin-bottom">
-            Empat ruang lingkup skema sertifikasi klaster:
-            </h3>
+            <h3 class="text-center mt-2 mb-2 custom-margin-bottom">Empat ruang lingkup skema sertifikasi klaster:</h3>
 			<div class="container container-topik">
-			<a href="#persiapan-ekspor" style="text-decoration: none;">
-			<div class="topic-card">
-				<img src="images\icons\clipboard.png" alt="Persiapan Ekspor">
-				<h3>Persiapan Ekspor</h3>
-			</div>
-			</a>
-			<a href="#pelaksanaan-ekspor" style="text-decoration: none;">
-			<div class="topic-card">
-				<img src="images\icons\implement.png" alt="Pelaksanaan Ekspor">
-				<h3>Pelaksanaan Ekspor</h3>
-			</div>
-			</a>
-			<a href="#persiapan-impor" style="text-decoration: none;">
-			<div class="topic-card">
-				<img src="images\icons\clipboard.png" alt="Persiapan Impor">
-				<h3>Persiapan Impor</h3>
-			</div>
-			</a>
-			<a href="#pelaksanaan-impor" style="text-decoration: none;">
-			<div class="topic-card">
-				<img src="images\icons\implement.png" alt="Pelaksanaan Impor">
-				<h3>Pelaksanaan Impor</h3>
-			</div>
-			</a>
+				<a href="#persiapan-ekspor" style="text-decoration: none;">
+				<div class="topic-card">
+					<img src="images\icons\clipboard.png" alt="Persiapan Ekspor">
+					<h3>Persiapan Ekspor</h3>
+				</div>
+				</a>
+
+				<a href="#pelaksanaan-ekspor" style="text-decoration: none;">
+				<div class="topic-card">
+					<img src="images\icons\implement.png" alt="Pelaksanaan Ekspor">
+					<h3>Pelaksanaan Ekspor</h3>
+				</div>
+				</a>
+
+				<a href="#persiapan-impor" style="text-decoration: none;">
+				<div class="topic-card">
+					<img src="images\icons\clipboard.png" alt="Persiapan Impor">
+					<h3>Persiapan Impor</h3>
+				</div>
+				</a>
+
+				<a href="#pelaksanaan-impor" style="text-decoration: none;">
+				<div class="topic-card">
+					<img src="images\icons\implement.png" alt="Pelaksanaan Impor">
+					<h3>Pelaksanaan Impor</h3>
+				</div>
+				</a>
 			</div>
 			<p class="text-center">
 			Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 95 Tahun 2018 Tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Perdagangan Besar Dan Eceran; Reparasi Dan Perawatan Mobil Dan Sepeda Motor Golongan Pokok Perdagangan Besar, Bukan Mobil Dan Sepeda Motor Bidang Ekspor Impor.
@@ -277,6 +285,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 		<h3>1. Skema Sertifikasi Persiapan Ekspor</h3>
 	</div>
 </div>
+
 <div class="container mb-5">
 	<p>Rincian Unit Kompetensi :</p>
 	<table>
@@ -355,8 +364,8 @@ window.addEventListener('scroll', toggleBackToTopBtn);
             </tr>
         </tbody>
     </table>
-
 	<br>
+
 	<p> Persyaratan Dasar Pemohon Sertifikasi:
 		<ol>
 			<li>Memiliki sertifikat pelatihan ekspor yang diselenggarakan oleh PPEJP, dan</li>
@@ -374,6 +383,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 		<h3>2. Skema Sertifikasi Pelaksanaan Ekspor</h3>
 	</div>
 </div>
+
 <div class="container mb-5">
 	<p>Rincian Unit Kompetensi :</p>
 	<table>
@@ -470,6 +480,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 		<h3>3. Skema Sertifikasi Persiapan Impor</h3>
 	</div>
 </div>
+
 <div class="container mb-5">
 	<p>Rincian Unit Kompetensi :</p>
 	<table>
@@ -523,8 +534,8 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 			</tr>
 		</tbody>
 	</table>
-
 	<br>
+
 	<p> Persyaratan Dasar Pemohon Sertifikasi:
 		<ol>
 			<li>Memiliki sertifikat pelatihan ekspor yang diselenggarakan oleh PPEJP, dan</li>
@@ -542,6 +553,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 		<h3>4. Skema Sertifikasi Pelaksanaan Impor</h3>
 	</div>
 </div>
+
 <div class="container mb-5">
 	<p>Rincian Unit Kompetensi :</p>
 	<table>
@@ -595,8 +607,8 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 			</tr>
 		</tbody>
 	</table>
-
 	<br>
+
 	<p> Persyaratan Dasar Pemohon Sertifikasi:
 		<ol>
 			<li>Memiliki sertifikat pelatihan ekspor yang diselenggarakan oleh PPEJP, dan</li>
