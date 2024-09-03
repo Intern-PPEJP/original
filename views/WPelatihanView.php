@@ -383,82 +383,76 @@ $Page->showMessage();
         </div>
     </div>
     <section class="pt-5 pb-2">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 text-center">
-                <a class="btn btn-success mb-3 mr-1" href="#carouselProducts" role="button" data-slide="prev" style="position:absolute;left:12px;top:0;">
-                    <i class="fa fa-arrow-left"></i>
-                </a>
-                <h3 class="mb-3 text-bold">Pelatihan Lainnya</h3>
-                <a class="btn btn-success mb-3" href="#carouselProducts" role="button" data-slide="next" style="position:absolute;right:25px;top:0">
-                    <i class="fa fa-arrow-right"></i>
-                </a><br>
-            </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center">
+				<a class="btn btn-success mb-3 mr-1" href="#carouselProducts" role="button" data-slide="prev" style="position:absolute;left:12px;top:0;">
+					<i class="fa fa-arrow-left"></i>
+				</a>
+				<h3 class="mb-3 text-bold">Pelatihan Lainnya</h3>
+				<a class="btn btn-success mb-3" href="#carouselProducts" role="button" data-slide="next" style="position:absolute;right:25px;top:0">
+					<i class="fa fa-arrow-right"></i>
+				</a><br>
+			</div>
 
-            <div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="5000">
-                <div class="carousel-inner" role="listbox">
-                    <?php
-                        $rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
-                        FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
-                        ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
-                        $i = 0;
-                        while ($row = $rs->fetch()) {
-                            if ($i % 3 == 0) { // Membuka item baru setiap 3 container
-                                echo '<div class="carousel-item ' . ($i == 0 ? 'active' : '') . '"><div class="row">';
-                            }
-                    ?>
-                        <div class="col-md-4">
-                            <div class="card" style="padding:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
-                                <img class="img-fluid" alt="100%x220" style="height:220px !important;border-radius:8px 8px 0 0 !important;" src="files/<?php echo $row["gambar"]; ?>">
-                                <div class="card-body m-0 p-1">
-                                    <h3 class="card-title" style="height:40px; font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></h3>
-                                    <table class="table p-0 m-0" style="font-size:.8em">
-                                        <tr>
-                                            <td width="60%" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
-                                            <td width="40%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-users" aria-hidden="true"></i> <?php echo $row["jumlah_peserta"]; ?> Orang</td>
-                                            <td><i class="fa fa-money" aria-hidden="true"></i> <?php echo rupiah($row["harga"]); ?></td>
-                                        </tr>
-                                        <tr>
-                                            <td><?php echo $row["tanggal_pelaksanaan"]; ?></td>
-                                            <td><i class="fa fa-user" aria-hidden="true"></i> 
-                                                <?php if($row["sisa"] > 0 && strtotime($row["tawal"]) > strtotime(date("Y-m-d"))) { ?>
-                                                    <span class="text-danger">Sisa <?php echo $row["sisa"]; ?> Kursi</span>
-                                                <?php } else { ?>
-                                                    <span class="badge badge-danger">Fully Booked</span>
-                                                <?php } ?>
-                                            </td>
-                                        </tr>
-                                    </table>
-                                    <div class="card-footer"><a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-lg btn-block">Lihat Detail</a></div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php
-                            $i++;
-                            if ($i % 3 == 0) { // Menutup item setelah 3 container
-                                echo '</div></div>';
-                            }
-                        }
-
-                        // Menutup item terakhir jika belum genap 3 container
-                        if ($i % 3 != 0) {
-                            echo '</div></div>';
-                        }
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
+			<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="5000">
+				<div class="carousel-inner" role="listbox">
+					<?php
+						$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
+						FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
+						ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
+						$i = 0;
+						while ($row = $rs->fetch()) {
+							if ($i % 3 == 0) { // Membuka item baru setiap 3 container
+								echo '<div class="carousel-item ' . ($i == 0 ? 'active' : '') . '"><div class="row">';
+							}
+					?>
+						<div class="col-md-4">
+							<div class="card" style="padding:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
+                            <img src="<?= GetUrl('files/'.$row["gambar"]); ?>" class="card-img-top" height="250px" style="object-fit: cover;">
+								<div class="card-body m-0 p-1">
+									<h3 class="card-title" style="height:40px; font-size: 16px; font-weight: bold;cmargin-bottom:5px;"><?php echo $row["judul_pelatihan"]; ?></h3>
+									<table class="table p-0 m-0" style="font-size:.8em">
+										<tr>
+											<td width="60%" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
+											<td width="40%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
+										</tr>
+										<tr>
+											<td><i class="fa fa-users" aria-hidden="true"></i> <?php echo $row["jumlah_peserta"]; ?> Orang</td>
+											<td><i class="fa fa-money" aria-hidden="true"></i> <?php echo rupiah($row["harga"]); ?></td>
+										</tr>
+										<tr>
+											<td><?php echo $row["tanggal_pelaksanaan"]; ?></td>
+											<td><i class="fa fa-user" aria-hidden="true"></i> 
+												<?php if($row["sisa"] > 0 && strtotime($row["tawal"]) > strtotime(date("Y-m-d"))) { ?>
+													<span class="text-danger">Sisa <?php echo $row["sisa"]; ?> Kursi</span>
+												<?php } else { ?>
+													<span class="badge badge-danger">Fully Booked</span>
+												<?php } ?>
+											</td>
+										</tr>
+									</table>
+									<div class="card-footer"><a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-lg btn-block">Lihat Detail</a></div>
+								</div>
+							</div>
+						</div>
+					<?php
+							$i++;
+							if ($i % 3 == 0 || $row == false) { // Menutup item setelah 3 container
+								echo '</div></div>';
+							}
+						}
+					?>
+				</div>
+			</div>
+		</div>
+	</div>
 </section>
 
-
-    <div class="row xslim mt-5">
-        <div class="col-12">
-            <h4 class="text-bold">Rekomendasi lainnya<h4>
-        </div>
+	<div class="row xslim mt-5">
+    <div class="col-12">
+        <h4 class="text-bold">Rekomendasi lainnya<h4>
+    </div>
     </div>
     <div class="row flex-nowrap mb-5" style="overflow-x: scroll;width:100%">
         <?php
