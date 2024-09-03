@@ -438,7 +438,7 @@ $Page->showMessage();
 						</div>
 					<?php
 							$i++;
-							if ($i % 3 == 0 || $row == false) { // Menutup item setelah 3 container
+							if ($i % 3 == 0 || $row == false) {
 								echo '</div></div>';
 							}
 						}
