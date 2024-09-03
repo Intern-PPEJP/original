@@ -29,7 +29,7 @@ $Pelatihanekspor = &$Page;
 <div class="container">
     <div class="row my-5 ">
         <div class="col-md-12">
-            <div class="text-center">
+            <div class="text-justify">
                PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global. Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.
             </div>
         </div>
@@ -67,9 +67,13 @@ $Pelatihanekspor = &$Page;
     }
 
     p, table, div {
-    font-size: 16px;
+        font-size: 16px;
 	}
 	
+    h2{
+		font-size: 25px;
+	}
+
 	h3{
 		font-size: 20px;
 	}
@@ -148,48 +152,43 @@ $Pelatihanekspor = &$Page;
     </div>
 </div>
 
-
-
 <section class="content-section mt-5">
 	<div class="container">
-		<h3 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h3>
+        <h3 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h3>
 		<div class="row mb-5">
-		
-		<?php
-			$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` LIKE 'ekspor' ORDER BY `tawal` ASC");
-			$jumlahpelatihan = 0;
-			while ($row = $rs->fetch()) {
-			
-			//$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = ".$row["pelatihan_id"]);
-			$sisa = $row["sisa"];
-		?>
-			<div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
-			  <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
-			  <div class="card-title m-2">
-			  <p style="height:40px; font-size: 18px; font-weight: bold;" ><?php echo $row["judul_pelatihan"]; ?></p>
-				<table class="table">
-					<tr>
-						<td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
-						<td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
-					</tr>
-				</table>
-				
-							<a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
-			  </div>
+            <?php
+                $rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` LIKE 'ekspor' ORDER BY `tawal` ASC");
+                $jumlahpelatihan = 0;
+                while ($row = $rs->fetch()) {
+                
+                //$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = ".$row["pelatihan_id"]);
+                $sisa = $row["sisa"];
+            ?>
+            <div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
+                    <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
+                    <div class="card-title m-2">
+                    <p style="height:40px; font-size: 18px; font-weight: bold;" ><?php echo $row["judul_pelatihan"]; ?></p>
+                        <table class="table">
+                            <tr>
+                                <td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
+                                <td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
+                            </tr>
+                        </table>
+                        <a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
+                    </div>
+                </div>
 			</div>
-			</div>
-		<?php	
-			$jumlahpelatihan++;
-				}
-			if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>'; }
-		?>
+            <?php	
+                $jumlahpelatihan++;
+                    }
+                if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>'; }
+            ?>
 		</div>
 	</div>
 </section>
 
 <div class="mb-5">&nbsp;</div>
-
 
 <script>
     document.title = "Pelatihan Ekspor"
