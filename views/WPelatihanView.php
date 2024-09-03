@@ -403,7 +403,7 @@ $Page->showMessage();
 						ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 						$i = 0;
 						while ($row = $rs->fetch()) {
-							if ($i % 3 == 0) { // Membuka item baru setiap 3 container
+							if ($i % 3 == 0) { 
 								echo '<div class="carousel-item ' . ($i == 0 ? 'active' : '') . '"><div class="row">';
 							}
 					?>
