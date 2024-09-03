@@ -436,7 +436,6 @@ if ($(window).width() < 992) {
         });
     });
 });
-
 </script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding:0;">
 	<a class="navbar-brand" href="<?= GetUrl('home')?>">
