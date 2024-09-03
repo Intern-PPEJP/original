@@ -584,7 +584,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<div class="container">
 			<div class="row">
 				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
-				<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="3000">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
@@ -620,17 +620,45 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 							</div>
 						</div>
 						</div>
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/bpmjp-instalasi.png" style="width:95%; height:210px !important; border-radius: 10px" alt="Instalasi" data-bs-toggle="modal" data-bs-target="#modalInstalasi">
+							<h6 class="text-bold mt-3 text-secondary">INSTALASI</h6>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/bpmjp-laboratorium.png" style="width:95%; height:210px !important; border-radius: 10px" alt="Laboratorium" data-bs-toggle="modal" data-bs-target="#modalLaboratorium">
+							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images/fasilitas/bpmjp-teater.png" style="width:95%; height:210px !important; border-radius: 10px" alt="Teater" data-bs-toggle="modal" data-bs-target="#modalTeater">
+							<h6 class="text-bold mt-3 text-secondary">TEATER</h6>
+							</div>
+						</div>
+						</div>
 
 					</div>
 					<!-- Tombol titik navigasi -->
 					<ol class="carousel-indicators">
-                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"></li>
+					<li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2"></li>
                 	</ol>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var myCarousel = document.querySelector('#carouselExampleSlidesOnly');
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000,
+            wrap: true
+        });
+    });
+	</script>
 
 	<!-- Modals -->
 	<!-- Modal Perpustakaan -->
