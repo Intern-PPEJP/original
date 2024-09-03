@@ -449,13 +449,13 @@ if ($(window).width() < 992) {
 		<ul class="navbar-nav ms-auto mr-3">
 			<li class="nav-item">
 				<a class="nav-link click-scroll" href="<?= GetUrl('home') ?>">Beranda</a>
-				</li>
+			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
 				<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
 					<li><a class="dropdown-item" href="<?= GetUrl('tentang-kami') ?>">Pusat Pelatihan SDM Ekspor dan <br>Jasa Perdagangan (PPEJP)</a></li>
 					<li><a class="dropdown-item" href="<?= GetUrl('tentang-bpmjp') ?>">Balai Pelatihan SDM Metrologi, Mutu <br>dan Jasa Perdagangan (BPMJP)</a></li>
-					<li><a class="dropdown-item" href="#">Lembaga Sertifikasi Profesi (LSP) &raquo;</a>
+					<li><a class="dropdown-item dropdown-toggle" href="#">Lembaga Sertifikasi Profesi (LSP)</a>
 						<ul class="submenu dropdown-menu">
 							<li><a class="dropdown-item" href="<?= GetUrl('lsp-ppejp') ?>">LSP PPEJP</a></li>
 							<li><a class="dropdown-item" href="<?= GetUrl('lsp-bpmjp') ?>">LSP BPMJP</a></li>
@@ -465,8 +465,8 @@ if ($(window).width() < 992) {
 			</li>
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kegiatan</a>
-				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<li><a class="dropdown-item" href="<?= GetUrl('pelatihan') ?>">Pelatihan &raquo;</a>
+				<ul class="dropdown-menu" aria-labelledby="navbarLightDropdownMenuLink" id="sub-pelatihan">
+					<li><a class="dropdown-item dropdown-toggle" href="<?= GetUrl('pelatihan') ?>">Pelatihan</a>
 						<ul class="submenu dropdown-menu">
 							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-ekspor') ?>">Pelatihan Ekspor</a></li>
 							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-metrologi') ?>">Pelatihan Metrologi</a></li>
