@@ -81,7 +81,76 @@ $Pelatihanekspor = &$Page;
 	h4{
 		font-size: 18px;
 	}
+   
+    .pelatihan-mendatang {
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; 
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+}
+
+.pelatihan-mendatang .card-title {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-bottom: 5px; 
+}
+
+.pelatihan-mendatang .card-title p {
+    margin-bottom: auto; 
+}
+
+.pelatihan-mendatang .card-title table {
+    width: 100%;
+    margin-bottom: auto; 
+}
+
+.pelatihan-mendatang .card-img-top {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+}
+
+.pelatihan-mendatang .btn {
+    margin-top: auto; 
+    padding: 10px; 
+    text-align: center; 
+    display: block;
+    width: 100%; 
+}
+
+
+@media (max-width: 768px) {
+    .pelatihan-mendatang {
+        min-height: auto; 
+    }
+
+    .pelatihan-mendatang .card-title {
+        margin-bottom: 5px; 
+    }
+
+    .pelatihan-mendatang .card-title p {
+        font-size: 16px; 
+        margin-bottom: 5px; 
+    }
+
+    .pelatihan-mendatang .card-title table td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box; 
+        margin-bottom: 5px; 
+    }
+
+    .pelatihan-mendatang .btn {
+        padding: 8px; 
+        margin-top: 5px; 
+       
+    }
+}
+
 </style>
+
 <div class="container-fluid p-0 mt-0" style="background-image: url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;display:none;">
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
     <div class="container py-3">
@@ -156,34 +225,36 @@ $Pelatihanekspor = &$Page;
 	<div class="container">
         <h3 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h3>
 		<div class="row mb-5">
-            <?php
-                $rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` LIKE 'ekspor' ORDER BY `tawal` ASC");
-                $jumlahpelatihan = 0;
-                while ($row = $rs->fetch()) {
-                
-                //$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = ".$row["pelatihan_id"]);
-                $sisa = $row["sisa"];
-            ?>
-            <div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
-                    <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
-                    <div class="card-title m-2">
-                    <p style="height:40px; font-size: 18px; font-weight: bold;" ><?php echo $row["judul_pelatihan"]; ?></p>
-                        <table class="table">
-                            <tr>
-                                <td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
-                                <td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
-                            </tr>
-                        </table>
-                        <a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
-                    </div>
-                </div>
+		
+		<?php
+			$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` LIKE 'ekspor' ORDER BY `tawal` ASC");
+			$jumlahpelatihan = 0;
+			while ($row = $rs->fetch()) {
+			
+			//$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = ".$row["pelatihan_id"]);
+			$sisa = $row["sisa"];
+		?>
+			<div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12">
+			<div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
+			  <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
+			  <div class="card-title m-2">
+			  <p style="height:40px; font-size: 18px; font-weight: bold;" ><?php echo $row["judul_pelatihan"]; ?></p>
+				<table class="table">
+					<tr>
+						<td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
+						<td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
+					</tr>
+				</table>
+				
+							<a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
+			  </div>
 			</div>
-            <?php	
-                $jumlahpelatihan++;
-                    }
-                if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>'; }
-            ?>
+			</div>
+		<?php	
+			$jumlahpelatihan++;
+				}
+			if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>'; }
+		?>
 		</div>
 	</div>
 </section>
