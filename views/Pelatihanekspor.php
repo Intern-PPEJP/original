@@ -70,6 +70,10 @@ $Pelatihanekspor = &$Page;
         font-size: 16px;
 	}
 	
+    h1{
+        font-size: 25px;
+    }
+
     h2{
 		font-size: 25px;
 	}
