@@ -117,17 +117,6 @@ p, div {
 		font-size: 22px;
 }
 
-.zoom-in {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-
-.zoom-in.show {
-    opacity: 1;
-    transform: scale(1);
-}
-
 
 .icon-text, .featured-block {
         transition: transform 0.3s ease; /* Efek transisi yang halus */
@@ -376,7 +365,14 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		</div>
 	</section>
 	
-	<section>
+	<style>
+		.profile-section {
+			background-color: #ffffff; 
+			padding-bottom: 15px;
+		}
+	</style>
+	
+	<!--<section>
 		<div class="container-fluid">	
 				<div class="row cs-icons-menu">
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-ekspor" class="d-block">
@@ -447,30 +443,138 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
 
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-    	const elements = document.querySelectorAll('.zoom-in');
+	<section>
+    <div class="container container-act">
+		<a href="pelatihan-ekspor">
+        <div class="act-card">
+            <img src="images/icons/ekspor.png" alt="Pelatihan Ekspor">
+            <h3>Pelatihan Ekspor</h3>
+        </div>
+		</a>
+		<a href="pelatihan-metrologi">
+        <div class="act-card">
+            <img src="images/icons/measurement.png" alt="Pelatihan Metrologi">
+            <h3>Pelatihan Metrologi</h3>
+        </div>
+		</a>
+		<a href="pelatihan-mutu">
+        <div class="act-card">
+            <img src="images/icons/mutu.png" alt="Pelatihan Mutu">
+            <h3>Pelatihan Mutu</h3>
+        </div>
+		</a>
+		<a href="pelatihan-jasa-perdagangan">
+        <div class="act-card">
+            <img src="images/icons/trade.png" alt="Pelatihan Jasa Perdagangan">
+            <h3>Pelatihan Jasa Perdagangan</h3>
+        </div>
+		</a>
+		<a href="export-coaching-program">
+        <div class="act-card">
+            <img src="images\icons\coaching.png" alt="Export Coaching Program">
+            <h3>Export Coaching Program</h3>
+        </div>
+		</a>
+		<a href="webinar">
+        <div class="act-card">
+            <img src="images/icons/webinar (1).png" alt="Webinar">
+            <h3>Webinar</h3>
+        </div>
+		</a>
+    </div>
+</section>
 
-    	function checkElements() {
-        elements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                element.classList.add('show');
-            }
-        });
+<style>
+	.container-act {
+    display: flex; 
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    padding: 30px 0px;
+    margin: 0 auto;
+    max-width: 1250px;
+    flex-direction: row; 
+}
+
+.container-act .act-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    height: 90%;
+	transition: transform 0.3s ease;
+}
+
+.container-act .act-card img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.container-act .act-card h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.container-act .act-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.container-act .act-card:hover {
+    background-color: #031A31;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+	transform: scale(1.05);
+}
+
+.container-act .act-card:hover h3 {
+    color: #ffffff;
+}
+
+.container-act .act-card:hover img {
+    filter: brightness(0) invert(1); /* Mengubah icon menjadi putih */
+    transition: filter 0.3s ease;
+}
+
+.container-act a {
+    text-decoration: none;
+    color: inherit; 
+    display: block;
+}
+
+.container-act a:hover .act-card {
+    background-color: #031A31;
+    color: #ffffff;
+}
+
+.container-act a:hover .act-card img {
+    filter: brightness(0) invert(1);
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 768px) {
+    .container-act {
+        flex-direction: column; 
+        align-items: center; 
     }
 
-		window.addEventListener('scroll', checkElements);
-		checkElements(); // Check initially in case the elements are already in view
-	});
-	</script>
+    .container-act .act-card {
+        max-width:200px; 
+        margin: 10 px; 
+    }
+}
+
+</style>
 
 	<section class="barcount-section">
     <div class="container">
-
-        <div class="row row-bar-count pt-5">
+        <div class="row row-bar-count pt-2">
             <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
                 <span class="col-12 jumlah" data-target="60000">0</span>
                 <span class="col-12 jumlah_cap">Alumni pelatihan</span>
