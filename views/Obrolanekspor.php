@@ -40,6 +40,10 @@ $Obrolanekspor = &$Page;
 </div>
 
 <style>
+    p, table, div {
+        font-size: 16px;
+	}
+    
     .grid-topik-obrol .col-4 {
         margin-bottom: 25px;
     }
