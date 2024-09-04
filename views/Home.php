@@ -210,9 +210,40 @@ p, div {
     }
 }
 
+	.barcount-section {
+    background: none; /* Menghilangkan latar belakang */
+    padding: 20px 0;
+}
+
+.jumlah {
+    font-size: 4.5rem;
+    color: #031A31; /* Ubah warna font menjadi biru */
+    background: none; /* Hilangkan background */
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.jumlah_cap {
+    font-size: 20px;
+    color: #000;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.angka {
+    background: none; /* Pastikan tidak ada background pada elemen angka */
+}
+
+.container {
+    background: none; /* Menghilangkan background pada container jika ada */
+}
 
 
 </style>	
+
+
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
@@ -460,6 +491,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
         </div>
     </div>
 </section>
+
 
 <script>
     // Fungsi untuk melakukan animasi hitung angka
