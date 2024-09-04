@@ -97,10 +97,6 @@ $Pelatihanekspor = &$Page;
         margin-bottom: 5px; 
     }
 
-    .pelatihan-mendatang .card-title p {
-        margin-bottom: auto; 
-    }
-
     .pelatihan-mendatang .card-title table {
         width: 100%;
         margin-bottom: auto; 
@@ -234,7 +230,7 @@ $Pelatihanekspor = &$Page;
                 <div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
                 <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
                 <div class="card-title m-2">
-                <p style="height:60px; font-size: 18px; font-weight: bold;" ><?php echo $row["judul_pelatihan"]; ?></p>
+                <p style="height:40px; font-size: 18px; font-weight: bold;" ><?php echo $row["judul_pelatihan"]; ?></p>
                     <table class="table">
                         <tr>
                             <td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
@@ -254,7 +250,7 @@ $Pelatihanekspor = &$Page;
 	</div>
 </section>
 
-<div class="mb-5">&nbsp;</div>
+<div class="mb-2">&nbsp;</div>
 
 <script>
     document.title = "Pelatihan Ekspor"
