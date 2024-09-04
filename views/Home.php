@@ -117,17 +117,6 @@ p, div {
 		font-size: 22px;
 }
 
-.zoom-in {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-
-.zoom-in.show {
-    opacity: 1;
-    transform: scale(1);
-}
-
 
 .icon-text, .featured-block {
         transition: transform 0.3s ease; /* Efek transisi yang halus */
@@ -518,6 +507,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
     margin: 10px;
     text-align: center;
     height: 90%;
+	transition: transform 0.3s ease;
 }
 
 .container-act .act-card img {
@@ -540,6 +530,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
     background-color: #031A31;
     color: #ffffff;
     transition: background-color 0.3s ease, color 0.3s ease;
+	transform: scale(1.05);
 }
 
 .container-act .act-card:hover h3 {
@@ -580,24 +571,6 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 }
 
 </style>
-
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-    	const elements = document.querySelectorAll('.zoom-in');
-
-    	function checkElements() {
-        elements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                element.classList.add('show');
-            }
-        });
-    }
-
-		window.addEventListener('scroll', checkElements);
-		checkElements(); // Check initially in case the elements are already in view
-	});
-	</script>
 
 	<section class="barcount-section">
     <div class="container">
