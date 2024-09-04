@@ -229,19 +229,19 @@ $Pelatihanmetrologi = &$Page;
 			$sisa = $row["sisa"];
 		?>
 			<div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12">
-			<div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
-			  <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
-			  <div class="card-title m-2">
-			  <p style="height:40px; font-size: 18px; font-weight: bold;"> <?php echo $row["judul_pelatihan"]; ?> </p>
-				<table class="table">
-					<tr> 
-						<td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
-						<td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
-					</tr>
-				</table>
-                <a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
-			  </div>
-			</div>
+                <div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
+                    <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
+                    <div class="card-title m-2">
+                        <p style="height:40px; font-size: 18px; font-weight: bold;"> <?php echo $row["judul_pelatihan"]; ?> </p>
+                        <table class="table">
+                            <tr> 
+                                <td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
+                                <td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
+                            </tr>
+                        </table>
+                        <a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
+                    </div>
+                </div>
 			</div>
             <?php	
                 $jumlahpelatihan++;
