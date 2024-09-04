@@ -141,7 +141,7 @@ p, div {
 }
 
 .carousel-indicators .active {
-  background-color: #000000; /* Warna tombol titik aktif */
+  background-color: #031A31; /* Warna tombol titik aktif */
 }
 
 .testimonials {
@@ -179,7 +179,7 @@ p, div {
 }
 
 .testimonial h3 {
-    color: #004DAF;
+    color: #031A31;
     margin-top: 20px;
     font-size: 18px;
 }
@@ -1064,25 +1064,25 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         background-color: transparent;
-        background-image: none; /* Menghapus ikon default */
-        border: 2px solid white; /* Border untuk ikon */
-        border-radius: 50%; /* Bentuk bulat */
+        background-image: none;
+        border: 2px solid white; 
+        border-radius: 50%; 
         width: 30px;
         height: 30px;
         line-height: 30px;
     }
 
     .carousel-control-prev-icon::before {
-        content: '<'; /* Tanda panah kiri */
-        color: white; /* Warna ikon */
+        content: '<'; 
+        color: white; 
         font-size: 20px;
         display: block;
         text-align: center;
     }
 
     .carousel-control-next-icon::before {
-        content: '>'; /* Tanda panah kanan */
-        color: white; /* Warna ikon */
+        content: '>'; 
+        color: white; 
         font-size: 20px;
         display: block;
         text-align: center;
