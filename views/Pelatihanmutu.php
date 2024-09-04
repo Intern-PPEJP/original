@@ -28,7 +28,7 @@ $Pelatihanmutu = &$Page;
 
 <div class="container">
     <div class="col-md-12">
-        <div class="text-center">
+        <div class="text-justify">
             Dengan program pelatihan terpercaya, kami membekali Anda dengan pengetahuan tentang pengendalian kualitas, peningkatan proses, dan implementasi sistem manajemen mutu yang kuat. Kami juga fokus pada kepuasan pelanggan dan membantu Anda meningkatkan reputasi dan keunggulan bisnis Anda.
         </div>
     </div>
@@ -147,7 +147,7 @@ $Pelatihanmutu = &$Page;
 
 
 
-	
+<!--	
 <section class="content-section mt-5">
 	<div class="container">
 		<h2 class="text-center text-bold mb-4">PELATIHAN MUTU TAHUN <?php echo date("Y"); ?></h2>
@@ -185,7 +185,7 @@ $Pelatihanmutu = &$Page;
 		</div>
 	</div>
 </section>
-
+-->
 <div class="mb-5">&nbsp;</div>
 
 
