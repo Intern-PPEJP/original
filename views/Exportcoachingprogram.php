@@ -226,7 +226,6 @@ $Exportcoachingprogram = &$Page;
 		<center><h3>Kriteria Peserta</h3></center> <br>
 		<div class="slideshow-container">
 			<div class="slideshow-track">
-				<!-- Duplikasi container untuk menciptakan efek looping -->
 				<div class="criteria-container">
 					<div class="criteria-icon"><i class="fas fa-id-card"></i></div>
 					<div class="criteria-title">NIB & Badan Usaha</div>
@@ -278,24 +277,55 @@ $Exportcoachingprogram = &$Page;
 <br>
 
 	<br>
+	<style>
+		#map {
+		height: 500px;
+		width: 100%;
+		margin-bottom: 20px; /* Tambahkan jarak margin bawah */
+		border-radius: 15px; /* Membuat sudut peta menjadi rounded */
+		overflow: hidden; /* Agar elemen peta tidak meluap keluar dari border radius */
+		}
+
+	</style>
 	<center><div class="row container">
-	<center><h2><b>EXPORT COACHING PROGRAM 2024</b></h2></center>
-	<div class="col-md-12" style="text-align: left; margin-top:36px;margin-bottom:76px;">
-		<h3><b> Pelaksanaan di 9 (sembilan) Daerah: </b></h3>
-		<ul>
-			<li>Wilayah Jabodebek (Penyelenggaraan kegiatan di Gedung PPEJP)</li>
-			<li>Wilayah Banten (Penyelenggaraan kegiatan di Tangerang)</li>
-			<li>Wilayah Kalimantan Barat (Penyelenggaraan kegiatan di Pontianak)</li>
-			<li>Wilayah Sumatera Barat (Penyelenggaraan kegiatan di Padang)</li>
-			<li>Wilayah Daerah Istimewa Yogyakarta (Penyelenggaraan kegiatan di Yogyakarta)</li>
-			<li>Wilayah Jawa Tengah I (Penyelenggaraan kegiatan di Semarang)</li>
-			<li>Wilayah Jawa Tengah II (Penyelenggaraan kegiatan di Purwokerto)</li>
-			<li>Wilayah Jawa Barat (Penyelenggaraan kegiatan di Bandung)</li>
-			<li>Wilayah Jawa Timur (Penyelenggaraan kegiatan di Sidoarjo)</li>
-		</ul>
+	<center><h3><b>EXPORT COACHING PROGRAM 2024</b></h3></center> <br><br>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<div id="map" style="height: 500px; width: 100%;"></div>
+
+	<script>
+  	var map = L.map('map').setView([-2.5489, 118.0149], 5);
+
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	var locations = [
+		{ name: "Jabodebek", lat: -6.2088, lng: 106.8456 },
+		{ name: "Banten", lat: -6.1783, lng: 106.6319 },
+		{ name: "Kalimantan Barat", lat: -0.0263, lng: 109.3425 },
+		{ name: "Sumatera Barat", lat: -0.9471, lng: 100.4172 },
+		{ name: "Yogyakarta", lat: -7.7956, lng: 110.3695 },
+		{ name: "Jawa Tengah I", lat: -6.9667, lng: 110.4167 },
+		{ name: "Jawa Tengah II", lat: -7.4244, lng: 109.2396 },
+		{ name: "Jawa Barat", lat: -6.9175, lng: 107.6191 },
+		{ name: "Jawa Timur", lat: -7.4465, lng: 112.7171 }
+	];
+
+	locations.forEach(function(location) {
+		L.marker([location.lat, location.lng]).addTo(map)
+		.bindPopup(location.name)
+		.openPopup();
+	});
+</script>
+
+
+<br><br>
+
+
 	</div>
 </div>
-<a class="btn btn-success btn-lg daftar mb-5" href="https://forms.gle/NenFWx4d4ySo1UVP6"> <h2> Daftar Sekarang! </h2></a></center>
+<!--<a class="btn btn-success btn-lg daftar mb-5" href="https://forms.gle/NenFWx4d4ySo1UVP6"> <h2> Daftar Sekarang! </h2></a></center>-->
 
 <div class="mb-3">&nbsp;</div>
 
