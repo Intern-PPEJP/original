@@ -49,7 +49,7 @@ $Obrolanekspor = &$Page;
         padding-top: 5px;
     }
 
-    .h1{
+    h1{
         font-size: 25px;
     }
 </style>
