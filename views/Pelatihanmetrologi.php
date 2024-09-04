@@ -30,7 +30,7 @@ $Pelatihanmetrologi = &$Page;
     <div class="row my-5 ">
         <div class="col-md-12">
             <div class="text-justify">
-               Dengan program pelatihan yang komprehensif, kami memberikan pemahaman mendalam tentang prinsip-prinsip metrologi, penggunaan peralatan pengukuran, serta teknik-teknik kalibrasi yang presisi. Kami dilengkapi dengan fasilitas modern dan instruktur ahli yang akan membimbing Anda melalui teori dan praktik pengukuran yang tepat. Dengan bergabung dalam pusat pelatihan kami, Anda akan memiliki keterampilan yang diperlukan untuk mengukur dengan ketepatan dan memastikan kualitas dalam berbagai bidang, termasuk industri, laboratorium, dan sektor lainnya.
+                Dengan program pelatihan yang komprehensif, kami memberikan pemahaman mendalam tentang prinsip-prinsip metrologi, penggunaan peralatan pengukuran, serta teknik-teknik kalibrasi yang presisi. Kami dilengkapi dengan fasilitas modern dan instruktur ahli yang akan membimbing Anda melalui teori dan praktik pengukuran yang tepat. Dengan bergabung dalam pusat pelatihan kami, Anda akan memiliki keterampilan yang diperlukan untuk mengukur dengan ketepatan dan memastikan kualitas dalam berbagai bidang, termasuk industri, laboratorium, dan sektor lainnya.
             </div>
         </div>
     </div>
@@ -66,9 +66,13 @@ $Pelatihanmetrologi = &$Page;
     }
 
     p, table, div {
-    font-size: 16px;
+        font-size: 16px;
 	}
 	
+    h1{
+		font-size: 25px;
+	}
+
 	h2{
 		font-size: 20px;
 	}
@@ -76,6 +80,68 @@ $Pelatihanmetrologi = &$Page;
 	h3{
 		font-size: 18px;
 	}
+
+    .pelatihan-mendatang {
+        display: flex;
+        flex-direction: column;
+        min-height: 400px; 
+        box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .pelatihan-mendatang .card-title {
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        margin-bottom: 5px; 
+    }
+
+    .pelatihan-mendatang .card-title table {
+        width: 100%;
+        margin-bottom: auto; 
+    }
+
+    .pelatihan-mendatang .card-img-top {
+        object-fit: cover;
+        height: 250px;
+        width: 100%;
+    }
+
+    .pelatihan-mendatang .btn {
+        margin-top: auto; 
+        padding: 10px; 
+        text-align: center; 
+        display: block;
+        width: 100%; 
+    }
+
+    @media (max-width: 768px) {
+        .pelatihan-mendatang {
+            min-height: auto; 
+        }
+
+        .pelatihan-mendatang .card-title {
+            margin-bottom: 5px; 
+        }
+
+        .pelatihan-mendatang .card-title p {
+            font-size: 16px; 
+            margin-bottom: 5px; 
+        }
+
+        .pelatihan-mendatang .card-title table td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box; 
+            margin-bottom: 5px; 
+        }
+
+        .pelatihan-mendatang .btn {
+            padding: 8px; 
+            margin-top: 5px; 
+        
+        }
+    }
 </style>
 
 <div class="container-fluid p-0 mt-0" style="background-image: url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;display:none;">
@@ -186,7 +252,7 @@ $Pelatihanmetrologi = &$Page;
 	</div>
 </section>
 
-<div class="mb-5">&nbsp;</div>
+<div class="mb-2">&nbsp;</div>
 
 <script>
     document.title = "Pelatihan Metrologi"
