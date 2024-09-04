@@ -80,24 +80,24 @@ $Exportcoachingprogram = &$Page;
         </div>
     </div>
 </div>
-<br>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-	<section class="barcount-section">
+<section class="barcount-section">
 		<div class="container">
 			<div class="row row-bar-count pt-5">
 
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 angka">
-					<span class="col-12 jumlah" data-target="65">0</span>
+					<span class="col-12 jumlah" data-target="74">0</span>
 					<span class="col-12 jumlah_cap">Angkatan ECP</span>
 				</div>
 				
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 angka">
-					<span class="col-12 jumlah" data-target="1860">0</span>
+					<span class="col-12 jumlah" data-target="2160">0</span>
 					<span class="col-12 jumlah_cap">Peserta ECP</span>		
 				</div>
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 angka">
-					<span class="col-12 jumlah" data-target="338">0</span>
-					<span class="col-12 jumlah_cap">Peserta ECP Sukses Ekspor</span>		
+					<span class="col-12 jumlah" data-target="20">0</span>
+					<span class="col-12 jumlah_cap">Jumlah Wilayah</span>		
 				</div>
 			</div>
 		</div>
@@ -147,18 +147,142 @@ $Exportcoachingprogram = &$Page;
 
 		</script>
 	</section>
+
+	<section>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .slideshow-container {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            background-color: none;
+            padding: 20px 10px;
+            border-radius: 15px;
+        }
+
+        .slideshow-track {
+            display: flex;
+            width: calc(200%); /* Menggandakan lebar untuk looping */
+            animation: slide 30s linear infinite;
+            gap: 20px;
+        }
+
+        .criteria-container {
+            flex: 1 0 25%;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .criteria-container:hover {
+            transform: scale(1.05);
+        }
+
+        .criteria-icon {
+            font-size: 3rem;
+            color: #031A31;
+        }
+
+        .criteria-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .criteria-desc {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 992px) {
+            .criteria-container {
+                flex: 1 0 25%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .criteria-container {
+                flex: 1 0 25%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <center><h2><b>Kriteria Peserta</b></h2></center> <br>
+    <div class="slideshow-container">
+        <div class="slideshow-track">
+            <!-- Duplikasi container untuk menciptakan efek looping -->
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-id-card"></i></div>
+                <div class="criteria-title">NIB & Badan Usaha</div>
+                <div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-industry"></i></div>
+                <div class="criteria-title">Kapasitas Produksi</div>
+                <div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
+                <div class="criteria-title">Komitmen Tahunan</div>
+                <div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-business-time"></i></div>
+                <div class="criteria-title">Pengalaman Bisnis</div>
+                <div class="criteria-desc">Diutamakan memiliki pengalaman bisnis minimal 1 tahun.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-language"></i></div>
+                <div class="criteria-title">Kemampuan Bahasa & IT</div>
+                <div class="criteria-desc">Memiliki tim yang memahami bahasa Inggris & mampu menggunakan komputer.</div>
+            </div>
+            <!-- Mulai pengulangan konten -->
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-id-card"></i></div>
+                <div class="criteria-title">NIB & Badan Usaha</div>
+                <div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-industry"></i></div>
+                <div class="criteria-title">Kapasitas Produksi</div>
+                <div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
+                <div class="criteria-title">Komitmen Tahunan</div>
+                <div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</section>
+
+<br>
+
 	<br>
 	<center><div class="row container">
 	<center><h2><b>EXPORT COACHING PROGRAM 2024</b></h2></center>
 	<div class="col-md-12" style="text-align: left; margin-top:36px;margin-bottom:76px;">
-		<h3><b> Kriteria Peserta: </b></h3>
-		<ul>
-			<li>Memiliki NIB, Badan Usaha (UD, CV, PT dan Koperasi) yang masih berlaku</li>
-			<li>Memiliki kapasitas produksi yang mendukung kegiatan ekspor</li>
-			<li>Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 (satu) tahun berjalan</li>
-			<li>Diutamakan memiliki pengalaman bisnis minimal 1 (satu) tahun</li>
-			<li>Memiliki tim yang memahami bahasa inggris & mampu menggunakan komputer</li>
-		</ul>
 		<h3><b> Pelaksanaan di 9 (sembilan) Daerah: </b></h3>
 		<ul>
 			<li>Wilayah Jabodebek (Penyelenggaraan kegiatan di Gedung PPEJP)</li>
