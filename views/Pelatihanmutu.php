@@ -67,6 +67,10 @@ $Pelatihanmutu = &$Page;
     font-size: 16px;
 	}
 	
+    h1{
+		font-size: 25px;
+	}
+
 	h2{
 		font-size: 20px;
 	}
@@ -75,6 +79,7 @@ $Pelatihanmutu = &$Page;
 		font-size: 18px;
 	}
 </style>
+
 <div class="container-fluid p-0 mt-0" style="background-image: url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;display:none;">
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
     <div class="container py-3">
@@ -82,7 +87,6 @@ $Pelatihanmutu = &$Page;
 			<h3 class="mt-3">Cara Daftar Pelatihan</h3>
 		</div>
         <div class="row mt-5 alur-daftar justify-content-center">
-			
             <div class="col-md-2 p-0 m-0 text-center text-white mt-5">
                 <div class="step" style="height:67px;">Sign in</div>
                 <div class="step">1</div>
@@ -140,12 +144,9 @@ $Pelatihanmutu = &$Page;
                     Pembayaran anda akan diverifikasi oleh tim PPEJP. Tunggu notifikasi apakah pembayaran terverifikasi atau tidak di halaman profil PPEJP dan alamat email yang terdaftar. Maks waktu verifikasi 5 hari kerja
                 </div>
             </div>
-			
         </div>
     </div>
 </div>
-
-
 
 <!--	
 <section class="content-section mt-5">
@@ -188,13 +189,11 @@ $Pelatihanmutu = &$Page;
 -->
 <div class="mb-5">&nbsp;</div>
 
-
 <script>
     document.title = "Pelatihan Mutu"
 </script>
 	
 </div>
 <?php echo myfooter(); ?>
-
 
 <?= GetDebugMessage() ?>
