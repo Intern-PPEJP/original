@@ -223,7 +223,7 @@ $Exportcoachingprogram = &$Page;
 	<section>
 	
 	<div class="container py-5">
-		<center><h3><b>Kriteria Peserta</b></h3></center> <br>
+		<center><h3>Kriteria Peserta</h3></center> <br>
 		<div class="slideshow-container">
 			<div class="slideshow-track">
 				<!-- Duplikasi container untuk menciptakan efek looping -->
