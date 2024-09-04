@@ -15,8 +15,54 @@ $Home = &$Page;
   	<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
 	<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
 </head>
-<body> 
+<body id="top">
+	<a href="#top" class="back-to-top" id="backToTopBtn">
+		<div class="button-circle">
+			<img src="images\icons\top.png" alt="Back to Top">
+		</div>
+	</a>
+<script>
+	// Ambil elemen button
+	const backToTopBtn = document.getElementById('backToTopBtn');
+
+	// Fungsi untuk menampilkan atau menyembunyikan button
+	function toggleBackToTopBtn() {
+		if (window.scrollY > 200) { // Jika scroll lebih dari 200px
+			backToTopBtn.style.display = "block";
+		} else {
+			backToTopBtn.style.display = "none";
+		}
+	}
+
+	// Pasang event listener untuk scroll
+	window.addEventListener('scroll', toggleBackToTopBtn);
+</script>
+
 <style>
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    text-decoration: none;
+    display: none; /* Button disembunyikan secara default */
+}
+
+.button-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #19497D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-circle img {
+    width: 20px;
+    height: 20px;
+}
+
 /*
 
 CC 2.0 License Iatek LLC 2018
