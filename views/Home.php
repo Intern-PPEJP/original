@@ -376,7 +376,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		</div>
 	</section>
 	
-	<section>
+	<!--<section>
 		<div class="container-fluid">	
 				<div class="row cs-icons-menu">
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-ekspor" class="d-block">
@@ -447,7 +447,63 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				</div>
 			</div>
 		</div>
-	</section>
+	</section>-->
+
+	<section>
+    <div class="container container-act">
+        <div class="act-card">
+            <img src="images/icons/ekspor.png" alt="Pelatihan Ekspor">
+            <h3>Pelatihan Ekspor</h3>
+        </div>
+        <div class="act-card">
+            <img src="images/icons/metrologi.png" alt="Pelatihan Metrologi">
+            <h3>Pelatihan Metrologi</h3>
+        </div>
+        <div class="act-card">
+            <img src="images/icons/mutu.png" alt="Pelatihan Mutu">
+            <h3>Pelatihan Mutu</h3>
+        </div>
+        <div class="act-card">
+            <img src="images/icons/trade.png" alt="Pelatihan Jasa Perdagangan">
+            <h3>Pelatihan Jasa Perdagangan</h3>
+        </div>
+        <div class="act-card">
+            <img src="images\icons\coaching.png" alt="Export Coaching Program">
+            <h3>Export Coaching Program</h3>
+        </div>
+        <div class="act-card">
+            <img src="images/icons/webinar (1).png" alt="Webinar">
+            <h3>Webinar</h3>
+        </div>
+    </div>
+</section>
+
+<style>
+	.container-act {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.act-card {
+    width: 150px;
+    text-align: center;
+    margin: 10px;
+}
+
+.act-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.act-card h3 {
+    font-size: 16px;
+    margin: 0;
+    font-weight: bold;
+}
+
+</style>
 
 	<script>
 		document.addEventListener("DOMContentLoaded", function() {
