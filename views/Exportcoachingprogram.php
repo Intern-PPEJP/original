@@ -19,6 +19,37 @@ $Exportcoachingprogram = &$Page;
 	h3{
 		font-size: 18px;
 	}
+
+	.barcount-section {
+    background: none; /* Menghilangkan latar belakang */
+    padding: 20px 0;
+	}
+
+	.jumlah {
+		font-size: 4.5rem;
+		color: #031A31; /* Ubah warna font menjadi biru */
+		background: none; /* Hilangkan background */
+		display: block;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	.jumlah_cap {
+		font-size: 20px;
+		color: #000;
+		display: block;
+		text-align: center;
+		margin-top: 5px;
+	}
+
+	.angka {
+		background: none; 
+	}
+
+	.container {
+		background: none; 
+	}
+
 </style>
 
 <div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
@@ -43,7 +74,7 @@ $Exportcoachingprogram = &$Page;
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="text-center">
+            <div class="text-justify">
                 Export Coaching Program merupakan program pendampingan untuk pelaku usaha berorientasi ekspor yang dilaksanakan dengan 7 tahapan selama kurang lebih 8 bulan sampai dengan 1 tahun. Tujuan program pendampingan ini adalah agar para pelaku usaha mampu menjalankan bisnis ekspornya secara efektif sehingga dapat melakukan ekspor secara mandiri.
             </div>
         </div>
