@@ -51,7 +51,7 @@ $Home = &$Page;
 .button-circle {
     width: 50px;
     height: 50px;
-    background-color: #d48adb;
+    background-color: #19497D;
     border-radius: 50%;
     display: flex;
     justify-content: center;
