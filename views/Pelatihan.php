@@ -56,7 +56,7 @@ $Pelatihan = &$Page;
 <div class="container">
     <div class="row mb-5 mt-n5">
         <div class="col-md-12">
-            <div class="text-center">
+            <div class="text-justify">
                 Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan adalah mitra terpercaya untuk mengembangkan pengetahuan dan keterampilan di bidang ekspor, metrologi, mutu, dan jasa perdagangan. Program pelatihan kami yang terkini dan instruktur berpengalaman akan mempersiapkan Anda untuk menghadapi tantangan global dalam dunia bisnis, serta meningkatkan keunggulan produk, efisiensi operasional, dan kemampuan dalam bertransaksi di pasar internasional. 
                 Bergabunglah dengan kami sekarang untuk mengambil langkah selanjutnya dalam karier dan keberhasilan bisnis Anda! 
             </div>
