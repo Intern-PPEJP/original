@@ -70,6 +70,10 @@ $Pelatihanekspor = &$Page;
         font-size: 16px;
 	}
 	
+    h1{
+        font-size: 25px;
+    }
+
     h2{
 		font-size: 25px;
 	}
@@ -225,6 +229,38 @@ $Pelatihanekspor = &$Page;
 	<div class="container">
         <h3 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h3>
 		<div class="row mb-5">
+		
+		<?php
+			$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` LIKE 'ekspor' ORDER BY `tawal` ASC");
+			$jumlahpelatihan = 0;
+			while ($row = $rs->fetch()) {
+			
+			//$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = ".$row["pelatihan_id"]);
+			$sisa = $row["sisa"];
+		?>
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card pelatihan-mendatang mb-4">
+                <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top">
+                <div class="card-title m-2">
+                    <p style="font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></p>
+                    <table class="table">
+                        <tr>
+                            <td><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
+                            <td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></span></td>
+                        </tr>
+                    </table>
+                    <a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
+                </div>
+            </div>
+        </div>
+
+
+		<?php	
+			$jumlahpelatihan++;
+				}
+			if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>'; }
+		?>
+      
 		
 		<?php
 			$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` LIKE 'ekspor' ORDER BY `tawal` ASC");
