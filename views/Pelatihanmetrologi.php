@@ -29,7 +29,7 @@ $Pelatihanmetrologi = &$Page;
 <div class="container">
     <div class="row my-5 ">
         <div class="col-md-12">
-            <div class="text-center">
+            <div class="text-justify">
                Dengan program pelatihan yang komprehensif, kami memberikan pemahaman mendalam tentang prinsip-prinsip metrologi, penggunaan peralatan pengukuran, serta teknik-teknik kalibrasi yang presisi. Kami dilengkapi dengan fasilitas modern dan instruktur ahli yang akan membimbing Anda melalui teori dan praktik pengukuran yang tepat. Dengan bergabung dalam pusat pelatihan kami, Anda akan memiliki keterampilan yang diperlukan untuk mengukur dengan ketepatan dan memastikan kualitas dalam berbagai bidang, termasuk industri, laboratorium, dan sektor lainnya.
             </div>
         </div>
