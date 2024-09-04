@@ -199,7 +199,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
-            <div class="text-center">
+            <div class="text-justify">
 				<p> LSP PPEJP ini merupakan LSP pihak ke 2 yang mempunyai tugas memastikan dan memelihara kompetensi alumni pelatihan PPEJP dan jejaringnya, khususnya eksportir dan calon eksportir di dalam ruang lingkup tugas mereka sebagai pengelola dan pelaku manajemen ekspor impor.</p>
 			</div>
         </div>
@@ -273,7 +273,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 				</div>
 				</a>
 			</div>
-			<p class="text-center">
+			<p class="text-justify">
 			Kemasan yang digunakan mengacu pada Standar Kompetensi Kerja Nasional Indonesia berdasarkan Keputusan Menteri Ketenagakerjaan Republik Indonesia Nomor 95 Tahun 2018 Tentang Penetapan Standar Kompetensi Kerja Nasional Indonesia Kategori Perdagangan Besar Dan Eceran; Reparasi Dan Perawatan Mobil Dan Sepeda Motor Golongan Pokok Perdagangan Besar, Bukan Mobil Dan Sepeda Motor Bidang Ekspor Impor.
 			</p>
         </div>
@@ -374,7 +374,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 	</p>
 	
 	<div class="card p-3 text-center">
-		<p>Biaya sertifikasi untuk skema Kompetensi Persiapan Ekspor sebesar Rp.500.000. dengan rincian biaya terlampir. (dalam proses pengajuan PP tarif)</p>
+		<p>Biaya sertifikasi untuk skema Kompetensi Persiapan Ekspor sebesar Rp500.000 dengan rincian biaya terlampir. (dalam proses pengajuan PP tarif)</p>
 	</div>
 </div>
 
@@ -471,7 +471,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 	</ol>
 	
 	<div class="card p-3 text-center">
-		<p>Biaya sertifikasi untuk skema Kompetensi Pelaksanaan Ekspor sebesar Rp.500.000. dengan rincian biaya terlampir. (dalam proses pengajuan PP tarif)</p>
+		<p>Biaya sertifikasi untuk skema Kompetensi Pelaksanaan Ekspor sebesar Rp500.000 dengan rincian biaya terlampir. (dalam proses pengajuan PP tarif)</p>
 	</div>
 </div>
 
@@ -544,7 +544,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 	</p>
 	
 	<div class="card p-3 text-center">
-		<p>Biaya sertifikasi untuk skema Kompetensi Persiapan Impor sebesar Rp.500.000. dengan rincian biaya terlampir. (dalam proses pengajuan PP tarif)</p>
+		<p>Biaya sertifikasi untuk skema Kompetensi Persiapan Impor sebesar Rp500.000 dengan rincian biaya terlampir. (dalam proses pengajuan PP tarif)</p>
 	</div>
 </div>
 
@@ -617,7 +617,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 	</p>
 	
 	<div class="card p-3 text-center">
-		<p>Biaya sertifikasi untuk skema Kompetensi Pelaksanan Impor sebesar Rp.500.000. dengan rincian biaya terlampir. (dalam proses pengajuan PP tarif)</p>
+		<p>Biaya sertifikasi untuk skema Kompetensi Pelaksanan Impor sebesar Rp500.000 dengan rincian biaya terlampir. (dalam proses pengajuan PP tarif)</p>
 	</div>
 </div>
 	
