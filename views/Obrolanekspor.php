@@ -20,7 +20,7 @@ $Obrolanekspor = &$Page;
 
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
-        <div class="col-md-12 p-0" style=" height: 500px">
+        <div class="col-md-12 p-0" style=" height: 480px">
             <div style="background-image: url(images/pages/obrolan-ekspor.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
             </div>
         </div>
@@ -47,6 +47,10 @@ $Obrolanekspor = &$Page;
     .grid-topik-obrol .col-8{
         text-transform: capitalize;
         padding-top: 5px;
+    }
+
+    h1{
+        font-size: 25px;
     }
 </style>
 
@@ -214,20 +218,6 @@ $Obrolanekspor = &$Page;
                 </div>
            </div>
         </div>
-        <!--<div class="row mt-0">
-            <div class="col-md-4 py-3 text-center text-white">
-                <img src="images/icons/icon _user male circle_.png" style="height: 100px; margin-bottom: 15px;">
-                <h1 style="font-size: 20px;">Fasilitator <br>PPEJP</h1>
-            </div>
-            <div class="col-md-4 py-3 text-center text-white">
-                <img src="images/icons/icon _user male circle_.png" style="height: 100px; margin-bottom: 15px;">
-                <h1 style="font-size: 20px;">Pejabat Perwakilan <br>Perdagangan</h1>
-            </div>
-            <div class="col-md-4 py-3 text-center text-white">
-                <img src="images/icons/icon _user male circle_.png" style="height: 100px; margin-bottom: 15px;">
-                <h1 style="font-size: 20px;">Alumni Sukses <br>Pelatihan PPEJP</h1>
-            </div>
-        </div>-->
         <div class="row justify-content-center">
             <div class="col-md-3 py-3 text-center text-white">
                 <div class="narasumber-card">
@@ -253,20 +243,6 @@ $Obrolanekspor = &$Page;
         </div>
 </div>
 
-
-<!--<style>
-    @media (max-width: 767px) {
-        .container-fluid h1 {
-            font-size: 20px;
-        }
-    }
-
-    @media (min-width: 768px) {
-        .container-fluid h1 {
-            font-size: 20px;
-        }
-    }
-</style>-->
 
 <style>
     .narasumber-card {
