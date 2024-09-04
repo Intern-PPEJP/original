@@ -417,120 +417,47 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 			padding-bottom: 15px;
 		}
 	</style>
-	
-	<!--<section>
-		<div class="container-fluid">	
-				<div class="row cs-icons-menu">
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-ekspor" class="d-block">
-							<p class="icon-text text-center zoom-in">PELATIHAN EKSPOR</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/icon-world.png" class="featured-block-image img-fluid " alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/icons/bg/bg-pelatihan-ekspor.png');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-metrologi" class="d-block">
-							<p class="icon-text text-center zoom-in">PELATIHAN METROLOGI</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/pelatihan-metrologi.png" class="featured-block-image img-fluid" alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/icons/bg/bg-pelatihan-metrologi.png');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-mutu" class="d-block">
-							<p class="icon-text text-center zoom-in">PELATIHAN MUTU</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/icon-checkup.png" class="featured-block-image img-fluid " alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/icons/bg/bg-pel-mutu.jpg');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-jasa-perdagangan" class="d-block">
-							<p class="icon-text text-center zoom-in">PELATIHAN JASA PERDAGANGAN</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/pelatihan-ekspor.png" class="featured-block-image img-fluid " alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/icons/bg/bg-pel-jasa.jpg');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="export-coaching-program" class="d-block">
-							<p class="icon-text text-center zoom-in">EXPORT COACHING PROGRAM</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/ecp.png" class="featured-block-image img-fluid" alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.83)), url('images/icons/bg/bg-ecp.png');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="webinar" class="d-block">
-							<p class="icon-text text-center zoom-in">WEBINAR</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/webinar.png" class="featured-block-image img-fluid" alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/icons/bg/bg-webinar.png');">
-					</div>
-					</a>
-				</div>
-			</div>
-		</div>
-	</section>-->
 
 	<section>
-    <div class="container container-act">
-		<a href="pelatihan-ekspor">
-        <div class="act-card">
-            <img src="images/icons/ekspor.png" alt="Pelatihan Ekspor">
-            <h3>Pelatihan Ekspor</h3>
-        </div>
-		</a>
-		<a href="pelatihan-metrologi">
-        <div class="act-card">
-            <img src="images/icons/measurement.png" alt="Pelatihan Metrologi">
-            <h3>Pelatihan Metrologi</h3>
-        </div>
-		</a>
-		<a href="pelatihan-mutu">
-        <div class="act-card">
-            <img src="images/icons/mutu.png" alt="Pelatihan Mutu">
-            <h3>Pelatihan Mutu</h3>
-        </div>
-		</a>
-		<a href="pelatihan-jasa-perdagangan">
-        <div class="act-card">
-            <img src="images/icons/trade.png" alt="Pelatihan Jasa Perdagangan">
-            <h3>Pelatihan Jasa Perdagangan</h3>
-        </div>
-		</a>
-		<a href="export-coaching-program">
-        <div class="act-card">
-            <img src="images\icons\coaching.png" alt="Export Coaching Program">
-            <h3>Export Coaching Program</h3>
-        </div>
-		</a>
-		<a href="webinar">
-        <div class="act-card">
-            <img src="images/icons/webinar (1).png" alt="Webinar">
-            <h3>Webinar</h3>
-        </div>
-		</a>
-    </div>
-</section>
+		<div class="container container-act">
+			<a href="pelatihan-ekspor">
+			<div class="act-card">
+				<img src="images/icons/ekspor.png" alt="Pelatihan Ekspor">
+				<h3>Pelatihan Ekspor</h3>
+			</div>
+			</a>
+			<a href="pelatihan-metrologi">
+			<div class="act-card">
+				<img src="images/icons/measurement.png" alt="Pelatihan Metrologi">
+				<h3>Pelatihan Metrologi</h3>
+			</div>
+			</a>
+			<a href="pelatihan-mutu">
+			<div class="act-card">
+				<img src="images/icons/mutu.png" alt="Pelatihan Mutu">
+				<h3>Pelatihan Mutu</h3>
+			</div>
+			</a>
+			<a href="pelatihan-jasa-perdagangan">
+			<div class="act-card">
+				<img src="images/icons/trade.png" alt="Pelatihan Jasa Perdagangan">
+				<h3>Pelatihan Jasa Perdagangan</h3>
+			</div>
+			</a>
+			<a href="export-coaching-program">
+			<div class="act-card">
+				<img src="images\icons\coaching.png" alt="Export Coaching Program">
+				<h3>Export Coaching Program</h3>
+			</div>
+			</a>
+			<a href="webinar">
+			<div class="act-card">
+				<img src="images/icons/webinar (1).png" alt="Webinar">
+				<h3>Webinar</h3>
+			</div>
+			</a>
+		</div>
+	</section>
 
 <style>
 	.container-act {
