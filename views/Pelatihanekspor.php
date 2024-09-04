@@ -11,7 +11,7 @@ $Pelatihanekspor = &$Page;
     <div class="container" style="xmargin-top:110px">
         <div class="row" style="xbackground-color: #031A31;">
             <div class="col-md-12">
-                <h1 class="m-0" style="color: white;font-weight:bold;">PELATIHAN EKSPOR</h1>
+                <h2 class="m-0" style="color: white;font-weight:bold;">PELATIHAN EKSPOR</h2>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@ $Pelatihanekspor = &$Page;
 <div class="container">
     <div class="row my-5 ">
         <div class="col-md-12">
-            <div class="text-center">
+            <div class="text-justify">
                PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global. Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.
             </div>
         </div>
@@ -67,14 +67,22 @@ $Pelatihanekspor = &$Page;
     }
 
     p, table, div {
-    font-size: 16px;
+        font-size: 16px;
 	}
 	
-	h2{
-		font-size: 20px;
+    h1{
+        font-size: 25px;
+    }
+
+    h2{
+		font-size: 25px;
 	}
 
 	h3{
+		font-size: 20px;
+	}
+
+	h4{
 		font-size: 18px;
 	}
    
@@ -151,7 +159,7 @@ $Pelatihanekspor = &$Page;
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
     <div class="container py-3">
 		<div class="col p-0 mb-3 text-white text-center">
-			<h3 class="mt-3">Cara Daftar Pelatihan</h3>
+			<h4 class="mt-3">Cara Daftar Pelatihan</h4>
 		</div>
         <div class="row mt-5 alur-daftar justify-content-center">
 			
@@ -217,11 +225,9 @@ $Pelatihanekspor = &$Page;
     </div>
 </div>
 
-
-
 <section class="content-section mt-5">
 	<div class="container">
-		<h2 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h2>
+        <h3 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h3>
 		<div class="row mb-5">
 		
 		<?php
@@ -254,12 +260,12 @@ $Pelatihanekspor = &$Page;
 				}
 			if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>'; }
 		?>
+      
 		</div>
 	</div>
 </section>
 
 <div class="mb-5">&nbsp;</div>
-
 
 <script>
     document.title = "Pelatihan Ekspor"
