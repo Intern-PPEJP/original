@@ -399,6 +399,15 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	?>
 
 	<div class="container mt-5">
+		<div class="row mb-3">
+			<div class="col-12">
+				<h3 style="font-weight: bold; position: relative; display: inline-block;">
+					Berita Terbaru
+					<span style="position: absolute; left: 0; bottom: -8px; width: 50px; height: 4px; background-color: #4CAF50;"></span>
+				</h3>
+				<div style="border-bottom: 1px solid #e9ecef; margin-top: 0;"></div>
+			</div>
+		</div>
 		<div class="row">
 			<?php
 			if ($berita_terbaru->rowCount() > 0) {
