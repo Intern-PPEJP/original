@@ -733,16 +733,16 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 						<div class="row justify-content-center">
 
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/bpmjp-instalasi.png" style="width:95%; height:210px !important; border-radius: 10px" alt="Instalasi" data-bs-toggle="modal" data-bs-target="#modalInstalasi">
+							<img src="images\fasilitas\bpmjp\3. Instalasi timbangan jembatan.jpg" style="width:95%; height:210px !important; border-radius: 10px" alt="Instalasi" data-bs-toggle="modal" data-bs-target="#modalInstalasi">
 							<h6 class="text-bold mt-3 text-secondary">INSTALASI</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/bpmjp-laboratorium.png" style="width:95%; height:210px !important; border-radius: 10px" alt="Laboratorium" data-bs-toggle="modal" data-bs-target="#modalLaboratorium">
+							<img src="images\fasilitas\bpmjp\Lab Massa Elektronik.3.jpeg" style="width:95%; height:210px !important; border-radius: 10px" alt="Laboratorium" data-bs-toggle="modal" data-bs-target="#modalLaboratorium">
 							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
 							</div>
 							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
-							<img src="images/fasilitas/bpmjp-teater.png" style="width:95%; height:210px !important; border-radius: 10px" alt="Teater" data-bs-toggle="modal" data-bs-target="#modalTeater">
-							<h6 class="text-bold mt-3 text-secondary">TEATER</h6>
+							<img src="images\fasilitas\bpmjp\Lapangan Badminton.jpg" style="width:95%; height:210px !important; border-radius: 10px" alt="Lainnya" data-bs-toggle="modal" data-bs-target="#modalFasilitasLainnya">
+							<h6 class="text-bold mt-3 text-secondary">FASILITAS LAINNYA</h6>
 							</div>
 						</div>
 						</div>
@@ -1013,6 +1013,141 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
                         <span class="visually-hidden">Previous</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselRuangKelas" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Instalasi -->
+	<div class="modal fade" id="modalInstalasi" tabindex="-1" aria-labelledby="modalInstalasiLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalInstalasiLabel">Instalasi</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselInstalasi" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images\fasilitas\bpmjp\3. Instalasi timbangan jembatan.jpg" class="d-block w-100" alt="Instalasi">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\1.1. Instalasi Tangki Ukur Mobil.jpg" class="d-block w-100" alt="Instalasi 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\1.2.Instalasi Tangki Ukur Mobil.jpg" class="d-block w-100" alt="Instalasi 2">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\2. Instalasi PU BBM.jpeg" class="d-block w-100" alt="Instalasi 3">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\4.Instalasi TUTSIT.jpeg" class="d-block w-100" alt="Instalasi 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselInstalasi" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselInstalasi" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Lab -->
+	<div class="modal fade" id="modalLaboratorium" tabindex="-1" aria-labelledby="modalLaboratoriumLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalLaboratoriumLabel">Laboratorium</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselLaboratorium" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images\fasilitas\bpmjp\Lab Massa Elektronik.3.jpeg" class="d-block w-100" alt="Laboratorium">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Bejana Ukur.jpeg" class="d-block w-100" alt="Laboratorium 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Listrik.jpeg" class="d-block w-100" alt="Laboratorium 2">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Massa Elektronik.jpeg" class="d-block w-100" alt="Laboratorium 3">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Massa Elektronik.3.jpeg" class="d-block w-100" alt="Laboratorium 4">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Massa Elektronik.2.jpeg" class="d-block w-100" alt="Laboratorium 5">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Meter Kadar Air.1.jpg" class="d-block w-100" alt="Laboratorium 6">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Suhu, Gaya, Tekanan.jpeg" class="d-block w-100" alt="Laboratorium 7">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Timbangan Mekanik.3.jpeg" class="d-block w-100" alt="Laboratorium 8">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Timbangan Mekanik.jpeg" class="d-block w-100" alt="Laboratorium 9">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLaboratorium" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselLaboratorium" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Fasilitas Lainnya -->
+	<div class="modal fade" id="modalFasilitasLainnya" tabindex="-1" aria-labelledby="modalFasilitasLainnyaLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalFasilitasLainnyaLabel">Lapangan & Teater</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselFasilitasLainnya" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images\fasilitas\bpmjp\Lapangan Badminton.jpg" class="d-block w-100" alt="Lapangan 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lapangan Voli dan Jogging Track.jpg" class="d-block w-100" alt="Lapangan 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Theater.jpg" class="d-block w-100" alt="Teater">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFasilitasLainnya" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselFasilitasLainnya" data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
