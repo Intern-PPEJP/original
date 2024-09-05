@@ -399,7 +399,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	?>
 
 	<div class="container mt-5">
-		<div class="row mb-3">
+	<div class="row mb-3">
 			<div class="col-12">
 				<h3 style="font-weight: bold; position: relative; display: inline-block;">
 					Berita Terbaru
