@@ -426,7 +426,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 	</div>
 	<!-- Button Berita Lainnya -->
 	<div class="d-flex justify-content-center mt-4">
-			<a href="halaman-berita" class="btn btn-primary" style="border:none; border-radius: 10px; font-size: 12px">Berita Lainnya »</a>
+			<a href="berita" class="btn btn-primary" style="border:none; border-radius: 10px; font-size: 12px">Berita Lainnya »</a>
 		</div>
 	</div>
 
