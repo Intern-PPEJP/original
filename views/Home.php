@@ -391,6 +391,65 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		</div>
 	</section>
 
+	<!--BERITA DI BERANDA-->
+
+	<?php
+	// Query untuk mengambil 4 berita terbaru
+	$berita_terbaru = ExecuteQuery("SELECT id, gambar, judul, DATE_FORMAT(tanggal_publikasi, '%Y-%m-%d') tanggal FROM w_berita WHERE publish = 'Y' ORDER BY tanggal_publikasi DESC LIMIT 4");
+	?>
+
+	<div class="container mt-5">
+		<div class="row">
+			<?php
+			if ($berita_terbaru->rowCount() > 0) {
+				while ($berita = $berita_terbaru->fetch()) {
+					$gambar = explode(Config("MULTIPLE_UPLOAD_SEPARATOR"), $berita["gambar"]);
+			?>
+			<div class="col-md-3 mb-4">
+				<a href="berita?baca=<?php echo $berita['id']; ?>" style="color:#000;text-decoration:none;">
+					<div class="card h-100 shadow card-hover" style="border-radius: 10px; border: none;">
+						<div class="card-img-top" style="background-image: url('images/news/<?php echo $gambar[0]; ?>'); background-size: cover; height: 200px; border-top-left-radius: 10px; border-top-right-radius: 10px;"></div>
+						<div class="card-body">
+							<h5 class="card-title" style="font-weight: 500; font-size: 14px;"><?php echo $berita['judul']; ?></h5>
+							<p class="card-text" style="font-size: .8em; color: gray;"><?php echo tanggal_indo($berita['tanggal']); ?></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<?php
+				}
+			} else {
+				echo "Belum ada berita terbaru.";
+			}
+			?>
+		</div>
+	</div>
+	<!-- Button Berita Lainnya -->
+	<div class="d-flex justify-content-center mt-4">
+			<a href="halaman-berita" class="btn btn-primary" style="border:none; border-radius: 10px; font-size: 12px">Berita Lainnya »</a>
+		</div>
+	</div>
+
+	<style>
+    .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+
+	.btn-primary {
+        background-color: #031A31;
+
+    }
+
+    .btn-primary:hover {
+        background-color: #19497D;
+    }
+	</style>
+
 
 	<section class="profile-section">
 		<div class="container text-center">
@@ -1372,8 +1431,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 								<table style="margin:0;padding:0;"><tr><td rowspan="2"><i class="fa fa-user" aria-hidden="true" style="font-size:25px;"></i></td>
 								
 								<td style="font-size:8pt;margin:0;padding:0;padding-left:5px;vertical-align:bottom;"><?php echo $row2["jumlah_peserta"]; ?> orang</td><tr><td class="<?php if($row2["sisa"]>5){ echo "text-success"; } else { echo "text-danger"; } ?>" style="font-size:8pt;margin:0;padding:0;padding-left:5px;vertical-align:top;">sisa <?php echo $row2["sisa"]; ?> orang</td>
-								
-								
+					
 								</tr></table>
 			</div>
 			</a>
