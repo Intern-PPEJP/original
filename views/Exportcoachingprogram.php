@@ -6,23 +6,9 @@ namespace PHPMaker2021\ppejp_web;
 $Exportcoachingprogram = &$Page;
 ?>
 <?php echo myheader(); ?>
-<div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="m-0" style="color: white;font-weight:bold;"><i>EXPORT COACHING PROGRAM</i></h1>
-            </div>
-        </div>
-    </div>
-</div>
 
 <style>
 	.container-fluid, .container, .row {
-		margin: 0;
-		padding: 0;
-	}
-
-	body, html {
 		margin: 0;
 		padding: 0;
 	}
@@ -40,7 +26,7 @@ $Exportcoachingprogram = &$Page;
 	}
 
 	h3{
-		font-size: 22px !important;
+		font-size: 18px !important;
 	}
 
 	.barcount-section {
@@ -151,9 +137,20 @@ $Exportcoachingprogram = &$Page;
 		overflow: hidden; /* Agar elemen peta tidak meluap keluar dari border radius */
 		display: block; /* Memastikan elemen ini ditampilkan sebagai blok */
 	}
+
 </style>
 
-<div class="container-fluid">
+<div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="m-0" style="color: white;font-weight:bold;"><i>EXPORT COACHING PROGRAM</i></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
         <div class="col-md-12 p-0" style="height: 450px">
             <div style="background-image: url(images/pages/bannerecp3.jpeg); background-size: cover ; background-position: bottom;width: 100%; height: 100%; position: absolute;top:0">
