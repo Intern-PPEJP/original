@@ -219,11 +219,10 @@ $Exportcoachingprogram = &$Page;
 
 		</script>
 	</section>
-
+<br><br>
 	<section>
-	
 	<div class="container py-5">
-		<center><h3>Kriteria Peserta</h3></center> <br>
+		<center><h3><b>Kriteria Peserta</b></h3></center> <br> <br>
 		<div class="slideshow-container">
 			<div class="slideshow-track">
 				<div class="criteria-container">
@@ -274,7 +273,6 @@ $Exportcoachingprogram = &$Page;
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </section>
 
-<br>
 
 	<br>
 	<style>
@@ -288,7 +286,7 @@ $Exportcoachingprogram = &$Page;
 
 	</style>
 	<center><div class="row container">
-	<center><h3><b>EXPORT COACHING PROGRAM 2024</b></h3></center> <br><br>
+	<center><h3><b>EXPORT COACHING PROGRAM 2024</b></h3></center> <br><br><br><br>
 	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 	<div id="map" style="height: 500px; width: 100%;"></div>
