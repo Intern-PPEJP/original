@@ -97,11 +97,11 @@ $Webinar = &$Page;
     <div class="row">
         <div class="col-md-12 p-0">
             <div style="
-                background-image: url(images/pages/webinar.png);
+                background-image: url(images/pages/webinar.jpg);
                 background-size: cover;
                 background-position: center;
                 width: 100%;
-                height: 500px; 
+                height: 550px; 
                 ">
             </div>
         </div>
