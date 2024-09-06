@@ -18,71 +18,74 @@ $Exportcoachingprogram = &$Page;
     </div>
 </div>
 <style>
-	.container-fluid, .container, .row {
-		margin: 0;
-		padding: 0;
-	}
+	<style>
+    .container-fluid, .container, .row {
+        margin: 0;
+        padding: 0;
+    }
 
-	h1 {
-    	font-size: 25px !important;
-	}
+    h1 {
+        font-size: 25px !important;
+    }
 
-	p, table, div {
-		font-size: 16px !important;
-	}
+    p, table, div {
+        font-size: 16px !important;
+    }
 
-	h2{
-		font-size: 20px !important;
-	}
+    h2 {
+        font-size: 20px !important;
+    }
 
-	h3{
-		font-size: 18px !important;
-	}
+    h3 {
+        font-size: 18px !important;
+    }
 
-	.barcount-section {
-		background: none; /* Menghilangkan latar belakang */
-		padding: 0px 0;
-	}
+    .barcount-section {
+        background: none;
+        padding: 0;
+        margin: 0 auto;
+    }
 
-	.jumlah {
-		font-size: 72px;
-		color: #031A31; /* Ubah warna font menjadi biru */
-		background: none; /* Hilangkan background */
-		display: block;
-		text-align: center;
-		font-weight: bold;
-	}
+    .jumlah {
+        font-size: 72px;
+        color: #031A31;
+        background: none;
+        display: block;
+        text-align: center;
+        font-weight: bold;
+    }
 
-	.jumlah_cap {
-		font-size: 20px;
-		color: #000;
-		display: block;
-		text-align: center;
-		margin-top: 5px;
-	}
+    .jumlah_cap {
+        font-size: 20px;
+        color: #000;
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
 
-	.angka {
-		background: none; 
-	}
+    .angka {
+        background: none;
+    }
 
-	.container {
-		background: none; 
-	}
+    .container {
+        background: none;
+    }
 
-	/*animasikriteria peserta*/
-	.slideshow-container {
+    /* Animasi kriteria peserta */
+    .slideshow-container {
         display: flex;
+        justify-content: center;
         overflow: hidden;
         width: 100%;
         height: auto;
         background-color: none;
         padding: 20px 0px;
-	    border-radius: 15px;
+        border-radius: 15px;
     }
 
     .slideshow-track {
         display: flex;
-        width: calc(200%); /* Menggandakan lebar untuk looping */
+        width: calc(200%);
         animation: slide 30s linear infinite;
         gap: 20px;
     }
@@ -129,25 +132,32 @@ $Exportcoachingprogram = &$Page;
 
     @media (max-width: 992px) {
         .criteria-container {
-            flex: 1 0 25%;
+            flex: 1 0 50%;
         }
     }
 
     @media (max-width: 768px) {
         .criteria-container {
-            flex: 1 0 25%;
+            flex: 1 0 100%;
         }
     }
 
-	#map {
-		height: 500px;
-		width: 80%;
-		margin: 0 auto; /* Agar elemen peta berada di tengah secara horizontal */
-		border-radius: 15px; /* Membuat sudut peta menjadi rounded */
-		overflow: hidden; /* Agar elemen peta tidak meluap keluar dari border radius */
-		display: block; /* Memastikan elemen ini ditampilkan sebagai blok */
-	}
+    #map {
+        height: 500px;
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 15px;
+        overflow: hidden;
+        display: block;
+    }
 
+    .text-justify {
+        padding: 20px;
+        text-align: justify;
+    }
+
+
+	
 </style>
 <div class="container-fluid">
     <div class="row">
@@ -167,8 +177,8 @@ $Exportcoachingprogram = &$Page;
         </div>
     </div>
 </div>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <section class="barcount-section">
@@ -285,7 +295,6 @@ $Exportcoachingprogram = &$Page;
 			</div>
 		</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </section>
 
 	<center><div class="row container"></center>
@@ -329,6 +338,8 @@ $Exportcoachingprogram = &$Page;
     document.title = "Pendampingan Export Coaching Program";
 </script>
 
-<?php echo myfooter(); ?>
+	<?php echo myfooter(); ?>
+
+
 
 <?= GetDebugMessage() ?>
