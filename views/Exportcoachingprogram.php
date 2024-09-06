@@ -8,45 +8,35 @@ $Exportcoachingprogram = &$Page;
 <?php echo myheader(); ?>
 
 
-<div class="container-fluid " style="background-color: #031A31; padding:20px; margin-top:0;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="m-0" style="color: white;font-weight:bold"><i>EXPORT COACHING PROGRAM</i></h1>
-            </div>
-        </div>
-    </div>
-</div>
 <style>
-	p, table, div {
-    font-size: 16px;
-	}
 	.container-fluid, .container, .row {
-    margin: 0;
-    padding: 0;
-}
-body, html {
-    margin: 0;
-    padding: 0;
-}
-* 
+		margin: 0;
+		padding: 0;
+	}
 
+	h1 {
+    	font-size: 25px !important;
+	}
+
+	p, table, div {
+		font-size: 16px !important;
+	}
 
 	h2{
-		font-size: 20px;
+		font-size: 20px !important;
 	}
 
 	h3{
-		font-size: 18px;
+		font-size: 18px !important;
 	}
 
 	.barcount-section {
-    background: none; /* Menghilangkan latar belakang */
-    padding: 0px 0;
+		background: none; /* Menghilangkan latar belakang */
+		padding: 0px 0;
 	}
 
 	.jumlah {
-		font-size: 4.5rem;
+		font-size: 72px;
 		color: #031A31; /* Ubah warna font menjadi biru */
 		background: none; /* Hilangkan background */
 		display: block;
@@ -72,76 +62,98 @@ body, html {
 
 	/*animasikriteria peserta*/
 	.slideshow-container {
-            display: flex;
-            overflow: hidden;
-            width: 100%;
-            height: auto;
-            background-color: none;
-            padding: 20px 0px;
-            border-radius: 15px;
-        }
+        display: flex;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        background-color: none;
+        padding: 20px 0px;
+	    border-radius: 15px;
+    }
 
-        .slideshow-track {
-            display: flex;
-            width: calc(200%); /* Menggandakan lebar untuk looping */
-            animation: slide 30s linear infinite;
-            gap: 20px;
-        }
+    .slideshow-track {
+        display: flex;
+        width: calc(200%); /* Menggandakan lebar untuk looping */
+        animation: slide 30s linear infinite;
+        gap: 20px;
+    }
 
+    .criteria-container {
+        flex: 1 0 25%;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 2px 1px 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .criteria-container:hover {
+        transform: scale(1.05);
+    }
+
+    .criteria-icon {
+        font-size: 48px;
+        color: #031A31;
+    }
+
+    .criteria-title {
+        font-size: 19px;
+        font-weight: bold;
+        margin-top: 0px;
+    }
+
+    .criteria-desc {
+        font-size: 16px;
+        color: #555;
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @media (max-width: 992px) {
         .criteria-container {
             flex: 1 0 25%;
-            text-align: center;
-            padding: 20px;
-            box-sizing: border-box;
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 2px 1px 2px 4px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
         }
+    }
 
-        .criteria-container:hover {
-            transform: scale(1.05);
+    @media (max-width: 768px) {
+        .criteria-container {
+            flex: 1 0 25%;
         }
+    }
 
-        .criteria-icon {
-            font-size: 3rem;
-            color: #031A31;
-        }
-
-        .criteria-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-            margin-top: 0px;
-        }
-
-        .criteria-desc {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        @keyframes slide {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        @media (max-width: 992px) {
-            .criteria-container {
-                flex: 1 0 25%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .criteria-container {
-                flex: 1 0 25%;
-            }
-        }
+	#map {
+		height: 500px;
+		width: 80%;
+		margin: 0 auto; /* Agar elemen peta berada di tengah secara horizontal */
+		border-radius: 15px; /* Membuat sudut peta menjadi rounded */
+		overflow: hidden; /* Agar elemen peta tidak meluap keluar dari border radius */
+		display: block; /* Memastikan elemen ini ditampilkan sebagai blok */
+	}
 
 </style>
-<div class="container-fluid">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="m-0" style="color: white;font-weight:bold;"><i>EXPORT COACHING PROGRAM</i></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
         <div class="col-md-12 p-0" style="height: 450px">
             <div style="background-image: url(images/pages/bannerecp3.jpeg); background-size: cover ; background-position: bottom;width: 100%; height: 100%; position: absolute;top:0">
@@ -159,19 +171,14 @@ body, html {
         </div>
     </div>
 </div>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <section class="barcount-section">
 		<div class="container">
 			<div class="row row-bar-count pt-5">
-
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 angka">
 					<span class="col-12 jumlah" data-target="74">0</span>
 					<span class="col-12 jumlah_cap">Angkatan ECP</span>
 				</div>
-				
 				<div class="col-lg col-md-4 col-sm-4 col-xs-4 angka">
 					<span class="col-12 jumlah" data-target="2160">0</span>
 					<span class="col-12 jumlah_cap">Peserta ECP</span>		
@@ -224,117 +231,100 @@ body, html {
 
 			// Memeriksa elemen ketika pengguna melakukan scroll
 			window.addEventListener('scroll', checkScroll);
-		});
+			});
 
 		</script>
 	</section>
-<br><br>
+	
 	<section>
-	<div class="container py-5">
-		<center><h3><b>Kriteria Peserta</b></h3></center> <br> <br>
-		<div class="slideshow-container">
-			<div class="slideshow-track">
-				<div class="criteria-container">
-					<div class="criteria-icon"><i class="fas fa-id-card"></i></div>
-					<div class="criteria-title">NIB & Badan Usaha</div>
-					<div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
-				</div>
-				<div class="criteria-container">
-					<div class="criteria-icon"><i class="fas fa-industry"></i></div>
-					<div class="criteria-title">Kapasitas Produksi</div>
-					<div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
-				</div>
-				<div class="criteria-container">
-					<div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
-					<div class="criteria-title">Komitmen Tahunan</div>
-					<div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
-				</div>
-				<div class="criteria-container">
-					<div class="criteria-icon"><i class="fas fa-business-time"></i></div>
-					<div class="criteria-title">Pengalaman Bisnis</div>
-					<div class="criteria-desc">Diutamakan memiliki pengalaman bisnis minimal 1 tahun.</div>
-				</div>
-				<div class="criteria-container">
-					<div class="criteria-icon"><i class="fas fa-language"></i></div>
-					<div class="criteria-title">Kemampuan Bahasa & IT</div>
-					<div class="criteria-desc">Memiliki tim yang memahami bahasa Inggris & mampu menggunakan komputer.</div>
-				</div>
-				<!-- Mulai pengulangan konten -->
-				<div class="criteria-container">
-					<div class="criteria-icon"><i class="fas fa-id-card"></i></div>
-					<div class="criteria-title">NIB & Badan Usaha</div>
-					<div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
-				</div>
-				<div class="criteria-container">
-					<div class="criteria-icon"><i class="fas fa-industry"></i></div>
-					<div class="criteria-title">Kapasitas Produksi</div>
-					<div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
-				</div>
-				<div class="criteria-container">
-					<div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
-					<div class="criteria-title">Komitmen Tahunan</div>
-					<div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
+		<div class="container py-5">
+			<h2 class="text-center"><b>KRITERIA PESERTA</b></h2> <br>
+			<div class="slideshow-container">
+				<div class="slideshow-track">
+					<div class="criteria-container">
+						<div class="criteria-icon"><i class="fas fa-id-card"></i></div>
+						<div class="criteria-title">NIB & Badan Usaha</div>
+						<div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
+					</div>
+					<div class="criteria-container">
+						<div class="criteria-icon"><i class="fas fa-industry"></i></div>
+						<div class="criteria-title">Kapasitas Produksi</div>
+						<div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
+					</div>
+					<div class="criteria-container">
+						<div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
+						<div class="criteria-title">Komitmen Tahunan</div>
+						<div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
+					</div>
+					<div class="criteria-container">
+						<div class="criteria-icon"><i class="fas fa-business-time"></i></div>
+						<div class="criteria-title">Pengalaman Bisnis</div>
+						<div class="criteria-desc">Diutamakan memiliki pengalaman bisnis minimal 1 tahun.</div>
+					</div>
+					<div class="criteria-container">
+						<div class="criteria-icon"><i class="fas fa-language"></i></div>
+						<div class="criteria-title">Kemampuan Bahasa & IT</div>
+						<div class="criteria-desc">Memiliki tim yang memahami bahasa Inggris & mampu menggunakan komputer.</div>
+					</div>
+					<!-- Mulai pengulangan konten -->
+					<div class="criteria-container">
+						<div class="criteria-icon"><i class="fas fa-id-card"></i></div>
+						<div class="criteria-title">NIB & Badan Usaha</div>
+						<div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
+					</div>
+					<div class="criteria-container">
+						<div class="criteria-icon"><i class="fas fa-industry"></i></div>
+						<div class="criteria-title">Kapasitas Produksi</div>
+						<div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
+					</div>
+					<div class="criteria-container">
+						<div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
+						<div class="criteria-title">Komitmen Tahunan</div>
+						<div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-</section>
+		
+	</section>
 
+	<center><div class="row container"></center>
+		<h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br>
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+		<div id="map"></div>
+		<script>
+			var map = L.map('map').setView([-2.5489, 118.0149], 5);
 
-	<br>
-	<style>
-		#map {
-		height: 500px;
-		width: 100%;
-		margin-bottom: 20px; /* Tambahkan jarak margin bawah */
-		border-radius: 15px; /* Membuat sudut peta menjadi rounded */
-		overflow: hidden; /* Agar elemen peta tidak meluap keluar dari border radius */
-		}
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+			}).addTo(map);
 
-	</style>
-	<center><div class="row container">
-	<center><h3><b>EXPORT COACHING PROGRAM 2024</b></h3></center> <br><br><br><br>
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-	<div id="map" style="height: 500px; width: 100%;"></div>
+			var locations = [
+				{ name: "Jabodebek", lat: -6.2088, lng: 106.8456 },
+				{ name: "Banten", lat: -6.1783, lng: 106.6319 },
+				{ name: "Kalimantan Barat", lat: -0.0263, lng: 109.3425 },
+				{ name: "Sumatera Barat", lat: -0.9471, lng: 100.4172 },
+				{ name: "Yogyakarta", lat: -7.7956, lng: 110.3695 },
+				{ name: "Jawa Tengah I", lat: -6.9667, lng: 110.4167 },
+				{ name: "Jawa Tengah II", lat: -7.4244, lng: 109.2396 },
+				{ name: "Jawa Barat", lat: -6.9175, lng: 107.6191 },
+				{ name: "Jawa Timur", lat: -7.4465, lng: 112.7171 }
+			];
 
-	<script>
-  	var map = L.map('map').setView([-2.5489, 118.0149], 5);
-
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
-
-	var locations = [
-		{ name: "Jabodebek", lat: -6.2088, lng: 106.8456 },
-		{ name: "Banten", lat: -6.1783, lng: 106.6319 },
-		{ name: "Kalimantan Barat", lat: -0.0263, lng: 109.3425 },
-		{ name: "Sumatera Barat", lat: -0.9471, lng: 100.4172 },
-		{ name: "Yogyakarta", lat: -7.7956, lng: 110.3695 },
-		{ name: "Jawa Tengah I", lat: -6.9667, lng: 110.4167 },
-		{ name: "Jawa Tengah II", lat: -7.4244, lng: 109.2396 },
-		{ name: "Jawa Barat", lat: -6.9175, lng: 107.6191 },
-		{ name: "Jawa Timur", lat: -7.4465, lng: 112.7171 }
-	];
-
-	locations.forEach(function(location) {
-		L.marker([location.lat, location.lng]).addTo(map)
-		.bindPopup(location.name)
-		.openPopup();
-	});
-</script>
-
-
-<br><br>
-
-
+			locations.forEach(function(location) {
+				L.marker([location.lat, location.lng]).addTo(map)
+				.bindPopup(location.name)
+				.openPopup();
+			});
+		</script>
+		<br><br>
 	</div>
 </div>
 <!--<a class="btn btn-success btn-lg daftar mb-5" href="https://forms.gle/NenFWx4d4ySo1UVP6"> <h2> Daftar Sekarang! </h2></a></center>-->
 
-<div class="mb-3">&nbsp;</div>
+<div class="mb-2">&nbsp;</div>
 
 <script>
     document.title = "Pendampingan Export Coaching Program";
