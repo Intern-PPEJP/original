@@ -510,7 +510,7 @@ if ($(window).width() < 992) {
 			</script>-->
 
 
-			<li class="nav-item dropdown">
+			<li class="nav-item">
 				<a class="nav-link" href="<?= GetUrl('kontak') ?>">Kontak</a>
 			</li>
 			<li class="nav-item">
