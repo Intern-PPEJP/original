@@ -70,6 +70,7 @@ $Tentangbpmjp = &$Page;
 		width: 100%;
 		height: 200px; 
 		object-fit: cover; 
+		border-radius: 8px;
 		margin-bottom: 15px;
 	}
 
@@ -166,7 +167,7 @@ $Tentangbpmjp = &$Page;
 				<p>Teater dengan kapasitas untuk 150 orang.</p>
 			</div>
 			<div class="fasilitas-item">
-				<img src="images/fasilitas/bpmjp-fasilitas-lainnya.png" alt="Fasilitas Lainnya">
+				<img src="images\fasilitas\bpmjp-fasilitas-lainnya.jpg" alt="Fasilitas Lainnya">
 				<h3><strong>FASILITAS LAINNYA</strong></h3>
 				<p>Sarana olahraga seperti lapangan badminton, lapangan voli, dan jogging track dapat dimanfaatkan peserta untuk refreshing dan menjaga kondisi.</p>
 			</div>
