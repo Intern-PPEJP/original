@@ -465,7 +465,7 @@ if ($(window).width() < 992) {
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kegiatan</a>
 				<ul class="dropdown-menu" aria-labelledby="navbarLightDropdownMenuLink" id="sub-pelatihan">
-					<li><a class="dropdown-item dropdown-toggle" href="<?= GetUrl('pelatihan') ?>">Pelatihan</a>
+					<li><a class="dropdown-item dropdown-toggle" href="#" onclick="window.location='<?= GetUrl('pelatihan') ?>';">Pelatihan</a>
 						<ul class="submenu dropdown-menu">
 							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-ekspor') ?>">Pelatihan Ekspor</a></li>
 							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-metrologi') ?>">Pelatihan Metrologi</a></li>
