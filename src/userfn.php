@@ -477,9 +477,39 @@ if ($(window).width() < 992) {
 					<li><a class="dropdown-item" href="<?= GetUrl('webinar') ?>">Webinar</a></li>
 					<li><a class="dropdown-item" href="https://kudagang.kemendag.go.id/" target="_blank">KUDAGANG</a></li>
 					<li><a class="dropdown-item" href="<?= GetUrl('obrolan-ekspor') ?>">Obrolan Ekspor</a></li>
-					<!--<li><a class="dropdown-item" href="<?= GetUrl('sertifikasikompetensi') ?>">Sertifikasi Kompetensi</a></li> -->
+					<!--<li><a class="dropdown-item" href="<?= GetUrl('sertifikasikompetensi') ?>">Sertifikasi Kompetensi</a></li>-->
 				</ul>
 			</li>
+
+			<!--<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kegiatan</a>
+				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<li>
+						<!-- Tautan ke halaman Pelatihan 
+						<a class="dropdown-item dropdown-toggle" href="<?= GetUrl('pelatihan') ?>" id="pelatihanLink" role="button">Pelatihan</a>
+						<ul class="submenu dropdown-menu">
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-ekspor') ?>">Pelatihan Ekspor</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-metrologi') ?>">Pelatihan Metrologi</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-mutu') ?>">Pelatihan Mutu</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-jasa-perdagangan') ?>">Pelatihan Jasa Perdagangan</a></li>
+						</ul>
+					</li>
+					<li><a class="dropdown-item font-italic" href="<?= GetUrl('export-coaching-program') ?>">Export Coaching Program</a></li>
+					<li><a class="dropdown-item" href="<?= GetUrl('webinar') ?>">Webinar</a></li>
+					<li><a class="dropdown-item" href="https://kudagang.kemendag.go.id/" target="_blank">KUDAGANG</a></li>
+					<li><a class="dropdown-item" href="<?= GetUrl('obrolan-ekspor') ?>">Obrolan Ekspor</a></li>
+				</ul>
+			</li>
+
+			<!-- JavaScript untuk mencegah dropdown saat "Pelatihan" diklik 
+			<script>
+				document.getElementById('pelatihanLink').addEventListener('click', function(e) {
+					e.stopPropagation(); // Menghentikan dropdown agar tidak terbuka
+					window.location.href = "<?= GetUrl('pelatihan') ?>"; // Mengarahkan ke halaman pelatihan
+				});
+			</script>-->
+
+
 			<li class="nav-item dropdown">
 				<a class="nav-link" href="<?= GetUrl('kontak') ?>">Kontak</a>
 			</li>
