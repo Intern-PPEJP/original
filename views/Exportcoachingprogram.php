@@ -8,6 +8,15 @@ $Exportcoachingprogram = &$Page;
 <?php echo myheader(); ?>
 
 
+<div class="container-fluid " style="background-color: #031A31; padding:20px; margin-top:0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="m-0" style="color: white;font-weight:bold"><i>EXPORT COACHING PROGRAM</i></h1>
+            </div>
+        </div>
+    </div>
+</div>
 <style>
 	.container-fluid, .container, .row {
 		margin: 0;
@@ -140,20 +149,7 @@ $Exportcoachingprogram = &$Page;
 	}
 
 </style>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-<div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="m-0" style="color: white;font-weight:bold;"><i>EXPORT COACHING PROGRAM</i></h1>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid" style="xmargin-top:90px;">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-12 p-0" style="height: 450px">
             <div style="background-image: url(images/pages/bannerecp3.jpeg); background-size: cover ; background-position: bottom;width: 100%; height: 100%; position: absolute;top:0">
@@ -171,6 +167,9 @@ $Exportcoachingprogram = &$Page;
         </div>
     </div>
 </div>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 <section class="barcount-section">
 		<div class="container">
@@ -286,8 +285,8 @@ $Exportcoachingprogram = &$Page;
 			</div>
 		</div>
 
-		
-	</section>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</section>
 
 	<center><div class="row container"></center>
 		<h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br>
