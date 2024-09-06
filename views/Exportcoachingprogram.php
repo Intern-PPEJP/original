@@ -6,12 +6,11 @@ namespace PHPMaker2021\ppejp_web;
 $Exportcoachingprogram = &$Page;
 ?>
 <?php echo myheader(); ?>
-
-<div class="container-fluid " style="background-color: #031A31; padding:20px; margin-top:0;">
+<div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="m-0" style="color: white;font-weight:bold"><i>EXPORT COACHING PROGRAM</i></h1>
+                <h1 class="m-0" style="color: white;font-weight:bold;"><i>EXPORT COACHING PROGRAM</i></h1>
             </div>
         </div>
     </div>
@@ -291,8 +290,6 @@ $Exportcoachingprogram = &$Page;
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 	</section>
-
-	<br>
 
 	<center><div class="row container"></center>
 		<h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br>
