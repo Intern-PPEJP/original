@@ -7,11 +7,31 @@ $Exportcoachingprogram = &$Page;
 ?>
 <?php echo myheader(); ?>
 
+
+<div class="container-fluid " style="background-color: #031A31; padding:20px; margin-top:0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="m-0" style="color: white;font-weight:bold"><i>EXPORT COACHING PROGRAM</i></h1>
+            </div>
+        </div>
+    </div>
+</div>
 <style>
 	p, table, div {
     font-size: 16px;
 	}
-	
+	.container-fluid, .container, .row {
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+* 
+
+
 	h2{
 		font-size: 20px;
 	}
@@ -22,7 +42,7 @@ $Exportcoachingprogram = &$Page;
 
 	.barcount-section {
     background: none; /* Menghilangkan latar belakang */
-    padding: 20px 0;
+    padding: 0px 0;
 	}
 
 	.jumlah {
@@ -57,7 +77,7 @@ $Exportcoachingprogram = &$Page;
             width: 100%;
             height: auto;
             background-color: none;
-            padding: 20px 10px;
+            padding: 20px 0px;
             border-radius: 15px;
         }
 
@@ -91,7 +111,7 @@ $Exportcoachingprogram = &$Page;
         .criteria-title {
             font-size: 1.2rem;
             font-weight: bold;
-            margin-top: 10px;
+            margin-top: 0px;
         }
 
         .criteria-desc {
@@ -121,17 +141,6 @@ $Exportcoachingprogram = &$Page;
         }
 
 </style>
-
-<div class="container-fluid " style="background-color: #031A31; padding:20px 0px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="m-0" style="color: white;font-weight:bold"><i>EXPORT COACHING PROGRAM</i></h1>
-            </div>
-        </div>
-    </div>
-</div>
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 p-0" style="height: 450px">
