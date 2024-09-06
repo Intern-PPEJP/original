@@ -37,11 +37,11 @@ $Exportcoachingprogram = &$Page;
 	}
 
 	h2{
-		font-size: 20px;
+		font-size: 20px !important;
 	}
 
 	h3{
-		font-size: 18px;
+		font-size: 22px !important;
 	}
 
 	.barcount-section {
@@ -241,7 +241,7 @@ $Exportcoachingprogram = &$Page;
 	
 	<section>
 		<div class="container py-5">
-			<h2 class="text-center"><b>Kriteria Peserta</b></h2> <br>
+			<h2 class="text-center"><b>KRITERIA PESERTA</b></h2> <br>
 			<div class="slideshow-container">
 				<div class="slideshow-track">
 					<div class="criteria-container">
