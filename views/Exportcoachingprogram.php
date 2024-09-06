@@ -132,13 +132,13 @@ $Exportcoachingprogram = &$Page;
 
     @media (max-width: 992px) {
         .criteria-container {
-            flex: 1 0 50%;
+            flex: 1 0 25%;
         }
     }
 
     @media (max-width: 768px) {
         .criteria-container {
-            flex: 1 0 100%;
+            flex: 1 0 30%;
         }
     }
 
