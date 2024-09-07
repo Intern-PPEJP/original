@@ -356,7 +356,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					} else if ($row["jenis_pelatihan"] == "webinar" ){
 						$ikon = "icon-video.png";
 					}
-				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:23px;height:41%;"></span>
+				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:23px;height:40%;border-radius:15px;"></span>
 					<div class="item_direction mb-4">
 						
 						<i class="fas fa-circle cikon"></i><a href="<?php echo $link; ?>" style="text-decoration:none;color:#fff;">
@@ -370,6 +370,15 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				?>
 				</ul>
 				</div>
+
+				<style>
+					@media (max-width: 768px) {
+						.y-jadwal {
+							margin-left: -30px; /* Sesuaikan margin untuk layar kecil */
+							padding-right: 30px; /* Sesuaikan padding pada layar kecil */
+						}
+					}
+				</style>
 			
 				</div>
 					<div id="ppejp-slide"  class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false">
