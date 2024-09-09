@@ -428,7 +428,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					<div class="card h-100 shadow card-hover" style="border-radius: 10px; border: none;">
 						<div class="card-img-top" style="background-image: url('images/news/<?php echo $gambar[0]; ?>'); background-size: cover; height: 200px; border-top-left-radius: 10px; border-top-right-radius: 10px;"></div>
 						<div class="card-body">
-							<h5 class="card-title" style="font-weight: 500; font-size: 14px;"><?php echo $berita['judul']; ?></h5>
+							<h5 class="card-title" style="font-weight: 500; font-size: 16px;"><?php echo $berita['judul']; ?></h5>
 							<p class="card-text" style="font-size: .8em; color: gray;"><?php echo tanggal_indo($berita['tanggal']); ?></p>
 						</div>
 					</div>
