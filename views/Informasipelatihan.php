@@ -169,7 +169,7 @@ $Informasipelatihan = &$Page;
 		</div>
 		<div class="col-md-6 col-12">
 			<div id="map-ppejp">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.740610310819!2d106.790633!3d-6.1728921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f65e8a20c0ad%3A0x16686d34d44c12fb!2sPusat%20Pelatihan%20Sumber%20Daya%20Manusia%20Ekspor%20dan%20Jasa%20Perdagangan%20(PPEJP)!5e0!3m2!1sid!2sid!4v1682930206918!5m2!1sid!2sid" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.740610310819!2d106.790633!3d-6.1728921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f65e8a20c0ad%3A0x16686d34d44c12fb!2sPusat%20Pelatihan%20Sumber%20Daya%20Manusia%20Ekspor%20dan%20Jasa%20Perdagangan%20(PPEJP)!5e0!3m2!1sid!2sid!4v1682930206918!5m2!1sid!2sid" width="100%" height="580" style="border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 
 			<div id="map-bpmjp">
