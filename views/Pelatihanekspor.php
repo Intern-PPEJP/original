@@ -233,8 +233,17 @@ $Pelatihanekspor = &$Page;
                 <p style="height:40px; font-size: 18px; font-weight: bold;" ><?php echo $row["judul_pelatihan"]; ?></p>
                     <table class="table">
                         <tr>
+                            <!--<td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
+                            <td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>-->
                             <td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
-                            <td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
+                            <td>
+                                <i class="fa fa-user" aria-hidden="true"></i>
+                                <?php if ($sisa > 0) { ?>
+                                    <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></span>
+                                <?php } else { ?>
+                                    <span class="badge badge-danger">Fully Booked</span>
+                                <?php } ?>
+                            </td>
                         </tr>
                     </table>
                     <a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
