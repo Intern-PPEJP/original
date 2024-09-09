@@ -8,7 +8,7 @@ $Berita = &$Page;
 <?php echo myheader(); ?>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-<!--
+
 <style>
     /* Mengatur font default dan ukuran teks */
     body, p, table, div {
