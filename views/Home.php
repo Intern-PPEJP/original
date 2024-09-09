@@ -374,8 +374,8 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				<style>
 					@media (max-width: 768px) {
 						.y-jadwal {
-							margin-left: -30px; /* Sesuaikan margin untuk layar kecil */
-							padding-right: 30px; /* Sesuaikan padding pada layar kecil */
+							margin-left: -35px; /* Sesuaikan margin untuk layar kecil */
+							padding-right: 35px; /* Sesuaikan padding pada layar kecil */
 						}
 					}
 				</style>
