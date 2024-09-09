@@ -22,6 +22,10 @@ $Tentangkami = &$Page;
 		font-size : 16px;
 	}
 	
+	h1{
+		font-size: 25px;
+	}
+
 	h2{
 		font-size: 20px;
 	}
@@ -107,15 +111,13 @@ $Tentangkami = &$Page;
 	text-align: center; 
 	width: 1300px;
 	height: 320px;
-}
+	}
 
-@media (max-width: 992px) {
-    .fasilitas-item-full {
-        width: 100%; /* Tetap memenuhi lebar penuh pada layar lebih kecil */
-    }
-}
-
-
+	@media (max-width: 992px) {
+		.fasilitas-item-full {
+			width: 100%; /* Tetap memenuhi lebar penuh pada layar lebih kecil */
+		}
+	}
 
 	@media (max-width: 992px) {
 		.fasilitas-row {
@@ -152,7 +154,6 @@ $Tentangkami = &$Page;
 <div class="container" style="text-align:justify;">
 	<div class="row ">
 		<center><h2 class="text-bold">SAMBUTAN  KEPALA PPEJP</h2></center>
-		
 		<div class="col-md-12">
 			<div style="position:absolute;left:10px;top:210px;width:210px;background:#031A31;margin-left:2px;color:#fff;padding:10px;">
 				<h3 style="font-size: 12px;" >SUGIH RAHMANSYAH, S.E., M.M.</h3>
@@ -232,8 +233,6 @@ $Tentangkami = &$Page;
         </div>
     </div>
 	</div>
-
-
 	<br>
 
 	<center><h2><strong>TIPE KAMAR</strong></h2></center>
@@ -304,14 +303,16 @@ $Tentangkami = &$Page;
 			</div>
 		</div>
 	</div>
+
 	<div class="row mt-4">
 		<div class="col-md-12 text-center">
-				<p>Klik tombol di bawah untuk mengisi form untuk kami hubungi kembali</p>
-				<a class="btn btn-success" href="kontak">Kerjasama pelatihan</a>
+			<p>Klik tombol di bawah untuk mengisi form untuk kami hubungi kembali</p>
+			<a class="btn btn-success" href="kontak">Kerjasama pelatihan</a>
 		</div>
 	</div>
 </div>
-<br><br>
+<br>
+<br>
 
 <script>
     document.title = "Tentang Kami";

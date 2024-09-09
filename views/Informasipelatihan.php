@@ -22,25 +22,29 @@ $Informasipelatihan = &$Page;
     cursor: pointer; /* Tampilkan ikon kursor */
     border-radius: 5px; /* Berikan radius sudut */
     transition: background-color 0.3s ease; /* Efek transisi */
-}
+	}
 
-.send_form:hover {
-    background-color: #28a745; /* Warna latar belakang saat di-hover */
-	text-decoration: none; /* Hilangkan garis bawah */
-	color: white; /* Warna teks putih */
-}
+	.send_form:hover {
+		background-color: #28a745; /* Warna latar belakang saat di-hover */
+		text-decoration: none; /* Hilangkan garis bawah */
+		color: white; /* Warna teks putih */
+	}
 
 	form:invalid [type="submit"] {
-	pointer-events: none;
-	border: 1px solid #999999;
-	background-color: #CCCCCC;
-	color: #666666;
+		pointer-events: none;
+		border: 1px solid #999999;
+		background-color: #CCCCCC;
+		color: #666666;
 	}
 
     p, table, div {
-    font-size: 16px;
+    	font-size: 16px;
 	}
 	
+	h1{
+		font-size: 25px;
+	}
+
 	h2{
 		font-size: 20px;
 	}
@@ -90,13 +94,10 @@ $Informasipelatihan = &$Page;
 		<div class="col-md-6 col-12">
 			<section>
 				<p class="text-justify w-responsive mx-auto mb-3">Untuk seputar pertanyaan dan informasi silahkan menghubungi kami dengan mengisi form di bawah ini</p>
-
 				<div class="row">
 					<div class="col-md-12 mb-md-0 mb-5">
 						<form id="contact-form" name="contact-form" action="send.php" method="POST">
-
 							<div class="row">
-
 								<div class="col-md-12">
 									<div class="md-form mb-0">
 										<label for="kepada" class="mb-0">Kepada</label>
@@ -168,19 +169,17 @@ $Informasipelatihan = &$Page;
 		</div>
 		<div class="col-md-6 col-12">
 			<div id="map-ppejp">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.740610310819!2d106.790633!3d-6.1728921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f65e8a20c0ad%3A0x16686d34d44c12fb!2sPusat%20Pelatihan%20Sumber%20Daya%20Manusia%20Ekspor%20dan%20Jasa%20Perdagangan%20(PPEJP)!5e0!3m2!1sid!2sid!4v1682930206918!5m2!1sid!2sid" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-			
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15866.740610310819!2d106.790633!3d-6.1728921!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f65e8a20c0ad%3A0x16686d34d44c12fb!2sPusat%20Pelatihan%20Sumber%20Daya%20Manusia%20Ekspor%20dan%20Jasa%20Perdagangan%20(PPEJP)!5e0!3m2!1sid!2sid!4v1682930206918!5m2!1sid!2sid" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
+
 			<div id="map-bpmjp">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15845.190459814496!2d107.5694983!3d-6.8548862!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e5df4dc488b3%3A0xb14b834b4c7f78c0!2sBalai%20Pelatihan%20SDM%20Metrologi%2C%20Mutu%20dan%20Jasa%20Perdagangan!5e0!3m2!1sid!2sid!4v1691290146586!5m2!1sid!2sid" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15845.190459814496!2d107.5694983!3d-6.8548862!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e5df4dc488b3%3A0xb14b834b4c7f78c0!2sBalai%20Pelatihan%20SDM%20Metrologi%2C%20Mutu%20dan%20Jasa%20Perdagangan!5e0!3m2!1sid!2sid!4v1691290146586!5m2!1sid!2sid" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
-		
 		</div>
 	</div>
 </div>
 
 <div style="margin-bottom:36px;">&nbsp;</div>
-
 
 <script>
 $("#text-info").hide();
@@ -226,8 +225,6 @@ document.getElementById("text-info").innerHTML = '<span class="no">'+text_no+'</
 }
 });
 
-
-
 $("#map-bpmjp").hide();
 $("#kepada").change(function(){
 	if( $("#kepada").value() == "BPMJP" ) {
@@ -245,7 +242,6 @@ $("#kepada").change(function(){
 	}
 	
 });
-
 
 document.title = "Kontak"
 </script>

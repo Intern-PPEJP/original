@@ -393,6 +393,7 @@ $Page->showMessage();
                         </div>
                     </div>
                 </div>
+
             </div>
             <div class="container">
                 <div class="row my-5">
@@ -574,6 +575,7 @@ $Page->showMessage();
             <?php echo myfooter(); ?>
         </div>
     </template>
+
 </form>
 <script class="ew-apply-template">
     loadjs.ready(["jsrender", "makerjs"], function() {

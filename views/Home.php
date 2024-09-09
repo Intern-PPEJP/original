@@ -15,8 +15,54 @@ $Home = &$Page;
   	<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
 	<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
 </head>
-<body> 
+<body id="top">
+	<a href="#top" class="back-to-top" id="backToTopBtn">
+		<div class="button-circle">
+			<img src="images\icons\top.png" alt="Back to Top">
+		</div>
+	</a>
+<script>
+	// Ambil elemen button
+	const backToTopBtn = document.getElementById('backToTopBtn');
+
+	// Fungsi untuk menampilkan atau menyembunyikan button
+	function toggleBackToTopBtn() {
+		if (window.scrollY > 200) { // Jika scroll lebih dari 200px
+			backToTopBtn.style.display = "block";
+		} else {
+			backToTopBtn.style.display = "none";
+		}
+	}
+
+	// Pasang event listener untuk scroll
+	window.addEventListener('scroll', toggleBackToTopBtn);
+</script>
+
 <style>
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    text-decoration: none;
+    display: none; /* Button disembunyikan secara default */
+}
+
+.button-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #19497D;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-circle img {
+    width: 20px;
+    height: 20px;
+}
+
 /*
 
 CC 2.0 License Iatek LLC 2018
@@ -117,17 +163,6 @@ p, div {
 		font-size: 22px;
 }
 
-.zoom-in {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
-}
-
-.zoom-in.show {
-    opacity: 1;
-    transform: scale(1);
-}
-
 
 .icon-text, .featured-block {
         transition: transform 0.3s ease; /* Efek transisi yang halus */
@@ -152,7 +187,7 @@ p, div {
 }
 
 .carousel-indicators .active {
-  background-color: #000000; /* Warna tombol titik aktif */
+  background-color: #031A31; /* Warna tombol titik aktif */
 }
 
 .testimonials {
@@ -190,7 +225,7 @@ p, div {
 }
 
 .testimonial h3 {
-    color: #004DAF;
+    color: #031A31;
     margin-top: 20px;
     font-size: 18px;
 }
@@ -210,9 +245,40 @@ p, div {
     }
 }
 
+	.barcount-section {
+    background: none; /* Menghilangkan latar belakang */
+    padding: 20px 0;
+}
+
+.jumlah {
+    font-size: 4.5rem;
+    color: #031A31; /* Ubah warna font menjadi biru */
+    background: none; /* Hilangkan background */
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.jumlah_cap {
+    font-size: 20px;
+    color: #000;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.angka {
+    background: none; /* Pastikan tidak ada background pada elemen angka */
+}
+
+.container {
+    background: none; /* Menghilangkan background pada container jika ada */
+}
 
 
 </style>	
+
+
 <script>
 $('#carouselProducts').on('slide.bs.carousel', function (e) {
 
@@ -290,7 +356,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 					} else if ($row["jenis_pelatihan"] == "webinar" ){
 						$ikon = "icon-video.png";
 					}
-				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:23px;height:41%;"></span>
+				?><li><span class="" style="border: 2px solid #fff;position:absolute;left:23px;height:40%;border-radius:15px;"></span>
 					<div class="item_direction mb-4">
 						
 						<i class="fas fa-circle cikon"></i><a href="<?php echo $link; ?>" style="text-decoration:none;color:#fff;">
@@ -304,6 +370,15 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 				?>
 				</ul>
 				</div>
+
+				<style>
+					@media (max-width: 768px) {
+						.y-jadwal {
+							margin-left: -35px; /* Sesuaikan margin untuk layar kecil */
+							padding-right: 35px; /* Sesuaikan padding pada layar kecil */
+						}
+					}
+				</style>
 			
 				</div>
 					<div id="ppejp-slide"  class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-pause="false">
@@ -325,6 +400,74 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		</div>
 	</section>
 
+	<!--BERITA DI BERANDA-->
+
+	<?php
+	// Query untuk mengambil 4 berita terbaru
+	$berita_terbaru = ExecuteQuery("SELECT id, gambar, judul, DATE_FORMAT(tanggal_publikasi, '%Y-%m-%d') tanggal FROM w_berita WHERE publish = 'Y' ORDER BY tanggal_publikasi DESC LIMIT 4");
+	?>
+
+	<div class="container mt-5">
+	<div class="row mb-3">
+			<div class="col-12">
+				<h3 style="font-weight: bold; position: relative; display: inline-block;">
+					Berita Terbaru
+					<span style="position: absolute; left: 0; bottom: -8px; width: 50px; height: 4px; background-color: #4CAF50;"></span>
+				</h3>
+				<div style="border-bottom: 1px solid #e9ecef; margin-top: 0;"></div>
+			</div>
+		</div>
+		<div class="row">
+			<?php
+			if ($berita_terbaru->rowCount() > 0) {
+				while ($berita = $berita_terbaru->fetch()) {
+					$gambar = explode(Config("MULTIPLE_UPLOAD_SEPARATOR"), $berita["gambar"]);
+			?>
+			<div class="col-md-3 mb-4">
+				<a href="berita?baca=<?php echo $berita['id']; ?>" style="color:#000;text-decoration:none;">
+					<div class="card h-100 shadow card-hover" style="border-radius: 10px; border: none;">
+						<div class="card-img-top" style="background-image: url('images/news/<?php echo $gambar[0]; ?>'); background-size: cover; height: 200px; border-top-left-radius: 10px; border-top-right-radius: 10px;"></div>
+						<div class="card-body">
+							<h5 class="card-title" style="font-weight: 500; font-size: 16px;"><?php echo $berita['judul']; ?></h5>
+							<p class="card-text" style="font-size: .8em; color: gray;"><?php echo tanggal_indo($berita['tanggal']); ?></p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<?php
+				}
+			} else {
+				echo "Belum ada berita terbaru.";
+			}
+			?>
+		</div>
+	</div>
+	<!-- Button Berita Lainnya -->
+	<div class="d-flex justify-content-center mt-4">
+			<a href="berita" class="btn btn-primary" style="border:none; border-radius: 10px; font-size: 12px">Berita Lainnya »</a>
+		</div>
+	</div>
+
+	<style>
+    .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-hover:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    }
+
+	.btn-primary {
+        background-color: #031A31;
+
+    }
+
+    .btn-primary:hover {
+        background-color: #19497D;
+    }
+	</style>
+
 
 	<section class="profile-section">
 		<div class="container text-center">
@@ -345,101 +488,143 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		</div>
 	</section>
 	
+	<style>
+		.profile-section {
+			background-color: #ffffff; 
+			padding-bottom: 15px;
+		}
+	</style>
+
 	<section>
-		<div class="container-fluid">	
-				<div class="row cs-icons-menu">
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-ekspor" class="d-block">
-							<p class="icon-text text-center zoom-in">PELATIHAN EKSPOR</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/icon-world.png" class="featured-block-image img-fluid " alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/icons/bg/bg-pelatihan-ekspor.png');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-metrologi" class="d-block">
-							<p class="icon-text text-center zoom-in">PELATIHAN METROLOGI</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/pelatihan-metrologi.png" class="featured-block-image img-fluid" alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/icons/bg/bg-pelatihan-metrologi.png');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-mutu" class="d-block">
-							<p class="icon-text text-center zoom-in">PELATIHAN MUTU</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/icon-checkup.png" class="featured-block-image img-fluid " alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/icons/bg/bg-pel-mutu.jpg');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="pelatihan-jasa-perdagangan" class="d-block">
-							<p class="icon-text text-center zoom-in">PELATIHAN JASA PERDAGANGAN</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/pelatihan-ekspor.png" class="featured-block-image img-fluid " alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/icons/bg/bg-pel-jasa.jpg');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="export-coaching-program" class="d-block">
-							<p class="icon-text text-center zoom-in">EXPORT COACHING PROGRAM</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/ecp.png" class="featured-block-image img-fluid" alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.83)), url('images/icons/bg/bg-ecp.png');">
-					</div>
-					</a>
-				</div>
-				<div class="col-lg col-md-4 col-sm-4 col-xs-4 icons-menu"><a href="webinar" class="d-block">
-							<p class="icon-text text-center zoom-in">WEBINAR</p>
-					<div class="featured-block d-flex justify-content-center align-items-center">
-						<p class="zoom-in">
-							<img src="images/icons/webinar.png" class="featured-block-image img-fluid" alt="">
-						</p>
-					</div>
-					<div class="cs-bg-icons" style="background-image:linear-gradient(0deg, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/icons/bg/bg-webinar.png');">
-					</div>
-					</a>
-				</div>
+		<div class="container container-act">
+			<a href="pelatihan-ekspor">
+			<div class="act-card">
+				<img src="images/icons/ekspor.png" alt="Pelatihan Ekspor">
+				<h3>Pelatihan Ekspor</h3>
 			</div>
+			</a>
+			<a href="pelatihan-metrologi">
+			<div class="act-card">
+				<img src="images/icons/measurement.png" alt="Pelatihan Metrologi">
+				<h3>Pelatihan Metrologi</h3>
+			</div>
+			</a>
+			<a href="pelatihan-mutu">
+			<div class="act-card">
+				<img src="images/icons/mutu.png" alt="Pelatihan Mutu">
+				<h3>Pelatihan Mutu</h3>
+			</div>
+			</a>
+			<a href="pelatihan-jasa-perdagangan">
+			<div class="act-card">
+				<img src="images/icons/trade.png" alt="Pelatihan Jasa Perdagangan">
+				<h3>Pelatihan Jasa Perdagangan</h3>
+			</div>
+			</a>
+			<a href="export-coaching-program">
+			<div class="act-card">
+				<img src="images\icons\coaching.png" alt="Export Coaching Program">
+				<h3>Export Coaching Program</h3>
+			</div>
+			</a>
+			<a href="webinar">
+			<div class="act-card">
+				<img src="images/icons/webinar (1).png" alt="Webinar">
+				<h3>Webinar</h3>
+			</div>
+			</a>
 		</div>
 	</section>
 
-	<script>
-		document.addEventListener("DOMContentLoaded", function() {
-    	const elements = document.querySelectorAll('.zoom-in');
+<style>
+	.container-act {
+    display: flex; 
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    padding: 30px 0px;
+    margin: 0 auto;
+    max-width: 1250px;
+    flex-direction: row; 
+}
 
-    	function checkElements() {
-        elements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-                element.classList.add('show');
-            }
-        });
+.container-act .act-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    height: 90%;
+	transition: transform 0.3s ease;
+}
+
+.container-act .act-card img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.container-act .act-card h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.container-act .act-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.container-act .act-card:hover {
+    background-color: #031A31;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+	transform: scale(1.05);
+}
+
+.container-act .act-card:hover h3 {
+    color: #ffffff;
+}
+
+.container-act .act-card:hover img {
+    filter: brightness(0) invert(1); /* Mengubah icon menjadi putih */
+    transition: filter 0.3s ease;
+}
+
+.container-act a {
+    text-decoration: none;
+    color: inherit; 
+    display: block;
+}
+
+.container-act a:hover .act-card {
+    background-color: #031A31;
+    color: #ffffff;
+}
+
+.container-act a:hover .act-card img {
+    filter: brightness(0) invert(1);
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 768px) {
+    .container-act {
+        flex-direction: column; 
+        align-items: center; 
     }
 
-		window.addEventListener('scroll', checkElements);
-		checkElements(); // Check initially in case the elements are already in view
-	});
-	</script>
+    .container-act .act-card {
+        max-width:200px; 
+        margin: 10 px; 
+    }
+}
+
+</style>
 
 	<section class="barcount-section">
     <div class="container">
-
-        <div class="row row-bar-count pt-5">
+        <div class="row row-bar-count pt-2">
             <div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
                 <span class="col-12 jumlah" data-target="60000">0</span>
                 <span class="col-12 jumlah_cap">Alumni pelatihan</span>
@@ -460,6 +645,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
         </div>
     </div>
 </section>
+
 
 <script>
     // Fungsi untuk melakukan animasi hitung angka
@@ -584,7 +770,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		<div class="container">
 			<div class="row">
 				<h3 class="text-center text-bold mb-4">Fasilitas</h3>
-				<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+				<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="3000">
 					<div class="carousel-inner">
 						<div class="carousel-item active">
 						<div class="row justify-content-center">
@@ -620,17 +806,45 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 							</div>
 						</div>
 						</div>
+						<div class="carousel-item">
+						<div class="row justify-content-center">
+
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images\fasilitas\bpmjp\3. Instalasi timbangan jembatan.jpg" style="width:95%; height:210px !important; border-radius: 10px" alt="Instalasi" data-bs-toggle="modal" data-bs-target="#modalInstalasi">
+							<h6 class="text-bold mt-3 text-secondary">INSTALASI</h6>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images\fasilitas\bpmjp\Lab Massa Elektronik.3.jpeg" style="width:95%; height:210px !important; border-radius: 10px" alt="Laboratorium" data-bs-toggle="modal" data-bs-target="#modalLaboratorium">
+							<h6 class="text-bold mt-3 text-secondary">LABORATORIUM</h6>
+							</div>
+							<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+							<img src="images\fasilitas\bpmjp\Lapangan Badminton.jpg" style="width:95%; height:210px !important; border-radius: 10px" alt="Lainnya" data-bs-toggle="modal" data-bs-target="#modalFasilitasLainnya">
+							<h6 class="text-bold mt-3 text-secondary">FASILITAS LAINNYA</h6>
+							</div>
+						</div>
+						</div>
 
 					</div>
 					<!-- Tombol titik navigasi -->
 					<ol class="carousel-indicators">
-                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleSlidesOnly" data-slide-to="1"></li>
+                    <li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"></li>
+					<li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="2"></li>
                 	</ol>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var myCarousel = document.querySelector('#carouselExampleSlidesOnly');
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000,
+            wrap: true
+        });
+    });
+	</script>
 
 	<!-- Modals -->
 	<!-- Modal Perpustakaan -->
@@ -885,6 +1099,141 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 		</div>
 	</div>
 
+	<!-- Modal Instalasi -->
+	<div class="modal fade" id="modalInstalasi" tabindex="-1" aria-labelledby="modalInstalasiLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalInstalasiLabel">Instalasi</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselInstalasi" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images\fasilitas\bpmjp\3. Instalasi timbangan jembatan.jpg" class="d-block w-100" alt="Instalasi">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\1.1. Instalasi Tangki Ukur Mobil.jpg" class="d-block w-100" alt="Instalasi 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\1.2.Instalasi Tangki Ukur Mobil.jpg" class="d-block w-100" alt="Instalasi 2">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\2. Instalasi PU BBM.jpeg" class="d-block w-100" alt="Instalasi 3">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\4.Instalasi TUTSIT.jpeg" class="d-block w-100" alt="Instalasi 4">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselInstalasi" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselInstalasi" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Lab -->
+	<div class="modal fade" id="modalLaboratorium" tabindex="-1" aria-labelledby="modalLaboratoriumLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalLaboratoriumLabel">Laboratorium</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselLaboratorium" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images\fasilitas\bpmjp\Lab Massa Elektronik.3.jpeg" class="d-block w-100" alt="Laboratorium">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Bejana Ukur.jpeg" class="d-block w-100" alt="Laboratorium 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Listrik.jpeg" class="d-block w-100" alt="Laboratorium 2">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Massa Elektronik.jpeg" class="d-block w-100" alt="Laboratorium 3">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Massa Elektronik.3.jpeg" class="d-block w-100" alt="Laboratorium 4">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Massa Elektronik.2.jpeg" class="d-block w-100" alt="Laboratorium 5">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Meter Kadar Air.1.jpg" class="d-block w-100" alt="Laboratorium 6">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Suhu, Gaya, Tekanan.jpeg" class="d-block w-100" alt="Laboratorium 7">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Timbangan Mekanik.3.jpeg" class="d-block w-100" alt="Laboratorium 8">
+                        </div>
+						<div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lab Timbangan Mekanik.jpeg" class="d-block w-100" alt="Laboratorium 9">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselLaboratorium" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselLaboratorium" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal Fasilitas Lainnya -->
+	<div class="modal fade" id="modalFasilitasLainnya" tabindex="-1" aria-labelledby="modalFasilitasLainnyaLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="modalFasilitasLainnyaLabel">Lapangan & Teater</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+				<!-- Bootstrap Carousel -->
+                <div id="carouselFasilitasLainnya" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images\fasilitas\bpmjp\Lapangan Badminton.jpg" class="d-block w-100" alt="Lapangan 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Lapangan Voli dan Jogging Track.jpg" class="d-block w-100" alt="Lapangan 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images\fasilitas\bpmjp\Theater.jpg" class="d-block w-100" alt="Teater">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselFasilitasLainnya" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselFasilitasLainnya" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- Bootstrap JS Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -900,25 +1249,25 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
         background-color: transparent;
-        background-image: none; /* Menghapus ikon default */
-        border: 2px solid white; /* Border untuk ikon */
-        border-radius: 50%; /* Bentuk bulat */
+        background-image: none;
+        border: 2px solid white; 
+        border-radius: 50%; 
         width: 30px;
         height: 30px;
         line-height: 30px;
     }
 
     .carousel-control-prev-icon::before {
-        content: '<'; /* Tanda panah kiri */
-        color: white; /* Warna ikon */
+        content: '<'; 
+        color: white; 
         font-size: 20px;
         display: block;
         text-align: center;
     }
 
     .carousel-control-next-icon::before {
-        content: '>'; /* Tanda panah kanan */
-        color: white; /* Warna ikon */
+        content: '>'; 
+        color: white; 
         font-size: 20px;
         display: block;
         text-align: center;
@@ -1100,8 +1449,7 @@ $('#carouselProducts').on('slide.bs.carousel', function (e) {
 								<table style="margin:0;padding:0;"><tr><td rowspan="2"><i class="fa fa-user" aria-hidden="true" style="font-size:25px;"></i></td>
 								
 								<td style="font-size:8pt;margin:0;padding:0;padding-left:5px;vertical-align:bottom;"><?php echo $row2["jumlah_peserta"]; ?> orang</td><tr><td class="<?php if($row2["sisa"]>5){ echo "text-success"; } else { echo "text-danger"; } ?>" style="font-size:8pt;margin:0;padding:0;padding-left:5px;vertical-align:top;">sisa <?php echo $row2["sisa"]; ?> orang</td>
-								
-								
+					
 								</tr></table>
 			</div>
 			</a>
