@@ -18,10 +18,14 @@ $Tentangkami = &$Page;
 		letter-spacing: 0.5px;
     }
 
-	p, div, ul, li {
+	div, ul, li {
 		font-size : 16px;
 	}
-	
+	p{
+		font-family: Poppins;
+		font-size:16px;
+		line-height: 1.5;
+	}
 	h1{
 		font-size: 25px;
 	}
@@ -119,7 +123,16 @@ $Tentangkami = &$Page;
 	.col-md-4:hover {
 		transform: translateY(-10px);
 		box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+		border-radius: 8px;
+
 	}
+	
+	.fasilitas-item p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+    color: inherit !important; /* Agar warna tidak dipengaruhi */
+	}
+
 
 	@media (max-width: 992px) {
 		.fasilitas-item-full {
@@ -214,29 +227,29 @@ $Tentangkami = &$Page;
     <div class="fasilitas-row">
         <div class="fasilitas-item">
             <img src="images/fasilitas/fasilitas-perpustakaan.png" alt="Perpustakaan">
-           <h4><strong>Perpustakaan</strong></h4>
+           <strong>Perpustakaan</strong>
             <p>Perpustakaan menyediakan berbagai informasi bagi dunia usaha, peserta pelatihan serta masyarakat umum.</p>
         </div>
         <div class="fasilitas-item">
             <img src="images/fasilitas/fasilitas-auditorium.png" alt="Auditorium">
-            <h4><strong>Auditorium</strong></h4>
+            <strong>Auditorium</strong>
             <p>Auditorium dengan kapasitas untuk 200 orang.</p>
         </div>
         <div class="fasilitas-item">
             <img src="images/fasilitas/fasilitas-simulation-center.png" alt="Simulation Center">
-            <h4><strong>Simulation Center</strong></h4>
+            <strong>Simulation Center</strong>
             <p>Simulation Center adalah sarana praktek untuk mempermudah penyerapan sistem belajar dan memberikan pengalaman pertama untuk penerapan keterampilan.</p>
         </div>
         <div class="fasilitas-item">
             <img src="images/fasilitas/fasilitas-ruang-kelas.png" alt="Ruang Kelas">
-            <h4><strong>Ruang Kelas</strong></h4>
+            <strong>Ruang Kelas</strong>
             <p>Ruang Kelas dilengkapi dengan peralatan audio video dengan kapasitas 15, 30, dan 50 orang.</p>
         </div>
     </div>
     <div class="fasilitas-row fasilitas-row-center">
         <div class="fasilitas-item fasilitas-item-full">
             <img src="images/fasilitas/fasilitas-asrama.png" alt="Asrama" style="heigh:00px;">
-            <h4><strong>ASRAMA</strong></h4>
+            <strong>ASRAMA</strong>
             <p>Asrama adalah salah satu fasilitas yang disediakan oleh PPEJP untuk memberikan alternatif tempat penginapan.</p>
         </div>
     </div>
@@ -247,17 +260,17 @@ $Tentangkami = &$Page;
 	<div class="row justify-content-center text-center">
 		<div class="col-md-4 col-12 mb-4">
 			<img src="images/fasilitas/fasilitas-kamar-standar.png" alt="Kamar Standard" class="img-fluid rounded">
-			<h3><br><strong>Kamar Standard</strong></h3>
+			<br><strong>Kamar Standard</strong>
 			<p>Rp. 75.000 / malam / bed / pintu<br>(1 Ruangan ada 4 pintu/bed)</p>
 		</div>
 		<div class="col-md-4 col-12 mb-4">
 			<img src="images/fasilitas/fasilitas-kamar-super.png" alt="Kamar Super" class="img-fluid rounded">
-			<h3><br><strong>Kamar Super</strong></h3>
+			<br><strong>Kamar Super</strong>
 			<p>Rp. 100.000 / malam / bed<br>(1 ruangan ada 3 bed)</p>
 		</div>
 		<div class="col-md-4 col-12 mb-4">
 			<img src="images/fasilitas/fasilitas-kamar-vip.png" alt="Kamar VIP" class="img-fluid rounded">
-			<h3><br><strong>Kamar VIP</strong></h3>
+			<br><strong>Kamar VIP</strong>
 			<p>Rp. 300.000 / malam<br>(1 ruangan ada 2 bed)</p>
 		</div>
 	</div>
