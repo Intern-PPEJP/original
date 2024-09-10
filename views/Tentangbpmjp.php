@@ -116,8 +116,8 @@ $Tentangbpmjp = &$Page;
 		<center><h2 class="text-bold mb-3">SAMBUTAN  KEPALA BPMJP</h2></center>
 		<div class="col-md-12">
 		<div style="position:absolute;left:10px;top:290px;width:260px;background:#031A31;margin-left:2px;color:#fff;padding:10px;">
-				<h3 style="font-size: 12px;" >SUCI INGGRID DANIATI, S.Si., M.Si.</h3>
-				<p style="line-height:1;font-size:10px;margin-bottom:0;">KEPALA BALAI PELATIHAN SUMBER DAYA MANUSIA METROLOGI, MUTU, DAN JASA PERDAGANGAN</p>
+				<h3 style="font-size: 12px; text-align:left" >SUCI INGGRID DANIATI, S.Si., M.Si.</h3>
+				<p style="text-align:left; line-height:1;font-size:10px;margin-bottom:0;">KEPALA BALAI PELATIHAN SUMBER DAYA MANUSIA METROLOGI, MUTU, DAN JASA PERDAGANGAN</p>
 			</div>
 			<img src="images/pages/kepala-bpmjp-2.png" style="width: 260px;height:auto;float: left !important;margin: 10px 35px 20px 0;"></img>
 			<p class="mt-2" >Perdagangan merupakan salah satu sektor penggerak pertumbuhan dan daya saing ekonomi untuk kesejahteraan masyarakat. Metrologi, mutu dan jasa perdagangan merupakan bidang yang tidak dapat dipisahkan dari kegiatan perdagangan pada masyarakat dan dunia usaha.</p>
