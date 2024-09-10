@@ -147,32 +147,32 @@ $Tentangbpmjp = &$Page;
 		<div class="fasilitas-row">
 			<div class="fasilitas-item">
 				<img src="images/fasilitas/bpmjp-instalasi.png" alt="Instalasi">
-				<h3><strong>INSTALASI</strong></h3>
+				<h3><strong>Instalasi</strong></h3>
 				<p>Instalasi Tangki Ukur Mobil, Instalasi Pompa Ukur BBM, Instalasi Timbangan Jembatan dan Instalasi TUTSIT adalah sarana praktik untuk mempermudah penyerapan sistem belajar.</p>
 			</div>
 			<div class="fasilitas-item">
 				<img src="images/fasilitas/bpmjp-laboratorium.png" alt="Laboratorium">
-				<h3><strong>LABORATORIUM</strong></h3>
+				<h3><strong>Laboratorium</strong></h3>
 				<p>Selain Instalasi yang beragam, BPMJP pun mempunyai laboratorium Bejana Ukur, Dimensi, Listrik, Massa Elektronik, Meter Kadar Air, Suhu, Gaya dan Tekanan dan Timbangan Mekanik. Pembelajaran dengan dibantu simulasi akan mendukung hasil yang optimal.</p>
 			</div>
 			<div class="fasilitas-item">
 				<img src="images/fasilitas/bpmjp-asrama.png" alt="Asrama">
-				<h3><strong>ASRAMA</strong></h3>
+				<h3><strong>Asrama</strong></h3>
 				<p>Asrama adalah salah satu fasilitas di BPMJP yang dapat memberikan alternatif bagi peserta yang memerlukan untuk menginap yang satu lokasi dengan tempat pembelajaran, aman, bersih, dan murah dengan tarif yang terjangkau.</p>
 			</div>
 			<div class="fasilitas-item">
 				<img src="images/fasilitas/bpmjp-ruang-kelas.png" alt="Ruang Kelas">
-				<h3><strong>RUANG KELAS</strong></h3>
+				<h3><strong>Ruang Kelas</strong></h3>
 				<p>Ruang kelas dilengkapi dengan peralatan audio, video dengan kapasitas 20 dan 40 orang.</p>
 			</div>
 			<div class="fasilitas-item">
 				<img src="images/fasilitas/bpmjp-teater.png" alt="Teater">
-				<h3><strong>TEATER</strong></h3>
+				<h3><strong>Teater</strong></h3>
 				<p>Teater dengan kapasitas untuk 150 orang.</p>
 			</div>
 			<div class="fasilitas-item">
 				<img src="images/fasilitas/bpmjp-fasilitas-lainnya.jpg" alt="Fasilitas Lainnya">
-				<h3><strong>FASILITAS LAINNYA</strong></h3>
+				<h3><strong>Fasilitas Lainnya</strong></h3>
 				<p>Sarana olahraga seperti lapangan badminton, lapangan voli, dan jogging track dapat dimanfaatkan peserta untuk refreshing dan menjaga kondisi.</p>
 			</div>
 		</div>
