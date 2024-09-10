@@ -19,7 +19,7 @@ $Pelatihanmutu = &$Page;
 
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
-        <div class="col-md-12 p-0" style=" height: 400px">
+        <div class="col-md-12 p-0" style=" height: 450px">
             <div style="background-image: url(images/pages/pelatihan-mutu.png); background-size: cover ; background-position: center;width: 100%;height: 90%; position: absolute;top:0">
             </div>
         </div>
@@ -27,11 +27,13 @@ $Pelatihanmutu = &$Page;
 </div>
 
 <div class="container">
+<div class="row">
     <div class="col-md-12">
-        <div class="text-center">
+        <div class="text-justify">
             Dengan program pelatihan terpercaya, kami membekali Anda dengan pengetahuan tentang pengendalian kualitas, peningkatan proses, dan implementasi sistem manajemen mutu yang kuat. Kami juga fokus pada kepuasan pelanggan dan membantu Anda meningkatkan reputasi dan keunggulan bisnis Anda.
         </div>
     </div>
+</div>
 </div>
 
 <style>
@@ -67,6 +69,10 @@ $Pelatihanmutu = &$Page;
     font-size: 16px;
 	}
 	
+    h1{
+		font-size: 25px;
+	}
+
 	h2{
 		font-size: 20px;
 	}
@@ -74,7 +80,70 @@ $Pelatihanmutu = &$Page;
 	h3{
 		font-size: 18px;
 	}
+
+    .pelatihan-mendatang {
+        display: flex;
+        flex-direction: column;
+        min-height: 400px; 
+        box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .pelatihan-mendatang .card-title {
+        flex-grow: 1; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        margin-bottom: 5px; 
+    }
+
+    .pelatihan-mendatang .card-title table {
+        width: 100%;
+        margin-bottom: auto; 
+    }
+
+    .pelatihan-mendatang .card-img-top {
+        object-fit: cover;
+        height: 250px;
+        width: 100%;
+    }
+
+    .pelatihan-mendatang .btn {
+        margin-top: auto; 
+        padding: 10px; 
+        text-align: center; 
+        display: block;
+        width: 100%; 
+    }
+
+    @media (max-width: 768px) {
+        .pelatihan-mendatang {
+            min-height: auto; 
+        }
+
+        .pelatihan-mendatang .card-title {
+            margin-bottom: 5px; 
+        }
+
+        .pelatihan-mendatang .card-title p {
+            font-size: 16px; 
+            margin-bottom: 5px; 
+        }
+
+        .pelatihan-mendatang .card-title table td {
+            display: block;
+            width: 100%;
+            box-sizing: border-box; 
+            margin-bottom: 5px; 
+        }
+
+        .pelatihan-mendatang .btn {
+            padding: 8px; 
+            margin-top: 5px; 
+        
+        }
+    }
 </style>
+
 <div class="container-fluid p-0 mt-0" style="background-image: url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;display:none;">
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
     <div class="container py-3">
@@ -82,7 +151,6 @@ $Pelatihanmutu = &$Page;
 			<h3 class="mt-3">Cara Daftar Pelatihan</h3>
 		</div>
         <div class="row mt-5 alur-daftar justify-content-center">
-			
             <div class="col-md-2 p-0 m-0 text-center text-white mt-5">
                 <div class="step" style="height:67px;">Sign in</div>
                 <div class="step">1</div>
@@ -140,14 +208,11 @@ $Pelatihanmutu = &$Page;
                     Pembayaran anda akan diverifikasi oleh tim PPEJP. Tunggu notifikasi apakah pembayaran terverifikasi atau tidak di halaman profil PPEJP dan alamat email yang terdaftar. Maks waktu verifikasi 5 hari kerja
                 </div>
             </div>
-			
         </div>
     </div>
 </div>
 
-
-
-	
+<!--	
 <section class="content-section mt-5">
 	<div class="container">
 		<h2 class="text-center text-bold mb-4">PELATIHAN MUTU TAHUN <?php echo date("Y"); ?></h2>
@@ -185,9 +250,8 @@ $Pelatihanmutu = &$Page;
 		</div>
 	</div>
 </section>
-
+-->
 <div class="mb-5">&nbsp;</div>
-
 
 <script>
     document.title = "Pelatihan Mutu"
@@ -195,6 +259,5 @@ $Pelatihanmutu = &$Page;
 	
 </div>
 <?php echo myfooter(); ?>
-
 
 <?= GetDebugMessage() ?>
