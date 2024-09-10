@@ -115,11 +115,11 @@ $Tentangbpmjp = &$Page;
     <div class="row slim">
 		<center><h2 class="text-bold mb-3">SAMBUTAN  KEPALA BPMJP</h2></center>
 		<div class="col-md-12">
-		<div style="position:absolute;left:10px;top:210px;width:210px;background:#031A31;margin-left:2px;color:#fff;padding:10px;">
+		<div style="position:absolute;left:10px;top:290px;width:260px;background:#031A31;margin-left:2px;color:#fff;padding:10px;">
 				<h3 style="font-size: 12px;" >SUCI INGGRID DANIATI, S.Si., M.Si.</h3>
 				<p style="line-height:1;font-size:10px;margin-bottom:0;">KEPALA BALAI PELATIHAN SUMBER DAYA MANUSIA METROLOGI, MUTU, DAN JASA PERDAGANGAN</p>
 			</div>
-			<img src="images/pages/kepala-bpmjp-2.png" style="width: 210px;height:auto;float: left !important;margin: 10px 35px 20px 0;"></img>
+			<img src="images/pages/kepala-bpmjp-2.png" style="width: 260px;height:auto;float: left !important;margin: 10px 35px 20px 0;"></img>
 			<p class="mt-2" >Perdagangan merupakan salah satu sektor penggerak pertumbuhan dan daya saing ekonomi untuk kesejahteraan masyarakat. Metrologi, mutu dan jasa perdagangan merupakan bidang yang tidak dapat dipisahkan dari kegiatan perdagangan pada masyarakat dan dunia usaha.</p>
 			<p>Sebagai gambaran di bidang metrologi, pada tahun 2021 terdapat 16.175 pasar tradisional yang di dalamnya terdapat banyak alat ukur, alat takar, alat timbang dan perlengkapannya (UTTP) yang harus dicek kesesuaian pengukurannya oleh Juru Timbang. Terdapat 6.729 stasiun pengisian bahan bakar umum (SPBU) yang takarannya harus dicek berkala oleh Juru Takar, serta pemastian akan pelabelan dan kuanta produk makanan/minuman oleh Pelaku Usaha dimana industri ini menjadi kontributor terbesar produk domestik bruto (PDB) yakni mencapai Rp302,28 triliun (34,44%). </p>
 			<p>Di bidang mutu, Indonesia mempunyai 10 produk ekspor unggulan dan produk potensi ekspor lainnya serta produk yang dipasarkan di dalam negeri yang harus dijaga kualitasnya oleh pelaku usaha. Di bidang jasa perdagangan yang pergerakannya terus meningkat, undang-undang perdagangan mengamanatkan agar penyedia Jasa yang bergerak di bidang Perdagangan Jasa wajib didukung tenaga teknis yang kompeten.</p>
