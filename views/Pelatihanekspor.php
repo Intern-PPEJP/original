@@ -20,7 +20,7 @@ $Pelatihanekspor = &$Page;
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
         <div class="col-md-12 p-0" style=" height: 450px">
-            <div style="background-image: url(images/pages/altpelatihan1/p3131465_2.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
+            <div style="background-image: url(images/pages/bannerpelatihanekspor.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
             </div>
         </div>
     </div>
