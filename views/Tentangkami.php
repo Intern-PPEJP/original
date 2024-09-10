@@ -117,12 +117,13 @@ $Tentangkami = &$Page;
 	}
 	.fasilitas-item:hover,
 	.col-md-4:hover {
-		transform: scale(1.1); /* Membesarkan gambar saat hover */
+		transform: translateY(-10px);
+		box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 	}
 
 	@media (max-width: 992px) {
 		.fasilitas-item-full {
-			width: 100%; /* Tetap memenuhi lebar penuh pada layar lebih kecil */
+			width: 100%; 
 		}
 	}
 
@@ -206,7 +207,7 @@ $Tentangkami = &$Page;
 			PPEJP menyediakan produk ekspor - impor dan jasa perdagangan yang bermutu dan senantiasa mengutamakan kepuasan pelanggan. Kebijakan mutu ini dikomunikasikan kepada seluruh pegawai untuk dipahami dan dilaksanakan.
 		</div>
 	</div>
-	<br>
+	<br><br>
 
 	<center><h2><strong>FASILITAS</strong></h2></center>
 	<div class="fasilitas-container">
