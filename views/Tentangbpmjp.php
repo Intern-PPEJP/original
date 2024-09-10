@@ -84,6 +84,10 @@ $Tentangbpmjp = &$Page;
 		font-size: 14px;
 		margin-top: 10px;
 	}
+	.fasilitas-item:hover{
+		transform: translateY(-10px);
+		box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+	}
 
 	@media (max-width: 992px) {
 		.fasilitas-row {
