@@ -465,8 +465,8 @@ Attribution required
 			</div>
 		</div>
 		<!-- Button Berita Lainnya -->
-		<div class="d-flex justify-content-center mt-4">
-			<a href="berita" class="btn btn-primary" style="border:none; border-radius: 10px; font-size: 12px">Berita Lainnya »</a>
+		<div class="d-flex justify-content-center mt-1">
+			<a href="berita" class="btn btn-primary" style="border:none; border-radius: 10px; font-size: 14px">Berita Lainnya »</a>
 		</div>
 		</div>
 
@@ -551,7 +551,7 @@ Attribution required
 				</a>
 				<a href="webinar">
 					<div class="act-card">
-						<img src="images/icons/webinar (1).png" alt="Webinar">
+						<img src="images/icons/webinar.png" alt="Webinar">
 						<h3>Webinar</h3>
 					</div>
 				</a>
