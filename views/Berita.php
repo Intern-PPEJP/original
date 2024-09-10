@@ -20,24 +20,20 @@ $Berita = &$Page;
     /* Mengatur ukuran heading */
     h1 {
         font-size: 25px !important;
-        font-family: 'Poppins', sans-serif !important;
     }
 
     h2 {
         font-size: 20px !important;
-        font-family: 'Poppins', sans-serif !important;
     }
 
     h3 {
         font-size: 18px !important;
-        font-family: 'Poppins', sans-serif !important;
     }
 
     /* Mengatur ukuran teks di dalam berita */
     .text-justify {
         font-size: 16px !important;
         /* Ukuran teks di dalam berita */
-        font-family: 'Poppins', sans-serif !important;
     }
 
     * {
@@ -57,8 +53,6 @@ $Berita = &$Page;
 </div>
 
 <?php if (empty(@$_GET["baca"])) { ?>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
@@ -82,7 +76,7 @@ $Berita = &$Page;
     <div class="container grid pb-5">
         <div class="row">
             <div class="col-md-12 p-0">
-                <h3 style="margin-bottom:0;background: #031a31;border-radius: 0 90px 0 0;padding: 5px 20px ;color: #fff;width:300px;">Berita Terbaru</h3>
+                <h3 style="margin-bottom:0; background: #031a31; border-radius: 10px; padding: 5px 20px ;color: #fff;width:300px;">Berita Terbaru</h3>
             </div>
         </div>
 
@@ -94,8 +88,8 @@ $Berita = &$Page;
         <div class="row mb-5"><?php $gambar_terbaru = explode(Config("MULTIPLE_UPLOAD_SEPARATOR"), $last_berita["gambar"]); ?>
             <a href="berita?baca=<?php echo $last_berita["id"]; ?>" style="color:#fff;text-decoration:none;padding:0;">
                 <div class="col-md-12 p-0">
-                    <div style="background-image: url('images/news/<?php echo $gambar_terbaru[0]; ?>');background-repeat:no-repeat; background-position: center center; background-size: cover;height: 450px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;border-radius: 0px 10px 10px 10px;">
-                        <div style="background:#031a31bf; padding:10px 30px 10px 30px ;border-radius: 0px 0px 10px 10px;">
+                    <div style="background-image: url('images/news/<?php echo $gambar_terbaru[0]; ?>');background-repeat:no-repeat; background-position: center center; background-size: cover;height: 450px; display: flex; flex-direction: column; justify-content: flex-end; color: #fff;border-radius: 10px;">
+                        <div style="background:#031a31bf; padding:10px 30px 10px 30px ;border-radius: 10px;">
                             <h4><?php echo $last_berita["judul"]; ?></h4>
                             <div><?php echo tanggal_indo($last_berita["tanggal"]); ?></div>
                         </div>
@@ -190,7 +184,7 @@ $Berita = &$Page;
                 <div class="text-justify" style=""><?php echo $lihat_berita["isi"]; ?></div>
             </div>
             <div class="col-md-4">
-                <h3 style="margin-bottom:10px;background: #031a31;border-radius: 0 53.1rem 0 0;padding: 5px;color: #fff;">Berita Lainnya</h3>
+                <h3 style="margin-bottom:10px;background: #031a31;border-radius: 10px;padding: 5px;color: #fff;">Berita Lainnya</h3>
 
                 <?php
                 $sql = "SELECT id,gambar,judul,DATE_FORMAT(tanggal_publikasi,'%Y-%m-%d') tanggal FROM `w_berita` WHERE publish='Y' AND id != " . @$_GET["baca"] . " ORDER BY tanggal_publikasi DESC LIMIT 3"; // define your SQL
