@@ -176,11 +176,11 @@ $Tentangkami = &$Page;
 	<div class="row ">
 		<center><h2 class="text-bold">SAMBUTAN  KEPALA PPEJP</h2></center>
 		<div class="col-md-12">
-			<div style="position:absolute;left:10px;top:210px;width:210px;background:#031A31;margin-left:2px;color:#fff;padding:10px;">
+			<div style="position:absolute;left:10px;top:270px;width:250px;background:#031A31;margin-left:2px;color:#fff;padding:10px;">
 				<h3 style="font-size: 12px;" >SUGIH RAHMANSYAH, S.E., M.M.</h3>
 				<p style="line-height:1;font-size:10px;margin-bottom:0;">KEPALA PUSAT PELATIHAN SUMBER DAYA MANUSIA EKSPOR DAN JASA PERDAGANGAN</p>
 			</div>
-			<img src="images/pages/kepala-ppejp-2.png" style="width: 210px;height:auto;float: left !important;margin: 10px 35px 20px 0;"></img>
+			<img src="images/pages/kepala-ppejp-2.png" style="width: 250px;height:auto;float: left !important;margin: 10px 35px 20px 0;"></img>
 			<p class="mt-2" >Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) adalah lembaga terkemuka yang beroperasi di bawah naungan Sekretariat Jenderal, Kementerian Perdagangan. Dengan fokus yang tajam, PPEJP bertugas melaksanakan pengembangan sumber daya manusia di bidang ekspor, mutu, personil metrologi legal, dan jasa perdagangan. Dalam upaya kami memajukan dunia usaha dan masyarakat, kami mempersiapkan individu untuk meraih kesuksesan di panggung internasional.</p>
 			<p>Di PPEJP, kami mempersembahkan program pelatihan yang dirancang khusus untuk mengasah keterampilan dan pengetahuan dalam ekspor, mutu, metrologi legal, dan jasa perdagangan. Kami memadukan keahlian praktis dengan pendekatan terkini untuk memastikan peserta kami siap menghadapi tantangan dalam dunia bisnis yang dinamis.</p>
 			<p>PPEJP adalah jembatan Anda menuju kesuksesan. Mari bergabung dengan kami dan tembuslah batas-batas kesuksesan dalam ekspor, mutu, metrologi, dan jasa perdagangan.</p>
