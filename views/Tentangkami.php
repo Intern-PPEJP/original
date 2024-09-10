@@ -87,7 +87,7 @@ $Tentangkami = &$Page;
 
 	.fasilitas-item img {
 		width: 100%;
-		height: 200px;
+		height: 190px;
 		object-fit: cover;
 		border-radius: 8px;
 		margin-bottom: 15px;
@@ -227,7 +227,7 @@ $Tentangkami = &$Page;
     </div>
     <div class="fasilitas-row fasilitas-row-center">
         <div class="fasilitas-item fasilitas-item-full">
-            <img src="images/fasilitas/fasilitas-asrama.png" alt="Asrama">
+            <img src="images/fasilitas/fasilitas-asrama.png" alt="Asrama" style="heigh:00px;">
             <h3><strong>ASRAMA</strong></h3>
             <p>Asrama adalah salah satu fasilitas yang disediakan oleh PPEJP untuk memberikan alternatif tempat penginapan.</p>
         </div>
