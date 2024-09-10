@@ -20,7 +20,7 @@ $Obrolanekspor = &$Page;
 
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
-        <div class="col-md-12 p-0" style=" height: 480px">
+        <div class="col-md-12 p-0" style=" height: 450px">
             <div style="background-image: url(images/pages/obrolan-ekspor.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
             </div>
         </div>
@@ -171,59 +171,6 @@ $Obrolanekspor = &$Page;
     }
 </style>
 
-<!--<div class="container-fluid grid-topik-obrol" style="background-color: #e9e9e9;">
-    <div class="container">
-        <div class="row py-3">
-            <div class="col-md-12 p-0 text-center text-black">
-                <div class="xb1 text-center">-->
-                    <!--<h2 class="mt-3 text-bold" style="font-size: 20px;">TOPIK OBROLAN</h2>-->
-                <!--</div>-->
-           <!-- </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4 py-3">
-                <div class="row align-items-center">
-                    <div class="col-4 text-center">
-                        <img src="images/icons/icon_newspaper_.svg" class="img-fluid">
-                    </div>
-                    <div class="col-8">Pengetahuan tentang ekspor</div>
-                </div>
-            </div>
-            <div class="col-md-4 py-3">
-                <div class="row align-items-center">
-                    <div class="col-4 text-center">
-                        <img src="images/icons/icon_archive_.svg" class="img-fluid">
-                    </div>
-                    <div class="col-8">Pendekatan produk ekspor</div>
-                </div>
-            </div>
-            <div class="col-md-4 py-3">
-                <div class="row align-items-center">
-                    <div class="col-4 text-center">
-                        <img src="images/icons/icon_zoomin_.png" class="img-fluid">
-                    </div>
-                    <div class="col-8">Pemecahan masalah ekspor</div>
-                </div>
-            </div>
-            <div class="col-md-4 py-3">
-                <div class="row align-items-center">
-                    <div class="col-4 text-center">
-                        <img src="images/icons/icon _bag_.png" class="img-fluid">
-                    </div>
-                    <div class="col-8">Pendekatan akses pasar</div>
-                </div>
-            </div>
-            <div class="col-md-4 py-3">
-                <div class="row align-items-center">
-                    <div class="col-4 text-center">
-                        <img src="images/icons/icon _user male_.png" class="img-fluid">
-                    </div>
-                    <div class="col-8">Success story</div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
 <div class="container">
     <div class="row py-3">
         <div class="col-md-12 p-0 text-center text-black">
