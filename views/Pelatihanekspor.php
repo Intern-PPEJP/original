@@ -19,7 +19,7 @@ $Pelatihanekspor = &$Page;
 
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
-        <div class="col-md-12 p-0" style=" height: 400px">
+        <div class="col-md-12 p-0" style=" height: 430px">
             <div style="background-image: url(images/pages/altpelatihan1/p3131465_2.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
             </div>
         </div>
@@ -233,9 +233,10 @@ $Pelatihanekspor = &$Page;
                 <p style="height:40px; font-size: 18px; font-weight: bold;" ><?php echo $row["judul_pelatihan"]; ?></p>
                     <table class="table">
                         <tr>
-                            <!--<td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
-                            <td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>-->
-                            <td><i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 18px"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
+                            <td style="font-size: 16px;">
+                                <i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 16px"></i> 
+                                <?php echo $row["tanggal_pelaksanaan"]; ?>
+                            </td>
                             <td>
                                 <i class="fa fa-user" aria-hidden="true"></i>
                                 <?php if ($sisa > 0) { ?>
