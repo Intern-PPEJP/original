@@ -33,6 +33,9 @@ $Tentangkami = &$Page;
 	h3{
 		font-size: 18px;
 	}
+	h4{
+		font-size: 16px;
+	}
 	
 	p class="mt-2" {
 		margin-top : 2px;
@@ -87,7 +90,7 @@ $Tentangkami = &$Page;
 
 	.fasilitas-item img {
 		width: 100%;
-		height: 190px;
+		height: 200px;
 		object-fit: cover;
 		border-radius: 8px;
 		margin-bottom: 15px;
@@ -111,6 +114,10 @@ $Tentangkami = &$Page;
 	text-align: center; 
 	width: 1300px;
 	height: 320px;
+	}
+	.fasilitas-item:hover,
+	.col-md-4:hover {
+		transform: scale(1.1); /* Membesarkan gambar saat hover */
 	}
 
 	@media (max-width: 992px) {
@@ -159,7 +166,7 @@ $Tentangkami = &$Page;
 				<h3 style="font-size: 12px;" >SUGIH RAHMANSYAH, S.E., M.M.</h3>
 				<p style="line-height:1;font-size:10px;margin-bottom:0;">KEPALA PUSAT PELATIHAN SUMBER DAYA MANUSIA EKSPOR DAN JASA PERDAGANGAN</p>
 			</div>
-			<img src="images/pages/kepala-ppejp-2.png" style="width: 210px;height:auto;float: left !important;margin: 10px 35px 20px 0;"></img>
+			<img src="images/pages/kepala-ppejp.png" style="width: 210px;height:auto;float: left !important;margin: 10px 35px 20px 0;"></img>
 			<p class="mt-2" >Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) adalah lembaga terkemuka yang beroperasi di bawah naungan Sekretariat Jenderal, Kementerian Perdagangan. Dengan fokus yang tajam, PPEJP bertugas melaksanakan pengembangan sumber daya manusia di bidang ekspor, mutu, personil metrologi legal, dan jasa perdagangan. Dalam upaya kami memajukan dunia usaha dan masyarakat, kami mempersiapkan individu untuk meraih kesuksesan di panggung internasional.</p>
 			<p>Di PPEJP, kami mempersembahkan program pelatihan yang dirancang khusus untuk mengasah keterampilan dan pengetahuan dalam ekspor, mutu, metrologi legal, dan jasa perdagangan. Kami memadukan keahlian praktis dengan pendekatan terkini untuk memastikan peserta kami siap menghadapi tantangan dalam dunia bisnis yang dinamis.</p>
 			<p>PPEJP adalah jembatan Anda menuju kesuksesan. Mari bergabung dengan kami dan tembuslah batas-batas kesuksesan dalam ekspor, mutu, metrologi, dan jasa perdagangan.</p>
@@ -206,50 +213,50 @@ $Tentangkami = &$Page;
     <div class="fasilitas-row">
         <div class="fasilitas-item">
             <img src="images/fasilitas/fasilitas-perpustakaan.png" alt="Perpustakaan">
-            <h3><strong>PERPUSTAKAAN</strong></h3>
+           <h4><strong>Perpustakaan</strong></h4>
             <p>Perpustakaan menyediakan berbagai informasi bagi dunia usaha, peserta pelatihan serta masyarakat umum.</p>
         </div>
         <div class="fasilitas-item">
             <img src="images/fasilitas/fasilitas-auditorium.png" alt="Auditorium">
-            <h3><strong>AUDITORIUM</strong></h3>
+            <h4><strong>Auditorium</strong></h4>
             <p>Auditorium dengan kapasitas untuk 200 orang.</p>
         </div>
         <div class="fasilitas-item">
             <img src="images/fasilitas/fasilitas-simulation-center.png" alt="Simulation Center">
-            <h3><strong>SIMULATION CENTER</strong></h3>
+            <h4><strong>Simulation Center</strong></h4>
             <p>Simulation Center adalah sarana praktek untuk mempermudah penyerapan sistem belajar dan memberikan pengalaman pertama untuk penerapan keterampilan.</p>
         </div>
         <div class="fasilitas-item">
             <img src="images/fasilitas/fasilitas-ruang-kelas.png" alt="Ruang Kelas">
-            <h3><strong>RUANG KELAS</strong></h3>
+            <h4><strong>Ruang Kelas</strong></h4>
             <p>Ruang Kelas dilengkapi dengan peralatan audio video dengan kapasitas 15, 30, dan 50 orang.</p>
         </div>
     </div>
     <div class="fasilitas-row fasilitas-row-center">
         <div class="fasilitas-item fasilitas-item-full">
             <img src="images/fasilitas/fasilitas-asrama.png" alt="Asrama" style="heigh:00px;">
-            <h3><strong>ASRAMA</strong></h3>
+            <h4><strong>ASRAMA</strong></h4>
             <p>Asrama adalah salah satu fasilitas yang disediakan oleh PPEJP untuk memberikan alternatif tempat penginapan.</p>
         </div>
     </div>
 	</div>
-	<br>
+	<br><br>
 
-	<center><h2><strong>TIPE KAMAR</strong></h2></center>
-	<div class="row">
+	<center><h3><strong>TIPE KAMAR</strong></h3></center>
+	<div class="row justify-content-center text-center">
 		<div class="col-md-4 col-12 mb-4">
 			<img src="images/fasilitas/fasilitas-kamar-standar.png" alt="Kamar Standard" class="img-fluid rounded">
-			<h3><strong>Kamar Standard</strong></h3>
+			<h3><br><strong>Kamar Standard</strong></h3>
 			<p>Rp. 75.000 / malam / bed / pintu<br>(1 Ruangan ada 4 pintu/bed)</p>
 		</div>
 		<div class="col-md-4 col-12 mb-4">
 			<img src="images/fasilitas/fasilitas-kamar-super.png" alt="Kamar Super" class="img-fluid rounded">
-			<h3><strong>Kamar Super</strong></h3>
+			<h3><br><strong>Kamar Super</strong></h3>
 			<p>Rp. 100.000 / malam / bed<br>(1 ruangan ada 3 bed)</p>
 		</div>
 		<div class="col-md-4 col-12 mb-4">
 			<img src="images/fasilitas/fasilitas-kamar-vip.png" alt="Kamar VIP" class="img-fluid rounded">
-			<h3><strong>Kamar VIP</strong></h3>
+			<h3><br><strong>Kamar VIP</strong></h3>
 			<p>Rp. 300.000 / malam<br>(1 ruangan ada 2 bed)</p>
 		</div>
 	</div>
