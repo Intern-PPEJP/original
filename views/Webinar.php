@@ -97,11 +97,13 @@ $Webinar = &$Page;
     <div class="row">
         <div class="col-md-12 p-0">
             <div style="
-                background-image: url(images/pages/webinar.jpg);
+
+                background-image: url(images/pages/bannerwebinar.jpg);
                 background-size: cover;
                 background-position: center;
                 width: 100%;
-                height: 550px; 
+                height: 450px; 
+
                 ">
             </div>
         </div>
@@ -109,7 +111,7 @@ $Webinar = &$Page;
 </div>
 
 <div class="container">
-    <div class="row my-5 ">
+    <div class="row my-5">
         <div class="col-md-12">
             <div class="text-justify">
               Webinar ekspor adalah acara yang sangat bermanfaat bagi para pelaku bisnis yang ingin memulai atau mengembangkan bisnis ekspor mereka. Dalam acara ini, peserta akan mendapatkan pemahaman yang lebih dalam tentang pasar global, hambatan-hambatan yang mungkin mereka hadapi, serta strategi-strategi yang efektif untuk memasarkan dan menjual produk mereka ke luar negeri. Dengan demikian, acara webinar ekspor dapat menjadi langkah awal yang baik bagi para pelaku bisnis dalam memasuki pasar global dan memperluas jangkauan bisnis mereka.
