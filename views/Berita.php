@@ -10,7 +10,7 @@ $Berita = &$Page;
 
 <style>
     /* Mengatur font default dan ukuran teks */
-    body, p,mtable, div {
+    body, p, table, div {
         font-family: 'Poppins', sans-serif !important;
         /* Menggunakan font Poppins */
         font-size: 16px !important;
@@ -35,10 +35,15 @@ $Berita = &$Page;
 
     /* Mengatur ukuran teks di dalam berita */
     .text-justify {
-        font-size: 16px;
+        font-size: 16px !important;
         /* Ukuran teks di dalam berita */
         font-family: 'Poppins', sans-serif !important;
     }
+
+    * {
+    font-family: 'Poppins', sans-serif !important;
+    }
+
 </style>
 -->
 <div class="container-fluid mb-3" style="background-color: #031A31; padding:20px 0px;">
