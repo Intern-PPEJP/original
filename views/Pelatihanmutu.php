@@ -19,7 +19,7 @@ $Pelatihanmutu = &$Page;
 
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
-        <div class="col-md-12 p-0" style=" height: 400px">
+        <div class="col-md-12 p-0" style=" height: 450px">
             <div style="background-image: url(images/pages/pelatihan-mutu.png); background-size: cover ; background-position: center;width: 100%;height: 90%; position: absolute;top:0">
             </div>
         </div>
@@ -27,11 +27,13 @@ $Pelatihanmutu = &$Page;
 </div>
 
 <div class="container">
+<div class="row">
     <div class="col-md-12">
         <div class="text-justify">
             Dengan program pelatihan terpercaya, kami membekali Anda dengan pengetahuan tentang pengendalian kualitas, peningkatan proses, dan implementasi sistem manajemen mutu yang kuat. Kami juga fokus pada kepuasan pelanggan dan membantu Anda meningkatkan reputasi dan keunggulan bisnis Anda.
         </div>
     </div>
+</div>
 </div>
 
 <style>
