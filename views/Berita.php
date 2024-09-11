@@ -76,7 +76,10 @@ $Berita = &$Page;
     <div class="container grid pb-5">
         <div class="row">
             <div class="col-md-12 p-0">
-                <h3 style="margin-bottom:0; background: #031a31; border-radius: 10px; padding: 5px 20px ;color: #fff;width:300px;">Berita Terbaru</h3>
+                <h3 style="font-weight: bold; position: relative; display: inline-block;">
+						Berita Terbaru
+						<span style="position: absolute; left: 0; bottom: -8px; width: 50px; height: 4px; background-color: #023E8A;"></span>
+					</h3>
             </div>
         </div>
 
@@ -184,8 +187,7 @@ $Berita = &$Page;
                 <div class="text-justify" style=""><?php echo $lihat_berita["isi"]; ?></div>
             </div>
             <div class="col-md-4">
-                <h3 style="margin-bottom:10px;background: #031a31;border-radius: 10px;padding: 5px;color: #fff;">Berita Lainnya</h3>
-
+                <h3 style="margin-bottom:10px;background: #031a31; border-radius: 10px; padding: 5px;color: #fff;">Berita Lainnya</h3>
                 <?php
                 $sql = "SELECT id,gambar,judul,DATE_FORMAT(tanggal_publikasi,'%Y-%m-%d') tanggal FROM `w_berita` WHERE publish='Y' AND id != " . @$_GET["baca"] . " ORDER BY tanggal_publikasi DESC LIMIT 3"; // define your SQL
                 $stmt = ExecuteQuery($sql); // execute the query
