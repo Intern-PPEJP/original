@@ -465,7 +465,8 @@ if ($(window).width() < 992) {
 			<li class="nav-item dropdown">
 				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kegiatan</a>
 				<ul class="dropdown-menu" aria-labelledby="navbarLightDropdownMenuLink" id="sub-pelatihan">
-					<li><a class="dropdown-item dropdown-toggle" href="<?= GetUrl('pelatihan') ?>">Pelatihan</a>
+					<li>
+						<a class="dropdown-item dropdown-toggle" href="#" id="pelatihan-menu">Pelatihan</a>
 						<ul class="submenu dropdown-menu">
 							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-ekspor') ?>">Pelatihan Ekspor</a></li>
 							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-metrologi') ?>">Pelatihan Metrologi</a></li>
@@ -477,10 +478,35 @@ if ($(window).width() < 992) {
 					<li><a class="dropdown-item" href="<?= GetUrl('webinar') ?>">Webinar</a></li>
 					<li><a class="dropdown-item" href="https://kudagang.kemendag.go.id/" target="_blank">KUDAGANG</a></li>
 					<li><a class="dropdown-item" href="<?= GetUrl('obrolan-ekspor') ?>">Obrolan Ekspor</a></li>
-					<!--<li><a class="dropdown-item" href="<?= GetUrl('sertifikasikompetensi') ?>">Sertifikasi Kompetensi</a></li> -->
+					<!-- <li><a class="dropdown-item" href="<?= GetUrl('sertifikasikompetensi') ?>">Sertifikasi Kompetensi</a></li> -->
 				</ul>
 			</li>
-			<li class="nav-item dropdown">
+
+			<script>
+				let clickCount = 0;
+
+				document.getElementById('pelatihan-menu').addEventListener('click', function (e) {
+					e.preventDefault();
+					
+					if (window.innerWidth <= 768) {  
+						clickCount++;
+
+						if (clickCount === 1) {
+							
+							const submenu = this.nextElementSibling;
+							submenu.classList.toggle('show');
+						} else if (clickCount === 2) {
+						
+							window.location.href = '<?= GetUrl("pelatihan") ?>';
+						}
+					} else {
+					
+						window.location.href = '<?= GetUrl("pelatihan") ?>';
+					}
+				});
+			</script>
+
+			<li class="nav-item">
 				<a class="nav-link" href="<?= GetUrl('kontak') ?>">Kontak</a>
 			</li>
 			<li class="nav-item">

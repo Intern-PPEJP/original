@@ -91,16 +91,26 @@ $Pelatihan = &$Page;
 <div class="container-fluid">
     <div id="ppejp-slide" class="carousel slide row" data-ride="carousel" data-interval="3000" data-pause="false" style="margin-bottom: 0;">
         <div class="carousel-inner col-12 p-0">
-            <div class="carousel-item active" style=" height: 470px;">
-                <div style="background-image:linear-gradient(0deg, rgba(3, 26, 49, 0.61), rgba(3, 26, 49, 0.61)), url(images/pages/pelatihan2.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0;">
+
+            <div class="carousel-item active" style=" height: 450px;">
+                <div style="background-image: url(images/pages/pelatihan2.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0;">
                 </div>
             </div>
-            <div class="carousel-item" style=" height: 470px;">
-                <div style="background-image:linear-gradient(0deg, rgba(3, 26, 49, 0.61), rgba(3, 26, 49, 0.61)), url(images/pages/altpelatihan1/p3131465_2.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
+            <div class="carousel-item" style=" height: 450px;">
+                <div style="background-image: url(images/pages/pelatihan1new.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
                 </div>
             </div>
-            <div class="carousel-item" style=" height: 470px;">
-                <div style="background-image:linear-gradient(0deg, rgba(3, 26, 49, 0.61), rgba(3, 26, 49, 0.61)), url(images/pages/header-ecp.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
+            <div class="carousel-item" style=" height: 450px;">
+                <div style="background-image: url(images/pages/pelatihan3.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
+                </div>
+            </div>
+            <div class="carousel-item" style=" height: 450px;">
+                <div style="background-image: url(images/pages/pelatihan4.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
+                </div>
+            </div>
+            <div class="carousel-item" style=" height: 450px;">
+                <div style="background-image: url(images/pages/pelatihan5.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
+
                 </div>
             </div>
         </div>
