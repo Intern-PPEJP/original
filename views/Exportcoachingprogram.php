@@ -155,10 +155,9 @@ $Exportcoachingprogram = &$Page;
         padding: 20px;
         text-align: justify;
     }
-
-
 	
 </style>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 p-0" style="height: 450px">
