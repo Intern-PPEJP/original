@@ -91,6 +91,7 @@ $Pelatihan = &$Page;
 <div class="container-fluid">
     <div id="ppejp-slide" class="carousel slide row" data-ride="carousel" data-interval="3000" data-pause="false" style="margin-bottom: 0;">
         <div class="carousel-inner col-12 p-0">
+
             <div class="carousel-item active" style=" height: 450px;">
                 <div style="background-image: url(images/pages/pelatihan2.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0;">
                 </div>
@@ -109,6 +110,7 @@ $Pelatihan = &$Page;
             </div>
             <div class="carousel-item" style=" height: 450px;">
                 <div style="background-image: url(images/pages/pelatihan5.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
+
                 </div>
             </div>
         </div>
