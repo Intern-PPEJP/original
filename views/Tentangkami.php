@@ -7,55 +7,61 @@ $Tentangkami = &$Page;
 ?>
 <?php echo myheader(); ?>
 <html>
+
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <style>
 	h1 h4 p ul li {
-        font-family: 'Poppins', sans-serif;
+		font-family: 'Poppins', sans-serif;
 		letter-spacing: 0.5px;
-    }
-
-	div, ul, li {
-		font-size : 16px;
 	}
-	p{
+
+	div,
+	ul,
+	li {
+		font-size: 16px;
+	}
+
+	p {
 		font-family: Poppins;
-		font-size:16px;
+		font-size: 16px;
 		line-height: 1.5;
 	}
-	h1{
+
+	h1 {
 		font-size: 25px;
 	}
 
-	h2{
+	h2 {
 		font-size: 20px;
 	}
 
-	h3{
+	h3 {
 		font-size: 18px;
 	}
-	h4{
+
+	h4 {
 		font-size: 16px;
 	}
-	
+
 	p class="mt-2" {
-		margin-top : 2px;
+		margin-top: 2px;
 	}
 
-	.col-md-12{
-		font-size : 16px;
+	.col-md-12 {
+		font-size: 16px;
 		line-height: 1.3;
-		margin-top : 2px;
-		margin-bottom: 2px; 
+		margin-top: 2px;
+		margin-bottom: 2px;
 	}
 
 	.equal-height {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 	}
 
 	.card-body {
@@ -77,11 +83,11 @@ $Tentangkami = &$Page;
 
 	.fasilitas-row:first-child {
 		width: 100%;
-		justify-content: space-between; 
+		justify-content: space-between;
 	}
 
 	.fasilitas-row-center {
-		justify-content: center; 
+		justify-content: center;
 	}
 
 	.fasilitas-item {
@@ -89,7 +95,7 @@ $Tentangkami = &$Page;
 		padding: 15px;
 		border-radius: 8px;
 		text-align: center;
-		width: 30%; 
+		width: 30%;
 	}
 
 	.fasilitas-item img {
@@ -110,15 +116,17 @@ $Tentangkami = &$Page;
 		font-size: 16px;
 		margin-top: 10px;
 	}
+
 	.fasilitas-item-full {
-    background-color: #f9f9f9;
-	object-fit: cover;
-	padding: 15px;
-	border-radius: 8px;
-	text-align: center; 
-	width: 1300px;
-	height: 320px;
+		background-color: #f9f9f9;
+		object-fit: cover;
+		padding: 15px;
+		border-radius: 8px;
+		text-align: center;
+		width: 1300px;
+		height: 320px;
 	}
+
 	.fasilitas-item:hover,
 	.col-md-4:hover {
 		transform: translateY(-10px);
@@ -126,17 +134,18 @@ $Tentangkami = &$Page;
 		border-radius: 8px;
 
 	}
-	
+
 	.fasilitas-item p {
-    font-size: 15px !important;
-    line-height: 1.5 !important;
-    color: inherit !important; /* Agar warna tidak dipengaruhi */
+		font-size: 15px !important;
+		line-height: 1.5 !important;
+		color: inherit !important;
+		/* Agar warna tidak dipengaruhi */
 	}
 
 
 	@media (max-width: 992px) {
 		.fasilitas-item-full {
-			width: 100%; 
+			width: 100%;
 		}
 	}
 
@@ -147,41 +156,95 @@ $Tentangkami = &$Page;
 		}
 
 		.fasilitas-item {
-			width: 80%; 
+			width: 80%;
 		}
 	}
 
 	@media (max-width: 768px) {
 		.fasilitas-item {
-			width: 100%; 
+			width: 100%;
 		}
 	}
 </style>
 
 <div class="container-fluid" style="background-color: #031A31; padding:20px 0px;">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="m-0" style="color: white; font-weight:bold">TENTANG KAMI</h1>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1 class="m-0" style="color: white; font-weight:bold">TENTANG KAMI</h1>
+			</div>
+		</div>
+	</div>
 </div>
 
+<body id="top">
+	<a href="#top" class="back-to-top" id="backToTopBtn">
+		<div class="button-circle">
+			<img src="images\icons\top.png" alt="Back to Top">
+		</div>
+	</a>
+	<script>
+		// Ambil elemen button
+		const backToTopBtn = document.getElementById('backToTopBtn');
+
+		// Fungsi untuk menampilkan atau menyembunyikan button
+		function toggleBackToTopBtn() {
+			if (window.scrollY > 200) { // Jika scroll lebih dari 200px
+				backToTopBtn.style.display = "block";
+			} else {
+				backToTopBtn.style.display = "none";
+			}
+		}
+
+		// Pasang event listener untuk scroll
+		window.addEventListener('scroll', toggleBackToTopBtn);
+	</script>
+
+	<style>
+		.back-to-top {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 100;
+			text-decoration: none;
+			display: none;
+			/* Button disembunyikan secara default */
+		}
+
+		.button-circle {
+			width: 50px;
+			height: 50px;
+			background-color: #19497D;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.button-circle img {
+			width: 20px;
+			height: 20px;
+		}
+
+	</style>
+</body>
+
 <div class="container-fluid" style="padding-left:0;padding-right:0;">
-	<iframe  style="width: 100%; height: 509px; border-radius: 0px;" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<iframe style="width: 100%; height: 509px; border-radius: 0px;" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <br>
 <div class="container" style="text-align:justify;">
 	<div class="row ">
-		<center><h2 class="text-bold">SAMBUTAN  KEPALA PPEJP</h2></center>
+		<center>
+			<h2 class="text-bold">SAMBUTAN KEPALA PPEJP</h2>
+		</center>
 		<div class="col-md-12">
 			<div style="position:absolute;left:10px;top:270px;width:250px;background:#031A31;margin-left:2px;color:#fff;padding:10px;">
-				<h3 style="font-size: 12px; text-align:left;" >SUGIH RAHMANSYAH, S.E., M.M.</h3>
+				<h3 style="font-size: 12px; text-align:left;">SUGIH RAHMANSYAH, S.E., M.M.</h3>
 				<p style="text-align:left; line-height:1;font-size:10px;margin-bottom:0;">KEPALA PUSAT PELATIHAN SUMBER DAYA MANUSIA EKSPOR DAN JASA PERDAGANGAN</p>
 			</div>
 			<img src="images/pages/kepala-ppejp-2.png" style="width: 250px;height:auto;float: left !important;margin: 10px 35px 20px 0;"></img>
-			<p class="mt-2" >Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) adalah lembaga terkemuka yang beroperasi di bawah naungan Sekretariat Jenderal, Kementerian Perdagangan. Dengan fokus yang tajam, PPEJP bertugas melaksanakan pengembangan sumber daya manusia di bidang ekspor, mutu, personil metrologi legal, dan jasa perdagangan. Dalam upaya kami memajukan dunia usaha dan masyarakat, kami mempersiapkan individu untuk meraih kesuksesan di panggung internasional.</p>
+			<p class="mt-2">Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) adalah lembaga terkemuka yang beroperasi di bawah naungan Sekretariat Jenderal, Kementerian Perdagangan. Dengan fokus yang tajam, PPEJP bertugas melaksanakan pengembangan sumber daya manusia di bidang ekspor, mutu, personil metrologi legal, dan jasa perdagangan. Dalam upaya kami memajukan dunia usaha dan masyarakat, kami mempersiapkan individu untuk meraih kesuksesan di panggung internasional.</p>
 			<p>Di PPEJP, kami mempersembahkan program pelatihan yang dirancang khusus untuk mengasah keterampilan dan pengetahuan dalam ekspor, mutu, metrologi legal, dan jasa perdagangan. Kami memadukan keahlian praktis dengan pendekatan terkini untuk memastikan peserta kami siap menghadapi tantangan dalam dunia bisnis yang dinamis.</p>
 			<p>PPEJP adalah jembatan Anda menuju kesuksesan. Mari bergabung dengan kami dan tembuslah batas-batas kesuksesan dalam ekspor, mutu, metrologi, dan jasa perdagangan.</p>
 		</div>
@@ -189,17 +252,21 @@ $Tentangkami = &$Page;
 	<br>
 
 	<div class="row ">
-		<center><h2 class="text-bold">SEJARAH SINGKAT</h2></center>
+		<center>
+			<h2 class="text-bold">SEJARAH SINGKAT</h2>
+		</center>
 		<div class="col-md-12">
 			<p>Semenjak berdirinya pada tahun 1990, PPEI telah mengalami transformasi struktur organisasi, yang semula Eselon 2 di bawah Sekretariat Jenderal pada tahun 1990 hingga 1995 dengan nama Pusat Pelatihan Ekspor Indonesia (PPEI), kemudian pada tahun 1995 yakni saat Departemen Perdagangan digabung dengan Departemen Perindustrian, PPEI mengalami perubahan status menjadi Eselon 3 dibawah Pusat Pembinaan dan Pelatihan (PUSBINLAT) Deperindag dengan nama Balai Pendidikan dan Pelatihan Ekspor (PPEI) hingga tahun 2005.</p>
 			<p>Akhirnya pada tahun 2006 PPEI kembali mengalami perubahan status menjadi Eselon 2 dengan nama Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) di bawah Badan Pengembangan Ekspor Nasional Departemen Perdagangan. </p>
-			<p>Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) berubah nama menjadi Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP)  yang berada dibawah naungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP menyelenggarakan fungsi penyelenggaraan pelatihan SDM Ekspor, Pelatihan SDM Jasa Perdagangan, dan Export Coaching Program.  Transformasi status tersebut membawa pengaruh terhadap pelaksanaan tugasnya sebagai Unit Pelaksana Teknis yang melakukan pembinaan terhadap dunia usaha eksportir.</p>
+			<p>Pada tahun 2022 Balai Besar Pendidikan dan Pelatihan Ekspor Indonesia (BBPPEI) berubah nama menjadi Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) yang berada dibawah naungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP menyelenggarakan fungsi penyelenggaraan pelatihan SDM Ekspor, Pelatihan SDM Jasa Perdagangan, dan Export Coaching Program. Transformasi status tersebut membawa pengaruh terhadap pelaksanaan tugasnya sebagai Unit Pelaksana Teknis yang melakukan pembinaan terhadap dunia usaha eksportir.</p>
 		</div>
 	</div>
 	<br>
 
 	<div class="row ">
-		<center><h2 class="text-bold">FUNGSI PPEJP</h2></center>
+		<center>
+			<h2 class="text-bold">FUNGSI PPEJP</h2>
+		</center>
 		<div class="col-md-12">
 			Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) menyelenggarakan fungsi:
 			<br>
@@ -215,48 +282,54 @@ $Tentangkami = &$Page;
 	<br>
 
 	<div class="row ">
-		<center><h2 class="text-bold">KEBIJAKAN MUTU PPEJP</h2></center>
+		<center>
+			<h2 class="text-bold">KEBIJAKAN MUTU PPEJP</h2>
+		</center>
 		<div class="col-md-12">
 			PPEJP menyediakan produk ekspor - impor dan jasa perdagangan yang bermutu dan senantiasa mengutamakan kepuasan pelanggan. Kebijakan mutu ini dikomunikasikan kepada seluruh pegawai untuk dipahami dan dilaksanakan.
 		</div>
 	</div>
 	<br><br>
 
-	<center><h2><strong>FASILITAS</strong></h2></center>
+	<center>
+		<h2><strong>FASILITAS</strong></h2>
+	</center>
 	<div class="fasilitas-container">
-    <div class="fasilitas-row">
-        <div class="fasilitas-item">
-            <img src="images/fasilitas/fasilitas-perpustakaan.png" alt="Perpustakaan">
-           <strong>Perpustakaan</strong>
-            <p>Perpustakaan menyediakan berbagai informasi bagi dunia usaha, peserta pelatihan serta masyarakat umum.</p>
-        </div>
-        <div class="fasilitas-item">
-            <img src="images/fasilitas/fasilitas-auditorium.png" alt="Auditorium">
-            <strong>Auditorium</strong>
-            <p>Auditorium dengan kapasitas untuk 200 orang.</p>
-        </div>
-        <div class="fasilitas-item">
-            <img src="images/fasilitas/fasilitas-simulation-center.png" alt="Simulation Center">
-            <strong>Simulation Center</strong>
-            <p>Simulation Center adalah sarana praktek untuk mempermudah penyerapan sistem belajar dan memberikan pengalaman pertama untuk penerapan keterampilan.</p>
-        </div>
-        <div class="fasilitas-item">
-            <img src="images/fasilitas/fasilitas-ruang-kelas.png" alt="Ruang Kelas">
-            <strong>Ruang Kelas</strong>
-            <p>Ruang Kelas dilengkapi dengan peralatan audio video dengan kapasitas 15, 30, dan 50 orang.</p>
-        </div>
-    </div>
-    <div class="fasilitas-row fasilitas-row-center">
-        <div class="fasilitas-item fasilitas-item-full">
-            <img src="images/fasilitas/fasilitas-asrama.png" alt="Asrama" style="heigh:00px;">
-            <strong>ASRAMA</strong>
-            <p>Asrama adalah salah satu fasilitas yang disediakan oleh PPEJP untuk memberikan alternatif tempat penginapan.</p>
-        </div>
-    </div>
+		<div class="fasilitas-row">
+			<div class="fasilitas-item">
+				<img src="images/fasilitas/fasilitas-perpustakaan.png" alt="Perpustakaan">
+				<strong>Perpustakaan</strong>
+				<p>Perpustakaan menyediakan berbagai informasi bagi dunia usaha, peserta pelatihan serta masyarakat umum.</p>
+			</div>
+			<div class="fasilitas-item">
+				<img src="images/fasilitas/fasilitas-auditorium.png" alt="Auditorium">
+				<strong>Auditorium</strong>
+				<p>Auditorium dengan kapasitas untuk 200 orang.</p>
+			</div>
+			<div class="fasilitas-item">
+				<img src="images/fasilitas/fasilitas-simulation-center.png" alt="Simulation Center">
+				<strong>Simulation Center</strong>
+				<p>Simulation Center adalah sarana praktek untuk mempermudah penyerapan sistem belajar dan memberikan pengalaman pertama untuk penerapan keterampilan.</p>
+			</div>
+			<div class="fasilitas-item">
+				<img src="images/fasilitas/fasilitas-ruang-kelas.png" alt="Ruang Kelas">
+				<strong>Ruang Kelas</strong>
+				<p>Ruang Kelas dilengkapi dengan peralatan audio video dengan kapasitas 15, 30, dan 50 orang.</p>
+			</div>
+		</div>
+		<div class="fasilitas-row fasilitas-row-center">
+			<div class="fasilitas-item fasilitas-item-full">
+				<img src="images/fasilitas/fasilitas-asrama.png" alt="Asrama" style="heigh:00px;">
+				<strong>ASRAMA</strong>
+				<p>Asrama adalah salah satu fasilitas yang disediakan oleh PPEJP untuk memberikan alternatif tempat penginapan.</p>
+			</div>
+		</div>
 	</div>
 	<br><br>
 
-	<center><h3><strong>TIPE KAMAR</strong></h3></center>
+	<center>
+		<h3><strong>TIPE KAMAR</strong></h3>
+	</center>
 	<div class="row justify-content-center text-center">
 		<div class="col-md-4 col-12 mb-4">
 			<img src="images/fasilitas/fasilitas-kamar-standar.png" alt="Kamar Standard" class="img-fluid rounded">
@@ -279,7 +352,9 @@ $Tentangkami = &$Page;
 <div class="container-fluid" style="background-color:#fff;">
 	<div class="container">
 		<div class="row mt-2">
-			<center><h2 class="text-bold">KERJASAMA</h2></center>
+			<center>
+				<h2 class="text-bold">KERJASAMA</h2>
+			</center>
 			<div class="col-md-12 text-justify">
 				<p>Untuk menyelenggarakan pelatihan ekspor, PPEI membuka peluang kerja sama dengan berbagai instansi terkait dan stake holder lainnya dengan menggunakan pola subsidi dan kontraktual. Informasi lebih lanjut dapat menghubungi Tim Kerja Sama dan Promosi.</p>
 			</div>
@@ -303,7 +378,7 @@ $Tentangkami = &$Page;
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="col-md-6">
 				<div class="card h-100">
 					<div class="card-header" style="background-color:#031A31;color:#fff">
@@ -336,8 +411,9 @@ $Tentangkami = &$Page;
 <br>
 
 <script>
-    document.title = "Tentang Kami";
+	document.title = "Tentang Kami";
 </script>
+
 </html>
 <?php echo myfooter(); ?>
 
