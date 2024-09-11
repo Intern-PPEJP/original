@@ -6,7 +6,6 @@ namespace PHPMaker2021\ppejp_web;
 $Berita = &$Page;
 ?>
 <?php echo myheader(); ?>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
     /* Mengatur font default dan ukuran teks */
@@ -39,11 +38,10 @@ $Berita = &$Page;
     * {
     font-family: 'Poppins', sans-serif !important;
     }
-
 </style>
--->
-<div class="container-fluid mb-3" style="background-color: #031A31; padding:20px 0px;">
-    <div class="container">
+
+<div class="container-fluid mb-3" style="margin: 0px; background-color: #031A31; padding:20px 0px; margin-top: 20px;">
+    <div class="container" style="xmargin-top:110px">
         <div class="row">
             <div class="col-md-12">
                 <h1 class='m-0' style="color: white;font-weight:bold">BERITA</h1>
@@ -51,6 +49,7 @@ $Berita = &$Page;
         </div>
     </div>
 </div>
+
 
 <?php if (empty(@$_GET["baca"])) { ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
