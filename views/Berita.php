@@ -9,7 +9,10 @@ $Berita = &$Page;
 
 <style>
     /* Mengatur font default dan ukuran teks */
-    body, p, table, div {
+    body,
+    p,
+    table,
+    div {
         font-family: 'Poppins', sans-serif !important;
         /* Menggunakan font Poppins */
         font-size: 16px !important;
@@ -36,7 +39,7 @@ $Berita = &$Page;
     }
 
     * {
-    font-family: 'Poppins', sans-serif !important;
+        font-family: 'Poppins', sans-serif !important;
     }
 </style>
 
@@ -50,6 +53,56 @@ $Berita = &$Page;
     </div>
 </div>
 
+<body id="top">
+    <a href="#top" class="back-to-top" id="backToTopBtn">
+        <div class="button-circle">
+            <img src="images\icons\top.png" alt="Back to Top">
+        </div>
+    </a>
+    <script>
+        // Ambil elemen button
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        // Fungsi untuk menampilkan atau menyembunyikan button
+        function toggleBackToTopBtn() {
+            if (window.scrollY > 200) { // Jika scroll lebih dari 200px
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        }
+
+        // Pasang event listener untuk scroll
+        window.addEventListener('scroll', toggleBackToTopBtn);
+    </script>
+
+    <style>
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            text-decoration: none;
+            display: none;
+            /* Button disembunyikan secara default */
+        }
+
+        .button-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #19497D;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-circle img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</body>
 
 <?php if (empty(@$_GET["baca"])) { ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -76,9 +129,9 @@ $Berita = &$Page;
         <div class="row">
             <div class="col-md-12 p-0">
                 <h3 style="font-weight: bold; position: relative; display: inline-block;">
-						Berita Terbaru
-						<span style="position: absolute; left: 0; bottom: -8px; width: 50px; height: 4px; background-color: #023E8A;"></span>
-					</h3>
+                    Berita Terbaru
+                    <span style="position: absolute; left: 0; bottom: -8px; width: 50px; height: 4px; background-color: #023E8A;"></span>
+                </h3>
             </div>
         </div>
 
@@ -194,19 +247,19 @@ $Berita = &$Page;
                     while ($data3 = $stmt->fetch()) { // loop
                         $gambar_berita_lain = explode(Config("MULTIPLE_UPLOAD_SEPARATOR"), $data3["gambar"]);
                 ?>
-                    <a href="berita?baca=<?php echo $data3["id"]; ?>" style="color:#000;text-decoration:none;">
-                        <div class="row" style="padding:5px;">
-                            <div class="col-md-12 mb-3">
-                                <div style="background-image: url('images/news/<?php echo $gambar_berita_lain[0]; ?>'); background-size: cover;height: 200px;border-radius: 10px;"></div>
-                                <div style="color: #000;  font-weight: 500;" class="mb-1text-left">
-                                    <?php echo $data3["judul"]; ?>
-                                </div>
-                                <div style="color: gray;" class="mt-2">
-                                    <?php echo tanggal_indo($data3["tanggal"]); ?>
+                        <a href="berita?baca=<?php echo $data3["id"]; ?>" style="color:#000;text-decoration:none;">
+                            <div class="row" style="padding:5px;">
+                                <div class="col-md-12 mb-3">
+                                    <div style="background-image: url('images/news/<?php echo $gambar_berita_lain[0]; ?>'); background-size: cover;height: 200px;border-radius: 10px;"></div>
+                                    <div style="color: #000;  font-weight: 500;" class="mb-1text-left">
+                                        <?php echo $data3["judul"]; ?>
+                                    </div>
+                                    <div style="color: gray;" class="mt-2">
+                                        <?php echo tanggal_indo($data3["tanggal"]); ?>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
+                        </a>
                 <?php
 
                     } // end loop
@@ -217,12 +270,12 @@ $Berita = &$Page;
                 ?>
             </div>
         </div>
-    </div>
+        </div>
 <?php
     }
 }
 ?>
-          
+
 <?php echo myfooter(); ?>
 
 <?= GetDebugMessage() ?>
