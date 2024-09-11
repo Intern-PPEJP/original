@@ -72,33 +72,24 @@ $Exportcoachingprogram = &$Page;
     }
 
     /* Animasi kriteria peserta */
-    .slideshow-container {
-        display: flex;
-        justify-content: center;
-        overflow: hidden;
-        width: 100%;
-        height: auto;
-        background-color: none;
-        padding: 20px 0px;
-        border-radius: 15px;
-    }
 
-    .slideshow-track {
-        display: flex;
-        width: calc(200%);
-        animation: slide 30s linear infinite;
-        gap: 20px;
+    .criteria-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; /* Untuk memberikan ruang antar card */
+    gap: 20px; /* Tambahkan gap antar card */
     }
 
     .criteria-container {
-        flex: 1 0 25%;
+        flex: 1 0 19%; /* Setiap card mengambil 19% dari lebar container */
         text-align: center;
         padding: 20px;
         box-sizing: border-box;
         background-color: #ffffff;
         border-radius: 15px;
-        box-shadow: 2px 1px 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
+        min-width: 150px; /* Supaya tidak terlalu kecil saat layar mengecil */
     }
 
     .criteria-container:hover {
@@ -121,24 +112,26 @@ $Exportcoachingprogram = &$Page;
         color: #555;
     }
 
-    @keyframes slide {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(-50%);
-        }
-    }
-
+    /* Responsive untuk layar yang lebih kecil */
     @media (max-width: 992px) {
+        .criteria-row {
+            flex-wrap: wrap; /* Membungkus ke baris berikutnya di layar kecil */
+        }
+
         .criteria-container {
-            flex: 1 0 25%;
+            flex: 1 0 30%; /* Menyesuaikan agar 3 card per baris di layar sedang */
         }
     }
 
     @media (max-width: 768px) {
         .criteria-container {
-            flex: 1 0 30%;
+            flex: 1 0 45%; /* Menyesuaikan agar 2 card per baris di layar kecil */
+        }
+    }
+
+    @media (max-width: 576px) {
+        .criteria-container {
+            flex: 1 0 100%; /* Menyesuaikan agar 1 card per baris di layar sangat kecil */
         }
     }
 
@@ -244,7 +237,7 @@ $Exportcoachingprogram = &$Page;
 		</script>
 	</section>
 	
-	<section>
+	<!--<section>
 		<div class="container py-5">
 			<h2 class="text-center"><b>KRITERIA PESERTA</b></h2> <br>
 			<div class="slideshow-container">
@@ -274,27 +267,44 @@ $Exportcoachingprogram = &$Page;
 						<div class="criteria-title">Kemampuan Bahasa & IT</div>
 						<div class="criteria-desc">Memiliki tim yang memahami bahasa Inggris & mampu menggunakan komputer.</div>
 					</div>
-					<!-- Mulai pengulangan konten -->
-					<div class="criteria-container">
-						<div class="criteria-icon"><i class="fas fa-id-card"></i></div>
-						<div class="criteria-title">NIB & Badan Usaha</div>
-						<div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
-					</div>
-					<div class="criteria-container">
-						<div class="criteria-icon"><i class="fas fa-industry"></i></div>
-						<div class="criteria-title">Kapasitas Produksi</div>
-						<div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
-					</div>
-					<div class="criteria-container">
-						<div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
-						<div class="criteria-title">Komitmen Tahunan</div>
-						<div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
-					</div>
 				</div>
 			</div>
 		</div>
+</section>-->
 
+<section>
+    <div class="container py-5">
+        <h2 class="text-center"><b>KRITERIA PESERTA</b></h2> <br>
+        <div class="criteria-row">
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-id-card"></i></div>
+                <div class="criteria-title">NIB & Badan Usaha</div>
+                <div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-industry"></i></div>
+                <div class="criteria-title">Kapasitas Produksi</div>
+                <div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
+                <div class="criteria-title">Komitmen Tahunan</div>
+                <div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-business-time"></i></div>
+                <div class="criteria-title">Pengalaman Bisnis</div>
+                <div class="criteria-desc">Diutamakan memiliki pengalaman bisnis minimal 1 tahun.</div>
+            </div>
+            <div class="criteria-container">
+                <div class="criteria-icon"><i class="fas fa-language"></i></div>
+                <div class="criteria-title">Kemampuan Bahasa & IT</div>
+                <div class="criteria-desc">Memiliki tim yang memahami bahasa Inggris & mampu menggunakan komputer.</div>
+            </div>
+        </div>
+    </div>
 </section>
+
 
 	<center><div class="row container"></center>
 		<h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br>
