@@ -129,7 +129,7 @@ $Berita = &$Page;
                 } // end loop
                 ?>
                 <div class="show_more_main mb-3 mt-2" id="show_more_main<?php echo $postID; ?>" style="text-align:right;">
-                    <a href="javascript:void(0)" id="<?php echo $postID; ?>" style="font-weight: 600;text-decoration:none;color: #fff;background: #031a31;padding:10px;" class="show_more" title="Load more posts">Berita Lainnya <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0)" id="<?php echo $postID; ?>" style="font-weight: 600;text-decoration:none;color: #fff; border-radius: 10px; background: #031a31;padding:10px;" class="show_more" title="Load more posts">Berita Lainnya >> <!--<i class="fa fa-chevron-right" aria-hidden="true"></i> --> </a>
                     <span class="loding" style="display: none;"><span class="loding_txt">Loading...</span></span>
                 </div>
             <?php
@@ -153,7 +153,6 @@ $Berita = &$Page;
         CurrentPage()->terminate("berita");
     } else {
     ?>
-
         <script>
             document.title = '<?php echo $lihat_berita["judul"]; ?>'
         </script>
@@ -224,7 +223,7 @@ $Berita = &$Page;
     }
 }
 ?>
-
+          
 <?php echo myfooter(); ?>
 
 <?= GetDebugMessage() ?>
