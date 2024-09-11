@@ -82,7 +82,7 @@ window.addEventListener('scroll', toggleBackToTopBtn);
 	}
 
 	thead {
-		background-color: #19497D;
+		background-color: #023e8a;
 		color: #ffffff;
 		text-align: center; /* Rata tengah untuk header */
 	}
