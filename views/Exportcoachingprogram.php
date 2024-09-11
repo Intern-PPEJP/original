@@ -235,75 +235,40 @@ $Exportcoachingprogram = &$Page;
 			});
 
 		</script>
-	</section>
-	
-	<!--<section>
-		<div class="container py-5">
-			<h2 class="text-center"><b>KRITERIA PESERTA</b></h2> <br>
-			<div class="slideshow-container">
-				<div class="slideshow-track">
-					<div class="criteria-container">
-						<div class="criteria-icon"><i class="fas fa-id-card"></i></div>
-						<div class="criteria-title">NIB & Badan Usaha</div>
-						<div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
-					</div>
-					<div class="criteria-container">
-						<div class="criteria-icon"><i class="fas fa-industry"></i></div>
-						<div class="criteria-title">Kapasitas Produksi</div>
-						<div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
-					</div>
-					<div class="criteria-container">
-						<div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
-						<div class="criteria-title">Komitmen Tahunan</div>
-						<div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
-					</div>
-					<div class="criteria-container">
-						<div class="criteria-icon"><i class="fas fa-business-time"></i></div>
-						<div class="criteria-title">Pengalaman Bisnis</div>
-						<div class="criteria-desc">Diutamakan memiliki pengalaman bisnis minimal 1 tahun.</div>
-					</div>
-					<div class="criteria-container">
-						<div class="criteria-icon"><i class="fas fa-language"></i></div>
-						<div class="criteria-title">Kemampuan Bahasa & IT</div>
-						<div class="criteria-desc">Memiliki tim yang memahami bahasa Inggris & mampu menggunakan komputer.</div>
-					</div>
-				</div>
-			</div>
-		</div>
-</section>-->
+</section>
 
-<section>
-    <div class="container py-5">
-        <h2 class="text-center"><b>KRITERIA PESERTA</b></h2> <br>
-        <div class="criteria-row">
-            <div class="criteria-container">
-                <div class="criteria-icon"><i class="fas fa-id-card"></i></div>
-                <div class="criteria-title">NIB & Badan Usaha</div>
-                <div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
-            </div>
-            <div class="criteria-container">
-                <div class="criteria-icon"><i class="fas fa-industry"></i></div>
-                <div class="criteria-title">Kapasitas Produksi</div>
-                <div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
-            </div>
-            <div class="criteria-container">
-                <div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
-                <div class="criteria-title">Komitmen Tahunan</div>
-                <div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
-            </div>
-            <div class="criteria-container">
-                <div class="criteria-icon"><i class="fas fa-business-time"></i></div>
-                <div class="criteria-title">Pengalaman Bisnis</div>
-                <div class="criteria-desc">Diutamakan memiliki pengalaman bisnis minimal 1 tahun.</div>
-            </div>
-            <div class="criteria-container">
-                <div class="criteria-icon"><i class="fas fa-language"></i></div>
-                <div class="criteria-title">Kemampuan Bahasa & IT</div>
-                <div class="criteria-desc">Memiliki tim yang memahami bahasa Inggris & mampu menggunakan komputer.</div>
+    <section>
+        <div class="container py-5">
+            <h2 class="text-center"><b>KRITERIA PESERTA</b></h2> <br>
+            <div class="criteria-row">
+                <div class="criteria-container">
+                    <div class="criteria-icon"><i class="fas fa-id-card"></i></div>
+                    <div class="criteria-title">NIB & Badan Usaha</div>
+                    <div class="criteria-desc">Memiliki NIB, Badan Usaha (UD, CV, PT, Koperasi) yang masih berlaku.</div>
+                </div>
+                <div class="criteria-container">
+                    <div class="criteria-icon"><i class="fas fa-industry"></i></div>
+                    <div class="criteria-title">Kapasitas Produksi</div>
+                    <div class="criteria-desc">Memiliki kapasitas produksi yang mendukung kegiatan ekspor.</div>
+                </div>
+                <div class="criteria-container">
+                    <div class="criteria-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="criteria-title">Komitmen Tahunan</div>
+                    <div class="criteria-desc">Memiliki komitmen untuk mengikuti tahapan pendampingan ekspor selama 1 tahun.</div>
+                </div>
+                <div class="criteria-container">
+                    <div class="criteria-icon"><i class="fas fa-business-time"></i></div>
+                    <div class="criteria-title">Pengalaman Bisnis</div>
+                    <div class="criteria-desc">Diutamakan memiliki pengalaman bisnis minimal 1 tahun.</div>
+                </div>
+                <div class="criteria-container">
+                    <div class="criteria-icon"><i class="fas fa-language"></i></div>
+                    <div class="criteria-title">Kemampuan Bahasa & IT</div>
+                    <div class="criteria-desc">Memiliki tim yang memahami bahasa Inggris & mampu menggunakan komputer.</div>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 	<center><div class="row container"></center>
