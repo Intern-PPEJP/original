@@ -403,12 +403,56 @@ $Exportcoachingprogram = &$Page;
 </div>
 </div>
 
-<section>
+<!--<section>
 	<div class="container py-5">
 		<h2 class="text-center"><b>DOKUMENTASI KEGIATAN</b></h2> <br>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
 
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/pages/ecp1.jpg" class="d-block w-100" alt="1st slide">
+        </div>
+        <div class="carousel-item">
+          <img src="images/pages/ecp2.jpg" class="d-block w-100" alt="2nd slide">
+        </div>
+        <div class="carousel-item">
+          <img src="images/pages/ecp3.jpg" class="d-block w-100" alt="3rd slide">
+        </div>
+        <div class="carousel-item">
+          <img src="images/pages/ecp4.jpg" class="d-block w-100" alt="4th slide">
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 	</div>
 </section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+  .custom-carousel-img {
+    max-height: 400px; /* Membatasi tinggi maksimum gambar */
+    object-fit: cover;  /* Agar gambar tidak terdistorsi */
+    border-radius: 15px; /* Menambahkan border-radius */
+  }
+
+  .carousel-item {
+    text-align: center;
+  }
+</style>-->
 
 <!--<a class="btn btn-success btn-lg daftar mb-5" href="https://forms.gle/NenFWx4d4ySo1UVP6"> <h2> Daftar Sekarang! </h2></a></center>-->
 
