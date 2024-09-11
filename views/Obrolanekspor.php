@@ -27,6 +27,57 @@ $Obrolanekspor = &$Page;
     </div>
 </div>
 
+<body id="top">
+    <a href="#top" class="back-to-top" id="backToTopBtn">
+        <div class="button-circle">
+            <img src="images\icons\top.png" alt="Back to Top">
+        </div>
+    </a>
+    <script>
+        // Ambil elemen button
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        // Fungsi untuk menampilkan atau menyembunyikan button
+        function toggleBackToTopBtn() {
+            if (window.scrollY > 200) { // Jika scroll lebih dari 200px
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        }
+
+        // Pasang event listener untuk scroll
+        window.addEventListener('scroll', toggleBackToTopBtn);
+    </script>
+
+    <style>
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            text-decoration: none;
+            display: none;
+            /* Button disembunyikan secara default */
+        }
+
+        .button-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #19497D;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-circle img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</body>
+
 <div class="container">
     <div class="row my-4">
         <div class="col-md-12">
@@ -40,20 +91,22 @@ $Obrolanekspor = &$Page;
 </div>
 
 <style>
-    p, table, div {
+    p,
+    table,
+    div {
         font-size: 16px;
-	}
-    
+    }
+
     .grid-topik-obrol .col-4 {
         margin-bottom: 25px;
     }
 
-    .grid-topik-obrol .col-8{
+    .grid-topik-obrol .col-8 {
         text-transform: capitalize;
         padding-top: 5px;
     }
 
-    h1{
+    h1 {
         font-size: 25px;
     }
 
@@ -103,10 +156,11 @@ $Obrolanekspor = &$Page;
     }
 
     .container-topik .topic-card:hover img {
-        filter: brightness(0) invert(1); /* Mengubah icon menjadi putih */
+        filter: brightness(0) invert(1);
+        /* Mengubah icon menjadi putih */
         transition: filter 0.3s ease;
     }
-    
+
     .narasumber-card {
         background-color: #ffffff;
         border-radius: 15px;
@@ -131,42 +185,45 @@ $Obrolanekspor = &$Page;
     }
 
     .narasumber-img {
-        width: 100%; 
-        height: 220px; 
-        border-radius: 15px; 
-        object-fit: cover; 
+        width: 100%;
+        height: 220px;
+        border-radius: 15px;
+        object-fit: cover;
         margin-bottom: 15px;
-        display: block; 
-        margin-left: auto; 
-        margin-right: auto; 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .flex-nowrap .col-md-4 {
         min-width: 250px;
     }
-        
+
     @media (max-width: 1024px) {
         .narasumber-card {
             margin-bottom: 20px;
             padding: 15px;
         }
+
         .narasumber-img {
-            width: 100%; /* Atur agar gambar lebih kecil pada tablet */
-            height: auto; /* Memastikan gambar tetap proporsional */
+            width: 100%;
+            /* Atur agar gambar lebih kecil pada tablet */
+            height: auto;
+            /* Memastikan gambar tetap proporsional */
         }
     }
-        
+
     /* Media query untuk layar kecil */
     @media (max-width: 768px) {
         .container-topik {
-            flex-direction: column; 
-            align-items: center; 
+            flex-direction: column;
+            align-items: center;
         }
 
         .container-topik .topic-card {
-            width: 100%; 
-            max-width: 350px; 
-            margin: 10px; 
+            width: 100%;
+            max-width: 350px;
+            margin: 10px;
         }
     }
 </style>
@@ -214,7 +271,7 @@ $Obrolanekspor = &$Page;
             <div class="xb1 text-center">
                 <h2 class="mt-3 text-bold" style="font-size: 20px; margin-bottom: 5px;">NARASUMBER</h2>
             </div>
-       </div>
+        </div>
     </div>
     <div class="row justify-content-center">
         <div class="col-md-3 py-3 text-center text-white">
@@ -228,7 +285,7 @@ $Obrolanekspor = &$Page;
             <div class="narasumber-card">
                 <!--<img src="images/icons/icon_user2.png" class="img-fluid rounded-circle mb-3" alt="Narasumber 2" style="height: 150px; width: 150px;">-->
                 <img src="images\narasumber\pejabat.jpg" class="narasumber-img" alt="Profil Narasumber">
-                <h3 class="narasumber-name"style="font-weight: bold;">Pejabat Perwakilan Perdagangan</h3>
+                <h3 class="narasumber-name" style="font-weight: bold;">Pejabat Perwakilan Perdagangan</h3>
             </div>
         </div>
         <div class="col-md-3 py-3 text-center text-white">
@@ -253,9 +310,9 @@ $Obrolanekspor = &$Page;
         <!--<div class="container">
             <div class="row xpy-5 flex-nowrap" style="overflow-x: auto; height: 420px;">
                 <?php
-                    $rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`,`Link`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `jenis_pelatihan` LIKE 'obrolan_ekspor' ORDER BY `tawal` DESC Limit 20");
-                    $jumlahpelatihan = 0;
-                    while ($row = $rs->fetch()) {
+                $rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`,`Link`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `jenis_pelatihan` LIKE 'obrolan_ekspor' ORDER BY `tawal` DESC Limit 20");
+                $jumlahpelatihan = 0;
+                while ($row = $rs->fetch()) {
                 ?>
                     <div class="col-md-4 mb-4">
                         <div class="card border-2" style="width: 100%; height: 100%;">
@@ -264,10 +321,12 @@ $Obrolanekspor = &$Page;
                             </a>
                         </div>
                     </div>
-                <?php	
+                <?php
                     $jumlahpelatihan++;
-                        }
-                    if($jumlahpelatihan == 0){ echo '<div class="alert alert-warning text-center">Obrolan Ekspor belum tersedia</div>'; }
+                }
+                if ($jumlahpelatihan == 0) {
+                    echo '<div class="alert alert-warning text-center">Obrolan Ekspor belum tersedia</div>';
+                }
                 ?>
             </div>
         </div>
@@ -292,7 +351,7 @@ $Obrolanekspor = &$Page;
                     echo '
                     <div class="col-md-3 mb-4">
                         <div class="embed-responsive embed-responsive-16by9">
-                            <iframe class="embed-responsive-item" src="'.$playlist.'" allowfullscreen></iframe>
+                            <iframe class="embed-responsive-item" src="' . $playlist . '" allowfullscreen></iframe>
                         </div>
                     </div>';
                 }
