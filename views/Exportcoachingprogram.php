@@ -269,7 +269,7 @@ $Exportcoachingprogram = &$Page;
             </div>
         </div>
     </section>
-
+    <br>
 
 	<center><div class="row container"></center>
 		<h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br>
@@ -301,9 +301,17 @@ $Exportcoachingprogram = &$Page;
 				.openPopup();
 			});
 		</script>
-		<br><br>
+		<br>
 	</div>
 </div>
+
+<section>
+        <div class="container py-5">
+            <h2 class="text-center"><b>DOKUMENTASI KEGIATAN</b></h2> <br>
+            
+        </div>
+    </section>
+
 <!--<a class="btn btn-success btn-lg daftar mb-5" href="https://forms.gle/NenFWx4d4ySo1UVP6"> <h2> Daftar Sekarang! </h2></a></center>-->
 
 <div class="mb-2">&nbsp;</div>
