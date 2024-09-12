@@ -162,10 +162,10 @@ $Tentangbpmjp = &$Page;
 </style>
 
 <div class="container-fluid" style="padding-left:0;padding-right:0;">
-	<iframe style="width: 100%; height: 509px; border-radius: 0px;" src="https://www.youtube.com/embed/uwYw0NQ1WTA?si=zQOWDUuill_NEdhd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<iframe style="width: 100%; height: 420px; border-radius: 0px;" src="https://www.youtube.com/embed/uwYw0NQ1WTA?si=zQOWDUuill_NEdhd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-<div class="container text-justify mt-5">
+<div class="container text-justify mt-3">
 	<div class="row slim">
 		<center>
 			<h2 class="text-bold mb-3">SAMBUTAN KEPALA BPMJP</h2>
