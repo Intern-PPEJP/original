@@ -226,7 +226,7 @@ function myheader(){
 	}
 
 	.main-header #ew-navbar .nav-item { 
-		padding: 10px;
+		padding: 20px;
 	}
 
 	.content-header { 
@@ -241,8 +241,8 @@ function myheader(){
 	button.close span { 
 		font-size: 25px; 
 		background: #ff1800; 
-		border-radius: 10px; 
-		padding-right: 10px; 
+		border-radius: 20px; 
+		padding-right: 20px; 
 		padding-left: 100px; 
         margin-left: 100px;
 	}
@@ -340,7 +340,8 @@ function myheader(){
 		.logo {
 			margin-left: 10px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
 			height: auto;
-			margin-right:50px;
+			margin-left: 20px;
+			margin-right:60px;
 			padding: auto;
 		}
 
