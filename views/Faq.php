@@ -17,13 +17,64 @@ $Faq = &$Page;
 	</div>
 </div>
 
+<body id="top">
+	<a href="#top" class="back-to-top" id="backToTopBtn">
+		<div class="button-circle">
+			<img src="images\icons\top.png" alt="Back to Top">
+		</div>
+	</a>
+	<script>
+		// Ambil elemen button
+		const backToTopBtn = document.getElementById('backToTopBtn');
+
+		// Fungsi untuk menampilkan atau menyembunyikan button
+		function toggleBackToTopBtn() {
+			if (window.scrollY > 200) { // Jika scroll lebih dari 200px
+				backToTopBtn.style.display = "block";
+			} else {
+				backToTopBtn.style.display = "none";
+			}
+		}
+
+		// Pasang event listener untuk scroll
+		window.addEventListener('scroll', toggleBackToTopBtn);
+	</script>
+
+	<style>
+		.back-to-top {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 100;
+			text-decoration: none;
+			display: none;
+			/* Button disembunyikan secara default */
+		}
+
+		.button-circle {
+			width: 50px;
+			height: 50px;
+			background-color: #19497D;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.button-circle img {
+			width: 20px;
+			height: 20px;
+		}
+	</style>
+</body>
 
 <style>
-	p, div {
+	p,
+	div {
 		font-size: 16px;
 	}
-		
-	h1{
+
+	h1 {
 		font-size: 25px;
 	}
 
