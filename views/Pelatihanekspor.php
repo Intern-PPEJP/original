@@ -26,11 +26,62 @@ $Pelatihanekspor = &$Page;
     </div>
 </div>
 
+<body id="top">
+    <a href="#top" class="back-to-top" id="backToTopBtn">
+        <div class="button-circle">
+            <img src="images\icons\top.png" alt="Back to Top">
+        </div>
+    </a>
+    <script>
+        // Ambil elemen button
+        const backToTopBtn = document.getElementById('backToTopBtn');
+
+        // Fungsi untuk menampilkan atau menyembunyikan button
+        function toggleBackToTopBtn() {
+            if (window.scrollY > 200) { // Jika scroll lebih dari 200px
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        }
+
+        // Pasang event listener untuk scroll
+        window.addEventListener('scroll', toggleBackToTopBtn);
+    </script>
+
+    <style>
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            text-decoration: none;
+            display: none;
+            /* Button disembunyikan secara default */
+        }
+
+        .button-circle {
+            width: 50px;
+            height: 50px;
+            background-color: #19497D;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-circle img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</body>
+
 <div class="container">
     <div class="row my-5 ">
         <div class="col-md-12">
             <div class="text-justify">
-               PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global. Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.
+                PPEJP menyelenggarakan beragam pelatihan yang dirancang khusus untuk memperluas wawasan dan meningkatkan keterampilan dalam berbisnis di pasar global. Melalui program pelatihan kami, Anda akan mendapatkan pengetahuan yang diperlukan untuk memahami regulasi perdagangan internasional yang kompleks dan standar yang berlaku di berbagai negara. Kami akan membantu Anda memahami proses ekspor, strategi pemasaran global, serta praktik terbaik dalam menghadapi persaingan yang sengit.
             </div>
         </div>
     </div>
@@ -39,7 +90,7 @@ $Pelatihanekspor = &$Page;
 
 <style>
     .alur-daftar {
-        margin-top:0 !important;
+        margin-top: 0 !important;
     }
 
     .alur-daftar .step {
@@ -66,40 +117,42 @@ $Pelatihanekspor = &$Page;
         font-weight: 300;
     }
 
-    p, table, div {
+    p,
+    table,
+    div {
         font-size: 16px;
-	}
-	
-    h2{
-		font-size: 20px;
-	}
+    }
 
-	h3{
-		font-size: 20px;
-	}
+    h2 {
+        font-size: 20px;
+    }
 
-	h4{
-		font-size: 18px;
-	}
-   
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
     .pelatihan-mendatang {
         display: flex;
         flex-direction: column;
-        min-height: 400px; 
+        min-height: 400px;
         box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);
     }
 
     .pelatihan-mendatang .card-title {
-        flex-grow: 1; 
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
-        justify-content: space-between; 
-        margin-bottom: 5px; 
+        justify-content: space-between;
+        margin-bottom: 5px;
     }
 
     .pelatihan-mendatang .card-title table {
         width: 100%;
-        margin-bottom: auto; 
+        margin-bottom: auto;
     }
 
     .pelatihan-mendatang .card-img-top {
@@ -109,38 +162,38 @@ $Pelatihanekspor = &$Page;
     }
 
     .pelatihan-mendatang .btn {
-        margin-top: auto; 
-        padding: 10px; 
-        text-align: center; 
+        margin-top: auto;
+        padding: 10px;
+        text-align: center;
         display: block;
-        width: 100%; 
+        width: 100%;
     }
 
     @media (max-width: 768px) {
         .pelatihan-mendatang {
-            min-height: auto; 
+            min-height: auto;
         }
 
         .pelatihan-mendatang .card-title {
-            margin-bottom: 5px; 
+            margin-bottom: 5px;
         }
 
         .pelatihan-mendatang .card-title p {
-            font-size: 16px; 
-            margin-bottom: 5px; 
+            font-size: 16px;
+            margin-bottom: 5px;
         }
 
         .pelatihan-mendatang .card-title table td {
             display: block;
             width: 100%;
-            box-sizing: border-box; 
-            margin-bottom: 5px; 
+            box-sizing: border-box;
+            margin-bottom: 5px;
         }
 
         .pelatihan-mendatang .btn {
-            padding: 8px; 
-            margin-top: 5px; 
-        
+            padding: 8px;
+            margin-top: 5px;
+
         }
     }
 </style>
@@ -148,9 +201,9 @@ $Pelatihanekspor = &$Page;
 <div class="container-fluid p-0 mt-0" style="background-image: url(images/pages/altpelatihan1/img_6147_1.png); background-size: cover;position: relative; background-position: center;display:none;">
     <div style="box-sizing: border-box; position: absolute; top:0; height: 100%; width: 100%; background-image: linear-gradient(0deg, rgba(3, 26, 49, 0.8), rgba(3, 26, 49, 0.8));"></div>
     <div class="container py-3">
-		<div class="col p-0 mb-3 text-white text-center">
-			<h4 class="mt-3">Cara Daftar Pelatihan</h4>
-		</div>
+        <div class="col p-0 mb-3 text-white text-center">
+            <h4 class="mt-3">Cara Daftar Pelatihan</h4>
+        </div>
         <div class="row mt-5 alur-daftar justify-content-center">
             <div class="col-md-2 p-0 m-0 text-center text-white mt-5">
                 <div class="step" style="height:67px;">Sign in</div>
@@ -171,7 +224,7 @@ $Pelatihanekspor = &$Page;
                     </div>
                 </div>
                 <div class="desc">
-                   Pilih pelatihan yang ingin diikuti di Website. Pilih tanggal pelaksanaan yang sesuai dan jumlah peserta yang akan mengikutinya
+                    Pilih pelatihan yang ingin diikuti di Website. Pilih tanggal pelaksanaan yang sesuai dan jumlah peserta yang akan mengikutinya
                 </div>
             </div>
             <div class="col-md-2 p-0 m-0 text-center text-white mt-5">
@@ -185,7 +238,7 @@ $Pelatihanekspor = &$Page;
                     Pembayaran biaya ikut pelatihan ke rekening PPEJP yang resmi. Pastikan jumlah, nomor dan nama rekening sudah sesuai
                 </div>
             </div>
-			
+
             <div class="col-md-2 p-0 m-0 text-center text-white mt-5">
                 <div class="step" style="height:67px;">Upload bukti pembayaran</div>
                 <div class="step">5</div>
@@ -197,7 +250,7 @@ $Pelatihanekspor = &$Page;
                     Setelah pembayaran selesai, silahkan upload bukti melalui website PPEJP. Pastikan alamat email yang terdaftar di PPEJP sudah sesuai
                 </div>
             </div>
-			
+
             <div class="col-md-2 p-0 m-0 text-center text-white mt-5">
                 <div class="step" style="height:67px;">Verifikasi Pembayaran</div>
                 <div class="step">5</div>
@@ -214,50 +267,52 @@ $Pelatihanekspor = &$Page;
 </div>
 
 <section class="content-section mt-5">
-	<div class="container">
+    <div class="container">
         <h3 class="text-center text-bold mb-4">PELATIHAN EKSPOR MENDATANG</h3>
-		<div class="row mb-5">
-		
-		<?php
-			$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` LIKE 'ekspor' ORDER BY `tawal` ASC");
-			$jumlahpelatihan = 0;
-			while ($row = $rs->fetch()) {
-			
-			//$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = ".$row["pelatihan_id"]);
-			$sisa = $row["sisa"];
-		?>
-			<div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
-                <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
-                <div class="card-title m-2">
-                <p style="height:40px; font-size: 18px; font-weight: bold;" ><?php echo $row["judul_pelatihan"]; ?></p>
-                    <table class="table">
-                        <tr>
-                            <td style="font-size: 16px;">
-                                <i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 16px"></i> 
-                                <?php echo $row["tanggal_pelaksanaan"]; ?>
-                            </td>
-                            <td>
-                                <i class="fa fa-user" aria-hidden="true"></i>
-                                <?php if ($sisa > 0) { ?>
-                                    <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></span>
-                                <?php } else { ?>
-                                    <span class="badge badge-danger">Fully Booked</span>
-                                <?php } ?>
-                            </td>
-                        </tr>
-                    </table>
-                    <a href="<?= GetUrl('detail-pelatihan/view/'.$row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
-                </div>
-                </div>
-			</div>
-            <?php	
-                $jumlahpelatihan++;
-                    }
-                if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>'; }
+        <div class="row mb-5">
+
+            <?php
+            $rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`,`sisa`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` LIKE 'ekspor' ORDER BY `tawal` ASC");
+            $jumlahpelatihan = 0;
+            while ($row = $rs->fetch()) {
+
+                //$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = ".$row["pelatihan_id"]);
+                $sisa = $row["sisa"];
             ?>
-		</div>
-	</div>
+                <div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
+                        <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
+                        <div class="card-title m-2">
+                            <p style="height:40px; font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></p>
+                            <table class="table">
+                                <tr>
+                                    <td style="font-size: 16px;">
+                                        <i class="fa fa-calendar-o" aria-hidden="true" style="font-size: 16px"></i>
+                                        <?php echo $row["tanggal_pelaksanaan"]; ?>
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-user" aria-hidden="true"></i>
+                                        <?php if ($sisa > 0) { ?>
+                                            <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></span>
+                                        <?php } else { ?>
+                                            <span class="badge badge-danger">Fully Booked</span>
+                                        <?php } ?>
+                                    </td>
+                                </tr>
+                            </table>
+                            <a href="<?= GetUrl('detail-pelatihan/view/' . $row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            <?php
+                $jumlahpelatihan++;
+            }
+            if ($jumlahpelatihan == 0) {
+                echo '<span class="alert alert-warning text-center">Pelatihan belum tersedia</span>';
+            }
+            ?>
+        </div>
+    </div>
 </section>
 
 <div class="mb-2">&nbsp;</div>
@@ -265,7 +320,7 @@ $Pelatihanekspor = &$Page;
 <script>
     document.title = "Pelatihan Ekspor"
 </script>
-	
+
 </div>
 <?php echo myfooter(); ?>
 
