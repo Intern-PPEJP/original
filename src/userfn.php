@@ -172,7 +172,6 @@ function Route_Action($app)
     // informasi-pelatihan
     $app->any('/kontak[/{params:.*}]', InformasipelatihanController::class)->add(PermissionMiddleware::class)->setName('informasi-pelatihan-custom'); // custom
 
-
     $app->group(
         '/pencarian',
         function (\Slim\Routing\RouteCollectorProxy $group) {
@@ -231,7 +230,8 @@ function myheader(){
 	}
 
 	.content-header { 
-		background: #031A31; margin-bottom: 15px; 
+		background: #031A31; 
+		margin-bottom: 15px; 
 	} 
 	
 	.content-header h1 { 
@@ -243,32 +243,41 @@ function myheader(){
 		background: #ff1800; 
 		border-radius: 10px; 
 		padding-right: 10px; 
-		padding-left: 10px; 
+		padding-left: 100px; 
+        margin-left: 100px;
 	}
 
 	#fcari {
-		position: absolute;
-		z-index: 99;
-		width: 200px !important;
-		left: 194px;
-		top: 10px;
-		flex-grow: 1; /* Agar kotak pencarian mengambil ruang yang tersisa */
-		margin-left: 20px; /* Jarak antara logo dan kotak pencarian */
-		font-size: 16px;
+    width: 545px !important ;
+    margin-bottom: 10px;
+	margin-top: 10px;
+	}
+	
+	
+	#fcari input::placeholder {
+		font-size: 14px; 
+		color: #999; 
 	}
 
-	
+	#fcari input.form-control {
+    border-radius: 5px 0 0 5px; /* Rounded di sisi kiri */
+	}
+
+	#fcari .btn {
+		border-radius: 0 5px 5px 0; /* Rounded di sisi kanan */
+	}
+
 	.navbar-nav {
-		margin-right: auto; /* Memberikan ruang otomatis antara item menu dan tombol "Daftar Pelatihan" */
-		flex-grow: 1; /* Membiarkan item navigasi tumbuh dan mengambil ruang yang tersedia */
+		flex-grow: 1; 
 		display: flex;
-		justify-content: center; /* Memusatkan item navigasi */
+		justify-content: center; 
 		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.navbar-collapse {
 		display: flex;
-		justify-content: space-between; /* Menyebar item navbar secara merata di dalam navbar */
+		justify-content: space-between; 
 		align-items: center;
 		width: 100%;
 	}
@@ -280,46 +289,102 @@ function myheader(){
 		z-index: 1000; /* Pastikan navbar berada di atas elemen lain */
 	}
 
-	@media screen and (max-width: 768px) { /* mobile view */
-		#fcari {
-			position: static;
-			width:100% !important;
-			margin-left: 0; /* Reset margin pada tampilan mobile */
-		}
+	.nav-item.ms-3 {
+		margin-left: auto;
+		order: 3; /* Posisikan tombol di pojok kanan */
+	}
+
+	@media screen and (max-width: 768px) {
+    /* Adjusting search bar for small screens */
+  
+    
+    .navbar-nav {
+        flex-direction: column;
 		
-		.header {
-			flex-direction: column;
-			align-items: flex-start; /* Agar logo dan kotak pencarian berada di atas-bawah */
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start; /* Agar logo dan kotak pencarian berada di atas-bawah */
+    }
+    
+    #fcari {
+        order: 2; 
+        margin-top: 10px;
+		width: 100%;
+    }
+    
+    .nav-item.ms-3 {
+        order: 3;
     }
 	}
-	
-	.header {
+
+	.navbar {
 		display: flex;
 		align-items: center;
-		justify-content: space-between; /* Agar logo dan kotak pencarian berada di ujung yang berlawanan */
-		padding: 10px;
+		justify-content: space-between;
 	}
 
-    p, table, div, ul, li {
-    	font-size: 16px;
-	}
-	
-	h2{
-		font-size: 20px;
+		p, table, div, ul, li {
+			font-size: 16px;
+		}
+		
+		h2{
+			font-size: 20px;
+		}
+
+		h3{
+			font-size: 18px;
+		}
+
+		.logo {
+			margin-left: 10px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
+			height: auto;
+			margin-right:50px;
+			padding: auto;
+		}
+
+	@media (min-width: 992px) {
+		.dropdown-menu .submenu {
+			display: none;
+			position: absolute;
+			left: 100%;
+			top: 0;
+			margin-top: 0;
+		}
+
+		.dropdown-menu > li:hover > .submenu {
+			display: block;
+		}
 	}
 
-	h3{
-		font-size: 18px;
+	@media (max-width: 991px) {
+		.dropdown-menu .submenu {
+			display: none;
+			position: relative;
+			left: 0;
+			top: 0;
+			margin: 0;
+		}
+
+		.dropdown-menu > li > .submenu {
+			display: none;
+		}
+
+		.dropdown-menu > li.show > .submenu {
+			display: block;
+		}
 	}
 
-	.logo {
-    	margin-left: 20px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
-		height: auto;
+	.social-media-icon {
+		height: 30px;
+		width: auto;
+		margin-right: 5px;
 	}
 
 	.icon {
-		height: 15px;
-		width: 15px;
+		height: 16px;
+		width: 16px;
 		margin-right: 10px; /* Menambahkan jarak antara ikon dan teks */
 		vertical-align: middle; /* Agar ikon sejajar dengan teks secara vertikal */
 		display: inline-block; /* Memastikan gambar dan teks berada di satu baris */
@@ -339,16 +404,9 @@ function myheader(){
 		display: inline-block; /* Memastikan teks tetap berada di samping gambar */
 		vertical-align: middle; /* Menyelaraskan teks di tengah secara vertikal */
 	}
-	.social-media-icon {
-		height: 30px; /* Atur ukuran ikon sesuai kebutuhan, misalnya 25px */
-		width: auto; /* Menyesuaikan lebar secara otomatis */
-		margin-right: 5px; /* Memberikan jarak antar ikon */
-	}
-
 </style>
 
-<script>
-// Prevent closing from click inside dropdown
+<!--// Prevent closing from click inside dropdown
 $(document).on('click', '.dropdown-menu', function (e) {
   e.stopPropagation();
 });
@@ -364,86 +422,137 @@ if ($(window).width() < 992) {
      $(this).find('.submenu').hide();
   })
   });
-}
+}-->
+
+<script>
+   document.addEventListener("DOMContentLoaded", function() {
+    // Menangani klik pada item submenu
+    document.querySelectorAll('.dropdown-menu .dropdown-item').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+            let nextEl = this.nextElementSibling;
+            if (nextEl && nextEl.classList.contains('submenu')) {
+                e.preventDefault();
+                e.stopPropagation();
+                nextEl.style.display = nextEl.style.display === 'block' ? 'none' : 'block';
+            }
+        });
+    });
+
+    // Mencegah dropdown utama tertutup saat submenu diklik
+    document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+        dropdown.addEventListener('hide.bs.dropdown', function(e) {
+            if (dropdown.querySelector('.submenu') && dropdown.querySelector('.submenu').style.display === 'block') {
+                e.preventDefault(); // Mencegah penutupan dropdown
+            }
+        });
+    });
+});
 </script>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding:0;">
 	<a class="navbar-brand" href="<?= GetUrl('home')?>">
 		<img src="<?= GetUrl('images/logo-kemendag.png') ?>" class="logo" alt="PPEJP | Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) merupakan lembaga yang berada di lingkungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP mempunyai tugas melaksanakan pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan untuk dunia usaha dan masyarakat.">
 	</a>
-		 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  		</button>
-		<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-			<ul class="navbar-nav ms-auto mr-3">
-				<li class="nav-item">
-					<a class="nav-link click-scroll" href="<?= GetUrl('home') ?>">Beranda</a>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
-					<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-						<li><a class="dropdown-item" href="<?= GetUrl('tentang-kami') ?>">Pusat Pelatihan SDM Ekspor dan <br>Jasa Perdagangan (PPEJP)</a></li>
-						<li><a class="dropdown-item" href="<?= GetUrl('tentang-bpmjp') ?>">Balai Pelatihan SDM Metrologi, Mutu <br>dan Jasa Perdagangan (BPMJP)</a></li>
-						<li><a class="dropdown-item dropdown-toggle" href="#">Lembaga Sertifikasi Profesi (LSP)</a>
-							<ul class="submenu dropdown-menu">
-								<li><a class="dropdown-item" href="<?= GetUrl('lsp-ppejp') ?>">LSP PPEJP</a></li>
-								<li><a class="dropdown-item" href="<?= GetUrl('lsp-bpmjp') ?>">LSP BPMJP</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kegiatan</a>
-					<ul class="dropdown-menu" aria-labelledby="navbarLightDropdownMenuLink" id="sub-pelatihan">
-						<li><a class="dropdown-item dropdown-toggle" href="<?= GetUrl('pelatihan') ?>">Pelatihan</a>
-							<ul class="submenu dropdown-menu">
-								<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-ekspor') ?>">Pelatihan Ekspor</a></li>
-								<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-metrologi') ?>">Pelatihan Metrologi</a></li>
-								<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-mutu') ?>">Pelatihan Mutu</a></li>
-								<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-jasa-perdagangan') ?>">Pelatihan Jasa Perdagangan</a></li>
-							</ul>
-						</li>
-						<li><a class="dropdown-item font-italic" href="<?= GetUrl('export-coaching-program') ?>">Export Coaching Program</a></li>
-						<li><a class="dropdown-item" href="<?= GetUrl('webinar') ?>">Webinar</a></li>
-						<li><a class="dropdown-item" href="https://kudagang.kemendag.go.id/" target="_blank">KUDAGANG</a></li>
-						<li><a class="dropdown-item" href="<?= GetUrl('obrolan-ekspor') ?>">Obrolan Ekspor</a></li>
-						<!--<li><a class="dropdown-item" href="<?= GetUrl('sertifikasikompetensi') ?>">Sertifikasi Kompetensi</a></li> -->
-					</ul>
-				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link" href="<?= GetUrl('kontak') ?>">Kontak</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="<?= GetUrl('berita') ?>">Berita</a>
-				</li>
-				<?php if (IsLoggedIn()) { 
-				?>
-				<!--<li class="nav-item dropdown">
-					<a class="nav-link" href="akun" style="font-size:35px;padding-top:5px;"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
-					<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
-						<li><a class="dropdown-item" href="logout"><i class="fa fa-logout" aria-hidden="true"></i> Logout</a></li>
-					</ul>
-				</li>-->
-				<?php
-				} else { ?>
-				<!--<li class="nav-item">
-					<a class="nav-link" href="login" style=""><i class="fa fa-user" aria-hidden="true"></i> Masuk</a>
-				</li>-->
-				<?php } ?>
-				<li class="nav-item ms-3">
-					<a class="nav-link custom-btn custom-border-btn btn" href="<?= GetUrl('formpendaftaran') ?>"><p>Daftar Pelatihan</p></a>
-				</li>
-			</ul>
-		</div>
-		<form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
-			<div class="input-group p-2">
-				<input type="hidden" name="cmd" value="search">
-				<input type="hidden" name="t" value="caridata">
-				<input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width:80px">
-				<div class="input-group-append">
-					<button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
-				</div>
-			</div>
-		</form>
+	<form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
+            <div class="input-group p-2">
+                <input type="hidden" name="cmd" value="search">
+                <input type="hidden" name="t" value="caridata">
+                <input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width: 200px; height: 40px;">
+                <div class="input-group-append">
+                     <button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
+                 </div>
+            </div>
+        </form>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    	<span class="navbar-toggler-icon"></span>
+  	</button>
+	<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+		<ul class="navbar-nav ms-auto mr-3">
+			<li class="nav-item">
+				<a class="nav-link click-scroll" href="<?= GetUrl('home') ?>">Beranda</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tentang Kami</a>
+				<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+					<li><a class="dropdown-item" href="<?= GetUrl('tentang-kami') ?>">Pusat Pelatihan SDM Ekspor dan <br>Jasa Perdagangan (PPEJP)</a></li>
+					<li><a class="dropdown-item" href="<?= GetUrl('tentang-bpmjp') ?>">Balai Pelatihan SDM Metrologi, Mutu <br>dan Jasa Perdagangan (BPMJP)</a></li>
+					<li><a class="dropdown-item dropdown-toggle" href="#">Lembaga Sertifikasi Profesi (LSP)</a>
+						<ul class="submenu dropdown-menu">
+							<li><a class="dropdown-item" href="<?= GetUrl('lsp-ppejp') ?>">LSP PPEJP</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('lsp-bpmjp') ?>">LSP BPMJP</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kegiatan</a>
+				<ul class="dropdown-menu" aria-labelledby="navbarLightDropdownMenuLink" id="sub-pelatihan">
+					<li>
+						<a class="dropdown-item dropdown-toggle" href="#" id="pelatihan-menu">Pelatihan</a>
+						<ul class="submenu dropdown-menu">
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-ekspor') ?>">Pelatihan Ekspor</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-metrologi') ?>">Pelatihan Metrologi</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-mutu') ?>">Pelatihan Mutu</a></li>
+							<li><a class="dropdown-item" href="<?= GetUrl('pelatihan-jasa-perdagangan') ?>">Pelatihan Jasa Perdagangan</a></li>
+						</ul>
+					</li>
+					<li><a class="dropdown-item font-italic" href="<?= GetUrl('export-coaching-program') ?>">Export Coaching Program</a></li>
+					<li><a class="dropdown-item" href="<?= GetUrl('webinar') ?>">Webinar</a></li>
+					<li><a class="dropdown-item" href="https://kudagang.kemendag.go.id/" target="_blank">KUDAGANG</a></li>
+					<li><a class="dropdown-item" href="<?= GetUrl('obrolan-ekspor') ?>">Obrolan Ekspor</a></li>
+					<!-- <li><a class="dropdown-item" href="<?= GetUrl('sertifikasikompetensi') ?>">Sertifikasi Kompetensi</a></li> -->
+				</ul>
+			</li>
+
+			<script>
+				let clickCount = 0;
+
+				document.getElementById('pelatihan-menu').addEventListener('click', function (e) {
+					e.preventDefault();
+					
+					if (window.innerWidth <= 768) {  
+						clickCount++;
+
+						if (clickCount === 1) {
+							
+							const submenu = this.nextElementSibling;
+							submenu.classList.toggle('show');
+						} else if (clickCount === 2) {
+						
+							window.location.href = '<?= GetUrl("pelatihan") ?>';
+						}
+					} else {
+					
+						window.location.href = '<?= GetUrl("pelatihan") ?>';
+					}
+				});
+			</script>
+
+			<li class="nav-item">
+				<a class="nav-link" href="<?= GetUrl('kontak') ?>">Kontak</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="<?= GetUrl('berita') ?>">Berita</a>
+			</li>
+           
+		<?php if (IsLoggedIn()) { 
+			?>
+			<!--<li class="nav-item dropdown">
+				<a class="nav-link" href="akun" style="font-size:35px;padding-top:5px;"><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
+				<ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarLightDropdownMenuLink">
+					<li><a class="dropdown-item" href="logout"><i class="fa fa-logout" aria-hidden="true"></i> Logout</a></li>
+				</ul>
+			</li>-->
+			<?php
+			} else { ?>
+			<!--<li class="nav-item">
+				<a class="nav-link" href="login" style=""><i class="fa fa-user" aria-hidden="true"></i> Masuk</a>
+			</li>-->
+			<?php } ?>
+			<li class="nav-item ms-3">
+				<a class="nav-link custom-btn custom-border-btn btn" href="<?= GetUrl('formpendaftaran') ?>"><p>Daftar Pelatihan</p></a>
+			</li>
+		</ul>
+	</div>
 </nav>
 
 <br>
@@ -460,6 +569,7 @@ $(document).ready(function(){
     })
 });
 </script>
+
 <?php
 }
 
@@ -469,8 +579,7 @@ function myfooter (){
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-12 mb-4">
-				<div>
-					Pusat Pelatihan SDM Ekspor dan Jasa Perdagangan<br>
+				<div>Pusat Pelatihan SDM Ekspor dan Jasa Perdagangan<br>
                 	<div class="footer-item">
 						<img src="<?= GetUrl('images/icons/address.png') ?>" class="icon">
 						<div>Letjen S. Parman Jalan No.112, RT.3/RW.8, Tomang, Grogol Petamburan, Kota Jakarta Barat, Jakarta 11440</div>
@@ -488,8 +597,7 @@ function myfooter (){
 						<div>promosi.ppejp@kemendag.go.id</div>
 					</div>
 				</div><br>
-				<div>
-					Balai Pelatihan SDM Metrologi Mutu dan Jasa Perdagangan<br>
+				<div>Balai Pelatihan SDM Metrologi Mutu dan Jasa Perdagangan<br>
 					<div class="footer-item">
 						<img src="<?= GetUrl('images/icons/address.png') ?>" class="icon">
 						<div>Jl. Daeng Muhammad Ardiwinata KM 3,4 Kel. Cihanjuang, Kec. Parongpong, Kabupaten Bandung Barat, Jawa Barat 40559</div>
@@ -523,18 +631,18 @@ function myfooter (){
 			<div class="col-lg-2 col-md-6 col-12 mx-auto">
 				<h2 class="site-footer-title mb-3">Social Media</h2>
 				<p class="text-white d-flex mb-2">
-				<a href="https://www.facebook.com/PPEJP.Kemendag" class="footer-menu-link" target="_blank">
-					<img src="<?= GetUrl('images/icons/xfacebook.png') ?>" class="social-media-icon">
-				</a>
-				<a href="https://www.instagram.com/ppejp.kemendag/" class="footer-menu-link" target="_blank">
-					<img src="<?= GetUrl('images/icons/xinstagram.png') ?>" class="social-media-icon">
-				</a>
-				<a href="https://www.youtube.com/@PPEJPKemendag" class="footer-menu-link" target="_blank">
-					<img src="<?= GetUrl('images/icons/xyoutube.png') ?>" class="social-media-icon">
-				</a>
-				<a href="https://www.tiktok.com/@ppejp.kemendag/" class="footer-menu-link" target="_blank">
-					<img src="<?= GetUrl('images/icons/xtiktok.png') ?>" class="social-media-icon">
-				</a>
+					<a href="https://www.facebook.com/PPEJP.Kemendag" class="footer-menu-link" target="_blank">
+						<img src="<?= GetUrl('images/icons/xfacebook.png') ?>" class="social-media-icon">
+					</a>
+					<a href="https://www.instagram.com/ppejp.kemendag/" class="footer-menu-link" target="_blank">
+						<img src="<?= GetUrl('images/icons/xinstagram.png') ?>" class="social-media-icon">
+					</a>
+					<a href="https://www.youtube.com/@PPEJPKemendag" class="footer-menu-link" target="_blank">
+						<img src="<?= GetUrl('images/icons/xyoutube.png') ?>" class="social-media-icon">
+					</a>
+					<a href="https://www.tiktok.com/@ppejp.kemendag/" class="footer-menu-link" target="_blank">
+						<img src="<?= GetUrl('images/icons/xtiktok.png') ?>" class="social-media-icon">
+					</a>
 				</p>
 			</div>
 		</div>
