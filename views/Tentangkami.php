@@ -225,14 +225,14 @@ $Tentangkami = &$Page;
 			width: 20px;
 			height: 20px;
 		}
-
 	</style>
 </body>
 
 <div class="container-fluid" style="padding-left:0;padding-right:0;">
-	<iframe style="width: 100%; height: 509px; border-radius: 0px;" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<iframe style="width: 100%; height: 450px; border-radius: 0px;" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 <br>
+
 <div class="container" style="text-align:justify;">
 	<div class="row ">
 		<center>
