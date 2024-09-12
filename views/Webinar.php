@@ -155,7 +155,7 @@ $Webinar = &$Page;
                 background-size: cover;
                 background-position: center;
                 width: 100%;
-                height: 450px; 
+                height: 420px; 
 
                 ">
             </div>
