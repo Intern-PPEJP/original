@@ -9,9 +9,13 @@ $Sertifikasikompetensi = &$Page;
 
 <style>
 	p, table, div {
-    font-size: 16px;
+    	font-size: 16px;
 	}
 	
+	h1{
+		font-size: 25px;
+	}
+
 	h2{
 		font-size: 20px;
 	}
@@ -50,48 +54,43 @@ $Sertifikasikompetensi = &$Page;
     </div>
 </div>
 
-
-
 <section class="content-section mt-5">
 	<div class="container">
 		<h2 class="text-center text-bold mb-4">SEFTIFIKASI KOMPETENSI TAHUN <?php echo date("Y"); ?></h2>
 		<div class="row mb-5">
-		
-		<?php
+			<?php
 			$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` FROM `w_pelatihan`  WHERE `Activated` = 'Y' AND `jenis_pelatihan` LIKE 'sert_kompetensi' ORDER BY `tawal` ASC");
 			$jumlahpelatihan = 0;
 			while ($row = $rs->fetch()) {
 			
 			$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = ".$row["pelatihan_id"]);
 			$sisa = $row["jumlah_peserta"] - $peserta_terdaftar;
-		?>
+			?>
 			<div class=" col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-			<div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
-			  <img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
-			  <div class="card-title m-2" style="height:2.5em">
-			  <?php echo $row["judul_pelatihan"]; ?><!--
-				<table class="table">
-					<tr>
-						<td><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
-						<td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
-					</tr>
-				</table>
-				
-							<a href="wpelatihanview/<?php echo $row["pelatihan_id"];?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>-->
-			  </div>
-			</div>
+				<div class="card pelatihan-mendatang mb-4" style="margin:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
+				<img src="files/<?php echo $row["gambar"]; ?>" class="card-img-top" height="250px">
+					<div class="card-title m-2" style="height:2.5em">
+					<?php echo $row["judul_pelatihan"]; ?><!--
+						<table class="table">
+							<tr>
+								<td><i class="fa fa-calendar-o" aria-hidden="true"></i> <?php echo $row["tanggal_pelaksanaan"]; ?></td>
+								<td><i class="fa fa-user" aria-hidden="true"></i> <span class="text-danger"><small>Sisa <?php echo $sisa; ?> Kursi</small></td>
+							</tr>
+						</table>
+						
+									<a href="wpelatihanview/<?php echo $row["pelatihan_id"];?>" class="btn btn-success stretched-link btn-default btn-block">Lihat Detail</a>-->
+					</div>
+				</div>
 			</div>
 		
-		<?php	
-			$jumlahpelatihan++;
-				}
-			if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Sertifikasi kompetensi belum tersedia</span>'; }
-		?>
-		</div>
+			<?php	
+				$jumlahpelatihan++;
+					}
+				if($jumlahpelatihan == 0){ echo '<span class="alert alert-warning text-center">Sertifikasi kompetensi belum tersedia</span>'; }
+			?>
 		</div>
 	</div>
 </section>
-
 
 <script>
     document.title = "SERTIFIKASI KOMPETENSI";
