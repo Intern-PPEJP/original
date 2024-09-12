@@ -340,7 +340,7 @@ function myheader(){
 		.logo {
 			margin-left: 10px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
 			height: auto;
-			margin-left: 20px;
+			margin-left: 70px;
 			margin-right:60px;
 			padding: auto;
 		}
