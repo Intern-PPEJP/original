@@ -229,12 +229,11 @@ $Tentangkami = &$Page;
 </body>
 
 <div class="container-fluid" style="padding-left:0;padding-right:0;">
-	<iframe style="width: 100%; height: 450px; border-radius: 0px;" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<iframe style="width: 100%; height: 420px; border-radius: 0px;" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
-<br>
 
-<div class="container" style="text-align:justify;">
-	<div class="row ">
+<div class="container text-justify mt-3">
+	<div class="row slim">
 		<center>
 			<h2 class="text-bold">SAMBUTAN KEPALA PPEJP</h2>
 		</center>
