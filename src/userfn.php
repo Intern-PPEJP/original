@@ -248,15 +248,28 @@ function myheader(){
 	}
 
 	#fcari {
-		position: static;
-		z-index: 99;
-		width: 300px !important;
-		margin-left: auto; /* Posisikan di sebelah kanan sebelum tombol "Daftar Pelatihan" */
-		margin-right: 20px; /* Jarak dengan tombol "Daftar Pelatihan" */
-		margin-top: 7.5px;
-		order: 2; /* Urutan setelah navbar "Berita" */
-		font-size: 16px;
+    width: 200px;
+    margin-bottom: 10px;
+	margin-top: 10px;
 	}
+	
+	/* Mengatur ukuran placeholder */
+	#fcari input::placeholder {
+		font-size: 14px; /* Atur ukuran sesuai keinginan */
+		color: #999; /* Opsional: atur warna placeholder */
+	}
+
+	#fcari input {
+    width: 100px; /* Atur lebar sesuai kebutuhan */
+    height: 30px; /* Atur tinggi sesuai keinginan */
+	}
+
+	/* Tombol pencarian juga mengikuti ukuran input */
+	#fcari button {
+		height: 40px; /* Sesuaikan dengan input */
+	}
+
+
 
 	#fcari input.form-control {
     border-radius: 5px 0 0 5px; /* Rounded di sisi kiri */
@@ -267,16 +280,16 @@ function myheader(){
 	}
 
 	.navbar-nav {
-		flex-grow: 1; /* Membiarkan item navigasi tumbuh dan mengambil ruang yang tersedia */
+		flex-grow: 1; 
 		display: flex;
-		justify-content: center; /* Memusatkan item navigasi */
+		justify-content: center; 
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	.navbar-collapse {
 		display: flex;
-		justify-content: space-between; /* Menyebar item navbar secara merata di dalam navbar */
+		justify-content: space-between; 
 		align-items: center;
 		width: 100%;
 	}
@@ -293,45 +306,55 @@ function myheader(){
 		order: 3; /* Posisikan tombol di pojok kanan */
 	}
 
-	@media screen and (max-width: 768px) { /* mobile view */
-		#fcari {
-			position: static;
-			width:100% !important;
-			margin-left: 0; /* Reset margin pada tampilan mobile */
-			margin-left: 10px;
-		}
+	@media screen and (max-width: 768px) {
+    /* Adjusting search bar for small screens */
+  
+    
+    .navbar-nav {
+        flex-direction: column;
 		
-		.header {
-			flex-direction: column;
-			align-items: flex-start; /* Agar logo dan kotak pencarian berada di atas-bawah */
-    	}
+    }
+    
+    .header {
+        flex-direction: column;
+        align-items: flex-start; /* Agar logo dan kotak pencarian berada di atas-bawah */
+    }
+    
+    #fcari {
+        order: 2; 
+        margin-top: 10px;
+		width: 100%;
+    }
+    
+    .nav-item.ms-3 {
+        order: 3;
+    }
 	}
-	
-	.header {
+
+	.navbar {
 		display: flex;
 		align-items: center;
-		justify-content: space-between; /* Agar logo dan kotak pencarian berada di ujung yang berlawanan */
-		padding: 10px;
+		justify-content: space-between;
 	}
 
-    p, table, div, ul, li {
-    	font-size: 16px;
-	}
-	
-	h2{
-		font-size: 20px;
-	}
+		p, table, div, ul, li {
+			font-size: 16px;
+		}
+		
+		h2{
+			font-size: 20px;
+		}
 
-	h3{
-		font-size: 18px;
-	}
+		h3{
+			font-size: 18px;
+		}
 
-	.logo {
-    	margin-left: 50px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
-		height: auto;
-        margin-right:50px;
-        padding: auto;
-	}
+		.logo {
+			margin-left: 10px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
+			height: auto;
+			margin-right:50px;
+			padding: auto;
+		}
 
 	@media (min-width: 992px) {
 		.dropdown-menu .submenu {
@@ -441,6 +464,16 @@ if ($(window).width() < 992) {
 	<a class="navbar-brand" href="<?= GetUrl('home')?>">
 		<img src="<?= GetUrl('images/logo-kemendag.png') ?>" class="logo" alt="PPEJP | Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) merupakan lembaga yang berada di lingkungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP mempunyai tugas melaksanakan pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan untuk dunia usaha dan masyarakat.">
 	</a>
+	<form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
+            <div class="input-group p-2">
+                <input type="hidden" name="cmd" value="search">
+                <input type="hidden" name="t" value="caridata">
+                <input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width: 200px; height: 40px;">
+                <div class="input-group-append">
+                     <button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
+                 </div>
+            </div>
+        </form>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     	<span class="navbar-toggler-icon"></span>
   	</button>
@@ -512,16 +545,7 @@ if ($(window).width() < 992) {
 			<li class="nav-item">
 				<a class="nav-link" href="<?= GetUrl('berita') ?>">Berita</a>
 			</li>
-            <form name="fcari" id="fcari" class="ew-form ew-login-form" action="<?= GetUrl('caridatalist') ?>" method="get">
-            <div class="input-group p-2">
-                <input type="hidden" name="cmd" value="search">
-                <input type="hidden" name="t" value="caridata">
-                <input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width:80px">
-                <div class="input-group-append">
-                     <button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
-                 </div>
-            </div>
-        </form>
+           
 		<?php if (IsLoggedIn()) { 
 			?>
 			<!--<li class="nav-item dropdown">
