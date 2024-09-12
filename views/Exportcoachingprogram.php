@@ -403,57 +403,6 @@ $Exportcoachingprogram = &$Page;
 </div>
 </div>
 
-<!--<section>
-	<div class="container py-5">
-		<h2 class="text-center"><b>DOKUMENTASI KEGIATAN</b></h2> <br>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-      </div>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="images/pages/ecp1.jpg" class="d-block w-100" alt="1st slide">
-        </div>
-        <div class="carousel-item">
-          <img src="images/pages/ecp2.jpg" class="d-block w-100" alt="2nd slide">
-        </div>
-        <div class="carousel-item">
-          <img src="images/pages/ecp3.jpg" class="d-block w-100" alt="3rd slide">
-        </div>
-        <div class="carousel-item">
-          <img src="images/pages/ecp4.jpg" class="d-block w-100" alt="4th slide">
-        </div>
-      </div>
-
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
-    </div>
-	</div>
-</section>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<style>
-  .custom-carousel-img {
-    max-height: 400px; /* Membatasi tinggi maksimum gambar */
-    object-fit: cover;  /* Agar gambar tidak terdistorsi */
-    border-radius: 15px; /* Menambahkan border-radius */
-  }
-
-  .carousel-item {
-    text-align: center;
-  }
-</style>-->
-
 <section>
 	<div class="container py-5">
 		<h2 class="text-center"><b>DOKUMENTASI KEGIATAN</b></h2> <br>
@@ -462,15 +411,15 @@ $Exportcoachingprogram = &$Page;
 							<div class="carousel-item active">
 								<div class="row justify-content-center">
 
-									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+									<div class="col-lg-4 col-md-6 col-sm-12 text-center">
 										<img src="images/pages/ecp1.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 1">
 					
 									</div>
-									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+									<div class="col-lg-4 col-md-6 col-sm-12 text-center">
 										<img src="images/pages/ecp2.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 2">
 										
 									</div>
-									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+									<div class="col-lg-4 col-md-6 col-sm-12 text-center">
 										<img src="images/pages/ecp3.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 3">
 										
 									</div>
@@ -479,21 +428,31 @@ $Exportcoachingprogram = &$Page;
 							<div class="carousel-item">
 								<div class="row justify-content-center">
 
-									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+									<div class="col-lg-4 col-md-6 col-sm-12 text-center">
 										<img src="images/pages/ecp5.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 4">
 										
 									</div>
-									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+									<div class="col-lg-4 col-md-6 col-sm-12 text-center">
 										<img src="images/pages/ecp6.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 5">
 										
 									</div>
-									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+									<div class="col-lg-4 col-md-6 col-sm-12 text-center">
 										<img src="images/pages/ecp7.jpeg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 6">
 										
 									</div>
 								</div>
 							</div>
 						</div>
+						<!-- Tombol prev dan next -->
+						<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+
 						<!-- Tombol titik navigasi -->
 						<ol class="carousel-indicators">
 							<li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"></li>
@@ -503,6 +462,17 @@ $Exportcoachingprogram = &$Page;
 				</div>
 	</div>
 </section>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function() {
+				var myCarousel = document.querySelector('#carouselExampleSlidesOnly');
+				var carousel = new bootstrap.Carousel(myCarousel, {
+					interval: 3000,
+					wrap: true
+				});
+			});
+		</script>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
@@ -528,6 +498,63 @@ $Exportcoachingprogram = &$Page;
 			background-color: #031A31;
 			/* Warna tombol titik aktif */
 		}
+
+		.carousel-control-prev,
+			.carousel-control-next {
+				width: auto;
+				background: none;
+				border: none;
+				bottom: 10%;
+			}
+
+			.carousel-control-prev {
+				left: 15px; /* Atur jarak dari sisi kiri */
+			}
+
+			.carousel-control-next {
+				right: 15px; /* Atur jarak dari sisi kanan */
+			}
+
+			.carousel-control-prev-icon,
+			.carousel-control-next-icon {
+				background-color: transparent;
+				background-image: none;
+				border: 2px solid white;
+				border-radius: 50%;
+				width: 30px;
+				height: 30px;
+				line-height: 30px;
+			}
+
+			.carousel-control-prev-icon::before {
+				content: '<';
+				color: white;
+				font-size: 20px;
+				display: block;
+				text-align: center;
+			}
+
+			.carousel-control-next-icon::before {
+				content: '>';
+				color: white;
+				font-size: 20px;
+				display: block;
+				text-align: center;
+			}
+
+			@media (max-width: 768px) {
+				img {
+					margin-bottom: 20px; /* Memberikan jarak bawah antar gambar */
+				}
+				
+			}
+
+			@media (min-width: 769px) and (max-width: 1024px) {
+				img {
+					margin-bottom: 30px; /* Jarak antar gambar untuk layar sedang */
+				}
+			}
+
 </style>
 
 
