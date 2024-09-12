@@ -248,15 +248,28 @@ function myheader(){
 	}
 
 	#fcari {
-		position: static;
-		z-index: 99;
-		width: 500px !important;
-		margin-left: auto; /* Posisikan di sebelah kanan sebelum tombol "Daftar Pelatihan" */
-		margin-right: 60px; /* Jarak dengan tombol "Daftar Pelatihan" */
-		margin-top: 5.5px;
-		order: 1; /* Urutan setelah navbar "Berita" */
-		font-size: 16px;
+    width: 200px;
+    margin-bottom: 10px;
+	margin-top: 10px;
 	}
+	
+	/* Mengatur ukuran placeholder */
+	#fcari input::placeholder {
+		font-size: 14px; /* Atur ukuran sesuai keinginan */
+		color: #999; /* Opsional: atur warna placeholder */
+	}
+
+	#fcari input {
+    width: 100px; /* Atur lebar sesuai kebutuhan */
+    height: 30px; /* Atur tinggi sesuai keinginan */
+	}
+
+	/* Tombol pencarian juga mengikuti ukuran input */
+	#fcari button {
+		height: 40px; /* Sesuaikan dengan input */
+	}
+
+
 
 	#fcari input.form-control {
     border-radius: 5px 0 0 5px; /* Rounded di sisi kiri */
@@ -267,16 +280,16 @@ function myheader(){
 	}
 
 	.navbar-nav {
-		flex-grow: 1; /* Membiarkan item navigasi tumbuh dan mengambil ruang yang tersedia */
+		flex-grow: 1; 
 		display: flex;
-		justify-content: center; /* Memusatkan item navigasi */
+		justify-content: center; 
 		margin-left: auto;
 		margin-right: auto;
 	}
 
 	.navbar-collapse {
 		display: flex;
-		justify-content: space-between; /* Menyebar item navbar secara merata di dalam navbar */
+		justify-content: space-between; 
 		align-items: center;
 		width: 100%;
 	}
@@ -295,14 +308,11 @@ function myheader(){
 
 	@media screen and (max-width: 768px) {
     /* Adjusting search bar for small screens */
-    #fcari {
-        width: 100% !important;
-        margin-right: 0;
-        margin-left: 10px;
-    }
+  
     
     .navbar-nav {
         flex-direction: column;
+		
     }
     
     .header {
@@ -311,39 +321,40 @@ function myheader(){
     }
     
     #fcari {
-        order: 2; /* Place after logo on small screens */
-        margin-top: 5px;
+        order: 2; 
+        margin-top: 10px;
+		width: 100%;
     }
     
     .nav-item.ms-3 {
         order: 3;
     }
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-    p, table, div, ul, li {
-    	font-size: 16px;
-	}
-	
-	h2{
-		font-size: 20px;
 	}
 
-	h3{
-		font-size: 18px;
+	.navbar {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 
-	.logo {
-    	margin-left: 10px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
-		height: auto;
-        margin-right:50px;
-        padding: auto;
-	}
+		p, table, div, ul, li {
+			font-size: 16px;
+		}
+		
+		h2{
+			font-size: 20px;
+		}
+
+		h3{
+			font-size: 18px;
+		}
+
+		.logo {
+			margin-left: 10px; /* Ganti angka ini dengan jumlah jarak yang diinginkan */
+			height: auto;
+			margin-right:50px;
+			padding: auto;
+		}
 
 	@media (min-width: 992px) {
 		.dropdown-menu .submenu {
@@ -457,7 +468,7 @@ if ($(window).width() < 992) {
             <div class="input-group p-2">
                 <input type="hidden" name="cmd" value="search">
                 <input type="hidden" name="t" value="caridata">
-                <input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width:80px">
+                <input type="text" class="form-control" id="psearch" name="psearch" placeholder="Pencarian..." aria-label="Pencarian..." aria-describedby="basic-addon2" value="<?php echo @$_GET["psearch"]; ?>" style="min-width: 200px; height: 40px;">
                 <div class="input-group-append">
                      <button class="btn btn-default" id="cari" type="submit" value="cari" style=" border: 1px solid #bbb; "><i class="fas fa-search" aria-hidden="true"></i> </button>
                  </div>
