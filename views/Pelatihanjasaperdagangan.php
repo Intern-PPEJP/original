@@ -70,7 +70,7 @@ $Pelatihanjasaperdagangan = &$Page;
 
 <div class="container-fluid" style="xmargin-top:90px;">
     <div class="row">
-        <div class="col-md-12 p-0" style=" height: 450px">
+        <div class="col-md-12 p-0" style=" height: 420px">
             <div style="background-image: url(images/pages/pelatihan-jasa-perdagangan.png); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
             </div>
         </div>
