@@ -96,19 +96,19 @@ $Pelatihan = &$Page;
                 <div style="background-image: url(images/pages/pelatihan2.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0;">
                 </div>
             </div>
-            <div class="carousel-item" style=" height: 450px;">
+            <div class="carousel-item" style=" height: 420px;">
                 <div style="background-image: url(images/pages/pelatihan1new.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
                 </div>
             </div>
-            <div class="carousel-item" style=" height: 450px;">
+            <div class="carousel-item" style=" height: 420px;">
                 <div style="background-image: url(images/pages/pelatihan3.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
                 </div>
             </div>
-            <div class="carousel-item" style=" height: 450px;">
+            <div class="carousel-item" style=" height: 420px;">
                 <div style="background-image: url(images/pages/pelatihan4.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
                 </div>
             </div>
-            <div class="carousel-item" style=" height: 450px;">
+            <div class="carousel-item" style=" height: 420px;">
                 <div style="background-image: url(images/pages/pelatihan5.JPG); background-size: cover ; background-position: center;width: 100%;height: 100%; position: absolute;top:0">
 
                 </div>
