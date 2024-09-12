@@ -248,28 +248,16 @@ function myheader(){
 	}
 
 	#fcari {
-    width: 200px;
+    width: 545px !important ;
     margin-bottom: 10px;
 	margin-top: 10px;
 	}
 	
-	/* Mengatur ukuran placeholder */
+	
 	#fcari input::placeholder {
-		font-size: 14px; /* Atur ukuran sesuai keinginan */
-		color: #999; /* Opsional: atur warna placeholder */
+		font-size: 14px; 
+		color: #999; 
 	}
-
-	#fcari input {
-    width: 100px; /* Atur lebar sesuai kebutuhan */
-    height: 30px; /* Atur tinggi sesuai keinginan */
-	}
-
-	/* Tombol pencarian juga mengikuti ukuran input */
-	#fcari button {
-		height: 40px; /* Sesuaikan dengan input */
-	}
-
-
 
 	#fcari input.form-control {
     border-radius: 5px 0 0 5px; /* Rounded di sisi kiri */
