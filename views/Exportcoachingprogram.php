@@ -454,6 +454,58 @@ $Exportcoachingprogram = &$Page;
   }
 </style>-->
 
+<section>
+	<div class="container py-5">
+		<h2 class="text-center"><b>DOKUMENTASI KEGIATAN</b></h2> <br>
+        	<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="3000">
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<div class="row justify-content-center">
+
+									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+										<img src="images/pages/ecp1.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 1" data-bs-toggle="modal" data-bs-target="#modalPerpustakaan">
+					
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+										<img src="images/pages/ecp2.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 2" data-bs-toggle="modal" data-bs-target="#modalSimulationCenter">
+										
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+										<img src="images/pages/ecp3.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 3" data-bs-toggle="modal" data-bs-target="#modalAuditorium">
+										
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<div class="row justify-content-center">
+
+									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+										<img src="images/pages/ecp5.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 4" data-bs-toggle="modal" data-bs-target="#modalAsrama">
+										
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+										<img src="images/pages/ecp6.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 5" data-bs-toggle="modal" data-bs-target="#modalJicanet">
+										
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
+										<img src="images/pages/ecp7.jpeg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 6" data-bs-toggle="modal" data-bs-target="#modalRuangKelas">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Tombol titik navigasi -->
+						<ol class="carousel-indicators">
+							<li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"></li>
+							<li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"></li>
+						</ol>
+					</div>
+				</div>
+	</div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
 <!--<a class="btn btn-success btn-lg daftar mb-5" href="https://forms.gle/NenFWx4d4ySo1UVP6"> <h2> Daftar Sekarang! </h2></a></center>-->
 
 <div class="mb-2">&nbsp;</div>
