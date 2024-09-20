@@ -330,78 +330,6 @@ $Exportcoachingprogram = &$Page;
 		</div>
 	</div>
 </section>
-<br>
-
-<center>
-	<div class="row container">
-</center>
-<h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<div id="map"></div>
-<script>
-	var map = L.map('map').setView([-2.5489, 118.0149], 5);
-
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
-
-	var locations = [{
-			name: "Jabodebek",
-			lat: -6.2088,
-			lng: 106.8456
-		},
-		{
-			name: "Banten",
-			lat: -6.1783,
-			lng: 106.6319
-		},
-		{
-			name: "Kalimantan Barat",
-			lat: -0.0263,
-			lng: 109.3425
-		},
-		{
-			name: "Sumatera Barat",
-			lat: -0.9471,
-			lng: 100.4172
-		},
-		{
-			name: "Yogyakarta",
-			lat: -7.7956,
-			lng: 110.3695
-		},
-		{
-			name: "Jawa Tengah I",
-			lat: -6.9667,
-			lng: 110.4167
-		},
-		{
-			name: "Jawa Tengah II",
-			lat: -7.4244,
-			lng: 109.2396
-		},
-		{
-			name: "Jawa Barat",
-			lat: -6.9175,
-			lng: 107.6191
-		},
-		{
-			name: "Jawa Timur",
-			lat: -7.4465,
-			lng: 112.7171
-		}
-	];
-
-	locations.forEach(function(location) {
-		L.marker([location.lat, location.lng]).addTo(map)
-			.bindPopup(location.name)
-			.openPopup();
-	});
-</script>
-<br>
-</div>
-</div>
 
 <section>
 	<div class="container py-5">
@@ -559,7 +487,78 @@ $Exportcoachingprogram = &$Page;
 		}
 	}
 </style>
+<br>
 
+<center>
+	<div class="row container">
+</center>
+<h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<div id="map"></div>
+<script>
+	var map = L.map('map').setView([-2.5489, 118.0149], 5);
+
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+	var locations = [{
+			name: "Jabodebek",
+			lat: -6.2088,
+			lng: 106.8456
+		},
+		{
+			name: "Banten",
+			lat: -6.1783,
+			lng: 106.6319
+		},
+		{
+			name: "Kalimantan Barat",
+			lat: -0.0263,
+			lng: 109.3425
+		},
+		{
+			name: "Sumatera Barat",
+			lat: -0.9471,
+			lng: 100.4172
+		},
+		{
+			name: "Yogyakarta",
+			lat: -7.7956,
+			lng: 110.3695
+		},
+		{
+			name: "Jawa Tengah I",
+			lat: -6.9667,
+			lng: 110.4167
+		},
+		{
+			name: "Jawa Tengah II",
+			lat: -7.4244,
+			lng: 109.2396
+		},
+		{
+			name: "Jawa Barat",
+			lat: -6.9175,
+			lng: 107.6191
+		},
+		{
+			name: "Jawa Timur",
+			lat: -7.4465,
+			lng: 112.7171
+		}
+	];
+
+	locations.forEach(function(location) {
+		L.marker([location.lat, location.lng]).addTo(map)
+			.bindPopup(location.name)
+			.openPopup();
+	});
+</script>
+<br>
+</div>
+</div>
 
 <!--<a class="btn btn-success btn-lg daftar mb-5" href="https://forms.gle/NenFWx4d4ySo1UVP6"> <h2> Daftar Sekarang! </h2></a></center>-->
 
