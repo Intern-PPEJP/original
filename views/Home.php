@@ -327,7 +327,6 @@ Attribution required
 		});
 	</script>
 	<main>
-
 		<section class="ppejp-section ppejp-section-full-height">
 			<div class="container-fluid">
 				<div class="row">
@@ -345,7 +344,6 @@ Attribution required
 									<a class="nav-link custom-btn custom-border-btn btn inactive daftar" href="formpendaftaran">Daftar Pelatihan</a>
 								</li>
 							</ul>
-
 
 							<div class="y-jadwal">
 								<ul style="list-style-type:none">
@@ -482,7 +480,6 @@ Attribution required
 
 			.btn-primary {
 				background-color: #031A31;
-
 			}
 
 			.btn-primary:hover {
@@ -490,18 +487,14 @@ Attribution required
 			}
 		</style>
 
-
 		<section class="profile-section">
 			<div class="container text-center">
 				<div class="row justify-content-center">
 					<h3 class="mb-3 text-bold">Profil</h3>
 					<div class="col-lg-8 col-12 vid-profil mb-4">
-
 						<iframe width="90%" height="320" src="https://www.youtube.com/embed/m4Bxe4osZVo" title="Video Profil PPEJP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
 					</div>
 					<div class="col-lg-10 col-12 text-description">
-
 						<p style="text-align:center;">
 							Pusat Pelatihan Sumber Daya Manusia Ekspor dan Jasa Perdagangan (PPEJP) merupakan lembaga yang berada di lingkungan Sekretariat Jenderal, Kementerian Perdagangan. PPEJP mempunyai tugas melaksanakan pengembangan sumber daya manusia ekspor, mutu, personil metrologi legal, dan jasa perdagangan untuk dunia usaha dan masyarakat.
 						</p>
@@ -651,7 +644,6 @@ Attribution required
 						<span class="col-12 jumlah" data-target="60000">0</span>
 						<span class="col-12 jumlah_cap">Alumni pelatihan</span>
 					</div>
-
 					<div class="col-lg col-md-3 col-sm-6 col-xs-6 angka">
 						<span class="col-12 jumlah" data-target="2000">0</span>
 						<span class="col-12 jumlah_cap">Alumni Pendampingan</span>
@@ -668,12 +660,10 @@ Attribution required
 			</div>
 		</section>
 
-
 		<script>
 			// Fungsi untuk melakukan animasi hitung angka
 			function animateCountUp(element, start, end, duration) {
 				let startTime = null;
-
 				function animation(currentTime) {
 					if (startTime === null) startTime = currentTime;
 					const progress = Math.min((currentTime - startTime) / duration, 1);
@@ -713,9 +703,6 @@ Attribution required
 			});
 		</script>
 
-
-
-
 		<section class="pt-5 pb-2">
 			<div class="container">
 				<div class="row">
@@ -729,9 +716,7 @@ Attribution required
 						</a><br>
 					</div>
 
-
 					<div id="carouselProducts" class="carousel slide" data-ride="carousel" data-interval="5000">
-
 						<div class="carousel-inner" role="listbox">
 							<div class="row" style="margin-right:0px !important">
 								<?php
@@ -768,7 +753,6 @@ Attribution required
 																<?php } else { ?>
 																	<span class="badge badge-danger">Fully Booked</span>
 																<?php } ?>
-
 														</td>
 													</tr>
 												</table>
@@ -783,7 +767,6 @@ Attribution required
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</section>
@@ -796,7 +779,6 @@ Attribution required
 						<div class="carousel-inner">
 							<div class="carousel-item active">
 								<div class="row justify-content-center">
-
 									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
 										<img src="images/fasilitas/perpustakaan (2).JPG" style="width:95%; height:210px !important; border-radius: 10px" alt="Perpustakaan" data-bs-toggle="modal" data-bs-target="#modalPerpustakaan">
 										<h6 class="text-bold mt-3 text-secondary">PERPUSTAKAAN</h6>
@@ -813,7 +795,6 @@ Attribution required
 							</div>
 							<div class="carousel-item">
 								<div class="row justify-content-center">
-
 									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
 										<img src="images/fasilitas/asrama.jpg" style="width:95%; height:210px !important; border-radius: 10px" alt="Asrama" data-bs-toggle="modal" data-bs-target="#modalAsrama">
 										<h6 class="text-bold mt-3 text-secondary">ASRAMA</h6>
@@ -830,7 +811,6 @@ Attribution required
 							</div>
 							<div class="carousel-item">
 								<div class="row justify-content-center">
-
 									<div class="col-lg-4 col-md-4 col-sm-12 text-center">
 										<img src="images\fasilitas\bpmjp\3. Instalasi timbangan jembatan.jpg" style="width:95%; height:210px !important; border-radius: 10px" alt="Instalasi" data-bs-toggle="modal" data-bs-target="#modalInstalasi">
 										<h6 class="text-bold mt-3 text-secondary">INSTALASI</h6>
@@ -845,7 +825,6 @@ Attribution required
 									</div>
 								</div>
 							</div>
-
 						</div>
 						<!-- Tombol titik navigasi -->
 						<ol class="carousel-indicators">
@@ -1259,7 +1238,6 @@ Attribution required
 		<!-- Bootstrap JS Bundle with Popper -->
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
 		<style>
 			.carousel-control-prev,
 			.carousel-control-next {
@@ -1356,7 +1334,6 @@ Attribution required
 						?>
 					</div>
 				</center>
-
 		</section>
 
 		<section class="content-section">
@@ -1400,11 +1377,9 @@ Attribution required
 					</script>
 				</div>
 		</section>
-
 	</main>
 
 	<?php echo myfooter(); ?>
-
 
 	<div class="modal fade" id="ListPelatihan" tabindex="-1" role="dialog" aria-labelledby="ListPelatihan" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable modal-xl" role="document">
@@ -1415,7 +1390,6 @@ Attribution required
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
-
 
 				<div class="modal-body">
 					<div class="container-fluid">
@@ -1448,8 +1422,6 @@ Attribution required
 												<?php
 												if ($row2["tawal"] < date("Y-m-d") || $row2["sisa"] <= 0) {
 												?>
-
-
 													<div class="col-8 text-sm-left" style="border:2px solid #babababa;padding:2px;border-right:none;border-radius:0.25rem 0 0 0.25rem;font-size:14pt;color:#bababa"><del><?php echo $row2["tanggal_pelaksanaan"]; ?></del></div>
 													<div class="col-4" style="border:2px solid #babababa;padding:2px;border-radius:0 0.25rem 0.25rem 0;">
 														<table>
@@ -1459,7 +1431,6 @@ Attribution required
 															</tr>
 														</table>
 													</div>
-
 												<?php
 
 												} else {
@@ -1480,7 +1451,6 @@ Attribution required
 																				} else {
 																					echo "text-danger";
 																				} ?>" style="font-size:8pt;margin:0;padding:0;padding-left:5px;vertical-align:top;">sisa <?php echo $row2["sisa"]; ?> orang</td>
-
 																</tr>
 															</table>
 														</div>
@@ -1502,11 +1472,9 @@ Attribution required
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</div>
-
 
 	<?php
 	$ambilpopup = ExecuteRow("SELECT `Popup_Show`,`Popup_Picture`, `Popup_Link` FROM `w_settings` WHERE `ID` = 1");
@@ -1523,7 +1491,6 @@ Attribution required
 				/*$('#popup-ppejp').modal({backdrop: 'static', keyboard: false}, 'show');*/
 			});
 		</script>
-
 
 		<div class="modal fade" id="popup-ppejp" tabindex="-1" role="dialog" aria-labelledby="popup-ppejp" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered">
@@ -1551,7 +1518,6 @@ Attribution required
 							<span class="sr-only">Next</span>
 						</a>
 					</div>
-
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal"><i class='fa fa-close'></i> Close</button>
 					</div>
