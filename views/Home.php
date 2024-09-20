@@ -210,15 +210,13 @@ Attribution required
 		}
 
 		.testimonial {
-			display: inline-block;
 			background: white;
 			border-radius: 10px;
 			padding: 20px;
-			width: 23%;
+			width: 100%;
 			text-align: center;
 			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-			vertical-align: top;
-			margin-right: 1%;
+			margin-bottom: 20px;
 		}
 
 		.testimonial img {
@@ -246,15 +244,13 @@ Attribution required
 		/* Responsif untuk testimoni */
 		@media (max-width: 992px) {
 			.testimonial {
-				width: 48%;
-				margin-bottom: 20px;
+				width: 90%;
 			}
 		}
 
 		@media (max-width: 768px) {
 			.testimonial {
 				width: 100%;
-				margin-bottom: 20px;
 			}
 		}
 
@@ -1274,50 +1270,9 @@ Attribution required
 			}
 		</style>
 
-		<section class="content-section">
+		<!--<section class="content-section">
 			<div class="container">
 				<h3 class="text-center text-bold mt-5 mb-4">Testimoni Alumni</h3>
-				<!--<center>
-
-			<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-			  <div class="carousel-inner">
-					<?php
-					$rs = ExecuteQuery("SELECT * FROM `w_testimoni` WHERE `show` = 'Y'");
-					$count = 0;
-					$i = 1;
-					while ($row_testimoni = $rs->fetch()) {
-						$active = "";
-						if ($count % 4 == 0) {
-							if ($i == 1) $active = "active";
-							echo "<div class='carousel-item " . $active . "'><div class='row justify-content-center'>";
-						}
-					?>
-					
-					<div class="col-md-3 testimoni mb-2">
-						<a href="<?= $row_testimoni["link_testimoni"]; ?>">
-						<div class="col-12 p-0 m-0">
-							<img class="p-0 m-0" style="border-radius:15px;width:100%" src="images/testimoni/<?php echo $row_testimoni["gambar"]; ?>" height="300px"></img>
-							<div class="col-12" style="border-radius:15px;position: absolute; bottom: 0; background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5); /* Black see-through */ color: #f1f1f1; transition: .5s ease; color: white; font-size: 20px; padding-top: 300px; text-align: center;m-right:10px;"></div>
-						</div>
-						
-						<h5 class="judul ml-5 mr-5">"<?= $row_testimoni["testimoni"]; ?>"</h5>
-						</a>
-					</div>
-					
-					<?php
-
-						if ($count % 4 == 3) {
-							echo "</div></div>";
-						}
-
-						$count++;
-						$i++;
-					}
-					?>
-			  </div>
-			</div>
-
-			</center>-->
 				<center>
 					<div class="testimonials">
 						<?php
@@ -1334,7 +1289,60 @@ Attribution required
 						?>
 					</div>
 				</center>
+		</section>-->
+
+		<section class="content-section">
+			<div class="container">
+				<h3 class="text-center text-bold mt-5 mb-4">Testimoni Alumni</h3>
+				<div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+					<div class="carousel-inner">
+						<?php
+						$rs = ExecuteQuery("SELECT * FROM `w_testimoni` WHERE `show` = 'Y'");
+						$count = 0;
+						$item_per_slide = 4; // Jumlah item per slide
+						$total_testimoni = $rs->rowCount(); // Menghitung jumlah testimoni
+						
+						while ($row_testimoni = $rs->fetch()) {
+							// Jika ini adalah awal dari slide baru
+							if ($count % $item_per_slide == 0) {
+								if ($count != 0) {
+									echo '</div></div>'; // Tutup row dan carousel-item sebelumnya
+								}
+								// Membuka carousel-item baru
+								echo '<div class="carousel-item ' . ($count == 0 ? 'active' : '') . '">
+										<div class="row justify-content-center">';
+							}
+						?>
+							<div class="col-md-3">
+								<div class="testimonial">
+									<img src="images/testimoni/<?php echo $row_testimoni["gambar"]; ?>" alt="<?php echo $row_testimoni["nama"]; ?>">
+									<p>"<?php echo $row_testimoni["testimoni"]; ?>"</p>
+									<h3><?php echo strtoupper($row_testimoni["nama"]); ?></h3>
+								</div>
+							</div>
+						<?php
+							$count++;
+						}
+
+						// Pastikan untuk menutup carousel-item dan row terakhir
+						if ($total_testimoni > 0 && $count % $item_per_slide != 0) {
+							echo '</div></div>';
+						}
+						?>
+					</div>
+					<!-- Carousel Controls -->
+					<a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#testimonialCarousel" role="button" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</a>
+				</div>
+			</div>
 		</section>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
 
 		<section class="content-section">
 			<div class="container">
