@@ -331,171 +331,193 @@ $Exportcoachingprogram = &$Page;
 	</div>
 </section>
 
+
 <section>
-	<div class="container py-5">
-		<h2 class="text-center"><b>DOKUMENTASI KEGIATAN</b></h2> <br>
-		<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-wrap="true" data-bs-interval="3000">
-			<div class="carousel-inner">
-				<div class="carousel-item active">
-					<div class="row justify-content-center">
-
-						<div class="col-lg-4 col-md-6 col-sm-12 text-center">
-							<img src="images/pages/ecp1.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 1">
-
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12 text-center">
-							<img src="images/pages/ecp2.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 2">
-
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12 text-center">
-							<img src="images/pages/ecp3.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 3">
-
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<div class="row justify-content-center">
-
-						<div class="col-lg-4 col-md-6 col-sm-12 text-center">
-							<img src="images/pages/ecp5.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 4">
-
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12 text-center">
-							<img src="images/pages/ecp6.jpg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 5">
-
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12 text-center">
-							<img src="images/pages/ecp7.jpeg" style="width:95%; height:250px !important; border-radius: 10px" alt="ECP 6">
-
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Tombol prev dan next -->
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
-
-			<!-- Tombol titik navigasi -->
-			<ol class="carousel-indicators">
-				<li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="0" class="active"></li>
-				<li data-bs-target="#carouselExampleSlidesOnly" data-bs-slide-to="1"></li>
-			</ol>
-		</div>
-	</div>
-	</div>
+    <div class="container py-5">
+        <h2 class="text-center"><b>DOKUMENTASI KEGIATAN</b></h2><br>
+        <!-- Slider utama menggunakan Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 dengan 4 card -->
+                <div class="swiper-slide">
+                    <div class="card" style="width: 95%; margin: auto;">
+                        <img src="images/pages/ecp1.jpg" class="card-img-top" alt="ECP 1" style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">ECP 1</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="width: 95%; margin: auto;">
+                        <img src="images/pages/ecp2.jpg" class="card-img-top" alt="ECP 2" style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">ECP 2</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="width: 95%; margin: auto;">
+                        <img src="images/pages/ecp3.jpg" class="card-img-top" alt="ECP 3" style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">ECP 3</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card" style="width: 95%; margin: auto;">
+                        <img src="images/pages/ecp4.jpg" class="card-img-top" alt="ECP 4" style="height: 150px; object-fit: cover;">
+                        <div class="card-body">
+                            <p class="card-text">ECP 4</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tambahkan card lainnya sesuai kebutuhan -->
+            </div>
+            <!-- Navigasi -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <!-- Indikator titik -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
 </section>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 <script>
-	document.addEventListener('DOMContentLoaded', function() {
-		var myCarousel = document.querySelector('#carouselExampleSlidesOnly');
-		var carousel = new bootstrap.Carousel(myCarousel, {
-			interval: 3000,
-			wrap: true
-		});
-	});
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,      // 4 gambar per slide
+        spaceBetween: 10,      // Jarak antar gambar
+        loop: true,            // Loop slider
+        autoplay: {
+            delay: 3000,       // Interval waktu antar slide (3 detik)
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',   // Menampilkan indikator titik
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: { // Responsif berdasarkan ukuran layar
+            0: {
+                slidesPerView: 1,  // 1 gambar per slide di layar kecil
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,  // 2 gambar per slide di tablet
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 4,  // 4 gambar per slide di layar desktop
+                spaceBetween: 10,
+            }
+        }
+    });
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 <style>
-	.carousel-indicators {
-		position: relative;
-		margin-top: 6px;
-		/* Atur jarak dari konten di atasnya */
-		margin-bottom: -2px;
-		/* Geser lebih ke bawah dari posisi default */
-		text-align: center;
-		/* Posisikan di tengah secara horizontal */
-	}
+.swiper-container {
+    width: 100%;
+}
 
-	.carousel-indicators li {
-		width: 8px;
-		height: 8px;
-		background-color: #6c757d;
-		/* Warna tombol titik */
-		border-radius: 60%;
-	}
+.swiper-slide img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-	.carousel-indicators .active {
-		background-color: #031A31;
-		/* Warna tombol titik aktif */
-	}
+.swiper-button-next, .swiper-button-prev {
+    color: white;
+}
 
-	.carousel-control-prev,
-	.carousel-control-next {
-		width: auto;
-		background: none;
-		border: none;
-		bottom: 10%;
-	}
+.swiper-pagination-bullet {
+    background-color: #6c757d;
+}
 
-	.carousel-control-prev {
-		left: 15px;
-		/* Atur jarak dari sisi kiri */
-	}
-
-	.carousel-control-next {
-		right: 15px;
-		/* Atur jarak dari sisi kanan */
-	}
-
-	.carousel-control-prev-icon,
-	.carousel-control-next-icon {
-		background-color: transparent;
-		background-image: none;
-		border: 2px solid white;
-		border-radius: 50%;
-		width: 30px;
-		height: 30px;
-		line-height: 30px;
-	}
-
-	.carousel-control-prev-icon::before {
-		content: '<';
-		color: white;
-		font-size: 20px;
-		display: block;
-		text-align: center;
-	}
-
-	.carousel-control-next-icon::before {
-		content: '>';
-		color: white;
-		font-size: 20px;
-		display: block;
-		text-align: center;
-	}
-
-	@media (max-width: 768px) {
-		img {
-			margin-bottom: 20px;
-			/* Memberikan jarak bawah antar gambar */
-		}
-
-	}
-
-	@media (min-width: 769px) and (max-width: 1024px) {
-		img {
-			margin-bottom: 30px;
-			/* Jarak antar gambar untuk layar sedang */
-		}
-	}
+.swiper-pagination-bullet-active {
+    background-color: #031A31;
+}
 </style>
-<br>
 
+
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 4,      // 4 gambar per slide
+        spaceBetween: 10,      // Jarak antar gambar
+        loop: true,            // Loop slider
+        autoplay: {
+            delay: 3000,       // Interval waktu antar slide (3 detik)
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',   // Menampilkan indikator titik
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: { // Responsif berdasarkan ukuran layar
+            0: {
+                slidesPerView: 1,  // 1 gambar per slide di layar kecil
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2,  // 2 gambar per slide di tablet
+                spaceBetween: 10,
+            },
+            1024: {
+                slidesPerView: 4,  // 4 gambar per slide di layar desktop
+                spaceBetween: 10,
+            }
+        }
+    });
+</script>
+
+<style>
+    .swiper-container {
+        width: 100%;
+    }
+
+    .swiper-slide img {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        color: white;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: #6c757d;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #031A31;
+    }
+</style>
+
+
+
+<br>
+<section>
 <center>
 	<div class="row container">
 </center>
-<h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br>
+<h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br> 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<div id="map"></div>
+<div id="map" style="height: 500px;"></div>
 <script>
 	var map = L.map('map').setView([-2.5489, 118.0149], 5);
 
@@ -503,62 +525,46 @@ $Exportcoachingprogram = &$Page;
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 
-	var locations = [{
-			name: "Jabodebek",
-			lat: -6.2088,
-			lng: 106.8456
-		},
-		{
-			name: "Banten",
-			lat: -6.1783,
-			lng: 106.6319
-		},
-		{
-			name: "Kalimantan Barat",
-			lat: -0.0263,
-			lng: 109.3425
-		},
-		{
-			name: "Sumatera Barat",
-			lat: -0.9471,
-			lng: 100.4172
-		},
-		{
-			name: "Yogyakarta",
-			lat: -7.7956,
-			lng: 110.3695
-		},
-		{
-			name: "Jawa Tengah I",
-			lat: -6.9667,
-			lng: 110.4167
-		},
-		{
-			name: "Jawa Tengah II",
-			lat: -7.4244,
-			lng: 109.2396
-		},
-		{
-			name: "Jawa Barat",
-			lat: -6.9175,
-			lng: 107.6191
-		},
-		{
-			name: "Jawa Timur",
-			lat: -7.4465,
-			lng: 112.7171
-		}
+	var locations = [
+		{name: "Aceh", lat: 4.6951, lng: 96.7494, peserta: 30},
+		{name: "Banten", lat: -6.1783, lng: 106.6319, peserta: 130},
+		{name: "Banyuwangi", lat: -8.2192, lng: 114.3691, peserta: 25},
+		{name: "DKI Jakarta", lat: -6.2088, lng: 106.8456, peserta: 330},
+		{name: "Jabodebek", lat: -6.2088, lng: 106.8456, peserta: 30},
+		{name: "Jambi", lat: -1.4852, lng: 102.4381, peserta: 30},
+		{name: "Jawa Barat", lat: -6.9175, lng: 107.6191, peserta: 285},
+		{name: "Jawa Tengah", lat: -7.0246, lng: 110.3636, peserta: 195},
+		{name: "Jawa Timur", lat: -7.4465, lng: 112.7171, peserta: 210},
+		{name: "Kabupaten Tangerang", lat: -6.1783, lng: 106.6319, peserta: 25},
+		{name: "Kalimantan Barat", lat: -0.0263, lng: 109.3425, peserta: 60},
+		{name: "Kalimantan Selatan", lat: -3.0926, lng: 115.2838, peserta: 30},
+		{name: "Kalimantan Timur", lat: -0.5387, lng: 116.4194, peserta: 30},
+		{name: "Kepulauan Riau", lat: 0.1542, lng: 104.5809, peserta: 30},
+		{name: "Kota Pekalongan", lat: -6.8892, lng: 109.6759, peserta: 20},
+		{name: "Kota Surakarta", lat: -7.5755, lng: 110.8252, peserta: 30},
+		{name: "Lampung", lat: -5.4500, lng: 105.2667, peserta: 60},
+		{name: "Malang", lat: -7.9666, lng: 112.6326, peserta: 30},
+		{name: "Nusa Tenggara Barat", lat: -8.6529, lng: 117.3616, peserta: 60},
+		{name: "Purwokerto (Jawa Tengah)", lat: -7.4244, lng: 109.2396, peserta: 30},
+		{name: "Riau", lat: 0.5071, lng: 101.4478, peserta: 30},
+		{name: "Semarang (Jawa Tengah)", lat: -6.9667, lng: 110.4167, peserta: 30},
+		{name: "Sulawesi Selatan", lat: -5.1477, lng: 119.4327, peserta: 90},
+		{name: "Sulawesi Utara", lat: 1.4748, lng: 124.8428, peserta: 60},
+		{name: "Sumatera Barat", lat: -0.9471, lng: 100.4172, peserta: 60},
+		{name: "Sumatera Utara", lat: 3.5952, lng: 98.6722, peserta: 30},
+		{name: "Yogyakarta", lat: -7.7956, lng: 110.3695, peserta: 190}
 	];
 
 	locations.forEach(function(location) {
 		L.marker([location.lat, location.lng]).addTo(map)
-			.bindPopup(location.name)
-			.openPopup();
+			.bindPopup(`<b>${location.name}</b><br>Peserta: ${location.peserta}`);
 	});
 </script>
+
 <br>
 </div>
 </div>
+</section>
 
 <!--<a class="btn btn-success btn-lg daftar mb-5" href="https://forms.gle/NenFWx4d4ySo1UVP6"> <h2> Daftar Sekarang! </h2></a></center>-->
 
