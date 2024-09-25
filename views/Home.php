@@ -660,6 +660,7 @@ Attribution required
 			// Fungsi untuk melakukan animasi hitung angka
 			function animateCountUp(element, start, end, duration) {
 				let startTime = null;
+
 				function animation(currentTime) {
 					if (startTime === null) startTime = currentTime;
 					const progress = Math.min((currentTime - startTime) / duration, 1);
@@ -1301,7 +1302,7 @@ Attribution required
 						$count = 0;
 						$item_per_slide = 4; // Jumlah item per slide
 						$total_testimoni = $rs->rowCount(); // Menghitung jumlah testimoni
-						
+
 						while ($row_testimoni = $rs->fetch()) {
 							// Jika ini adalah awal dari slide baru
 							if ($count % $item_per_slide == 0) {
