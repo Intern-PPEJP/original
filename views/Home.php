@@ -771,75 +771,75 @@ Attribution required
 		--->
 
 		<section class="pt-5 pb-2">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h3 class="mb-3 text-bold">Pelatihan Mendatang</h3>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <div id="carouselProducts" class="carousel slide" data-bs-ride="carousel" data-interval="5000">
-            <div class="carousel-inner">
-              <?php
-              $rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
+			<div class="container">
+				<div class="row">
+					<div class="col-12 text-center">
+						<h3 class="mb-3 text-bold">Pelatihan Mendatang</h3>
+					</div>
+					<div class="row">
+						<div class="col-12">
+							<div id="carouselProducts" class="carousel slide" data-bs-ride="carousel" data-interval="5000">
+								<div class="carousel-inner">
+									<?php
+									$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
               FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
               ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
-              $i = 1;
-              while ($row = $rs->fetch()) {
-                $peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = " . $row["pelatihan_id"]);
-                $sisa = $row["sisa"];
-                $active = ($i == 1) ? ' active' : '';
-              ?>
-              <div class="carousel-item col-md-4<?php echo $active; ?>">
-                <div class="card" style="padding:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
-                  <img class="img-fluid" alt="100%x220" style="height:220px !important;border-radius:8px 8px 0 0 !important;" src="files/<?php echo $row["gambar"]; ?>">
-                  <div class="card-body m-0 p-1">
-                    <h3 class="card-title" style="height:40px; font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></h3>
-                    <table class="table p-0 m-0" style="font-size:.8em">
-                      <tr>
-                        <td width="60%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
-                        <td width="40%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
-                      </tr>
-                      <tr>
-                        <td height=""><i class="fa fa-users" aria-hidden="true"></i> <?php echo $row["jumlah_peserta"]; ?> Orang</td>
-                        <td><i class="fa fa-money" aria-hidden="true"></i> <?php echo rupiah($row["harga"]); ?></td>
-                      </tr>
-                      <tr>
-                        <td height=""><?php echo $row["tanggal_pelaksanaan"]; ?> </td>
-                        <td><i class="fa fa-user" aria-hidden="true"></i>
-                          <?php if ($row["sisa"] > 0 && strtotime($row["tawal"]) > strtotime(date("Y-m-d"))) { ?>
-                            <span class="text-danger">Sisa <?php echo $sisa; ?> Kursi
-                            <?php } else { ?>
-                              <span class="badge badge-danger">Fully Booked</span>
-                            <?php } ?>
-                        </td>
-                      </tr>
-                    </table>
-                    <div class="card-footer"><a href="<?= GetUrl('detail-pelatihan/view/' . $row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-lg btn-block">Lihat Detail</a></div>
-                  </div>
-                </div>
-              </div>
-              <?php
-              $i++;
-              }
-              ?>
-            </div>
-            <div class="row">
-              <div class="col-12 text-center">
-                <a class="btn btn-success mb-3 mr-1" href="#carouselProducts" role="button" data-bs-slide="prev">
-                  <i class="fa fa-arrow-left"></i>
-                </a>
-                <a class="btn btn-success mb-3" href="#carouselProducts" role="button" data-bs-slide ="next">
-                  <i class="fa fa-arrow-right"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+									$i = 1;
+									while ($row = $rs->fetch()) {
+										$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = " . $row["pelatihan_id"]);
+										$sisa = $row["sisa"];
+										$active = ($i == 1) ? ' active' : '';
+									?>
+										<div class="carousel-item col-md-4<?php echo $active; ?>">
+											<div class="card" style="padding:0;border:0;box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.25);">
+												<img class="img-fluid" alt="100%x220" style="height:220px !important;border-radius:8px 8px 0 0 !important;" src="files/<?php echo $row["gambar"]; ?>">
+												<div class="card-body m-0 p-1">
+													<h3 class="card-title" style="height:40px; font-size: 18px; font-weight: bold;"><?php echo $row["judul_pelatihan"]; ?></h3>
+													<table class="table p-0 m-0" style="font-size:.8em">
+														<tr>
+															<td width="60%" height="" valign="middle"><i class="fa fa-calendar" aria-hidden="true"></i> <?php echo $row["jumlah_hari"]; ?></td>
+															<td width="40%" valign="middle"><i class="fa fa-map-marker" aria-hidden="true"></i> <?php echo $row["tempat"]; ?></td>
+														</tr>
+														<tr>
+															<td height=""><i class="fa fa-users" aria-hidden="true"></i> <?php echo $row["jumlah_peserta"]; ?> Orang</td>
+															<td><i class="fa fa-money" aria-hidden="true"></i> <?php echo rupiah($row["harga"]); ?></td>
+														</tr>
+														<tr>
+															<td height=""><?php echo $row["tanggal_pelaksanaan"]; ?> </td>
+															<td><i class="fa fa-user" aria-hidden="true"></i>
+																<?php if ($row["sisa"] > 0 && strtotime($row["tawal"]) > strtotime(date("Y-m-d"))) { ?>
+																	<span class="text-danger">Sisa <?php echo $sisa; ?> Kursi
+																	<?php } else { ?>
+																		<span class="badge badge-danger">Fully Booked</span>
+																	<?php } ?>
+															</td>
+														</tr>
+													</table>
+													<div class="card-footer"><a href="<?= GetUrl('detail-pelatihan/view/' . $row["pelatihan_id"]) ?>" class="btn btn-success stretched-link btn-lg btn-block">Lihat Detail</a></div>
+												</div>
+											</div>
+										</div>
+									<?php
+										$i++;
+									}
+									?>
+								</div>
+								<div class="row">
+									<div class="col-12 text-center">
+										<a class="btn btn-success mb-3 mr-1" href="#carouselProducts" role="button" data-bs-slide="prev">
+											<i class="fa fa-arrow-left"></i>
+										</a>
+										<a class="btn btn-success mb-3" href="#carouselProducts" role="button" data-bs-slide="next">
+											<i class="fa fa-arrow-right"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<section class="content-section">
 			<div class="container">
