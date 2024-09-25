@@ -299,6 +299,7 @@ $Exportcoachingprogram = &$Page;
 </section>
 
 <section>
+	<h1></h1>
 	<div class="container py-5">
 		<h2 class="text-center"><b>KRITERIA PESERTA</b></h2> <br>
 		<div class="criteria-row">
@@ -330,182 +331,148 @@ $Exportcoachingprogram = &$Page;
 		</div>
 	</div>
 </section>
-
-
+<br>
 <section>
-    <div class="container py-5">
-        <h2 class="text-center"><b>DOKUMENTASI KEGIATAN</b></h2><br>
-        <!-- Slider utama menggunakan Swiper -->
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Slide 1 dengan 4 card -->
-                <div class="swiper-slide">
-                    <div class="card" style="width: 95%; margin: auto;">
-                        <img src="images/pages/ecp1.jpg" class="card-img-top" alt="ECP 1" style="height: 150px; object-fit: cover;">
-                        <div class="card-body">
-                            <p class="card-text">ECP 1</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card" style="width: 95%; margin: auto;">
-                        <img src="images/pages/ecp2.jpg" class="card-img-top" alt="ECP 2" style="height: 150px; object-fit: cover;">
-                        <div class="card-body">
-                            <p class="card-text">ECP 2</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card" style="width: 95%; margin: auto;">
-                        <img src="images/pages/ecp3.jpg" class="card-img-top" alt="ECP 3" style="height: 150px; object-fit: cover;">
-                        <div class="card-body">
-                            <p class="card-text">ECP 3</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="card" style="width: 95%; margin: auto;">
-                        <img src="images/pages/ecp4.jpg" class="card-img-top" alt="ECP 4" style="height: 150px; object-fit: cover;">
-                        <div class="card-body">
-                            <p class="card-text">ECP 4</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tambahkan card lainnya sesuai kebutuhan -->
-            </div>
-            <!-- Navigasi -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- Indikator titik -->
-            <div class="swiper-pagination"></div>
+	<h2 class="text-center"><b>Dokumentasi Kegiatan</b></h2> <br>
+    <div class="wrapper">
+        <i class="fa-solid fa-angle-left" id="prevBtn"></i>
+        <div class="carousel">
+            <img src="images/pages/ecp1.jpg" alt="ecp1" draggable="false">
+            <img src="images/pages/ecp2.jpg" alt="ecp2" draggable="false">
+            <img src="images/pages/ecp3.jpg" alt="ecp3" draggable="false">
+            <img src="images/pages/ecp4.jpg" alt="ecp4" draggable="false">
+            <img src="images/pages/ecp5.jpg" alt="ecp5" draggable="false">
+            <img src="images/pages/ecp6.jpg" alt="ecp6" draggable="false">
+            <img src="images/pages/ecp7.jpg" alt="ecp7" draggable="false">
         </div>
+        <i class="fa-solid fa-angle-right" id="nextBtn"></i>
     </div>
 </section>
 
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 4,      // 4 gambar per slide
-        spaceBetween: 10,      // Jarak antar gambar
-        loop: true,            // Loop slider
-        autoplay: {
-            delay: 3000,       // Interval waktu antar slide (3 detik)
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',   // Menampilkan indikator titik
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: { // Responsif berdasarkan ukuran layar
-            0: {
-                slidesPerView: 1,  // 1 gambar per slide di layar kecil
-                spaceBetween: 10,
-            },
-            768: {
-                slidesPerView: 2,  // 2 gambar per slide di tablet
-                spaceBetween: 10,
-            },
-            1024: {
-                slidesPerView: 4,  // 4 gambar per slide di layar desktop
-                spaceBetween: 10,
-            }
-        }
-    });
-</script>
-
-
 <style>
-.swiper-container {
-    width: 100%;
-}
-
-.swiper-slide img {
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.swiper-button-next, .swiper-button-prev {
-    color: white;
-}
-
-.swiper-pagination-bullet {
-    background-color: #6c757d;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: #031A31;
-}
-</style>
-
-
-
-<!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
-<!-- Swiper JS -->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 4,      // 4 gambar per slide
-        spaceBetween: 10,      // Jarak antar gambar
-        loop: true,            // Loop slider
-        autoplay: {
-            delay: 3000,       // Interval waktu antar slide (3 detik)
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',   // Menampilkan indikator titik
-            clickable: true,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: { // Responsif berdasarkan ukuran layar
-            0: {
-                slidesPerView: 1,  // 1 gambar per slide di layar kecil
-                spaceBetween: 10,
-            },
-            768: {
-                slidesPerView: 2,  // 2 gambar per slide di tablet
-                spaceBetween: 10,
-            },
-            1024: {
-                slidesPerView: 4,  // 4 gambar per slide di layar desktop
-                spaceBetween: 10,
-            }
-        }
-    });
-</script>
-
-<style>
-    .swiper-container {
-        width: 100%;
+    .wrapper {
+        max-width: 1200px;
+        position: relative;
+        margin: 0 auto;
+        padding: 0 10px;
     }
-
-    .swiper-slide img {
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    .carousel {
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
     }
-
-    .swiper-button-next, .swiper-button-prev {
+    .carousel img {
+        height: 230px;
+        object-fit: cover;
+        margin-right: 14px;
+        width: calc(100% / 4.2);
+        flex-shrink: 0;
+		border-radius: 10px;
+    }
+    .wrapper i {
+        top: 50%;
+        height: 46px;
+        width: 46px;
+        cursor: pointer;
+        position: absolute;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 46px;
+        background: green;
         color: white;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+    .wrapper i:first-child {
+        left: -45px;
+    }
+    .wrapper i:last-child {
+        right: -35px;
     }
 
-    .swiper-pagination-bullet {
-        background-color: #6c757d;
+    @media screen and (max-width: 900px) {
+        .carousel img {
+            width: calc(100% / 4);
+        }
     }
 
-    .swiper-pagination-bullet-active {
-        background-color: #031A31;
+    @media screen and (max-width: 550px) {
+        .carousel img {
+            width: 100%;
+        }
     }
 </style>
+
+<script>
+    const carousel = document.querySelector(".carousel");
+    const firstImg = carousel.querySelectorAll("img")[0];
+    const arrowIcons = document.querySelectorAll(".wrapper i");
+
+    let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+
+    const showHideIcons = () => {
+        let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
+        arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+        arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+    }
+
+    arrowIcons.forEach(icon => {
+        icon.addEventListener("click", () => {
+            let firstImgWidth = firstImg.clientWidth + 14;
+            carousel.scrollLeft += icon.id == "prevBtn" ? -firstImgWidth : firstImgWidth;
+            setTimeout(() => showHideIcons(), 60);
+        });
+    });
+
+    const autoSlide = () => {
+        if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
+
+        positionDiff = Math.abs(positionDiff);
+        let firstImgWidth = firstImg.clientWidth + 14;
+        let valDifference = firstImgWidth - positionDiff;
+
+        if(carousel.scrollLeft > prevScrollLeft) {
+            return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+        }
+        carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+    }
+
+    const dragStart = (e) => {
+        isDragStart = true;
+        prevPageX = e.pageX || e.touches[0].pageX;
+        prevScrollLeft = carousel.scrollLeft;
+    }
+
+    const dragging = (e) => {
+        if(!isDragStart) return;
+        e.preventDefault();
+        isDragging = true;
+        carousel.classList.add("dragging");
+        positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+        carousel.scrollLeft = prevScrollLeft - positionDiff;
+        showHideIcons();
+    }
+
+    const dragStop = () => {
+        isDragStart = false;
+        carousel.classList.remove("dragging");
+
+        if(!isDragging) return;
+        isDragging = false;
+        autoSlide();
+    }
+
+    carousel.addEventListener("mousedown", dragStart);
+    carousel.addEventListener("touchstart", dragStart);
+
+    document.addEventListener("mousemove", dragging);
+    carousel.addEventListener("touchmove", dragging);
+
+    document.addEventListener("mouseup", dragStop);
+    carousel.addEventListener("touchend", dragStop);
+</script>
+
 
 
 
