@@ -173,7 +173,7 @@ $Informasipelatihan = &$Page;
 			</div>
 
 			<div id="map-bpmjp">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15845.190459814496!2d107.5694983!3d-6.8548862!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e5df4dc488b3%3A0xb14b834b4c7f78c0!2sBalai%20Pelatihan%20SDM%20Metrologi%2C%20Mutu%20dan%20Jasa%20Perdagangan!5e0!3m2!1sid!2sid!4v1691290146586!5m2!1sid!2sid" width="100%" height="580" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15845.190459814496!2d107.5694983!3d-6.8548862!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e5df4dc488b3%3A0xb14b834b4c7f78c0!2sBalai%20Pelatihan%20SDM%20Metrologi%2C%20Mutu%20dan%20Jasa%20Perdagangan!5e0!3m2!1sid!2sid!4v1691290146586!5m2!1sid!2sid" width="100%" height="580" style="border-radius: 15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</div>
 	</div>
