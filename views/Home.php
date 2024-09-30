@@ -790,8 +790,8 @@ Attribution required
 										<div class="carousel-inner">
 											<?php
 											$rs = ExecuteQuery("SELECT `pelatihan_id`, `judul_pelatihan`,`tawal`, `jumlah_hari`, `tempat`, `jumlah_peserta`, `sisa`, `harga`, `tanggal_pelaksanaan`, `gambar`, `Last_Updated`, `Created_Date` 
-FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
-ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
+											FROM `w_pelatihan` WHERE `Activated` = 'Y' AND `tawal` >= CURRENT_DATE() AND `jenis_pelatihan` IN ('ekspor','metrologi','mutu','jasa_perdagangan','webinar') 
+											ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 											$i = 1;
 											while ($row = $rs->fetch()) {
 												$peserta_terdaftar = ExecuteScalar("SELECT COUNT(1) FROM `w_orders` WHERE `pelatihan_id` = " . $row["pelatihan_id"]);
