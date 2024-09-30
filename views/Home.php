@@ -15,6 +15,7 @@ $Home = &$Page;
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">-->
 	<!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body id="top">
@@ -782,7 +783,7 @@ Attribution required
 								<div class="row">
 									<div class="col-md-1 d-flex align-items-center">
 										<a class="carousel-control-prev" href="#carouselProducts" role="button" data-bs-slide="prev">
-											<i class="fa fa-arrow-left" style="color: #fff;"></i>
+											<i class="fas fa-arrow-left"></i> <!-- Tambahkan ikon panah kiri -->
 										</a>
 									</div>
 									<div class="col-md-10">
@@ -836,7 +837,7 @@ ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 									</div>
 									<div class="col-md-1 d-flex align-items-center">
 										<a class="carousel-control-next" href="#carouselProducts" role="button" data-bs-slide="next">
-											<i class="fa fa-arrow-right" style="color: #fff;"></i>
+											<i class="fas fa-arrow-right"></i> <!-- Tambahkan ikon panah kanan -->
 										</a>
 									</div>
 								</div>
@@ -882,41 +883,94 @@ ORDER BY CASE WHEN `sisa` > 0 THEN 1 ELSE 2 END, `tawal` ASC");
 
 			.carousel-control-prev,
 			.carousel-control-next {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
 				width: 40px;
 				height: 40px;
 				border-radius: 50%;
-				background-color: #157347;
-				/* changed to green */
-				border: none;
+				background-color: #198754;
+				/* Sesuaikan dengan warna background */
+				border: 2px solid #FFC107;
+				/* Warna border */
 				padding: 10px;
 				font-size: 20px;
-				color: #000;
+				color: green;
+				/* Warna ikon */
 				cursor: pointer;
+				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+			}
+
+			.carousel-control-prev i,
+			.carousel-control-next i {
+				color: #ffffff;
+				background-color: #157347;
+				/* Warna ikon */
+			}
+
+			.carousel-control-prev:hover,
+			.carousel-control-next:hover {
+				background-color: #5BC1AC;
+				color: #ffffff;
+			}
+
+			.carousel-control-prev i:before {
+				content: "\f104";
+				/* Unicode untuk panah kiri Font Awesome */
+			}
+
+			.carousel-control-next i:before {
+				content: "\f105";
+				/* Unicode untuk panah kanan Font Awesome */
 			}
 
 			.carousel-control-prev {
-				margin-right: 20px;
+				left: 20px;
 			}
 
 			.carousel-control-next {
-				margin-left: 20px;
+				right: 20px;
 			}
 
+			/* Default carousel item */
 			.carousel-item {
 				margin-right: 20px;
 			}
 
-			/* Opsional: Untuk tampilan responsif */
+			/* Responsif: Untuk tampilan di layar kecil */
 			@media (max-width: 768px) {
 
+				/* Mengubah ukuran tombol di perangkat seluler */
 				.carousel-control-prev,
 				.carousel-control-next {
 					width: 30px;
 					height: 30px;
+					top: 50%;
+					/* Pastikan tombol berada di tengah secara vertikal */
+					transform: translateY(-50%);
+					/* Pastikan tombol tetap di tengah */
 				}
 
-				.carousel-item {
-					margin-right: 10px;
+				.carousel-control-prev {
+					left: 10px;
+					/* Atur jarak tombol dari tepi kiri */
+				}
+
+				.carousel-control-next {
+					right: 10px;
+					/* Atur jarak tombol dari tepi kanan */
+				}
+
+				/* Perkecil ukuran card di perangkat mobile dan hanya tampilkan 1 card */
+				.carousel-inner .carousel-item {
+					width: 100%;
+					/* Tampilkan satu card penuh pada layar */
+				}
+
+				.carousel-item .card {
+					width: 90%;
+					/* Sesuaikan lebar card agar ada margin */
+					margin: 0 auto;
 				}
 			}
 		</style>
