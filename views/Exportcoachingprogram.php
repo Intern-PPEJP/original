@@ -18,56 +18,7 @@ $Exportcoachingprogram = &$Page;
 	</div>
 </div>
 
-<body id="top">
-	<a href="#top" class="back-to-top" id="backToTopBtn">
-		<div class="button-circle">
-			<img src="images\icons\top.png" alt="Back to Top">
-		</div>
-	</a>
-	<script>
-		// Ambil elemen button
-		const backToTopBtn = document.getElementById('backToTopBtn');
 
-		// Fungsi untuk menampilkan atau menyembunyikan button
-		function toggleBackToTopBtn() {
-			if (window.scrollY > 200) { // Jika scroll lebih dari 200px
-				backToTopBtn.style.display = "block";
-			} else {
-				backToTopBtn.style.display = "none";
-			}
-		}
-
-		// Pasang event listener untuk scroll
-		window.addEventListener('scroll', toggleBackToTopBtn);
-	</script>
-
-	<style>
-		.back-to-top {
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			z-index: 100;
-			text-decoration: none;
-			display: none;
-			/* Button disembunyikan secara default */
-		}
-
-		.button-circle {
-			width: 50px;
-			height: 50px;
-			background-color: #19497D;
-			border-radius: 50%;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.button-circle img {
-			width: 20px;
-			height: 20px;
-		}
-	</style>
-</body>
 
 <style>
 	<style>.container-fluid,
@@ -232,9 +183,6 @@ $Exportcoachingprogram = &$Page;
 	</div>
 </div>
 
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 <section class="barcount-section">
 	<div class="container">
 		<div class="row row-bar-count pt-5">
@@ -332,149 +280,123 @@ $Exportcoachingprogram = &$Page;
 	</div>
 </section>
 <br>
-<section>
-	<h2 class="text-center"><b>Dokumentasi Kegiatan</b></h2> <br>
-    <div class="wrapper">
-        <i class="fa-solid fa-angle-left" id="prevBtn"></i>
-        <div class="carousel">
-            <img src="images/pages/ecp1.jpg" alt="ecp1" draggable="false">
-            <img src="images/pages/ecp2.jpg" alt="ecp2" draggable="false">
-            <img src="images/pages/ecp3.jpg" alt="ecp3" draggable="false">
-            <img src="images/pages/ecp4.jpg" alt="ecp4" draggable="false">
-            <img src="images/pages/ecp5.jpg" alt="ecp5" draggable="false">
-            <img src="images/pages/ecp6.jpg" alt="ecp6" draggable="false">
-            <img src="images/pages/ecp7.jpg" alt="ecp7" draggable="false">
-        </div>
-        <i class="fa-solid fa-angle-right" id="nextBtn"></i>
-    </div>
-</section>
 
-<style>
-    .wrapper {
-        max-width: 1200px;
-        position: relative;
-        margin: 0 auto;
-        padding: 0 10px;
-    }
-    .carousel {
-        display: flex;
-        overflow: hidden;
-        scroll-behavior: smooth;
-    }
-    .carousel img {
-        height: 230px;
-        object-fit: cover;
-        margin-right: 14px;
-        width: calc(100% / 4.2);
-        flex-shrink: 0;
-		border-radius: 10px;
-    }
-    .wrapper i {
-        top: 50%;
-        height: 46px;
-        width: 46px;
-        cursor: pointer;
-        position: absolute;
-        font-size: 1.2rem;
-        text-align: center;
-        line-height: 46px;
-        background: green;
-        color: white;
-        border-radius: 50%;
-        transform: translateY(-50%);
-        z-index: 1;
-    }
-    .wrapper i:first-child {
-        left: -45px;
-    }
-    .wrapper i:last-child {
-        right: -35px;
-    }
-
-    @media screen and (max-width: 900px) {
-        .carousel img {
-            width: calc(100% / 4);
-        }
-    }
-
-    @media screen and (max-width: 550px) {
-        .carousel img {
+    <style>
+        .slideshow-container {
             width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+            position: relative;
         }
-    }
-</style>
 
-<script>
-    const carousel = document.querySelector(".carousel");
-    const firstImg = carousel.querySelectorAll("img")[0];
-    const arrowIcons = document.querySelectorAll(".wrapper i");
+        .slideshow-track {
+            display: flex;
+            transition: transform 1s ease;
+        }
 
-    let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+        .image-container {
+            flex: 0 0 25%;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
 
-    const showHideIcons = () => {
-        let scrollWidth = carousel.scrollWidth - carousel.clientWidth;
-        arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-        arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
-    }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
 
-    arrowIcons.forEach(icon => {
-        icon.addEventListener("click", () => {
-            let firstImgWidth = firstImg.clientWidth + 14;
-            carousel.scrollLeft += icon.id == "prevBtn" ? -firstImgWidth : firstImgWidth;
-            setTimeout(() => showHideIcons(), 60);
+        @media (max-width: 992px) {
+            .image-container {
+                flex: 0 0 50%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .image-container {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+
+    <div class="container py-5">
+	<h2 class="text-center"><b>DOKUMENTASI PELATIHAN</b></h2> <br>
+        <div class="slideshow-container">
+            <div class="slideshow-track">
+                <!-- Daftar gambar ECP -->
+                <div class="image-container">
+                    <img src="images/pages/ecp1.jpg" alt="ecp1" draggable="false">
+                </div>
+                <div class="image-container">
+                    <img src="images/pages/ecp2.jpg" alt="ecp2" draggable="false">
+                </div>
+                <div class="image-container">
+                    <img src="images/pages/ecp3.jpg" alt="ecp3" draggable="false">
+                </div>
+                <div class="image-container">
+                    <img src="images/pages/ecp4.jpg" alt="ecp4" draggable="false">
+                </div>
+                <div class="image-container">
+                    <img src="images/pages/ecp5.jpg" alt="ecp5" draggable="false">
+                </div>
+                <div class="image-container">
+                    <img src="images/pages/ecp6.jpg" alt="ecp6" draggable="false">
+                </div>
+                <!-- Duplicate first two images for smooth loop -->
+                <div class="image-container">
+                    <img src="images/pages/ecp1.jpg" alt="ecp1" draggable="false">
+                </div>
+                <div class="image-container">
+                    <img src="images/pages/ecp2.jpg" alt="ecp2" draggable="false">
+                </div>
+				<div class="image-container">
+                    <img src="images/pages/ecp3.jpg" alt="ecp3" draggable="false">
+                </div>
+                <div class="image-container">
+                    <img src="images/pages/ecp4.jpg" alt="ecp4" draggable="false">
+                </div>
+                <div class="image-container">
+                    <img src="images/pages/ecp5.jpg" alt="ecp5" draggable="false">
+                </div>
+                <div class="image-container">
+                    <img src="images/pages/ecp6.jpg" alt="ecp6" draggable="false">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.slideshow-track');
+            const images = track.querySelectorAll('.image-container');
+            const imageCount = images.length - 2; // Exclude duplicated images
+            let currentIndex = 0;
+
+            function slideToNext() {
+                currentIndex++;
+                track.style.transform = `translateX(-${currentIndex * 25}%)`;
+                track.style.transition = 'transform 1s ease';
+
+                if (currentIndex === imageCount) {
+                    setTimeout(() => {
+                        track.style.transition = 'none';
+                        currentIndex = 0;
+                        track.style.transform = 'translateX(0)';
+                        setTimeout(() => {
+                            track.style.transition = 'transform 1s ease';
+                        }, 50);
+                    }, 1000);
+                }
+
+                setTimeout(slideToNext, 3000); // 1 second for transition + 2 seconds pause
+            }
+
+            setTimeout(slideToNext, 3000); // Start the slideshow after 3 seconds
         });
-    });
-
-    const autoSlide = () => {
-        if(carousel.scrollLeft - (carousel.scrollWidth - carousel.clientWidth) > -1 || carousel.scrollLeft <= 0) return;
-
-        positionDiff = Math.abs(positionDiff);
-        let firstImgWidth = firstImg.clientWidth + 14;
-        let valDifference = firstImgWidth - positionDiff;
-
-        if(carousel.scrollLeft > prevScrollLeft) {
-            return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-        }
-        carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
-
-    const dragStart = (e) => {
-        isDragStart = true;
-        prevPageX = e.pageX || e.touches[0].pageX;
-        prevScrollLeft = carousel.scrollLeft;
-    }
-
-    const dragging = (e) => {
-        if(!isDragStart) return;
-        e.preventDefault();
-        isDragging = true;
-        carousel.classList.add("dragging");
-        positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
-        carousel.scrollLeft = prevScrollLeft - positionDiff;
-        showHideIcons();
-    }
-
-    const dragStop = () => {
-        isDragStart = false;
-        carousel.classList.remove("dragging");
-
-        if(!isDragging) return;
-        isDragging = false;
-        autoSlide();
-    }
-
-    carousel.addEventListener("mousedown", dragStart);
-    carousel.addEventListener("touchstart", dragStart);
-
-    document.addEventListener("mousemove", dragging);
-    carousel.addEventListener("touchmove", dragging);
-
-    document.addEventListener("mouseup", dragStop);
-    carousel.addEventListener("touchend", dragStop);
-</script>
-
-
-
+    </script>
 
 <br>
 <section>
@@ -484,7 +406,7 @@ $Exportcoachingprogram = &$Page;
 <h2 class="text-center"><b>EXPORT COACHING PROGRAM 2024</b></h2><br> 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-<div id="map" style="height: 500px;"></div>
+<div id="map" style="height: 400px;"></div>
 <script>
 	var map = L.map('map').setView([-2.5489, 118.0149], 5);
 
@@ -527,7 +449,56 @@ $Exportcoachingprogram = &$Page;
 			.bindPopup(`<b>${location.name}</b><br>Peserta: ${location.peserta}`);
 	});
 </script>
+<body id="top">
+	<a href="#top" class="back-to-top" id="backToTopBtn">
+		<div class="button-circle">
+			<img src="images\icons\top.png" alt="Back to Top">
+		</div>
+	</a>
+	<script>
+		// Ambil elemen button
+		const backToTopBtn = document.getElementById('backToTopBtn');
 
+		// Fungsi untuk menampilkan atau menyembunyikan button
+		function toggleBackToTopBtn() {
+			if (window.scrollY > 200) { // Jika scroll lebih dari 200px
+				backToTopBtn.style.display = "block";
+			} else {
+				backToTopBtn.style.display = "none";
+			}
+		}
+
+		// Pasang event listener untuk scroll
+		window.addEventListener('scroll', toggleBackToTopBtn);
+	</script>
+
+	<style>
+		.back-to-top {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 100;
+			text-decoration: none;
+			display: none;
+			/* Button disembunyikan secara default */
+		}
+
+		.button-circle {
+			width: 50px;
+			height: 50px;
+			background-color: #19497D;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.button-circle img {
+			width: 20px;
+			height: 20px;
+		}
+	</style>
+</body>
 <br>
 </div>
 </div>
