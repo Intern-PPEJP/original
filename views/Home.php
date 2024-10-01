@@ -779,7 +779,7 @@ Attribution required
 					</div>
 					<div class="row">
 						<div class="col-12">
-							<div id="carouselProducts" class="carousel slide" data-bs-ride="carousel" data-interval="5000">
+							<div id="carouselProducts" class="carousel slide" data-bs-ride="carousel" data-interval="2000">
 								<div class="row">
 									<div class="col-md-1 d-flex align-items-center">
 										<a class="carousel-control-prev" href="#carouselProducts" role="button" data-bs-slide="prev">
@@ -879,6 +879,7 @@ Attribution required
 				justify-content: space-between;
 				align-items: center;
 				padding: 0 20px;
+				text-decoration: none;
 			}
 
 			.carousel-control-prev,
@@ -899,19 +900,22 @@ Attribution required
 				/* Warna ikon */
 				cursor: pointer;
 				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+				text-decoration: none;
 			}
 
 			.carousel-control-prev i,
 			.carousel-control-next i {
-				color: #ffffff;
-				background-color: #157347;
+				color: #157347;
+				/*background-color: #157347;
 				/* Warna ikon */
+				text-decoration: none;
 			}
 
 			.carousel-control-prev:hover,
 			.carousel-control-next:hover {
 				background-color: #5BC1AC;
 				color: #ffffff;
+				text-decoration: none;
 			}
 
 			.carousel-control-prev i:before {
@@ -952,12 +956,12 @@ Attribution required
 				}
 
 				.carousel-control-prev {
-					left: 10px;
+					left: 2px;
 					/* Atur jarak tombol dari tepi kiri */
 				}
 
 				.carousel-control-next {
-					right: 10px;
+					right: 2px;
 					/* Atur jarak tombol dari tepi kanan */
 				}
 
