@@ -166,8 +166,8 @@ $Exportcoachingprogram = &$Page;
 
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12 p-0" style="height: 420px">
-			<div style="background-image: url(images/pages/bannerecpnew1.jpeg); background-size: cover ; background-position: bottom;width: 100%; height: 100%; position: absolute;top:0">
+		<div class="col-md-12 p-0" style="height: 520px">
+			<div style="background-image: url(images/pages/background_ecp.jpeg); background-size: cover ; background-position: bottom;width: 100%; height: 100%; position: absolute;top:0">
 			</div>
 		</div>
 	</div>
