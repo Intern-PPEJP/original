@@ -807,19 +807,10 @@ Attribution required
 				position: absolute;
 				top: 50%;
 				transform: translateY(-50%);
-				width: 40px;
-				height: 40px;
-				border-radius: 50%;
-				background-color: #198754;
-				/* Sesuaikan dengan warna background */
-				border: 2px solid #FFC107;
-				/* Warna border */
-				padding: 10px;
-				font-size: 20px;
-				color: green;
-				/* Warna ikon */
+				padding: 15px;
+				font-size: 30px;
+				color: #157347;
 				cursor: pointer;
-				box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 				text-decoration: none;
 			}
 
@@ -833,8 +824,7 @@ Attribution required
 
 			.carousel-control-prev:hover,
 			.carousel-control-next:hover {
-				background-color: #5BC1AC;
-				color: #ffffff;
+				color: #5BC1AC;
 				text-decoration: none;
 			}
 
@@ -867,22 +857,26 @@ Attribution required
 				/* Mengubah ukuran tombol di perangkat seluler */
 				.carousel-control-prev,
 				.carousel-control-next {
-					width: 30px;
-					height: 30px;
+					position: absolute;
 					top: 50%;
-					/* Pastikan tombol berada di tengah secara vertikal */
 					transform: translateY(-50%);
-					/* Pastikan tombol tetap di tengah */
+					padding: 15px;
+					font-size: 30px;
+					color: #157347;
+					cursor: pointer;
+					text-decoration: none;
 				}
 
 				.carousel-control-prev {
-					left: 2px;
-					/* Atur jarak tombol dari tepi kiri */
+					left: 0px;
+					/* Mengatur posisi tombol prev di luar card sebelah kiri */
+					top: 190px;
 				}
 
 				.carousel-control-next {
-					right: 2px;
-					/* Atur jarak tombol dari tepi kanan */
+					right: 0px;
+					/* Mengatur posisi tombol next di luar card sebelah kanan */
+					top: -190px;
 				}
 
 				/* Perkecil ukuran card di perangkat mobile dan hanya tampilkan 1 card */
@@ -1462,7 +1456,7 @@ Attribution required
 						}
 						?>
 					</div>
-					<!-- Carousel Controls -->
+					<!-- Carousel Controls 
 					<a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-bs-slide="prev">
 						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Previous</span>
@@ -1470,7 +1464,7 @@ Attribution required
 					<a class="carousel-control-next" href="#testimonialCarousel" role="button" data-bs-slide="next">
 						<span class="carousel-control-next-icon" aria-hidden="true"></span>
 						<span class="visually-hidden">Next</span>
-					</a>
+					</a>-->
 				</div>
 			</div>
 		</section>
